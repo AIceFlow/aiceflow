@@ -9,32 +9,48 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 227 100% 64%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 227 100% 75%;
+    --primary-dark: 227 100% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 97%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 215 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 231 85% 92%;
+    --accent-foreground: 227 100% 64%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 91%;
+    --input: 220 15% 91%;
+    --ring: 227 100% 64%;
+
+    /* Custom AIceFlow colors */
+    --gradient-primary: linear-gradient(135deg, hsl(227 100% 64%), hsl(220 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(231 85% 92%), hsl(220 15% 97%));
+    --gradient-hero: linear-gradient(135deg, hsl(227 100% 64%) 0%, hsl(220 100% 70%) 50%, hsl(210 100% 75%) 100%);
+    
+    /* Tennis-inspired shadows and effects */
+    --shadow-glow: 0 0 40px hsl(227 100% 64% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(227 100% 64% / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(227 100% 64% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --radius: 0.5rem;
 
