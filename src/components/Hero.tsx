@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Professional overlay */}
@@ -28,7 +31,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Smarter Processes,
+              {t('hero.title').split(',')[0]},
               <span className="block text-transparent bg-clip-text bg-gradient-primary animate-scale-in">
                 Powered by AI
               </span>
@@ -36,30 +39,30 @@ const Hero = () => {
           </div>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-delay-1">
-            Transform your business with cutting-edge AI automation. Custom solutions that deliver real-world results for your unique processes in southern Germany.
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-delay-2">
             <Button variant="cta" size="lg" className="text-lg px-8 py-4 hover:scale-105 transition-all duration-300">
-              Schedule Your Free Consultation
+              {t('hero.cta.primary')}
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-primary/20 text-foreground hover:bg-primary/5 hover:scale-105 transition-all duration-300">
-              View Our Work
+              {t('hero.cta.secondary')}
             </Button>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-delay-3">
             <div className="text-center p-6 rounded-xl bg-card/50 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-border">
               <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Processes Automated</div>
+              <div className="text-sm text-muted-foreground">{t('hero.stats.processes')}</div>
             </div>
             <div className="text-center p-6 rounded-xl bg-card/50 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-border">
               <div className="text-3xl font-bold text-primary mb-2">99%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              <div className="text-sm text-muted-foreground">{t('hero.stats.satisfaction')}</div>
             </div>
             <div className="text-center p-6 rounded-xl bg-card/50 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-border">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">AI Operations</div>
+              <div className="text-sm text-muted-foreground">{t('hero.stats.operations')}</div>
             </div>
           </div>
 
@@ -68,7 +71,7 @@ const Hero = () => {
             <div className="flex items-center justify-center space-x-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm">Available for consultation</span>
+                <span className="text-sm">{t('hero.status.available')}</span>
               </div>
               <div className="hidden sm:block w-1 h-1 bg-muted-foreground rounded-full"></div>
               <div className="flex items-center space-x-2">
@@ -76,7 +79,7 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-sm">Lake Constance, Germany</span>
+                <span className="text-sm">{t('hero.status.location')}</span>
               </div>
             </div>
           </div>
