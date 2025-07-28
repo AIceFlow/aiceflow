@@ -4,11 +4,25 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">AF</span>
+        <div className="flex items-center space-x-3">
+          {/* Tennis-inspired logo symbol */}
+          <div className="relative w-10 h-10 flex items-center justify-center">
+            {/* Tennis racket crossing lines */}
+            <div className="absolute w-8 h-8 flex items-center justify-center">
+              {/* Black diagonal line */}
+              <div className="absolute w-6 h-1.5 bg-foreground rounded-full transform rotate-45"></div>
+              {/* Blue diagonal line */}
+              <div className="absolute w-6 h-1.5 bg-primary rounded-full transform -rotate-45"></div>
+              {/* Small accent dots */}
+              <div className="absolute -top-1 -left-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+              <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-foreground rounded-full"></div>
+              <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-foreground rounded-full"></div>
+              <div className="absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+            </div>
           </div>
-          <span className="text-xl font-bold text-foreground">AIceFlow</span>
+          <span className="text-xl font-bold text-foreground">
+            <span className="text-primary">AI</span>ceFlow
+          </span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
