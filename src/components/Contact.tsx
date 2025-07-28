@@ -172,12 +172,6 @@ const Contact: React.FC = () => {
                 <Button variant="outline" className="w-full justify-start">
                   {t("contact.actions.discovery")}
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  {t("contact.actions.download")}
-                </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  {t("contact.actions.proposal")}
-                </Button>
               </div>
             </div>
           </div>
