@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,15 +6,24 @@
     <title>AIceFlow</title>
     <meta name="description" content="AIceFlow - Your AI Automation Partner" />
     <meta name="author" content="AIceFlow" />
-
     <meta property="og:title" content="AIceFlow" />
-    <meta property="og:description" content="AIceFlow - Your AI Automation Partner" />
- 
+    <meta
+      property="og:description"
+      content="AIceFlow - Your AI Automation Partner"
+    />
 
-    <script type="module" crossorigin src="/aiceflow/assets/index-T056_OGI.js"></script>
+    <script type="text/javascript">
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/aiceflow/assets/index-CcllSEsx.js"></script>
     <link rel="stylesheet" crossorigin href="/aiceflow/assets/index-CNVCH3mX.css">
   </head>
-
   <body>
     <div id="root"></div>
   </body>
