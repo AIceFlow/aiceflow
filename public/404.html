@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AIceFlow Redirect</title>
+    <script type="text/javascript">
+      var path = window.location.pathname;
+      var repoName = "/aiceflow";
+      var pathSegment = path.split(repoName)[1];
+      sessionStorage.redirect = pathSegment;
+      window.location.href = repoName;
+    </script>
+  </head>
+  <body></body>
+</html>
