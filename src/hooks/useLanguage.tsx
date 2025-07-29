@@ -177,6 +177,57 @@ export const translations = {
     "team.ff.expertise.optimization": "Operational & Cost Optimization",
     "team.expertiseTitle": "Expertise",
 
+    // Contact
+    "contact.title": "Ready to Transform Your Business?",
+    "contact.description":
+      "Let's discuss how AI automation can revolutionize your processes. Schedule your free consultation today and discover the possibilities.",
+
+    // Form
+    "contact.form.title": "Let's Get Started",
+    "contact.form.firstNameLabel": "First Name",
+    "contact.form.firstNamePlaceholder": "Your first name",
+    "contact.form.lastNameLabel": "Last Name",
+    "contact.form.lastNamePlaceholder": "Your last name",
+    "contact.form.emailLabel": "Email Address",
+    "contact.form.emailPlaceholder": "your.email@company.com",
+    "contact.form.companyLabel": "Company Name",
+    "contact.form.companyPlaceholder": "Your company name",
+    "contact.form.phoneLabel": "Phone Number",
+    "contact.form.phonePlaceholder": "+1 (555) 123-4567",
+    "contact.form.needsLabel": "Tell us about your automation needs",
+    "contact.form.needsPlaceholder":
+      "Describe your current processes and what you're looking to automate…",
+    "contact.form.submit": "Schedule a Free Consultation",
+    "contact.form.requiredNote":
+      "* Required fields. We'll respond within 24 hours.",
+    "contact.form.submitting": "Submitting...",
+    "contact.form.error":
+      "An error occurred. Please check your information and try again.",
+    "contact.form.successTitle": "Thank You!",
+    "contact.form.successMessage":
+      "Your message has been sent successfully. We will get back to you shortly.",
+    "contact.form.sendAnother": "Send another message",
+
+    // Contact Info
+    "contact.info.title": "Contact Information",
+    "contact.info.office.title": "Our Office",
+    "contact.info.office.line1": "Lake Constance Region",
+    "contact.info.office.line2": "Southern Germany",
+    "contact.info.office.line3": "Baden-Württemberg",
+    "contact.info.email.title": "Email",
+    "contact.info.email.address": "hello@aiceflow.de",
+    "contact.info.phone.title": "Phone",
+    "contact.info.phone.number": "+49 (0) 7531 123 456",
+    "contact.info.hours.title": "Business Hours",
+    "contact.info.hours.line1": "Mon – Fri: 9:00 AM – 6:00 PM CET",
+    "contact.info.hours.line2": "Sat: 10:00 AM – 2:00 PM CET",
+
+    // Actions
+    "contact.actions.title": "Quick Actions",
+    "contact.actions.discovery": "Book a Discovery Call",
+    "contact.actions.download": "Download Case Studies",
+    "contact.actions.proposal": "Request a Proposal",
+
     "footer.company.description":
       "We help businesses across southern Germany automate their processes intelligently and efficiently using AI.",
 
@@ -192,7 +243,7 @@ export const translations = {
     "header.cta": "Beratung vereinbaren",
 
     // Hero
-    "hero.title": "Intelligente Prozesse dank KI",
+    "hero.title": "Intelligente Prozesse",
     "hero.description":
       "Optimieren Sie Ihre Geschäftsprozesse mit smarter Automatisierung. AIceFlow unterstützt Sie dabei, Kosten zu senken, Arbeitszeit zu sparen und Wachstum mit innovativer KI-Technologie zu beschleunigen.",
     "hero.cta.primary": "Kostenlose Beratung vereinbaren",
@@ -397,6 +448,13 @@ export const translations = {
     "contact.form.submit": "Kostenlose Beratung vereinbaren",
     "contact.form.requiredNote":
       "* Pflichtfelder. Wir antworten innerhalb von 24 Stunden.",
+    "contact.form.submitting": "Wird gesendet...",
+    "contact.form.error":
+      "Ein Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+    "contact.form.successTitle": "Vielen Dank!",
+    "contact.form.successMessage":
+      "Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.",
+    "contact.form.sendAnother": "Weitere Nachricht senden",
 
     // Contact Info
     "contact.info.title": "Kontaktieren Sie uns",
