@@ -177,6 +177,15 @@ export const translations = {
     "team.ff.expertise.optimization": "Operational & Cost Optimization",
     "team.expertiseTitle": "Expertise",
 
+    "team.mp.name": "Maik Pfäffle",
+    "team.mp.position": "Business Software Architekt & Process Automation Expert",
+    "team.mp.bio": "Maik combines deep expertise in business software, cloud technologies, and artificial intelligence. As an experienced software architect, he designs high-performance, maintainable, and future-proof systems – from backend integration to modern user interfaces. His specialty lies in leveraging AI agents to automate complex business processes. Maik doesn’t just digitize workflows – he makes them intelligent, scalable, and truly valuable.",
+
+    "team.mp.expertise.bp": "Business Process Analysing & Optimation",
+    "team.mp.expertise.cloud": "Cloud Technologies",
+    "team.mp.expertise.ai": "AI-Powered Process Automation",
+    "team.mp.expertise.erp": "Business Software Architekt",
+
     // Contact
     "contact.title": "Ready to Transform Your Business?",
     "contact.description":
@@ -423,6 +432,15 @@ export const translations = {
     "team.ff.expertise.cv": "Echtzeit-Interfaces & Datenvisualisierung",
     "team.ff.expertise.optimization": "Workflow- & Kostenoptimierung",
     "team.expertiseTitle": "Expertise",
+
+    "team.mp.name": "Maik Pfäffle",
+    "team.mp.position": "Business Software Architekt & Process Automation Experte",
+    "team.mp.bio": "Maik bringt tiefgehendes Know-how in Business-Software, Cloud-Technologien und künstlicher Intelligenz zusammen. Als erfahrener Software-Architekt entwickelt er performante, wartbare und zukunftsfähige Systeme – von der Integrationslogik bis zur modernen Nutzeroberfläche. Seine Spezialität: den Einsatz von AI Agents zur Prozessautomatisierung in komplexen Unternehmensumgebungen. Maik denkt Abläufe nicht nur digital, sondern intelligent – mit Blick auf Skalierbarkeit, Sicherheit und echten Mehrwert.",
+
+    "team.mp.expertise.bp": "Business Process Analyse & Optimierung",
+    "team.mp.expertise.cloud": "Cloud Technologien",
+    "team.mp.expertise.ai": "KI-gestützte Prozessautomatisierung",
+    "team.mp.expertise.erp": "Business Software Architekt",
 
     // Contact
     "contact.title": "Bereit, Ihr Unternehmen zu transformieren?",

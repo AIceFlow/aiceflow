@@ -25,10 +25,10 @@ const Team: React.FC = () => {
       position: t("team.mp.position"),
       bio: t("team.mp.bio"),
       expertise: [
-        t("team.mp.expertise.architecture"),
-        t("team.mp.expertise.automation"),
-        t("team.mp.expertise.integration"),
-        t("team.mp.expertise.sap"),
+        t("team.mp.expertise.bp"),
+        t("team.mp.expertise.cloud"),
+        t("team.mp.expertise.ai"),
+        t("team.mp.expertise.erp"),
       ],
     },
   ];
