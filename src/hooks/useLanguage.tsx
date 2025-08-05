@@ -31,16 +31,23 @@ export const translations = {
     "header.cta": "Schedule Consultation",
 
     // Hero
-    "hero.title": "Intelligent Processes Powered by AI",
+    "hero.title.line1": "Orchestrate Your Business",
+    "hero.title.line2": "with Autonomous AI Agents",
     "hero.description":
-      "Optimize your business processes with smart automation. AIceFlow helps you cut costs, save time, and accelerate growth through innovative AI solutions.",
-    "hero.cta.primary": "Book Your Free Consultation",
-    "hero.cta.secondary": "Explore Our Projects",
-    "hero.stats.processes": "Automated Processes",
-    "hero.stats.satisfaction": "Client Satisfaction",
-    "hero.stats.operations": "AI-Powered Operations",
-    "hero.status.available": "Available for new projects",
-    "hero.status.location": "Based at Lake Constance, Germany",
+      "We design and deploy intelligent agents that handle your complex operational tasks—from data analysis to customer communication—freeing your team to focus on what truly matters: strategic growth.",
+
+    "hero.cta.primary": "Schedule a Strategy Call",
+    "hero.cta.secondary": "See It in Action",
+
+    "hero.pillars.tailored.title": "Tailor-Made Agents",
+    "hero.pillars.tailored.description": "For your unique processes",
+    "hero.pillars.integration.title": "Seamless Integration",
+    "hero.pillars.integration.description": "With your existing tools",
+    "hero.pillars.partnership.title": "Dedicated Partnership",
+    "hero.pillars.partnership.description": "From discovery to success",
+
+    "hero.status.available": "Available for New Projects",
+    "hero.status.location": "Based in Überlingen, Lake Constance",
 
     // About
     "about.title": "About AIceFlow",
@@ -116,66 +123,122 @@ export const translations = {
       "See how businesses are boosting productivity with AIceFlow – without additional staffing.",
 
     // Showcase
-    "showcase.title": "Your AI-Powered Team Dashboard",
+    "showcase.title": "From Operational Chaos to Strategic Clarity",
     "showcase.description":
-      "Log in to manage your team, automate workflows with LLM, and track metrics in real-time.",
-    "showcase.overlay.title": "Live Process Overview",
+      "Stop reacting and start leading. Our platform transforms your scattered workflows into a unified, intelligent system, giving you the real-time command center your business needs to thrive.",
 
-    "showcase.stats.automationRate.label": "Automation Rate",
-    "showcase.stats.automationRate.value": "{{automationRate}} %",
-    "showcase.stats.latency.label": "Average Latency",
-    "showcase.stats.latency.value": "{{latency}} s",
-    "showcase.stats.savings.label": "Estimated Monthly Savings",
-    "showcase.stats.savings.value": "{{savings}}",
+    "showcase.overlay.title": "Your Business, Operating Intelligently.",
 
-    "showcase.features.title": "Key Features",
-    "showcase.features.item1": "AI-Driven Task Allocation",
-    "showcase.features.item2": "Customizable Dashboards",
-    "showcase.features.item3": "Real-Time Collaboration",
-    "showcase.features.item4": "Seamless Integrations",
+    "showcase.stats.dashboard.label": "Unified Dashboard",
+    "showcase.stats.dashboard.value": "Total Control",
+    "showcase.stats.monitoring.label": "Live Process Monitoring",
+    "showcase.stats.monitoring.value": "Real-Time",
+    "showcase.stats.architecture.label": "Agent-Based Architecture",
+    "showcase.stats.architecture.value": "Built to Scale",
 
-    "showcase.impact.title": "Business Impact",
-    "showcase.impact.item1.label": "Time Saved",
-    "showcase.impact.item1.value": "{{timeSaved}}",
-    "showcase.impact.item2.label": "Reduced Manual Steps",
-    "showcase.impact.item2.value": "{{interventionReduction}} %",
-    "showcase.impact.item3.label": "ROI Period",
-    "showcase.impact.item3.value": "{{roiPeriod}}",
+    "showcase.features.title": "Our Approach",
+    "showcase.features.item1": "We map your existing business processes.",
+    "showcase.features.item2":
+      "Our experts configure and deploy autonomous agents.",
+    "showcase.features.item3":
+      "You monitor and manage everything from your dashboard.",
+    "showcase.features.item4":
+      "Gain actionable insights from automated reports.",
+
+    "showcase.impact.title": "The Strategic Impact",
+    "showcase.impact.unlock.icon": "Users",
+    "showcase.impact.unlock.title": "Unlock Your Team's Potential",
+    "showcase.impact.unlock.description":
+      "Automate the repetitive tasks that drain creativity. Free your experts to focus on strategic initiatives and high-impact work that drives growth.",
+    "showcase.impact.decisions.icon": "BarChart2",
+    "showcase.impact.decisions.title": "Drive Decisions with Data, Not Guesses",
+    "showcase.impact.decisions.description":
+      "Our platform generates clean, structured data from every action. Turn process outputs into reliable insights for smarter, faster business decisions.",
+    "showcase.impact.resilience.icon": "ShieldCheck",
+    "showcase.impact.resilience.title": "Build a Resilient, Scalable Operation",
+    "showcase.impact.resilience.description":
+      "Create robust processes that run flawlessly 24/7. Easily scale your operations to meet growing demand without the corresponding increase in manual overhead.",
+
+    "showcase.dots.team": "Manage your team and their permissions.",
+    "showcase.dots.processes": "Live processes are running seamlessly.",
+    "showcase.dots.alerts": "Get alerts for completed tasks and reports.",
 
     // Industries
 
     // Why AIceFlow
-    "why.title": "Why Choose AIceFlow?",
+    "why.title": "Why Partner with AIceFlow?",
     "why.description":
-      "What sets us apart and why leading businesses trust our solutions.",
+      "We're not just another software provider. We are your dedicated partner in transforming your business through intelligent automation.",
 
-    "why.customizable.title": "100% Customized",
-    "why.customizable.description":
-      "Our solutions perfectly match your requirements – for maximum benefit.",
+    "why.tailored.title": "Tailored Intelligence, Not Generic Bots",
+    "why.tailored.description":
+      "We build solutions that fit your exact processes. Our agents are custom-configured to solve your unique challenges for maximum impact.",
 
-    "why.localGlobal.title": "Locally Rooted, Globally Minded",
-    "why.localGlobal.description":
-      "Local expertise combined with global innovation.",
+    "why.partnership.title": "A True Partnership",
+    "why.partnership.description":
+      "Your success is our success. We work closely with you from day one to understand your goals and ensure our solutions deliver real, measurable value.",
 
-    "why.resultsDriven.title": "Results-Oriented",
-    "why.resultsDriven.description":
-      "We focus on measurable outcomes and ongoing optimization.",
+    "why.synergy.title": "Human + AI: The Perfect Synergy",
+    "why.synergy.description":
+      "Our philosophy is to augment, not replace. We empower your team by automating tedious work, freeing them to be more strategic and creative.",
 
-    "why.teamwork.title": "Human & AI in Harmony",
-    "why.teamwork.description":
-      "Our AI complements and supports your team without replacing it.",
+    "why.local.title": "Local Expertise, Global Power",
+    "why.local.description":
+      "Benefit from the attentive, reliable service of a local German partner while leveraging the power of world-class, global-scale AI technology.",
+
+    "commitment.title": "Our Commitment to You",
+    "commitment.description":
+      "These principles are the foundation of every project we undertake.",
+
+    "commitment.transparency.title": "Radical Transparency",
+    "commitment.transparency.description":
+      "No 'black boxes'. You will always have a clear understanding of what your AI agents are doing and why, ensuring you remain in full control.",
+
+    "commitment.empowerment.title": "Team Empowerment",
+    "commitment.empowerment.description":
+      "Our goal is to make your experts even better. We supercharge your team's capabilities, turning institutional knowledge into an automated asset.",
+
+    "commitment.value.title": "Measurable Value",
+    "commitment.value.description":
+      "We establish clear KPIs for every project. Success isn't just about launching a tool; it's about demonstrably improving the metrics that matter to you.",
 
     //Team
 
+    "team.title": "The Architects of Your Automation",
+    "team.description":
+      "We are a founder-led agency, combining years of enterprise-level engineering with a deep understanding of what drives business growth.",
+
+    "team.expertiseTitle": "Core Competencies",
+
     "team.ff.name": "Felix Funke",
-    "team.ff.position": "Process Architect & AI Strategist",
+    "team.ff.position": "Co-Founder | Growth & Solution Architect",
     "team.ff.bio":
-      "Felix bridges business thinking with deep technical execution. He designs scalable LLM-based workflows and builds the systems behind them — from backend logic to interface design. Whether it's automating editorial pipelines or enabling structured human-AI collaboration, Felix turns complex processes into intuitive, intelligent platforms.",
-    "team.ff.expertise.ml": "LLM Applications & Prompt Engineering",
-    "team.ff.expertise.automation": "AI-Powered Process Automation",
-    "team.ff.expertise.cv": "Realtime Interfaces & Data Visualization",
-    "team.ff.expertise.optimization": "Operational & Cost Optimization",
-    "team.expertiseTitle": "Expertise",
+      "With a background in both business management and full-stack engineering, Felix focuses on the 'why' behind every project. He partners with clients to map their challenges, design automation strategies that align with their growth goals, and ensure the final solution delivers tangible business value.",
+
+    "team.ff.expertise.business.title": "Strategy & Business",
+    "team.ff.expertise.business.item1": "Process Discovery & ROI",
+    "team.ff.expertise.business.item2": "Growth-Focused Solutions",
+    "team.ff.expertise.business.item3": "Client Partnership",
+
+    "team.ff.expertise.tech.title": "Technology & Engineering",
+    "team.ff.expertise.tech.item1": "Rapid Prototyping",
+    "team.ff.expertise.tech.item2": "Scalable System Design",
+    "team.ff.expertise.tech.item3": "Intuitive User Interfaces",
+
+    "team.mp.name": "Maik Pfäffle",
+    "team.mp.position": "Co-Founder | Technology & Success Architect",
+    "team.mp.bio":
+      "Maik combines deep expertise in business software, cloud technologies, and artificial intelligence. As an experienced software architect, he designs high-performance, maintainable, and future-proof systems – from backend integration to modern user interfaces. His specialty lies in leveraging AI agents to automate complex business processes. Maik doesn’t just digitize workflows – he makes them intelligent, scalable, and truly valuable.",
+
+    "team.mp.expertise.business.title": "Strategy & Business",
+    "team.mp.expertise.business.item1": "Technical Feasibility",
+    "team.mp.expertise.business.item2": "Workflow Automation",
+    "team.mp.expertise.business.item3": "System Integration Strategy",
+
+    "team.mp.expertise.tech.title": "Technology & Engineering",
+    "team.mp.expertise.tech.item1": "Enterprise-Grade Security",
+    "team.mp.expertise.tech.item2": "Robust Backend Systems",
+    "team.mp.expertise.tech.item3": "API & SAP Development",
 
     // Contact
     "contact.title": "Ready to Transform Your Business?",
@@ -243,16 +306,23 @@ export const translations = {
     "header.cta": "Beratung vereinbaren",
 
     // Hero
-    "hero.title": "Intelligente Prozesse",
+    "hero.title.line1": "Orchestrieren Sie Ihr Unternehmen",
+    "hero.title.line2": "mit autonomen KI-Agenten",
     "hero.description":
-      "Optimieren Sie Ihre Geschäftsprozesse mit smarter Automatisierung. AIceFlow unterstützt Sie dabei, Kosten zu senken, Arbeitszeit zu sparen und Wachstum mit innovativer KI-Technologie zu beschleunigen.",
-    "hero.cta.primary": "Kostenlose Beratung vereinbaren",
-    "hero.cta.secondary": "Unsere Projekte entdecken",
-    "hero.stats.processes": "Automatisierte Prozesse",
-    "hero.stats.satisfaction": "Kundenzufriedenheit",
-    "hero.stats.operations": "KI-gestützte Abläufe",
+      "Wir entwickeln und implementieren intelligente Agenten, die Ihre komplexen operativen Aufgaben erledigen – von der Datenanalyse bis zur Kundenkommunikation. So kann sich Ihr Team auf das Wesentliche konzentrieren: strategisches Wachstum.",
+
+    "hero.cta.primary": "Strategiegespräch vereinbaren",
+    "hero.cta.secondary": "Live-Demo ansehen",
+
+    "hero.pillars.tailored.title": "Maßgeschneiderte Agenten",
+    "hero.pillars.tailored.description": "Für Ihre einzigartigen Prozesse",
+    "hero.pillars.integration.title": "Nahtlose Integration",
+    "hero.pillars.integration.description": "In Ihre bestehenden Tools",
+    "hero.pillars.partnership.title": "Engagierte Partnerschaft",
+    "hero.pillars.partnership.description": "Von der Analyse bis zum Erfolg",
+
     "hero.status.available": "Verfügbar für neue Projekte",
-    "hero.status.location": "Standort: Bodensee, Deutschland",
+    "hero.status.location": "Standort: Überlingen am Bodensee",
 
     // About
     "about.title": "Über AIceFlow",
@@ -357,72 +427,126 @@ export const translations = {
       "Erfahren Sie, wie Unternehmen mit AIceFlow ihre Produktivität steigern – ohne zusätzlichen Personalaufwand.",
 
     //Showcase
-    "showcase.title": "Ihr KI-gesteuertes Team-Dashboard",
+
+    "showcase.title": "Vom operativen Chaos zur strategischen Klarheit",
     "showcase.description":
-      "Melden Sie sich an, um Ihr Team zu verwalten, Arbeitsabläufe per LLM zu automatisieren und Kennzahlen in Echtzeit zu verfolgen.",
-    "showcase.overlay.title": "Live-Prozessübersicht",
+      "Handeln statt reagieren. Unsere Plattform verwandelt Ihre verstreuten Arbeitsabläufe in ein einheitliches, intelligentes System und gibt Ihnen die Echtzeit-Kommandozentrale, die Ihr Unternehmen zum Erfolg braucht.",
 
-    "showcase.stats.automationRate.label": "Automatisierungsrate",
-    "showcase.stats.automationRate.value": "45 %",
-    "showcase.stats.latency.label": "Durchschnittliche Verzögerung",
-    "showcase.stats.latency.value": "1.5 s",
-    "showcase.stats.savings.label": "Geschätzte monatliche Einsparung",
-    "showcase.stats.savings.value": "5000 €",
+    "showcase.overlay.title": "Ihr Unternehmen, intelligent betrieben.",
 
-    "showcase.features.title": "Hauptfunktionen",
-    "showcase.features.item1": "KI-gestützte Aufgabenverteilung",
-    "showcase.features.item2": "Anpassbare Dashboards",
-    "showcase.features.item3": "Echtzeit-Zusammenarbeit",
-    "showcase.features.item4": "Nahtlose Integrationen",
+    "showcase.stats.dashboard.label": "Einheitliches Dashboard",
+    "showcase.stats.dashboard.value": "Totale Kontrolle",
+    "showcase.stats.monitoring.label": "Live-Prozessüberwachung",
+    "showcase.stats.monitoring.value": "In Echtzeit",
+    "showcase.stats.architecture.label": "Agenten-basierte Architektur",
+    "showcase.stats.architecture.value": "Skalierbar",
 
-    "showcase.impact.title": "Geschäftlicher Nutzen",
-    "showcase.impact.item1.label": "Eingesparte Zeit",
-    "showcase.impact.item1.value": "12 Stunden/Woche",
-    "showcase.impact.item2.label": "Weniger manuelle Schritte",
-    "showcase.impact.item2.value": "80 %",
-    "showcase.impact.item3.label": "Amortisationszeitraum",
-    "showcase.impact.item3.value": "2 Monate",
+    "showcase.features.title": "Unser Ansatz",
+    "showcase.features.item1":
+      "Wir erfassen Ihre bestehenden Geschäftsprozesse.",
+    "showcase.features.item2":
+      "Unsere Experten konfigurieren und implementieren autonome Agenten.",
+    "showcase.features.item3":
+      "Sie überwachen und steuern alles über Ihr Dashboard.",
+    "showcase.features.item4":
+      "Gewinnen Sie handlungsrelevante Einblicke aus automatisierten Berichten.",
+
+    "showcase.impact.title": "Der strategische Mehrwert",
+    "showcase.impact.unlock.icon": "Users",
+    "showcase.impact.unlock.title": "Entfesseln Sie das Potenzial Ihres Teams",
+    "showcase.impact.unlock.description":
+      "Automatisieren Sie repetitive Aufgaben, die Kreativität rauben. Geben Sie Ihren Experten die Freiheit, sich auf strategische Initiativen und wachstumsfördernde Arbeit zu konzentrieren.",
+    "showcase.impact.decisions.icon": "BarChart2",
+    "showcase.impact.decisions.title":
+      "Entscheidungen auf Basis von Daten, nicht Vermutungen",
+    "showcase.impact.decisions.description":
+      "Unsere Plattform erzeugt aus jeder Aktion saubere, strukturierte Daten. Verwandeln Sie Prozessergebnisse in verlässliche Einblicke für intelligentere und schnellere Geschäftsentscheidungen.",
+    "showcase.impact.resilience.icon": "ShieldCheck",
+    "showcase.impact.resilience.title":
+      "Schaffen Sie einen robusten, skalierbaren Betrieb",
+    "showcase.impact.resilience.description":
+      "Etablieren Sie stabile Prozesse, die rund um die Uhr fehlerfrei laufen. Skalieren Sie Ihren Betrieb, um der wachsenden Nachfrage gerecht zu werden, ohne den manuellen Aufwand zu erhöhen.",
+
+    "showcase.dots.team": "Verwalten Sie Ihr Team und dessen Berechtigungen.",
+    "showcase.dots.processes": "Aktive Prozesse laufen nahtlos ab.",
+    "showcase.dots.alerts":
+      "Erhalten Sie Benachrichtigungen für abgeschlossene Aufgaben und Berichte.",
     // Why AIceFlow
-    "why.title": "Warum AIceFlow?",
+
+    "why.title": "Warum eine Partnerschaft mit AIceFlow?",
     "why.description":
-      "Was uns besonders macht und warum führende Unternehmen auf unsere Lösungen vertrauen.",
+      "Wir sind nicht nur ein weiterer Softwareanbieter. Wir sind Ihr engagierter Partner bei der Transformation Ihres Unternehmens durch intelligente Automatisierung.",
 
-    "why.customizable.title": "100% individuell",
-    "why.customizable.description":
-      "Unsere Lösungen passen sich exakt Ihren Anforderungen an – für maximalen Nutzen.",
+    "why.tailored.title": "Maßgeschneiderte Intelligenz, keine Standard-Bots",
+    "why.tailored.description":
+      "Wir entwickeln Lösungen, die exakt auf Ihre Prozesse zugeschnitten sind. Unsere Agenten werden individuell konfiguriert, um Ihre einzigartigen Herausforderungen mit maximaler Wirkung zu lösen.",
 
-    "why.localGlobal.title": "Regional verwurzelt, global gedacht",
-    "why.localGlobal.description":
-      "Lokales Verständnis kombiniert mit globaler Innovationskraft.",
+    "why.partnership.title": "Eine echte Partnerschaft",
+    "why.partnership.description":
+      "Ihr Erfolg ist unser Erfolg. Wir arbeiten vom ersten Tag an eng mit Ihnen zusammen, um Ihre Ziele zu verstehen und sicherzustellen, dass unsere Lösungen einen echten, messbaren Mehrwert liefern.",
 
-    "why.resultsDriven.title": "Erfolgsorientiert",
-    "why.resultsDriven.description":
-      "Unser Fokus liegt auf messbaren Resultaten und stetiger Optimierung.",
+    "why.synergy.title": "Mensch + KI: Die perfekte Synergie",
+    "why.synergy.description":
+      "Unsere Philosophie ist es, zu erweitern, nicht zu ersetzen. Wir stärken Ihr Team, indem wir mühsame Arbeit automatisieren und Freiraum für strategische und kreative Aufgaben schaffen.",
 
-    "why.teamwork.title": "Mensch & KI im Einklang",
-    "why.teamwork.description":
-      "Unsere KI unterstützt und ergänzt Ihr Team, ohne es zu ersetzen.",
+    "why.local.title": "Lokale Expertise, globale Stärke",
+    "why.local.description":
+      "Profitieren Sie vom aufmerksamen, zuverlässigen Service eines lokalen deutschen Partners und nutzen Sie gleichzeitig die Stärke von erstklassiger, globaler KI-Technologie.",
 
-    "why.stats.title": "AIceFlow in Zahlen",
-    "why.stats.description":
-      "Nachgewiesene Erfolge über diverse Branchen hinweg, mit deutlichen Effizienz- und Wachstumssteigerungen.",
+    "commitment.title": "Unser Versprechen an Sie",
+    "commitment.description":
+      "Diese Prinzipien sind das Fundament jedes Projekts, das wir durchführen.",
 
-    "why.stats.projects.label": "Automatisierungsprojekte",
-    "why.stats.satisfaction.label": "Kundenzufriedenheit",
-    "why.stats.timeSavings.label": "Durchschnittliche Zeitersparnis",
-    "why.stats.roiTimeline.label": "Durchschnittlicher ROI-Zeitraum",
+    "commitment.transparency.title": "Radikale Transparenz",
+    "commitment.transparency.description":
+      "Keine 'Black Boxes'. Sie haben jederzeit ein klares Verständnis dafür, was Ihre KI-Agenten tun und warum. So behalten Sie die volle Kontrolle.",
 
+    "commitment.empowerment.title": "Stärkung des Teams",
+    "commitment.empowerment.description":
+      "Unser Ziel ist es, Ihre Experten noch besser zu machen. Wir laden die Fähigkeiten Ihres Teams auf und verwandeln institutionelles Wissen in einen automatisierten Vorteil.",
+
+    "commitment.value.title": "Messbarer Mehrwert",
+    "commitment.value.description":
+      "Wir definieren für jedes Projekt klare KPIs. Erfolg bedeutet für uns nicht nur, ein Tool zu starten, sondern die für Sie wichtigen Kennzahlen nachweislich zu verbessern.",
     //Team
 
+    "team.title": "Die Architekten Ihrer Automatisierung",
+    "team.description":
+      "Wir sind eine gründergeführte Agentur und kombinieren jahrelange Enterprise-Level-Entwicklung mit einem tiefen Verständnis für die Treiber von Geschäftswachstum.",
+
+    "team.expertiseTitle": "Kernkompetenzen",
+
     "team.ff.name": "Felix Funke",
-    "team.ff.position": "Prozessarchitekt & KI-Stratege",
+    "team.ff.position": "Co-Founder | Growth & Solution Architect",
     "team.ff.bio":
-      "Felix vereint technisches Know-how mit unternehmerischem Denken. Er konzipiert skalierbare LLM-Workflows und setzt sie von Grund auf um – vom Backend bis zur Nutzeroberfläche. Ob zur Automatisierung redaktioneller Abläufe oder für kontrollierbare Mensch-KI-Zusammenarbeit: Felix denkt Prozesse neu und macht sie intelligent und intuitiv bedienbar.",
-    "team.ff.expertise.ml": "LLM-Anwendungen & Prompt Engineering",
-    "team.ff.expertise.automation": "KI-gestützte Prozessautomatisierung",
-    "team.ff.expertise.cv": "Echtzeit-Interfaces & Datenvisualisierung",
-    "team.ff.expertise.optimization": "Workflow- & Kostenoptimierung",
-    "team.expertiseTitle": "Expertise",
+      "Mit seinem Hintergrund in BWL und Full-Stack-Entwicklung konzentriert sich Felix auf das 'Warum' hinter jedem Projekt. Er arbeitet partnerschaftlich mit Kunden, um ihre Herausforderungen zu verstehen, Automatisierungsstrategien an Wachstumszielen auszurichten und sicherzustellen, dass die finale Lösung messbaren Geschäftswert liefert.",
+
+    "team.ff.expertise.business.title": "Strategie & Business",
+    "team.ff.expertise.business.item1": "Prozessanalyse & ROI",
+    "team.ff.expertise.business.item2": "Wachstumsorientierte Lösungen",
+    "team.ff.expertise.business.item3": "Partnerschaftliche Zusammenarbeit",
+
+    "team.ff.expertise.tech.title": "Technologie & Engineering",
+    "team.ff.expertise.tech.item1":
+      "Full-Stack: Vom Frontend (Web & App) bis zum Backend",
+    "team.ff.expertise.tech.item2": "Intelligente Workflow-Automatisierung",
+    "team.ff.expertise.tech.item3": "Praxisreife KI-Lösungen",
+
+    "team.mp.name": "Maik Pfäffle",
+    "team.mp.position":
+      "Co-Founder | Business Software Architekt & Process Automation Experte",
+    "team.mp.bio":
+      "Maik bringt tiefgehendes Know-how in Business-Software, Cloud-Technologien und künstlicher Intelligenz zusammen. Als erfahrener Software-Architekt entwickelt er performante, wartbare und zukunftsfähige Systeme – von der Integrationslogik bis zur modernen Nutzeroberfläche. Seine Spezialität: den Einsatz von AI Agents zur Prozessautomatisierung in komplexen Unternehmensumgebungen. Maik denkt Abläufe nicht nur digital, sondern intelligent – mit Blick auf Skalierbarkeit, Sicherheit und echten Mehrwert.",
+
+    "team.mp.expertise.business.title": "Strategie & Business",
+    "team.mp.expertise.business.item1": "Technische Machbarkeit",
+    "team.mp.expertise.business.item2": "Workflow-Automatisierung",
+    "team.mp.expertise.business.item3": "System-Integrationsstrategie",
+
+    "team.mp.expertise.tech.title": "Technologie & Engineering",
+    "team.mp.expertise.tech.item1": "Enterprise-Sicherheit",
+    "team.mp.expertise.tech.item2": "Robuste Backend-Systeme",
+    "team.mp.expertise.tech.item3": "API- & SAP-Entwicklung",
 
     // Contact
     "contact.title": "Bereit, Ihr Unternehmen zu transformieren?",
@@ -440,7 +564,7 @@ export const translations = {
     "contact.form.companyLabel": "Firmenname",
     "contact.form.companyPlaceholder": "Ihr Firmenname",
     "contact.form.phoneLabel": "Telefonnummer",
-    "contact.form.phonePlaceholder": "+49 (0) 123 456 789",
+    "contact.form.phonePlaceholder": "+49 (0) 176 6336 4095",
     "contact.form.needsLabel":
       "Erzählen Sie uns von Ihren Automatisierungsbedürfnissen",
     "contact.form.needsPlaceholder":
