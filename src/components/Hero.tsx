@@ -195,7 +195,7 @@ const Hero = () => {
                   {word}
                 </motion.span>
               ))}
-            <span className="block text-transparent bg-clip-text bg-gradient-primary">
+            <span className="block text-transparent bg-clip-text bg-gradient-primary pb-2">
               {t("hero.title.line2")
                 .split(" ")
                 .map((word, i) => (
@@ -277,12 +277,12 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm">{t("hero.status.available")}</span>
+                <span className="text-lg">{t("hero.status.available")}</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-border"></div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">{t("hero.status.location")}</span>
+                <span className="text-lg">{t("hero.status.location")}</span>
               </div>
             </div>
           </motion.div>

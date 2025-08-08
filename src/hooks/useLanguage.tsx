@@ -50,7 +50,7 @@ export const translations = {
     "hero.status.location": "Based in Überlingen, Lake Constance",
 
     // About
-    "about.title": "About AIceFlow",
+    "about.title": "About",
     "about.description":
       "From our base at Lake Constance, we free your team from tedious routine tasks. Our tailored automations boost your productivity while giving your team complete control at all times.",
 
@@ -144,6 +144,10 @@ export const translations = {
       "You monitor and manage everything from your dashboard.",
     "showcase.features.item4":
       "Gain actionable insights from automated reports.",
+    "showcase.features.item5":
+      "We programmatically connect to your databases, CRM systems, and other applications.",
+    "showcase.features.item6":
+      "We ensure secure and controlled data flow throughout all processes.",
 
     "showcase.impact.title": "The Strategic Impact",
     "showcase.impact.unlock.icon": "Users",
@@ -281,7 +285,7 @@ export const translations = {
     "contact.info.email.title": "Email",
     "contact.info.email.address": "hello@aiceflow.de",
     "contact.info.phone.title": "Phone",
-    "contact.info.phone.number": "+49 (0) 7531 123 456",
+    "contact.info.phone.number": "+49 (0) 176 6336 4095",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.line1": "Mon – Fri: 9:00 AM – 6:00 PM CET",
     "contact.info.hours.line2": "Sat: 10:00 AM – 2:00 PM CET",
@@ -326,7 +330,7 @@ export const translations = {
     "hero.status.location": "Standort: Überlingen am Bodensee",
 
     // About
-    "about.title": "Über AIceFlow",
+    "about.title": "Über",
     "about.description":
       "Von unserem Sitz am Bodensee aus entlasten wir Ihr Team von zeitraubenden Routineaufgaben. Unsere maßgeschneiderten Automatisierungen erhöhen Ihre Produktivität und geben Ihrem Team die volle Kontrolle – jederzeit.",
 
@@ -348,9 +352,9 @@ export const translations = {
     "services.description":
       "Wir nehmen Ihnen Routineaufgaben ab und schaffen Transparenz – damit Sie sich voll auf das Kerngeschäft konzentrieren können.",
 
-    "services.processAutomation.title": "Workflow-Automatisierung",
+    "services.processAutomation.title": "Prozess-Automatisierung",
     "services.processAutomation.description":
-      "Beschleunigen Sie Abläufe, beseitigen Sie Engpässe und behalten Sie dabei die volle Kontrolle.",
+      "Beschleunigen Sie Ihre Prozesse, beseitigen Sie Engpässe und behalten Sie dabei die volle Kontrolle.",
     "services.processAutomation.feature1": "Weniger manuelle Aufgaben",
     "services.processAutomation.feature2": "Kürzere Bearbeitungszeiten",
     "services.processAutomation.feature3": "Konstante Qualität",
@@ -369,7 +373,7 @@ export const translations = {
       "Gemeinsam mit Ihnen identifizieren wir Potenziale, planen Maßnahmen und sorgen langfristig für spürbare Verbesserungen.",
     "services.consultation.feature1": "Detaillierte Prozessanalyse",
     "services.consultation.feature2": "Individueller Fahrplan",
-    "services.consultation.feature3": "Praxisnahe Schulungen",
+    "services.consultation.feature3": "Praxisnahe Umsetzung",
     "services.consultation.feature4": "Kontinuierlicher Support",
 
     // How It Works
@@ -377,7 +381,7 @@ export const translations = {
     "howItWorks.description":
       "Unser klar strukturierter Ablauf sorgt für schnelle, kontrollierte Effizienzsteigerung durch Automatisierung.",
 
-    "howItWorks.step1.title": "Discovery-Session",
+    "howItWorks.step1.title": "Potentialanalyse",
     "howItWorks.step1.description":
       "Gemeinsam analysieren wir Ihre Abläufe und identifizieren optimale Automatisierungspotenziale.",
 
@@ -394,7 +398,7 @@ export const translations = {
       "Wir überwachen und verfeinern Ihre Prozesse kontinuierlich für nachhaltige Effizienzgewinne.",
 
     // Industries
-    "industries.title": "Branchen, die wir stärken",
+    "industries.title": "Bereiche, die wir stärken",
     "industries.description":
       "Ob Logistik, Marketing oder Healthcare – unsere Automatisierungslösungen passen sich Ihren Anforderungen an und ermöglichen mehr mit weniger.",
 
@@ -451,6 +455,10 @@ export const translations = {
       "Sie überwachen und steuern alles über Ihr Dashboard.",
     "showcase.features.item4":
       "Gewinnen Sie handlungsrelevante Einblicke aus automatisierten Berichten.",
+    "showcase.features.item5":
+      "Wir binden Ihre Datenbanken, CRM-Systeme und weitere Anwendungen programmatisch ein.",
+    "showcase.features.item6":
+      "Für einen sicheren und kontrollierten Datenfluss in allen Prozessen wird gesorgt.",
 
     "showcase.impact.title": "Der strategische Mehrwert",
     "showcase.impact.unlock.icon": "Users",
@@ -527,8 +535,7 @@ export const translations = {
     "team.ff.name": "Felix Funke",
     "team.ff.role": "Co-Founder | Vision & Kundenstrategie",
     "team.ff.bio":
-      "Als Full-Stack-Entwickler mit einer Leidenschaft für Wachstum konzentriert sich Felix auf das große Ganze. Er versteht die Welt des Kunden, formt die strategische Vision und treibt Projekte mit Energie voran. Er ist Ihr erster Ansprechpartner, um Geschäftsziele in einen klaren, umsetzbaren Plan zu verwandeln.",
-
+      "Felix kombiniert fundiertes betriebswirtschaftliches Wissen mit umfassender technischer Erfahrung, um komplexe Geschäftsanforderungen präzise zu erfassen und in maßgeschneiderte Web- und App-Lösungen zu übersetzen. Seine Stärke liegt darin, technische Möglichkeiten mit den Zielen des Unternehmens zu verbinden – so entstehen effiziente, skalierbare und nachhaltige digitale Produkte. Neben der technischen Umsetzung legt Felix großen Wert auf eine enge Zusammenarbeit mit Kunden, um echte Mehrwerte zu schaffen und den Geschäftserfolg langfristig zu sichern.",
     "team.ff.expertise.business.item1": "Prozessanalyse & ROI",
     "team.ff.expertise.business.item2": "Kundenzentrierte Strategie",
     "team.ff.expertise.business.item3": "Wachstums-Roadmapping",
@@ -540,8 +547,7 @@ export const translations = {
     "team.mp.name": "Maik Pfäffle",
     "team.mp.role": "Co-Founder | Präzision & Technische Architektur",
     "team.mp.bio":
-      "Als Full-Stack-Entwickler mit einem Fokus auf Perfektion stellt Maik sicher, dass die Vision für die Ewigkeit gebaut wird. Er ist die treibende Kraft für Gründlichkeit und Detailtreue, der robuste Systeme entwirft und garantiert, dass jede Codezeile sicher, skalierbar und makellos ist. Er ist Ihre Garantie für technische Exzellenz.",
-
+      "Maik hat als SAP-Professional und Software-Architekt tiefgehendes Know-how in Business-Software, Cloud-Technologien und KI. Er entwickelt performante, wartbare Systeme – von Integrationen bis zu modernen Nutzeroberflächen – und ist spezialisiert auf AI Agents zur Prozessautomatisierung in komplexen Unternehmensumgebungen. Dabei denkt er Abläufe intelligent, mit Fokus auf Skalierbarkeit, Sicherheit und echtem Mehrwert.",
     "team.mp.expertise.business.item1": "Technische Machbarkeitsanalyse",
     "team.mp.expertise.business.item2": "Komplexe Workflow-Automatisierung",
     "team.mp.expertise.business.item3": "System-Integrationsstrategie",
@@ -590,7 +596,7 @@ export const translations = {
     "contact.info.email.title": "E-Mail",
     "contact.info.email.address": "hallo@aiceflow.de",
     "contact.info.phone.title": "Telefon",
-    "contact.info.phone.number": "+49 (0) 7531 123 456",
+    "contact.info.phone.number": "+49 (0) 176 6336 4095",
     "contact.info.hours.title": "Öffnungszeiten",
     "contact.info.hours.line1": "Mo – Fr: 9:00 – 18:00 Uhr CET",
     "contact.info.hours.line2": "Sa: 10:00 – 14:00 Uhr CET",

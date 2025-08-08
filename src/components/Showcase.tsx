@@ -67,7 +67,7 @@ export default function Showcase() {
     },
   ];
 
-  const featureKeys = ["item1", "item2", "item3", "item4"];
+  const featureKeys = ["item1", "item2", "item3", "item4", "item5", "item6"];
   const impactKeys = ["unlock", "decisions", "resilience"];
 
   const cardVariants: Variants = {

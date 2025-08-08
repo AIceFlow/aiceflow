@@ -182,7 +182,7 @@ const Team: React.FC = () => {
               </p>
 
               {/* Expertise */}
-              <div className="border-t border-border pt-6 mt-auto">
+              {/* <div className="border-t border-border pt-6 mt-auto">
                 <div className="flex flex-col sm:flex-row gap-6 text-left">
                   <ExpertiseColumn
                     title={founder.expertise.business.title}
@@ -199,7 +199,7 @@ const Team: React.FC = () => {
                     }
                   />
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

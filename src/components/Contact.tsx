@@ -232,7 +232,7 @@ const Contact: React.FC = () => {
                     type="submit"
                     variant="cta"
                     size="lg"
-                    className="w-full"
+                    className="w-full "
                     disabled={status === "loading"}
                   >
                     {status === "loading" && (
@@ -300,7 +300,7 @@ const Contact: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
@@ -314,10 +314,10 @@ const Contact: React.FC = () => {
                       {t("contact.info.hours.line2")}
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
+            {/* <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
               <h3 className="text-xl font-bold text-foreground mb-6">
                 {t("contact.actions.title")}
               </h3>
@@ -326,7 +326,7 @@ const Contact: React.FC = () => {
                   {t("contact.actions.discovery")}
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
