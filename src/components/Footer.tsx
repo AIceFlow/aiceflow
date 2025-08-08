@@ -2,10 +2,12 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { Linkedin } from "lucide-react";
 import React from "react";
 import horizontalLogo from "@/assets/logo/horizontal-full.png";
+import ImpressumModal from "./Impressum";
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
 
+  const [impressumOpen, setImpressumOpen] = React.useState(false);
   return (
     <footer className="bg-foreground text-white py-16">
       <div className="container mx-auto px-4">
@@ -125,15 +127,12 @@ const Footer: React.FC = () => {
               {t("footer.copy")} | {t("footer.tagline")}
             </p>
             <div className="flex space-x-6 text-sm text-gray-300">
-              <a href="#" className="hover:text-white transition-colors">
-                {t("footer.policies.privacy")}
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                {t("footer.policies.terms")}
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                {t("footer.policies.imprint")}
-              </a>
+              <ImpressumModal
+                open={impressumOpen}
+                onOpenChange={setImpressumOpen}
+              >
+                <a className=" cursor-pointer">Impressum</a>
+              </ImpressumModal>
             </div>
           </div>
         </div>

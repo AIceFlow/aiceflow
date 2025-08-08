@@ -168,6 +168,33 @@ export const translations = {
     "showcase.dots.alerts": "Get alerts for completed tasks and reports.",
 
     // Industries
+    "industries.title": "Industries We Empower",
+    "industries.description":
+      "Whether logistics, marketing, or healthcare – our automation solutions adapt to your requirements and enable you to do more with less.",
+
+    "industries.logistics.name": "Logistics",
+    "industries.logistics.description":
+      "Optimize routes and forecast demand to keep your supply chain running smoothly.",
+
+    "industries.marketing.name": "Marketing",
+    "industries.marketing.description":
+      "Automate campaign workflows, gain deeper insights, and boost customer engagement.",
+
+    "industries.sales.name": "Sales",
+    "industries.sales.description":
+      "Qualify leads faster, automate follow-ups, and manage customer relationships at scale.",
+
+    "industries.operations.name": "Operations",
+    "industries.operations.description":
+      "Optimize core processes and monitor performance in real time to avoid bottlenecks.",
+
+    "industries.manufacturing.name": "Manufacturing",
+    "industries.manufacturing.description":
+      "Improve manufacturing reliability with predictive maintenance and quality controls.",
+
+    "industries.healthcare.name": "Healthcare",
+    "industries.healthcare.description":
+      "Enhance the patient experience with automated appointment scheduling and secure data handling.",
 
     // Why AIceFlow
     "why.title": "Why Partner with AIceFlow?",
@@ -298,6 +325,20 @@ export const translations = {
 
     "footer.company.description":
       "We help businesses across southern Germany automate their processes intelligently and efficiently using AI.",
+
+    "footer.nav.services.title": "Services",
+    "footer.nav.services.processAutomation": "Process Automation",
+    "footer.nav.services.customDashboards": "Custom Dashboards",
+    "footer.nav.services.consultation": "Strategic Consulting",
+    "footer.nav.services.implementation": "AI Implementation",
+    "footer.nav.services.support": "Ongoing Support",
+
+    "footer.nav.company.title": "Company",
+    "footer.nav.company.about": "About AIceFlow",
+    "footer.nav.company.team": "Our Team",
+    "footer.nav.company.testimonials": "Testimonials",
+    "footer.nav.company.contact": "Contact",
+    "footer.nav.company.careers": "Careers",
 
     "footer.tagline": "Precision. Strategy. Excellence.",
   },
