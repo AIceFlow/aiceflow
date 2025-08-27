@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
       );
       console.error("Supabase submission error:", error.message);
     } else {
-      reportFormSubmitConversion();
+      reportFormSubmitConversion(submissionData.email);
       setStatus("success");
       setFormData(initialFormData); // Reset form on success
     }
