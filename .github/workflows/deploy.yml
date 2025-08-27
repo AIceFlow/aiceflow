@@ -30,9 +30,10 @@ jobs:
 
       - name: Build the project
         run: npm run build
-        env: # Use the secrets you created in Part 1
+        env: # Use the secrets you created
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_GOOGLE_ADS_ID: ${{ secrets.VITE_GOOGLE_ADS_ID }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -40,3 +41,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # The build output folder, default is 'dist' for Vite
           publish_dir: ./dist
+          # HINZUGEFÜGT: Diese Zeile setzt automatisch Ihre Custom Domain
+          cname: aiceflow.de
