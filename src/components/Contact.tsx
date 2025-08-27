@@ -7,12 +7,13 @@ import {
   MapPin,
   Mail,
   Phone,
-  Clock,
   Loader2,
   CheckCircle,
   AlertTriangle,
 } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
+
+import { reportFormSubmitConversion } from "../utils/analytics";
 
 type FormData = {
   firstName: string;
@@ -78,6 +79,7 @@ const Contact: React.FC = () => {
       );
       console.error("Supabase submission error:", error.message);
     } else {
+      reportFormSubmitConversion();
       setStatus("success");
       setFormData(initialFormData); // Reset form on success
     }
