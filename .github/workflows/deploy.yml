@@ -42,4 +42,4 @@ jobs:
           # The build output folder, default is 'dist' for Vite
           publish_dir: ./dist
           # HINZUGEFÜGT: Diese Zeile setzt automatisch Ihre Custom Domain
-          cname: aiceflow.de
+          cname: www.aiceflow.de
