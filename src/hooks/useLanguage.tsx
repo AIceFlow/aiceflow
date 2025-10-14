@@ -234,44 +234,36 @@ export const translations = {
       "We establish clear KPIs for every project. Success isn't just about launching a tool; it's about demonstrably improving the metrics that matter to you.",
 
     //Team
-    "team.title": "The Operating System for Your Growth",
-    "team.description":
-      "We don't deliver concepts, but functioning, intelligent systems. As technical founders and AI specialists, we transform your complex business processes into autonomous agents that work and learn for you.",
+    "team.founders.title": "Founders",
+    "team.founders.subtitle": "Strategy × Engineering, delivered as one.",
+    "team.duo.title": "How we work",
+    "team.duo.point1":
+      "Objectives become a clear automation blueprint, delivered in small, verified increments.",
+    "team.duo.point2":
+      "End-to-end architecture, integrations, and data flow designed to fit your stack (SAP, CRM, DB, APIs).",
+    "team.duo.point3":
+      "After the first win, we harden: security, reliability, monitoring, and clean handover docs.",
+    "team.cta.primary": "Book a call with both founders",
+    "team.cta.aria": "Open contact section to book a call",
 
-    "team.philosophy.title": "The Engine: An Intelligent Dialogue",
-    "team.philosophy.description":
-      "Every business process has its own language. We founded this agency because, for the first time, modern AI speaks this language fluently. Our job is to orchestrate the dialogue between your objective and the artificial intelligence. As founders deeply rooted in both strategy and code, we ensure this dialogue is perfect: one of us ensures the strategic clarity of the conversation, the other the technical perfection of the syntax. The result is a system that thinks along—and creates real value.",
-    "team.philosophy.imageAlt":
-      "The founders of AIceFlow, Felix Funke and Maik Pfäffle",
+    "team.ff.role_short": "Vision, Client Strategy & Full-stack",
+    "team.ff.focus1": "Strategy",
+    "team.ff.focus2": "Full-stack & AI",
+    "team.ff.focus3": "Client Advisory",
+    "team.ff.point1":
+      "Translates your business goals into an actionable automation roadmap.",
+    "team.ff.point2":
+      "Owns discovery, ROI and UX/dashboards that teams actually use.",
+    "team.ff.point3": "Builds fast prototypes and leads delivery to outcomes.",
 
-    "team.expertise.business": "Strategy & Business",
-    "team.expertise.tech": "Technology & Engineering",
-
-    "team.ff.name": "Felix Funke",
-    "team.ff.role": "Co-Founder | Vision & Client Strategy",
-    "team.ff.bio":
-      "As a full-stack engineer with a passion for growth, Felix focuses on the big picture. He excels at understanding a client's world, shaping the strategic vision, and driving the project forward with energy. He's your primary partner for turning business needs into a clear, actionable plan.",
-
-    "team.ff.expertise.business.item1": "Process Discovery & ROI",
-    "team.ff.expertise.business.item2": "Client-Centric Strategy",
-    "team.ff.expertise.business.item3": "Growth Roadmapping",
-
-    "team.ff.expertise.tech.item1": "Rapid Prototyping",
-    "team.ff.expertise.tech.item2": "User-Centric Dashboards",
-    "team.ff.expertise.tech.item3": "Full-Stack Application Design",
-
-    "team.mp.name": "Maik Pfäffle",
-    "team.mp.role": "Co-Founder | Precision & Technical Architecture",
-    "team.mp.bio":
-      "As a full-stack engineer with a focus on perfection, Maik ensures the vision is built to last. He is the thorough, detail-oriented force who architects robust systems and guarantees every line of code is secure, scalable, and flawless. He is your guarantee of technical excellence.",
-
-    "team.mp.expertise.business.item1": "Technical Feasibility Analysis",
-    "team.mp.expertise.business.item2": "Complex Workflow Automation",
-    "team.mp.expertise.business.item3": "System Integration Strategy",
-
-    "team.mp.expertise.tech.item1": "Enterprise-Grade Security",
-    "team.mp.expertise.tech.item2": "Robust & Scalable Backends",
-    "team.mp.expertise.tech.item3": "API & System Integration",
+    "team.mp.role_short": "SAP, Process Automation & Architecture",
+    "team.mp.focus1": "SAP & Integrations",
+    "team.mp.focus2": "Architecture",
+    "team.mp.focus3": "Process Automation",
+    "team.mp.point1": "Designs secure, scalable systems and clean data flows.",
+    "team.mp.point2": "Leads integrations (SAP, CRM, APIs, databases).",
+    "team.mp.point3":
+      "Hardens reliability, monitoring and quality engineering.",
     // Contact
     "contact.title": "Ready to Transform Your Business?",
     "contact.description":
@@ -560,42 +552,39 @@ export const translations = {
       "Wir definieren für jedes Projekt klare KPIs. Erfolg bedeutet für uns nicht nur, ein Tool zu starten, sondern die für Sie wichtigen Kennzahlen nachweislich zu verbessern.",
 
     //Team
-    "team.title": "Das Betriebssystem für Ihr Wachstum",
-    "team.description":
-      "Wir liefern keine Konzepte, sondern funktionierende, intelligente Systeme. Als technische Gründer und KI-Spezialisten wandeln wir Ihre komplexen Geschäftsprozesse in autonome Agenten um, die für Sie arbeiten und lernen.",
-
-    "team.philosophy.title": "Der Motor: Ein intelligenter Dialog",
-    "team.philosophy.description":
-      "Jeder Geschäftsprozess hat eine eigene Sprache. Wir haben diese Agentur gegründet, weil moderne KI diese Sprache erstmals fließend spricht. Unsere Aufgabe ist es, den Dialog zwischen Ihrem Ziel und der künstlichen Intelligenz zu orchestrieren. Als Gründer, die beide in Strategie und Code verwurzelt sind, stellen wir sicher, dass dieser Dialog perfekt ist: Einer sorgt für die strategische Klarheit der Konversation, der andere für die technische Perfektion der Syntax. So entsteht ein System, das mitdenkt – und echten Mehrwert schafft.",
-    "team.philosophy.imageAlt":
-      "Die Gründer von AIceFlow, Felix Funke und Maik Pfäffle",
-
-    "team.expertise.business": "Strategie & Business",
-    "team.expertise.tech": "Technologie & Engineering",
+    "team.founders.title": "Founders",
+    "team.founders.subtitle": "Strategie × Engineering – aus einer Hand.",
+    "team.duo.title": "So arbeiten wir",
+    "team.duo.point1":
+      "Aus Zielen wird ein klarer Automatisierungs-Fahrplan – umgesetzt in kleinen, verifizierten Schritten.",
+    "team.duo.point2":
+      "Architektur, Integrationen und Datenflüsse Ende-zu-Ende – passend zu Ihrem Stack (SAP, CRM, DB, APIs).",
+    "team.duo.point3":
+      "Nach dem ersten Erfolg härten wir: Sicherheit, Stabilität, Monitoring und saubere Übergabe.",
+    "team.cta.primary": "Termin mit beiden Founder buchen",
+    "team.cta.aria": "Kontaktbereich öffnen, um einen Termin zu buchen",
 
     "team.ff.name": "Felix Funke",
-    "team.ff.role": "Co-Founder | Vision & Kundenstrategie",
-    "team.ff.bio":
-      "Felix kombiniert fundiertes betriebswirtschaftliches Wissen mit umfassender technischer Erfahrung, um komplexe Geschäftsanforderungen präzise zu erfassen und in maßgeschneiderte Web- und App-Lösungen zu übersetzen. Seine Stärke liegt darin, technische Möglichkeiten mit den Zielen des Unternehmens zu verbinden – so entstehen effiziente, skalierbare und nachhaltige digitale Produkte. Neben der technischen Umsetzung legt Felix großen Wert auf eine enge Zusammenarbeit mit Kunden, um echte Mehrwerte zu schaffen und den Geschäftserfolg langfristig zu sichern.",
-    "team.ff.expertise.business.item1": "Prozessanalyse & ROI",
-    "team.ff.expertise.business.item2": "Kundenzentrierte Strategie",
-    "team.ff.expertise.business.item3": "Wachstums-Roadmapping",
-
-    "team.ff.expertise.tech.item1": "Rapid Prototyping",
-    "team.ff.expertise.tech.item2": "Nutzerzentrierte Dashboards",
-    "team.ff.expertise.tech.item3": "Full-Stack-Anwendungsdesign",
+    "team.ff.role_short": "Vision, Kundenstrategie & Full-Stack",
+    "team.ff.focus1": "Strategie",
+    "team.ff.focus2": "Full-Stack & KI",
+    "team.ff.focus3": "Kundenberatung",
+    "team.ff.point1":
+      "Überführt Geschäftsziele in einen umsetzbaren Automatisierungs-Plan.",
+    "team.ff.point2": "Fokus auf UX/Dashboards, die Teams wirklich nutzen.",
+    "team.ff.point3": "Steuert messbare Ergebnisse und klare KPIs.",
 
     "team.mp.name": "Maik Pfäffle",
-    "team.mp.role": "Co-Founder | Präzision & Technische Architektur",
-    "team.mp.bio":
-      "Maik hat als SAP-Professional und Software-Architekt tiefgehendes Know-how in Business-Software, Cloud-Technologien und KI. Er entwickelt performante, wartbare Systeme – von Integrationen bis zu modernen Nutzeroberflächen – und ist spezialisiert auf AI Agents zur Prozessautomatisierung in komplexen Unternehmensumgebungen. Dabei denkt er Abläufe intelligent, mit Fokus auf Skalierbarkeit, Sicherheit und echtem Mehrwert.",
-    "team.mp.expertise.business.item1": "Technische Machbarkeitsanalyse",
-    "team.mp.expertise.business.item2": "Komplexe Workflow-Automatisierung",
-    "team.mp.expertise.business.item3": "System-Integrationsstrategie",
-
-    "team.mp.expertise.tech.item1": "Enterprise-Sicherheit",
-    "team.mp.expertise.tech.item2": "Robuste & Skalierbare Backends",
-    "team.mp.expertise.tech.item3": "API- & Systemintegration",
+    "team.mp.role_short": "SAP, Prozess-Automation & Architektur",
+    "team.mp.focus1": "SAP & Integrationen",
+    "team.mp.focus2": "Architektur",
+    "team.mp.focus3": "Prozessautomatisierung",
+    "team.mp.point1":
+      "Entwirft skalierbare, sichere Systeme und saubere Datenpipelines.",
+    "team.mp.point2":
+      "Steuert Enterprise-Integrationen (SAP, CRM, APIs, Datenbanken).",
+    "team.mp.point3":
+      "Verankert Zuverlässigkeit, Monitoring und Qualität von Beginn an.",
     // Contact
     "contact.title": "Bereit, Ihr Unternehmen zu transformieren?",
     "contact.description":
