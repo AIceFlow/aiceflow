@@ -298,9 +298,9 @@ export const translations = {
     // Contact Info
     "contact.info.title": "Contact Information",
     "contact.info.office.title": "Our Office",
-    "contact.info.office.line1": "Lake Constance Region",
-    "contact.info.office.line2": "Southern Germany",
-    "contact.info.office.line3": "Baden-Württemberg",
+    "contact.info.office.line1": "AIceFlow GmbH",
+    "contact.info.office.line2": "Nussdorfer Strasse 9",
+    "contact.info.office.line3": "88662 Ueberlingen, Germany",
     "contact.info.email.title": "Email",
     "contact.info.email.address": "hello@aiceflow.de",
     "contact.info.phone.title": "Phone",
@@ -332,6 +332,7 @@ export const translations = {
     "footer.nav.company.contact": "Contact",
     "footer.nav.company.careers": "Careers",
 
+    "footer.copy": "© 2025 AIceFlow GmbH. All rights reserved.",
     "footer.tagline": "Precision. Strategy. Excellence.",
   },
   de: {
@@ -620,9 +621,9 @@ export const translations = {
     // Contact Info
     "contact.info.title": "Kontaktieren Sie uns",
     "contact.info.office.title": "Standort",
-    "contact.info.office.line1": "Region Bodensee",
-    "contact.info.office.line2": "Süddeutschland",
-    "contact.info.office.line3": "Baden-Württemberg",
+    "contact.info.office.line1": "AIceFlow GmbH",
+    "contact.info.office.line2": "Nussdorfer Strasse 9",
+    "contact.info.office.line3": "88662 Ueberlingen, Deutschland",
     "contact.info.email.title": "E-Mail",
     "contact.info.email.address": "hallo@aiceflow.de",
     "contact.info.phone.title": "Telefon",
@@ -657,7 +658,7 @@ export const translations = {
     "footer.nav.company.contact": "Kontakt",
     "footer.nav.company.careers": "Karriere",
 
-    "footer.copy": "© 2025 AIceFlow. Alle Rechte vorbehalten.",
+    "footer.copy": "© 2025 AIceFlow GmbH. Alle Rechte vorbehalten.",
     "footer.tagline": "Präzision, Strategie, Exzellenz.",
 
     "footer.policies.privacy": "Datenschutz",

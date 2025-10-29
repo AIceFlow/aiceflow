@@ -38,82 +38,84 @@ export default function ImpressumModal({
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-8 text-sm leading-relaxed">
-          {/* Maik / HIKES DIGITAL */}
           <section>
             <h3 className="font-semibold text-base mb-2">
-              HIKES DIGITAL GmbH{" "}
+              AIceFlow GmbH{" "}
               <span className="font-normal text-muted-foreground">
-                (Maik Pfäffle)
+                (in Gründung)
               </span>
             </h3>
             <div>
-              Josef-Maier-Str. 21
+              Nussdorfer Strasse 9
               <br />
-              88682 Salem
+              88662 Ueberlingen
               <br />
               Deutschland
             </div>
             <div className="mt-2 flex flex-col gap-1">
               <span className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <a href="tel:017655735688" className="underline">
-                  0176 55735688
-                </a>
+                <span>
+                  <span className="font-medium">Felix Funke:</span>{" "}
+                  <a href="tel:017663364095" className="underline">
+                    0176 63364095
+                  </a>
+                </span>
               </span>
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a
-                  href="mailto:maik.pfaeffle@hikes.digital"
-                  className="underline"
-                >
-                  maik.pfaeffle@hikes.digital
-                </a>
+                <span>
+                  <span className="font-medium">Felix Funke:</span>{" "}
+                  <a
+                    href="mailto:felixfunke456@gmail.com"
+                    className="underline"
+                  >
+                    felixfunke456@gmail.com
+                  </a>
+                </span>
+              </span>
+              <span className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>
+                  <span className="font-medium">Maik Pfäffle:</span>{" "}
+                  <a href="tel:017655735688" className="underline">
+                    0176 55735688
+                  </a>
+                </span>
+              </span>
+              <span className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>
+                  <span className="font-medium">Maik Pfäffle:</span>{" "}
+                  <a
+                    href="mailto:maik.pfaeffle@hikes.digital"
+                    className="underline"
+                  >
+                    maik.pfaeffle@hikes.digital
+                  </a>
+                </span>
               </span>
             </div>
             <p className="mt-2">
-              Handelsregister: HRB728466
-              <br />
-              Registergericht: Freiburg
+              Vertreten durch die Geschäftsführer: Felix Funke und Maik Pfäffle
             </p>
-            <p className="mt-2">Vertreten durch: Maik Pfäffle</p>
             <p className="mt-2">
-              Umsatzsteuer-ID: <b>DE361052065</b>
+              Handelsregistereintrag (HRB): wird nachgereicht
+              <br />
+              Umsatzsteuer-ID: wird nachgereicht
             </p>
           </section>
 
           <div className="border-b border-muted" />
 
-          {/* Felix Funke */}
           <section>
             <h3 className="font-semibold text-base mb-2">
-              Felix Funke{" "}
-              <span className="font-normal text-muted-foreground">
-                (Einzelunternehmen)
-              </span>
+              Verantwortliche Ansprechpartner
             </h3>
-            <div>
-              Nußdorfer Str. 9<br />
-              88662 Überlingen
-              <br />
-              Deutschland
-            </div>
-            <p className="mt-2">
-              Umsatzsteuer-ID: <b>DE346946939</b>
+            <p>
+              Für inhaltliche Rückfragen stehen Ihnen die Geschäftsführer Felix
+              Funke und Maik Pfäffle zur Verfügung.
             </p>
-            <div className="mt-2 flex flex-col gap-1">
-              <span className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <a href="tel:017663364095" className="underline">
-                  0176 63364095
-                </a>
-              </span>
-              <span className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:felixfunke456@gmail.com" className="underline">
-                  felixfunke456@gmail.com
-                </a>
-              </span>
-            </div>
           </section>
 
           <div className="border-b border-muted" />
@@ -151,8 +153,8 @@ export default function ImpressumModal({
           <section>
             <h4 className="font-semibold">Hinweis</h4>
             <p>
-              Maik Pfäffle (HIKES DIGITAL GmbH) und Felix Funke sind gemeinsam
-              verantwortlich für die Inhalte dieser Website.
+              Felix Funke und Maik Pfäffle sind gemeinsam verantwortlich für die
+              Inhalte dieser Website.
             </p>
           </section>
         </div>
