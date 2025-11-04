@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Settings2, PlugZap, Handshake, MapPin } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { motion, useMotionValue, useTransform, Variants } from "framer-motion";
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  Variants,
+  AnimatePresence,
+} from "framer-motion";
 
 // --- Helper Component: PillarCard (Unchanged) ---
 const PillarCard: React.FC<{
@@ -19,7 +25,7 @@ const PillarCard: React.FC<{
 
 // --- Main Hero Component ---
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const pillars = [
     { key: "tailored", icon: <Settings2 className="w-8 h-8 text-primary" /> },
@@ -109,6 +115,71 @@ const Hero = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const line1 = t("hero.title.line1");
+  const dynamicWordsSource = t("hero.title.dynamicWords");
+  const remainderSource = t("hero.title.staticRemainder");
+
+  const line1Parts = useMemo(
+    () => line1.split(" ").filter(Boolean),
+    [line1]
+  );
+
+  const fallbackDynamicWords = useMemo(
+    () => (line1Parts.length ? [line1Parts[0]] : []),
+    [line1Parts]
+  );
+
+  const dynamicWords = useMemo(() => {
+    const parsed = dynamicWordsSource
+      .split("|")
+      .map((word) => word.trim())
+      .filter(Boolean);
+    return parsed.length ? parsed : fallbackDynamicWords;
+  }, [dynamicWordsSource, fallbackDynamicWords]);
+
+  const remainderWords = useMemo(() => {
+    const trimmed = remainderSource.trim();
+    if (trimmed.length) {
+      return trimmed.split(" ").filter(Boolean);
+    }
+    return line1Parts.slice(1);
+  }, [remainderSource, line1Parts]);
+
+  const [activeWordIndex, setActiveWordIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveWordIndex(0);
+  }, [language, dynamicWords]);
+
+  useEffect(() => {
+    if (dynamicWords.length <= 1) {
+      return;
+    }
+    const interval = window.setInterval(() => {
+      setActiveWordIndex((prev) => (prev + 1) % dynamicWords.length);
+    }, 3200);
+    return () => window.clearInterval(interval);
+  }, [dynamicWords, language]);
+
+  const fallbackWord = fallbackDynamicWords[0] ?? "";
+  const activeWord =
+    dynamicWords.length > 0
+      ? dynamicWords[activeWordIndex % dynamicWords.length]
+      : fallbackWord;
+  const displayedWord = activeWord || fallbackWord;
+  const dynamicWordTransition = { duration: 0.45, ease: "easeOut" as const };
+  const measurementRef = useRef<HTMLSpanElement>(null);
+  const [dynamicWordWidth, setDynamicWordWidth] = useState<number>();
+
+  useLayoutEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    if (measurementRef.current) {
+      setDynamicWordWidth(measurementRef.current.offsetWidth);
+    }
+  }, [displayedWord, language]);
+
   return (
     <motion.section
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
@@ -177,30 +248,67 @@ const Hero = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.4 }}
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
+            key={language}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
             variants={textContainerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            {t("hero.title.line1")
-              .split(" ")
-              .map((word, i) => (
+            <motion.span
+              className="relative inline-flex mr-[0.25em] justify-start"
+              style={
+                dynamicWordWidth !== undefined
+                  ? {
+                      width: dynamicWordWidth,
+                    }
+                  : undefined
+              }
+              animate={
+                dynamicWordWidth !== undefined
+                  ? { width: dynamicWordWidth }
+                  : undefined
+              }
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <span
+                ref={measurementRef}
+                className="absolute left-0 top-0 whitespace-nowrap select-none opacity-0 pointer-events-none"
+                aria-hidden="true"
+              >
+                {displayedWord}
+              </span>
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.span
-                  key={i}
-                  variants={wordVariants}
-                  className="inline-block mr-[0.25em]"
+                  key={`${language}-${displayedWord}`}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={dynamicWordTransition}
+                  className="inline-block"
                 >
-                  {word}
+                  {displayedWord}
                 </motion.span>
-              ))}
+              </AnimatePresence>
+            </motion.span>
+            {remainderWords.map((word, i) => (
+              <motion.span
+                key={`${language}-remainder-${i}-${word}`}
+                variants={wordVariants}
+                className="inline-block mr-[0.25em]"
+              >
+                {word}
+              </motion.span>
+            ))}
             <span className="block text-transparent bg-clip-text bg-gradient-primary pb-2">
               {t("hero.title.line2")
                 .split(" ")
                 .map((word, i) => (
                   <motion.span
-                    key={i}
+                    key={`${language}-line2-${i}-${word}`}
                     variants={wordVariants}
                     className="inline-block mr-[0.25em]"
                   >
