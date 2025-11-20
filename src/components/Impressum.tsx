@@ -39,12 +39,7 @@ export default function ImpressumModal({
         </DialogHeader>
         <div className="space-y-8 text-sm leading-relaxed">
           <section>
-            <h3 className="font-semibold text-base mb-2">
-              AIceFlow GmbH{" "}
-              <span className="font-normal text-muted-foreground">
-                (in Gründung)
-              </span>
-            </h3>
+            <h3 className="font-semibold text-base mb-2">AIceFlow GmbH</h3>
             <div>
               Nussdorfer Strasse 9
               <br />
@@ -74,15 +69,7 @@ export default function ImpressumModal({
                   </a>
                 </span>
               </span>
-              <span className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>
-                  <span className="font-medium">Maik Pfäffle:</span>{" "}
-                  <a href="tel:017655735688" className="underline">
-                    0176 55735688
-                  </a>
-                </span>
-              </span>
+
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <span>
