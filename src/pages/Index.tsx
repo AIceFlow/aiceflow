@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
-import Industries from "@/components/Industries";
+import Universal from "@/components/Universal";
 import Testimonials from "@/components/Testimonials";
 import Showcase from "@/components/Showcase";
 import WhyAIceFlow from "@/components/WhyAIceFlow";
@@ -19,7 +19,7 @@ const Index = () => {
       <About />
       <Services />
       <HowItWorks />
-      <Industries />
+      <Universal />
       {/* <Testimonials /> */}
       <Showcase />
       <WhyAIceFlow />

@@ -1,203 +1,135 @@
-import React from "react";
+import React, { useRef } from "react";
 import dashboardMockup from "@/assets/showcase.png";
 import { useLanguage } from "@/hooks/useLanguage";
-import { motion, Variants } from "framer-motion";
-import { Users, BarChart2, ShieldCheck, LucideProps } from "lucide-react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { Users, BarChart2, ShieldCheck, Zap } from "lucide-react";
 
-const icons: { [key: string]: React.FC<LucideProps> } = {
-  Users,
-  BarChart2,
-  ShieldCheck,
-};
-
-const FeatureListItem: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => (
-  <li className="flex items-start text-muted-foreground">
-    <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></div>
-    {children}
-  </li>
+// --- Components ---
+const StatBadge = ({ label, value, color }: { label: string, value: string, color: string }) => (
+  <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-lg p-3 flex flex-col items-center min-w-[100px]">
+    <span className="text-xs text-white/70 uppercase tracking-wider mb-1">{label}</span>
+    <span className={`text-xl font-bold ${color}`}>{value}</span>
+  </div>
 );
 
-const ImpactCard: React.FC<{
-  iconKey: string;
-  title: string;
-  description: string;
-}> = ({ iconKey, title, description }) => {
-  const IconComponent = icons[iconKey] || ShieldCheck;
-  return (
-    <div className="flex flex-col p-4 bg-accent/50 rounded-lg text-center md:text-left">
-      <div className="flex justify-center md:justify-start items-center mb-3">
-        <div className="bg-primary/10 p-2 rounded-full">
-          <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-        </div>
-        <h4 className="text-base sm:text-lg font-semibold text-foreground ml-3">
-          {title}
-        </h4>
-      </div>
-      <p className="text-sm text-muted-foreground">{description}</p>
+const FeatureItem = ({ icon: Icon, title, description }: { icon: any, title: string, description: string }) => (
+  <div className="flex gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors duration-300">
+    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+      <Icon size={20} />
     </div>
-  );
-};
+    <div>
+      <h4 className="font-semibold text-foreground mb-1">{title}</h4>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+    </div>
+  </div>
+);
 
 export default function Showcase() {
   const { t } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
 
-  const overlayStats = [
-    { key: "dashboard", color: "text-green-400" },
-    { key: "monitoring", color: "text-blue-400" },
-    { key: "architecture", color: "text-yellow-400" },
-  ];
-
-  const interactiveDots = [
-    {
-      key: "team",
-      position: { top: "25%", left: "25%" },
-      color: "bg-purple-500",
-    },
-    {
-      key: "processes",
-      position: { top: "33%", right: "33%" },
-      color: "bg-green-500",
-    },
-    {
-      key: "alerts",
-      position: { bottom: "33%", left: "50%" },
-      color: "bg-yellow-500",
-    },
-  ];
-
-  const featureKeys = ["item1", "item2", "item3", "item4", "item5", "item6"];
-  const impactKeys = ["unlock", "decisions", "resilience"];
-
-  const cardVariants: Variants = {
-    offscreen: {
-      y: 50,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-        duration: 0.8,
-      },
-    },
-  };
+  // 3D Tilt Effect
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [15, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0.5, 1]);
+  
+  // Smooth out the transform
+  const smoothRotateX = useSpring(rotateX, { damping: 20, stiffness: 100 });
+  const smoothScale = useSpring(scale, { damping: 20, stiffness: 100 });
 
   return (
-    <section id="showcase" className="py-20 sm:py-24 bg-accent/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+    <section id="showcase" className="py-24 bg-secondary/30 relative overflow-hidden" ref={containerRef}>
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("showcase.title")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="w-20 h-1.5 bg-gradient-primary mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t("showcase.description")}
           </p>
         </div>
 
-        <motion.div
-          className="max-w-6xl mx-auto"
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={cardVariants}
-        >
-          <div className="bg-card rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-elegant border border-border">
-            <div className="relative group">
-              <img
-                src={dashboardMockup}
-                alt={t("showcase.overlay.title")}
-                className="w-full rounded-lg lg:rounded-xl shadow-card"
-                width={1200}
-                height={750}
-              />
-
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-lg lg:rounded-xl flex items-end"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="w-full p-4 sm:p-6 lg:p-8 text-white">
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
-                    {t("showcase.overlay.title")}
-                  </h3>
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6">
-                    {overlayStats.map((stat) => (
-                      <div key={stat.key} className="text-center">
-                        <div
-                          className={`text-xs sm:text-sm lg:text-base opacity-80`}
-                        >
-                          {t(`showcase.stats.${stat.key}.label`)}
-                        </div>
-                        <div
-                          className={`text-base sm:text-lg lg:text-2xl font-bold ${stat.color}`}
-                        >
-                          {t(`showcase.stats.${stat.key}.value`)}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+        {/* 3D Dashboard Container */}
+        <div className="perspective-1000">
+          <motion.div
+            style={{ 
+              rotateX: smoothRotateX,
+              scale: smoothScale,
+              opacity: opacity,
+              transformStyle: "preserve-3d"
+            }}
+            className="relative max-w-6xl mx-auto bg-black rounded-xl border border-white/10 shadow-2xl overflow-hidden group"
+          >
+             {/* Browser Chrome (Optional decoration) */}
+             <div className="h-12 bg-gray-900 border-b border-white/10 flex items-center px-4 gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                <div className="ml-4 px-3 py-1 bg-gray-800 rounded text-xs text-gray-400 font-mono">
+                  aiceflow-platform.app
                 </div>
-              </motion.div>
+             </div>
 
-              {interactiveDots.map((dot) => (
-                <div
-                  key={dot.key}
-                  className="absolute hidden md:block"
-                  style={{ ...dot.position }}
-                >
-                  <motion.div
-                    className={`w-3 h-3 sm:w-4 sm:h-4 ${dot.color} rounded-full shadow-glow`}
-                    animate={{ scale: [1, 1.2, 1], opacity: [0.7, 1, 0.7] }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: Math.random() * 0.5,
-                    }}
-                  />
-                  <div className="absolute bottom-full mb-2 w-max p-2 text-xs text-white bg-black/80 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    {t(`showcase.dots.${dot.key}`)}
+             {/* Main Image */}
+             <div className="relative">
+               <img
+                 src={dashboardMockup}
+                 alt="AIceFlow Dashboard"
+                 className="w-full h-auto"
+               />
+               
+               {/* Overlay Content (Visible on Hover/Always) */}
+               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-100 flex items-end justify-center pb-12">
+                  <div className="grid grid-cols-3 gap-4 sm:gap-8">
+                    <StatBadge 
+                      label={t("showcase.stats.dashboard.label")} 
+                      value={t("showcase.stats.dashboard.value")}
+                      color="text-green-400"
+                    />
+                     <StatBadge 
+                      label={t("showcase.stats.monitoring.label")} 
+                      value={t("showcase.stats.monitoring.value")}
+                      color="text-blue-400"
+                    />
+                     <StatBadge 
+                      label={t("showcase.stats.architecture.label")} 
+                      value={t("showcase.stats.architecture.value")}
+                      color="text-yellow-400"
+                    />
                   </div>
-                </div>
-              ))}
-            </div>
+               </div>
+             </div>
+          </motion.div>
+        </div>
 
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mt-8">
-              <div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4">
-                  {t("showcase.features.title")}
-                </h3>
-                <ul className="space-y-3 text-base">
-                  {featureKeys.map((key) => (
-                    <FeatureListItem key={key}>
-                      {t(`showcase.features.${key}`)}
-                    </FeatureListItem>
-                  ))}
-                </ul>
-              </div>
+        {/* Feature Grid below the dashboard */}
+        <div className="mt-20 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <FeatureItem 
+              icon={Zap}
+              title={t("showcase.impact.unlock.title")}
+              description={t("showcase.impact.unlock.description")}
+            />
+            <FeatureItem 
+              icon={BarChart2}
+              title={t("showcase.impact.decisions.title")}
+              description={t("showcase.impact.decisions.description")}
+            />
+            <FeatureItem 
+              icon={ShieldCheck}
+              title={t("showcase.impact.resilience.title")}
+              description={t("showcase.impact.resilience.description")}
+            />
+        </div>
 
-              <div className="space-y-4">
-                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4">
-                  {t("showcase.impact.title")}
-                </h3>
-                {impactKeys.map((key) => (
-                  <ImpactCard
-                    key={key}
-                    iconKey={t(`showcase.impact.${key}.icon`)}
-                    title={t(`showcase.impact.${key}.title`)}
-                    description={t(`showcase.impact.${key}.description`)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -23,664 +23,573 @@ export const useLanguage = () => {
 export const translations = {
   en: {
     // Header
-    "nav.about": "About Us",
-    "nav.services": "Services",
-    "nav.how-it-works": "How It Works",
+    "nav.about": "About",
+    "nav.services": "Solutions",
+    "nav.how-it-works": "Process",
     "nav.testimonials": "Success Stories",
     "nav.contact": "Contact",
-    "header.cta": "Book a Consultation",
+    "header.cta": "Start Automation",
 
     // Hero
-    "hero.title.line1": "Orchestrate Your Business",
-    "hero.title.dynamicWords": "Automate|Optimize|Orchestrate",
-    "hero.title.staticRemainder": "Your Business",
-    "hero.title.line2": "with Autonomous AI Agents",
+    "hero.title.line1": "The AI Operations Layer",
+    "hero.title.dynamicWords": "Reliable|Secure|Tailored",
+    "hero.title.staticRemainder": "for your Business",
+    "hero.title.line2": "Practical Automation for SMEs",
     "hero.description":
-      "We develop and implement intelligent agents that handle your complex operational tasks—from data analysis to customer communications. This lets your team focus on what matters most: strategic growth.",
+      "Turn repetitive, manual work into reliable automated workflows. We deliver practical AI agents that triage emails, process invoices, and connect your existing tools—in days, not months.",
 
-    "hero.cta.primary": "Book a Strategy Session",
-    "hero.cta.secondary": "Watch the Live Demo",
+    "hero.cta.primary": "Get Your Custom Plan",
+    "hero.cta.secondary": "See It In Action",
 
-    "hero.pillars.tailored.title": "Tailor-Made Agents",
-    "hero.pillars.tailored.description": "For your unique processes",
-    "hero.pillars.integration.title": "Seamless Integration",
-    "hero.pillars.integration.description": "Into your existing tools",
-    "hero.pillars.partnership.title": "Dedicated Partnership",
-    "hero.pillars.partnership.description": "From analysis to success",
+    "hero.pillars.tailored.title": "High-ROI Processes",
+    "hero.pillars.tailored.description": "Focus on revenue-driving work",
+    "hero.pillars.integration.title": "Seamless Connectors",
+    "hero.pillars.integration.description": "Works with your existing stack",
+    "hero.pillars.partnership.title": "Operations Layer",
+    "hero.pillars.partnership.description": "Secure, pragmatic, managed",
 
-    "hero.status.available": "Available for New Projects",
-    "hero.status.location": "Based in Überlingen on Lake Constance",
+    "hero.status.available": "Accepting New Projects",
+    "hero.status.location": "DACH Region & Remote",
 
     // About
-    "about.title": "About",
+    "about.title": "We are",
     "about.description":
-      "From our base on Lake Constance, we relieve your team of time-consuming routine tasks. Our tailored automations boost your productivity while keeping your team in full control at all times.",
+      "AIceFlow is an AI automation agency for small and mid-sized businesses. We help companies without in-house tech departments move faster and reduce errors by building the 'AI Operations Layer' tailored to how you already work.",
 
-    "about.innovation.title": "Innovation Without Limits",
-    "about.custom.title": "As Individual as Your Business",
-    "about.results.title": "Visible Results",
+    "about.innovation.title": "Practical > Theoretical",
+    "about.custom.title": "Custom Built",
+    "about.results.title": "Measurable Impact",
 
     "about.innovation.description":
-      "We turn complex processes into intelligent, flexible workflows that grow with your company.",
+      "Instead of abstract 'AI consulting', we deliver ready-to-run solutions that solve actual operational headaches.",
 
     "about.custom.description":
-      "Every solution is precisely aligned with your goals, data, and company culture—ensuring seamless integration into your daily operations.",
+      "Every automation has a clear trigger, input, and output. We connect the tools you already use (Microsoft 365, CRM, ERP).",
 
     "about.results.description":
-      "Benefit immediately from measurable efficiency gains and cost savings, backed by clear dashboards and continuous improvement.",
+      "We focus on response times, error reduction, and hours saved. If it doesn't drive value, we don't build it.",
 
     // Services
-    "services.title": "Our Services for Your Team",
+    "services.title": "What We Automate",
     "services.description":
-      "We take routine tasks off your plate and create transparency—so you can focus fully on your core business.",
+      "From inbox to invoice, we deploy agents that handle the busywork so your team can focus on the big picture.",
 
-    "services.processAutomation.title": "Process Automation",
+    "services.processAutomation.title": "Communication & Triage",
     "services.processAutomation.description":
-      "Accelerate your processes, eliminate bottlenecks, and maintain full control.",
-    "services.processAutomation.feature1": "Fewer manual tasks",
-    "services.processAutomation.feature2": "Shorter processing times",
-    "services.processAutomation.feature3": "Consistent quality",
-    "services.processAutomation.feature4": "Proactive notifications",
+      "Never miss a lead or a critical request again.",
+    "services.processAutomation.feature1": "Email Triage & Routing",
+    "services.processAutomation.feature2": "Lead Qualification",
+    "services.processAutomation.feature3": "Support Ticket Summaries",
+    "services.processAutomation.feature4": "Meeting Notes to Tasks",
 
-    "services.dashboards.title": "Transparent Dashboards",
+    "services.dashboards.title": "Finance & Admin",
     "services.dashboards.description":
-      "Keep your key metrics in view at all times—interactive and in real time.",
-    "services.dashboards.feature1": "Real-time data",
-    "services.dashboards.feature2": "Tailored KPI overview",
-    "services.dashboards.feature3": "Interactive visuals",
-    "services.dashboards.feature4": "Mobile-ready experience",
+      "Streamline the back-office chaos with precision.",
+    "services.dashboards.feature1": "Invoice Processing",
+    "services.dashboards.feature2": "Expense Categorization",
+    "services.dashboards.feature3": "Contract Data Extraction",
+    "services.dashboards.feature4": "Onboarding Workflows",
 
-    "services.consultation.title": "Strategic Partnership",
+    "services.consultation.title": "Business Intelligence",
     "services.consultation.description":
-      "Together we identify opportunities, plan measures, and ensure lasting improvements.",
-    "services.consultation.feature1": "Detailed process analysis",
-    "services.consultation.feature2": "Tailored roadmap",
-    "services.consultation.feature3": "Hands-on implementation",
-    "services.consultation.feature4": "Continuous support",
+      "Turn scattered data into decision-ready insights.",
+    "services.consultation.feature1": "Weekly KPI Digests",
+    "services.consultation.feature2": "Competitor Monitoring",
+    "services.consultation.feature3": "Review Aggregation",
+    "services.consultation.feature4": "Automated Reporting",
 
     // How It Works
-    "howItWorks.title": "How It Works",
+    "howItWorks.title": "Our Process",
     "howItWorks.description":
-      "Our clearly structured approach delivers rapid, controlled efficiency gains through automation.",
+      "We keep it simple: Identify the highest-ROI opportunity, build it, and ensure your team adopts it.",
 
-    "howItWorks.step1.title": "Potential Analysis",
+    "howItWorks.step1.title": "Identify",
     "howItWorks.step1.description":
-      "Together we analyze your processes and identify optimal automation potential.",
+      "We audit your workflows to find high-volume, repetitive tasks that are ripe for automation.",
 
-    "howItWorks.step2.title": "Tailored Planning",
+    "howItWorks.step2.title": "Build",
     "howItWorks.step2.description":
-      "We create an individual automation plan that fits your workflows perfectly.",
+      "We configure secure agents and connect them to your tools (Google/Microsoft, CRM, Accounting).",
 
-    "howItWorks.step3.title": "Seamless Implementation",
+    "howItWorks.step3.title": "Train & Handoff",
     "howItWorks.step3.description":
-      "We implement the automation and build clear dashboards for maximum transparency.",
+      "We provide documentation and training to ensure your team trusts and uses the new system.",
 
-    "howItWorks.step4.title": "Continuous Optimization",
+    "howItWorks.step4.title": "Support",
     "howItWorks.step4.description":
-      "We continuously monitor and refine your processes to secure lasting efficiency gains.",
+      "We monitor performance and refine the agents as your business evolves.",
 
-    // Testimonials
-    "testimonials.title": "Our Clients' Success Stories",
+    // Testimonials (Placeholder)
+    "testimonials.title": "Client Success",
     "testimonials.description":
-      "Discover how companies boost productivity with AIceFlow—without adding headcount.",
+      "See how other SMEs are saving time and scaling operations.",
 
     // Showcase
-    "showcase.title": "From Operational Chaos to Strategic Clarity",
+    "showcase.title": "Your AI Control Center",
     "showcase.description":
-      "Act instead of react. Our platform transforms your scattered workflows into a unified, intelligent system and gives you the real-time command center your business needs to succeed.",
+      "Automation shouldn't be a black box. Our dashboards give you full visibility into what your agents are doing, how much time they've saved, and where they need your input.",
 
-    "showcase.overlay.title": "Your business, run intelligently.",
+    "showcase.overlay.title": "Visibility & Control",
 
-    "showcase.stats.dashboard.label": "Unified Dashboard",
-    "showcase.stats.dashboard.value": "Total Control",
-    "showcase.stats.monitoring.label": "Live Process Monitoring",
-    "showcase.stats.monitoring.value": "In real time",
-    "showcase.stats.architecture.label": "Agent-Based Architecture",
-    "showcase.stats.architecture.value": "Scalable",
+    "showcase.stats.dashboard.label": "Tasks Autom.",
+    "showcase.stats.dashboard.value": "24/7",
+    "showcase.stats.monitoring.label": "Error Rate",
+    "showcase.stats.monitoring.value": "< 1%",
+    "showcase.stats.architecture.label": "ROI",
+    "showcase.stats.architecture.value": "Immediate",
 
-    "showcase.features.title": "Our Approach",
-    "showcase.features.item1":
-      "We capture your existing business processes.",
-    "showcase.features.item2":
-      "Our specialists configure and implement autonomous agents.",
-    "showcase.features.item3":
-      "You monitor and control everything through your dashboard.",
-    "showcase.features.item4":
-      "Gain actionable insights from automated reports.",
-    "showcase.features.item5":
-      "We integrate your databases, CRM systems, and other applications programmatically.",
-    "showcase.features.item6":
-      "We ensure secure, controlled data flows across every process.",
+    "showcase.features.title": "The Operations Layer",
+    "showcase.features.item1": "Centralized view of all running agents.",
+    "showcase.features.item2": "Human-in-the-loop approval flows.",
+    "showcase.features.item3": "Live logs and audit trails.",
+    "showcase.features.item4": "Seamless API integrations.",
+    "showcase.features.item5": "Custom triggers and scheduling.",
+    "showcase.features.item6": "Enterprise-grade security standards.",
 
-    "showcase.impact.title": "The Strategic Value",
-    "showcase.impact.unlock.icon": "Users",
-    "showcase.impact.unlock.title": "Unleash Your Team's Potential",
+    "showcase.impact.title": "Why It Matters",
+    "showcase.impact.unlock.icon": "Zap",
+    "showcase.impact.unlock.title": "Speed",
     "showcase.impact.unlock.description":
-      "Automate repetitive tasks that drain creativity. Give your experts the freedom to focus on strategic initiatives and growth-driving work.",
-    "showcase.impact.decisions.icon": "BarChart2",
-    "showcase.impact.decisions.title": "Make Decisions with Data, Not Guesses",
+      "Respond to customers instantly, even outside business hours.",
+    "showcase.impact.decisions.icon": "CheckCircle",
+    "showcase.impact.decisions.title": "Accuracy",
     "showcase.impact.decisions.description":
-      "Our platform generates clean, structured data from every action. Turn process outputs into reliable insights for smarter, faster business decisions.",
-    "showcase.impact.resilience.icon": "ShieldCheck",
-    "showcase.impact.resilience.title": "Build a Robust, Scalable Operation",
+      "Eliminate copy-paste errors and lost information.",
+    "showcase.impact.resilience.icon": "TrendingUp",
+    "showcase.impact.resilience.title": "Focus",
     "showcase.impact.resilience.description":
-      "Establish stable processes that run flawlessly around the clock. Scale to meet growing demand without increasing manual effort.",
+      "Free your team to work on strategy and relationships.",
 
-    "showcase.dots.team": "Manage your team and their permissions.",
-    "showcase.dots.processes": "Live processes run seamlessly.",
-    "showcase.dots.alerts":
-      "Receive notifications for completed tasks and reports.",
-
-    // Industries
-    "industries.title": "Industries We Strengthen",
-    "industries.description":
-      "Whether logistics, marketing, or healthcare—our automation solutions adapt to your requirements and let you achieve more with less.",
-
-    "industries.logistics.name": "Logistics",
-    "industries.logistics.description":
-      "Optimize routes and forecast demand so your supply chain keeps moving smoothly.",
-
-    "industries.marketing.name": "Marketing",
-    "industries.marketing.description":
-      "Automate campaign workflows, gain deeper insights, and boost customer engagement.",
-
-    "industries.sales.name": "Sales",
-    "industries.sales.description":
-      "Qualify leads faster, automate follow-ups, and manage customer relationships at scale.",
-
-    "industries.operations.name": "Operations",
-    "industries.operations.description":
-      "Optimize core processes and monitor performance in real time to avoid bottlenecks.",
-
-    "industries.manufacturing.name": "Production",
-    "industries.manufacturing.description":
-      "Improve production reliability with predictive maintenance and quality control.",
-
-    "industries.healthcare.name": "Healthcare",
-    "industries.healthcare.description":
-      "Enhance the patient experience with automated appointment scheduling and secure data handling.",
+    // Universal (Chaos Tamer)
+    "universal.title": "Whatever You Do, Do It Faster.",
+    "universal.subtitle": "Logistics, Law, or Lemonade stands. Chaos looks the same everywhere. So does the solution.",
+    "universal.button.idle": "Tame the Chaos",
+    "universal.button.active": "Order Restored",
+    // Short labels for floating cards to prevent overflow
+    "universal.floating.email": "Inbox 99+",
+    "universal.floating.invoice": "Unpaid Bills",
+    "universal.floating.meeting": "Scheduling",
+    "universal.floating.data": "Bad Data",
+    "universal.floating.urgent": "Fire Drill",
+    "universal.floating.delay": "Late Delivery",
+    "universal.floating.error": "Human Error",
 
     // Why AIceFlow
-    "why.title": "Why Partner with AIceFlow?",
+    "why.title": "Why AIceFlow?",
     "why.description":
-      "We're not just another software provider. We're your dedicated partner for transforming your business through intelligent automation.",
+      "We bridge the gap between complex AI technology and your daily business reality.",
 
-    "why.tailored.title": "Tailored Intelligence, Not Off-the-Shelf Bots",
+    "why.tailored.title": "Not Just Consulting",
     "why.tailored.description":
-      "We build solutions precisely around your processes. Our agents are individually configured to solve your unique challenges for maximum impact.",
+      "We don't just leave you with a PDF strategy. We build, deploy, and maintain the software.",
 
-    "why.partnership.title": "A True Partnership",
+    "why.partnership.title": "Defined ROI",
     "why.partnership.description":
-      "Your success is our success. From day one we work closely with you to understand your goals and ensure our solutions deliver measurable value.",
+      "We target processes where the impact is measurable: time saved, money saved, revenue generated.",
 
-    "why.synergy.title": "People + AI: The Perfect Synergy",
+    "why.synergy.title": "Human-Centric",
     "why.synergy.description":
-      "Our philosophy is to augment, not replace. We empower your team by automating tedious work so they can focus on strategic and creative initiatives.",
+      "Our automations are designed to work *with* your people, handling the grunt work so they shine.",
 
-    "why.local.title": "Local Expertise, Global Strength",
+    "why.local.title": "DACH Region Focus",
     "why.local.description":
-      "Benefit from the attentive, reliable service of a local German partner while leveraging world-class, global AI technology.",
+      "We understand local regulations, languages, and business culture.",
 
-    "commitment.title": "Our Promise to You",
-    "commitment.description":
-      "These principles are the foundation of every project we undertake.",
-
-    "commitment.transparency.title": "Radical Transparency",
-    "commitment.transparency.description":
-      "No 'black boxes.' You'll always understand what your AI agents are doing and why, keeping you in full control.",
-
-    "commitment.empowerment.title": "Empowering Your Team",
-    "commitment.empowerment.description":
-      "Our goal is to elevate your experts. We amplify your team's capabilities and turn institutional knowledge into an automated asset.",
-
-    "commitment.value.title": "Measurable Value",
-    "commitment.value.description":
-      "We define clear KPIs for every project. Success means demonstrably improving the metrics that matter to you.",
+    "commitment.title": "Our Standards",
+    "commitment.description": "Reliable. Secure. Pragmatic.",
+    "commitment.transparency.title": "Data Privacy",
+    "commitment.transparency.description": "GDPR compliant implementation.",
+    "commitment.empowerment.title": "No Lock-in",
+    "commitment.empowerment.description": "You own your data and workflows.",
+    "commitment.value.title": "Long-term Support",
+    "commitment.value.description": "We are your technical partner.",
 
     // Team
-    "team.founders.title": "Founders",
-    "team.founders.subtitle": "Strategy × Engineering—from a single source.",
-    "team.duo.title": "How We Work",
+    "team.founders.title": "The Team",
+    "team.founders.subtitle": "Bridging business strategy and technical execution.",
+    "team.duo.title": "Our Philosophy",
     "team.duo.point1":
-      "We turn objectives into a clear automation roadmap—delivered in small, validated increments.",
+      "We believe AI should be an invisible engine that powers your business.",
     "team.duo.point2":
-      "End-to-end architecture, integrations, and data flows tailored to your stack (SAP, CRM, DB, APIs).",
+      "We prioritize stability and security over hype and buzzwords.",
     "team.duo.point3":
-      "After the first success, we harden everything: security, stability, monitoring, and clean handover.",
-    "team.cta.primary": "Book a meeting with both founders",
-    "team.cta.aria": "Open the contact section to book a meeting",
+      "We build long-term relationships, not just one-off scripts.",
+    "team.cta.primary": "Work with us",
+    "team.cta.aria": "Contact us",
 
     "team.ff.name": "Felix Funke",
-    "team.ff.role_short": "Vision, Client Strategy & Full-Stack",
-    "team.ff.focus1": "Strategy",
-    "team.ff.focus2": "Full-Stack & AI",
-    "team.ff.focus3": "Client Advisory",
+    "team.ff.role_short": "Founder & Lead Architect",
+    "team.ff.focus1": "Business Strategy",
+    "team.ff.focus2": "Process Architecture",
+    "team.ff.focus3": "Engineering",
     "team.ff.point1":
-      "Turns your business goals into an actionable automation plan.",
+      "Combines commercial leadership experience with deep technical engineering.",
     "team.ff.point2":
-      "Keeps the focus on UX and dashboards that teams actually use.",
-    "team.ff.point3": "Drives measurable outcomes and clear KPIs.",
-
-    "team.mp.name": "Maik Pfäffle",
-    "team.mp.role_short": "SAP, Process Automation & Architecture",
-    "team.mp.focus1": "SAP & Integrations",
-    "team.mp.focus2": "Architecture",
-    "team.mp.focus3": "Process Automation",
-    "team.mp.point1":
-      "Designs scalable, secure systems and clean data pipelines.",
-    "team.mp.point2":
-      "Leads enterprise integrations (SAP, CRM, APIs, databases).",
-    "team.mp.point3":
-      "Builds in reliability, monitoring, and quality from the start.",
+      "Proven track record delivering mission-critical systems for enterprises like Handelsblatt and agile Silicon Valley startups.",
+    "team.ff.point3":
+      "Builds solutions that are not just code, but sustainable business assets.",
 
     // Contact
-    "contact.title": "Ready to Transform Your Business?",
+    "contact.title": "Let's Automate Your Business",
     "contact.description":
-      "Let's discuss how AI automation can revolutionize your processes. Book your free consultation today and explore the possibilities.",
+      "Book a free strategy session. We'll identify your highest-ROI automation opportunities in 30 minutes.",
 
     // Form
-    "contact.form.title": "Start Now",
+    "contact.form.title": "Get in Touch",
     "contact.form.firstNameLabel": "First Name",
-    "contact.form.firstNamePlaceholder": "Your first name",
+    "contact.form.firstNamePlaceholder": "Felix",
     "contact.form.lastNameLabel": "Last Name",
-    "contact.form.lastNamePlaceholder": "Your last name",
-    "contact.form.emailLabel": "Email Address",
-    "contact.form.emailPlaceholder": "your.email@company.com",
-    "contact.form.companyLabel": "Company Name",
-    "contact.form.companyPlaceholder": "Your company name",
-    "contact.form.phoneLabel": "Phone Number",
-    "contact.form.phonePlaceholder": "+49 (0) 176 6336 4095",
-    "contact.form.needsLabel": "Tell us about your automation needs",
+    "contact.form.lastNamePlaceholder": "Muster",
+    "contact.form.emailLabel": "Work Email",
+    "contact.form.emailPlaceholder": "felix@company.com",
+    "contact.form.companyLabel": "Company",
+    "contact.form.companyPlaceholder": "Muster GmbH",
+    "contact.form.phoneLabel": "Phone",
+    "contact.form.phonePlaceholder": "+49 123 45678",
+    "contact.form.needsLabel": "What process do you want to fix?",
     "contact.form.needsPlaceholder":
-      "Describe your current processes and what you'd like to automate…",
-    "contact.form.submit": "Book a Free Consultation",
+      "e.g., handling invoices, sorting support emails...",
+    "contact.form.submit": "Request Strategy Session",
     "contact.form.requiredNote":
-      "* Required fields. We'll reply within 24 hours.",
+      "* Required. We usually reply within 24h.",
     "contact.form.submitting": "Sending...",
     "contact.form.error":
-      "An error occurred. Please check your information and try again.",
-    "contact.form.successTitle": "Thank You!",
+      "Something went wrong. Please try again.",
+    "contact.form.successTitle": "Message Sent",
     "contact.form.successMessage":
-      "Your message has been sent successfully. We will get back to you shortly.",
-    "contact.form.sendAnother": "Send another message",
+      "Thanks for reaching out. We'll be in touch shortly to discuss your automation potential.",
+    "contact.form.sendAnother": "Send another",
 
     // Contact Info
-    "contact.info.title": "Contact Us",
-    "contact.info.office.title": "Location",
-    "contact.info.office.line1": "AIceFlow GmbH",
+    "contact.info.title": "Contact",
+    "contact.info.office.title": "HQ",
+    "contact.info.office.line1": "AIceFlow",
     "contact.info.office.line2": "Nussdorfer Strasse 9",
-    "contact.info.office.line3": "88662 Ueberlingen, Germany",
+    "contact.info.office.line3": "88662 Überlingen, Germany",
     "contact.info.email.title": "Email",
     "contact.info.email.address": "hello@aiceflow.de",
     "contact.info.phone.title": "Phone",
     "contact.info.phone.number": "+49 (0) 176 6336 4095",
-    "contact.info.hours.title": "Opening Hours",
+    "contact.info.hours.title": "Business Hours",
     "contact.info.hours.line1": "Mon – Fri: 9:00 – 18:00 CET",
-    "contact.info.hours.line2": "Sat: 10:00 – 14:00 CET",
+    "contact.info.hours.line2": "",
 
     // Actions
-    "contact.actions.title": "Quick Actions",
-    "contact.actions.discovery": "Book a Discovery Session",
-    "contact.actions.download": "Download Case Studies",
-    "contact.actions.proposal": "Request a Proposal",
+    "contact.actions.title": "Next Steps",
+    "contact.actions.discovery": "Book Strategy Call",
+    "contact.actions.download": "View Examples",
+    "contact.actions.proposal": "Email Us",
 
     // Footer
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "We transform companies in southern Germany with cutting-edge AI automation solutions. Intelligent processes, powered by AI.",
+      "The AI Operations Layer for DACH SMEs. Practical, secure, and tailored automation.",
 
-    "footer.nav.services.title": "Services",
-    "footer.nav.services.processAutomation": "Process Automation",
-    "footer.nav.services.customDashboards": "Custom Dashboards",
-    "footer.nav.services.consultation": "Strategic Consulting",
-    "footer.nav.services.implementation": "AI Implementation",
-    "footer.nav.services.support": "Ongoing Support",
+    "footer.nav.services.title": "Solutions",
+    "footer.nav.services.processAutomation": "Operations",
+    "footer.nav.services.customDashboards": "Admin & Finance",
+    "footer.nav.services.consultation": "Business Intel",
+    "footer.nav.services.implementation": "Implementation",
+    "footer.nav.services.support": "Support",
 
     "footer.nav.company.title": "Company",
-    "footer.nav.company.about": "About AIceFlow",
-    "footer.nav.company.team": "Our Team",
-    "footer.nav.company.testimonials": "References",
+    "footer.nav.company.about": "About",
+    "footer.nav.company.team": "Team",
+    "footer.nav.company.testimonials": "Success",
     "footer.nav.company.contact": "Contact",
     "footer.nav.company.careers": "Careers",
 
-    "footer.copy": "© 2025 AIceFlow GmbH. All rights reserved.",
-    "footer.tagline": "Precision. Strategy. Excellence.",
+    "footer.copy": "© 2026 AIceFlow. All rights reserved.",
+    "footer.tagline": "Automate. Optimize. Grow.",
 
     "footer.policies.privacy": "Privacy Policy",
-    "footer.policies.terms": "Terms of Use",
+    "footer.policies.terms": "Terms of Service",
     "footer.policies.imprint": "Imprint",
   },
   de: {
     // Header
-    "nav.about": "Über uns",
-    "nav.services": "Leistungen",
-    "nav.how-it-works": "So funktioniert's",
-    "nav.testimonials": "Erfolgsgeschichten",
+    "nav.about": "Über Uns",
+    "nav.services": "Lösungen",
+    "nav.how-it-works": "Ablauf",
+    "nav.testimonials": "Erfolge",
     "nav.contact": "Kontakt",
-    "header.cta": "Beratung vereinbaren",
+    "header.cta": "Automatisierung Starten",
 
     // Hero
-    "hero.title.line1": "Orchestrieren Sie Ihr Unternehmen",
-    "hero.title.dynamicWords": "Automatisieren|Optimieren|Orchestrieren",
-    "hero.title.staticRemainder": "Sie Ihr Unternehmen",
-    "hero.title.line2": "mit autonomen KI-Agenten",
+    "hero.title.line1": "Die AI Operations Ebene",
+    "hero.title.dynamicWords": "Zuverlässig|Sicher|Maßgeschneidert",
+    "hero.title.staticRemainder": "für Ihr Business",
+    "hero.title.line2": "Praktische Automatisierung für KMUs",
     "hero.description":
-      "Wir entwickeln und implementieren intelligente Agenten, die Ihre komplexen operativen Aufgaben erledigen – von der Datenanalyse bis zur Kundenkommunikation. So kann sich Ihr Team auf das Wesentliche konzentrieren: strategisches Wachstum.",
+      "Verwandeln Sie repetitive, manuelle Arbeit in zuverlässige automatisierte Workflows. Wir liefern praktische KI-Agenten, die E-Mails sortieren, Rechnungen verarbeiten und Ihre Tools verbinden – in Tagen, nicht Monaten.",
 
-    "hero.cta.primary": "Strategiegespräch vereinbaren",
-    "hero.cta.secondary": "Live-Demo ansehen",
+    "hero.cta.primary": "Strategiegespräch Buchen",
+    "hero.cta.secondary": "Live-Demo Ansehen",
 
-    "hero.pillars.tailored.title": "Maßgeschneiderte Agenten",
-    "hero.pillars.tailored.description": "Für Ihre einzigartigen Prozesse",
-    "hero.pillars.integration.title": "Nahtlose Integration",
-    "hero.pillars.integration.description": "In Ihre bestehenden Tools",
-    "hero.pillars.partnership.title": "Engagierte Partnerschaft",
-    "hero.pillars.partnership.description": "Von der Analyse bis zum Erfolg",
+    "hero.pillars.tailored.title": "High-ROI Prozesse",
+    "hero.pillars.tailored.description": "Fokus auf Wertschöpfung",
+    "hero.pillars.integration.title": "Nahtlose Verbinder",
+    "hero.pillars.integration.description": "Passt in Ihren Tech-Stack",
+    "hero.pillars.partnership.title": "Operations Layer",
+    "hero.pillars.partnership.description": "Sicher, pragmatisch, betreut",
 
-    "hero.status.available": "Verfügbar für neue Projekte",
-    "hero.status.location": "Standort: Überlingen am Bodensee",
+    "hero.status.available": "Neue Projekte möglich",
+    "hero.status.location": "DACH Region & Remote",
 
     // About
-    "about.title": "Über",
+    "about.title": "Wir sind",
     "about.description":
-      "Von unserem Sitz am Bodensee aus entlasten wir Ihr Team von zeitraubenden Routineaufgaben. Unsere maßgeschneiderten Automatisierungen erhöhen Ihre Produktivität und geben Ihrem Team die volle Kontrolle – jederzeit.",
+      "AIceFlow ist eine KI-Automatisierungsagentur für kleine und mittelständische Unternehmen. Wir helfen Firmen ohne eigene Tech-Abteilung, schneller zu werden und Fehler zu reduzieren, indem wir eine 'AI Operations Ebene' aufbauen, die genau so arbeitet, wie Sie es brauchen.",
 
-    "about.innovation.title": "Innovation ohne Grenzen",
-    "about.custom.title": "Individuell wie Ihr Unternehmen",
-    "about.results.title": "Sichtbare Ergebnisse",
+    "about.innovation.title": "Praxis > Theorie",
+    "about.custom.title": "Maßgefertigt",
+    "about.results.title": "Messbarer Impact",
 
     "about.innovation.description":
-      "Wir verwandeln komplexe Prozesse in intelligente, flexible Workflows, die mit Ihrem Unternehmen wachsen.",
+      "Statt theoretischer 'KI-Beratung' liefern wir sofort einsatzbereite Lösungen für echte operative Probleme.",
 
     "about.custom.description":
-      "Jede Lösung ist genau auf Ihre Ziele, Daten und Unternehmenskultur abgestimmt – für optimale Integration in Ihren Alltag.",
+      "Jede Automatisierung hat einen klaren Auslöser, Input und Output. Wir verbinden die Tools, die Sie bereits nutzen (Microsoft 365, CRM, ERP).",
 
     "about.results.description":
-      "Profitieren Sie unmittelbar von messbaren Effizienzsteigerungen und Kosteneinsparungen – unterstützt durch klare Dashboards und kontinuierliche Optimierung.",
+      "Wir fokussieren uns auf Reaktionszeiten, Fehlerreduktion und gesparte Stunden. Wenn es keinen Wert schafft, bauen wir es nicht.",
 
     // Services
-    "services.title": "Unsere Leistungen für Ihr Team",
+    "services.title": "Was wir automatisieren",
     "services.description":
-      "Wir nehmen Ihnen Routineaufgaben ab und schaffen Transparenz – damit Sie sich voll auf das Kerngeschäft konzentrieren können.",
+      "Vom Posteingang bis zur Rechnung: Wir setzen Agenten ein, die die Fleißarbeit erledigen, damit Ihr Team sich auf das große Ganze konzentrieren kann.",
 
-    "services.processAutomation.title": "Prozess-Automatisierung",
+    "services.processAutomation.title": "Kommunikation & Triage",
     "services.processAutomation.description":
-      "Beschleunigen Sie Ihre Prozesse, beseitigen Sie Engpässe und behalten Sie dabei die volle Kontrolle.",
-    "services.processAutomation.feature1": "Weniger manuelle Aufgaben",
-    "services.processAutomation.feature2": "Kürzere Bearbeitungszeiten",
-    "services.processAutomation.feature3": "Konstante Qualität",
-    "services.processAutomation.feature4": "Proaktive Benachrichtigungen",
+      "Verpassen Sie nie wieder einen Lead oder eine wichtige Anfrage.",
+    "services.processAutomation.feature1": "E-Mail Triage & Routing",
+    "services.processAutomation.feature2": "Lead Qualifizierung",
+    "services.processAutomation.feature3": "Support-Ticket Zusammenfassung",
+    "services.processAutomation.feature4": "Meeting-Notizen zu Aufgaben",
 
-    "services.dashboards.title": "Transparente Dashboards",
+    "services.dashboards.title": "Finanzen & Admin",
     "services.dashboards.description":
-      "Behalten Sie Ihre wichtigsten Kennzahlen jederzeit im Blick – interaktiv und in Echtzeit.",
-    "services.dashboards.feature1": "Echtzeit-Daten",
-    "services.dashboards.feature2": "Individuelle KPI-Übersicht",
-    "services.dashboards.feature3": "Interaktive Grafiken",
-    "services.dashboards.feature4": "Mobile Nutzung möglich",
+      "Bringen Sie Präzision in das Back-Office Chaos.",
+    "services.dashboards.feature1": "Rechnungsverarbeitung",
+    "services.dashboards.feature2": "Ausgaben-Kategorisierung",
+    "services.dashboards.feature3": "Vertragsdaten-Extraktion",
+    "services.dashboards.feature4": "Onboarding Workflows",
 
-    "services.consultation.title": "Strategische Partnerschaft",
+    "services.consultation.title": "Business Intelligence",
     "services.consultation.description":
-      "Gemeinsam mit Ihnen identifizieren wir Potenziale, planen Maßnahmen und sorgen langfristig für spürbare Verbesserungen.",
-    "services.consultation.feature1": "Detaillierte Prozessanalyse",
-    "services.consultation.feature2": "Individueller Fahrplan",
-    "services.consultation.feature3": "Praxisnahe Umsetzung",
-    "services.consultation.feature4": "Kontinuierlicher Support",
+      "Machen Sie aus verstreuten Daten entscheidungssichere Insights.",
+    "services.consultation.feature1": "Wöchentliche KPI-Digests",
+    "services.consultation.feature2": "Wettbewerber-Monitoring",
+    "services.consultation.feature3": "Bewertungs-Aggregation",
+    "services.consultation.feature4": "Automatisierte Reports",
 
     // How It Works
-    "howItWorks.title": "So funktioniert's",
+    "howItWorks.title": "Unser Prozess",
     "howItWorks.description":
-      "Unser klar strukturierter Ablauf sorgt für schnelle, kontrollierte Effizienzsteigerung durch Automatisierung.",
+      "Wir halten es einfach: Die größte ROI-Chance finden, bauen und sicherstellen, dass Ihr Team es nutzt.",
 
-    "howItWorks.step1.title": "Potentialanalyse",
+    "howItWorks.step1.title": "Identifizieren",
     "howItWorks.step1.description":
-      "Gemeinsam analysieren wir Ihre Abläufe und identifizieren optimale Automatisierungspotenziale.",
+      "Wir auditieren Ihre Abläufe, um repetitive Aufgaben mit hohem Volumen zu finden.",
 
-    "howItWorks.step2.title": "Maßgeschneiderte Planung",
+    "howItWorks.step2.title": "Bauen",
     "howItWorks.step2.description":
-      "Wir erstellen einen individuellen Automatisierungsplan, der Ihre Prozesse perfekt ergänzt.",
+      "Wir konfigurieren sichere Agenten und verbinden sie mit Ihren Tools (Google/Microsoft, CRM, Buchhaltung).",
 
-    "howItWorks.step3.title": "Reibungslose Implementierung",
+    "howItWorks.step3.title": "Training & Übergabe",
     "howItWorks.step3.description":
-      "Wir setzen die Automatisierung um und erstellen übersichtliche Dashboards für maximale Transparenz.",
+      "Wir schulen Ihr Team und liefern Dokumentation, damit das neue System vertrauensvoll genutzt wird.",
 
-    "howItWorks.step4.title": "Kontinuierliche Optimierung",
+    "howItWorks.step4.title": "Support",
     "howItWorks.step4.description":
-      "Wir überwachen und verfeinern Ihre Prozesse kontinuierlich für nachhaltige Effizienzgewinne.",
-
-    // Industries
-    "industries.title": "Bereiche, die wir stärken",
-    "industries.description":
-      "Ob Logistik, Marketing oder Healthcare – unsere Automatisierungslösungen passen sich Ihren Anforderungen an und ermöglichen mehr mit weniger.",
-
-    "industries.logistics.name": "Logistik",
-    "industries.logistics.description":
-      "Optimieren Sie Routen und prognostizieren Sie die Nachfrage, damit Ihre Lieferkette reibungslos läuft.",
-
-    "industries.marketing.name": "Marketing",
-    "industries.marketing.description":
-      "Automatisieren Sie Kampagnenabläufe, gewinnen Sie tiefere Einblicke und steigern Sie die Kundenbindung.",
-
-    "industries.sales.name": "Vertrieb",
-    "industries.sales.description":
-      "Qualifizieren Sie Leads schneller, automatisieren Sie Follow-ups und pflegen Sie Kundenbeziehungen in großem Maßstab.",
-
-    "industries.operations.name": "Betrieb",
-    "industries.operations.description":
-      "Optimieren Sie Kernprozesse und überwachen Sie die Leistung in Echtzeit, um Engpässe zu vermeiden.",
-
-    "industries.manufacturing.name": "Produktion",
-    "industries.manufacturing.description":
-      "Verbessern Sie die Zuverlässigkeit Ihrer Fertigung mit vorausschauender Wartung und Qualitätskontrollen.",
-
-    "industries.healthcare.name": "Healthcare",
-    "industries.healthcare.description":
-      "Verbessern Sie das Patientenerlebnis mit automatischer Terminplanung und sicherer Datenverarbeitung.",
+      "Wir überwachen die Performance und passen die Agenten an, wenn Ihr Geschäft wächst.",
 
     // Testimonials
-    "testimonials.title": "Erfolgsgeschichten unserer Kunden",
+    "testimonials.title": "Kundenerfolge",
     "testimonials.description":
-      "Erfahren Sie, wie Unternehmen mit AIceFlow ihre Produktivität steigern – ohne zusätzlichen Personalaufwand.",
+      "Sehen Sie, wie andere KMUs Zeit sparen und skalieren.",
 
-    //Showcase
-
-    "showcase.title": "Vom operativen Chaos zur strategischen Klarheit",
+    // Showcase
+    "showcase.title": "Ihr KI Kontrollzentrum",
     "showcase.description":
-      "Handeln statt reagieren. Unsere Plattform verwandelt Ihre verstreuten Arbeitsabläufe in ein einheitliches, intelligentes System und gibt Ihnen die Echtzeit-Kommandozentrale, die Ihr Unternehmen zum Erfolg braucht.",
+      "Automatisierung darf keine Black Box sein. Unsere Dashboards geben volle Transparenz darüber, was Ihre Agenten tun, wie viel Zeit gespart wurde und wo Ihr Input nötig ist.",
 
-    "showcase.overlay.title": "Ihr Unternehmen, intelligent betrieben.",
+    "showcase.overlay.title": "Sichtbarkeit & Kontrolle",
 
-    "showcase.stats.dashboard.label": "Einheitliches Dashboard",
-    "showcase.stats.dashboard.value": "Totale Kontrolle",
-    "showcase.stats.monitoring.label": "Live-Prozessüberwachung",
-    "showcase.stats.monitoring.value": "In Echtzeit",
-    "showcase.stats.architecture.label": "Agenten-basierte Architektur",
-    "showcase.stats.architecture.value": "Skalierbar",
+    "showcase.stats.dashboard.label": "Autom. Tasks",
+    "showcase.stats.dashboard.value": "24/7",
+    "showcase.stats.monitoring.label": "Fehlerrate",
+    "showcase.stats.monitoring.value": "< 1%",
+    "showcase.stats.architecture.label": "ROI",
+    "showcase.stats.architecture.value": "Sofort",
 
-    "showcase.features.title": "Unser Ansatz",
-    "showcase.features.item1":
-      "Wir erfassen Ihre bestehenden Geschäftsprozesse.",
-    "showcase.features.item2":
-      "Unsere Experten konfigurieren und implementieren autonome Agenten.",
-    "showcase.features.item3":
-      "Sie überwachen und steuern alles über Ihr Dashboard.",
-    "showcase.features.item4":
-      "Gewinnen Sie handlungsrelevante Einblicke aus automatisierten Berichten.",
-    "showcase.features.item5":
-      "Wir binden Ihre Datenbanken, CRM-Systeme und weitere Anwendungen programmatisch ein.",
-    "showcase.features.item6":
-      "Für einen sicheren und kontrollierten Datenfluss in allen Prozessen wird gesorgt.",
+    "showcase.features.title": "Die Operations Ebene",
+    "showcase.features.item1": "Zentrale Ansicht aller aktiven Agenten.",
+    "showcase.features.item2": "Freigabeprozesse (Human-in-the-loop).",
+    "showcase.features.item3": "Live-Logs und Audit-Trails.",
+    "showcase.features.item4": "Nahtlose API-Integrationen.",
+    "showcase.features.item5": "Individuelle Trigger und Zeitpläne.",
+    "showcase.features.item6": "Sicherheitsstandards auf Enterprise-Niveau.",
 
-    "showcase.impact.title": "Der strategische Mehrwert",
-    "showcase.impact.unlock.icon": "Users",
-    "showcase.impact.unlock.title": "Entfesseln Sie das Potenzial Ihres Teams",
+    "showcase.impact.title": "Warum es zählt",
+    "showcase.impact.unlock.icon": "Zap",
+    "showcase.impact.unlock.title": "Geschwindigkeit",
     "showcase.impact.unlock.description":
-      "Automatisieren Sie repetitive Aufgaben, die Kreativität rauben. Geben Sie Ihren Experten die Freiheit, sich auf strategische Initiativen und wachstumsfördernde Arbeit zu konzentrieren.",
-    "showcase.impact.decisions.icon": "BarChart2",
-    "showcase.impact.decisions.title":
-      "Entscheidungen auf Basis von Daten, nicht Vermutungen",
+      "Antworten Sie Kunden sofort, auch außerhalb der Geschäftszeiten.",
+    "showcase.impact.decisions.icon": "CheckCircle",
+    "showcase.impact.decisions.title": "Präzision",
     "showcase.impact.decisions.description":
-      "Unsere Plattform erzeugt aus jeder Aktion saubere, strukturierte Daten. Verwandeln Sie Prozessergebnisse in verlässliche Einblicke für intelligentere und schnellere Geschäftsentscheidungen.",
-    "showcase.impact.resilience.icon": "ShieldCheck",
-    "showcase.impact.resilience.title":
-      "Schaffen Sie einen robusten, skalierbaren Betrieb",
+      "Eliminieren Sie Copy-Paste-Fehler und verlorene Informationen.",
+    "showcase.impact.resilience.icon": "TrendingUp",
+    "showcase.impact.resilience.title": "Fokus",
     "showcase.impact.resilience.description":
-      "Etablieren Sie stabile Prozesse, die rund um die Uhr fehlerfrei laufen. Skalieren Sie Ihren Betrieb, um der wachsenden Nachfrage gerecht zu werden, ohne den manuellen Aufwand zu erhöhen.",
+      "Geben Sie Ihrem Team den Freiraum für Strategie und Kundenbeziehungen.",
 
-    "showcase.dots.team": "Verwalten Sie Ihr Team und dessen Berechtigungen.",
-    "showcase.dots.processes": "Aktive Prozesse laufen nahtlos ab.",
-    "showcase.dots.alerts":
-      "Erhalten Sie Benachrichtigungen für abgeschlossene Aufgaben und Berichte.",
+    // Universal (Chaos Tamer)
+    "universal.title": "Egal was Sie tun, tun Sie es schneller.",
+    "universal.subtitle": "Logistik, Recht oder Limonadenstand. Chaos sieht überall gleich aus. Die Lösung auch.",
+    "universal.button.idle": "Chaos bändigen",
+    "universal.button.active": "Ordnung wiederhergestellt",
+    "universal.floating.email": "Inbox 99+",
+    "universal.floating.invoice": "Offene Rechnung",
+    "universal.floating.meeting": "Terminchaos",
+    "universal.floating.data": "Daten-Fehler",
+    "universal.floating.urgent": "Eskalation",
+    "universal.floating.delay": "Verzug",
+    "universal.floating.error": "Human Error",
+
     // Why AIceFlow
-
-    "why.title": "Warum eine Partnerschaft mit AIceFlow?",
+    "why.title": "Warum AIceFlow?",
     "why.description":
-      "Wir sind nicht nur ein weiterer Softwareanbieter. Wir sind Ihr engagierter Partner bei der Transformation Ihres Unternehmens durch intelligente Automatisierung.",
+      "Wir schlagen die Brücke zwischen komplexer KI-Technologie und Ihrer täglichen Geschäftsrealität.",
 
-    "why.tailored.title": "Maßgeschneiderte Intelligenz, keine Standard-Bots",
+    "why.tailored.title": "Nicht nur Beratung",
     "why.tailored.description":
-      "Wir entwickeln Lösungen, die exakt auf Ihre Prozesse zugeschnitten sind. Unsere Agenten werden individuell konfiguriert, um Ihre einzigartigen Herausforderungen mit maximaler Wirkung zu lösen.",
+      "Wir lassen Sie nicht mit einem PDF-Konzept allein. Wir bauen, implementieren und warten die Software.",
 
-    "why.partnership.title": "Eine echte Partnerschaft",
+    "why.partnership.title": "Definierter ROI",
     "why.partnership.description":
-      "Ihr Erfolg ist unser Erfolg. Wir arbeiten vom ersten Tag an eng mit Ihnen zusammen, um Ihre Ziele zu verstehen und sicherzustellen, dass unsere Lösungen einen echten, messbaren Mehrwert liefern.",
+      "Wir zielen auf Prozesse, wo der Impact messbar ist: Zeit gespart, Kosten gesenkt, Umsatz generiert.",
 
-    "why.synergy.title": "Mensch + KI: Die perfekte Synergie",
+    "why.synergy.title": "Mensch im Mittelpunkt",
     "why.synergy.description":
-      "Unsere Philosophie ist es, zu erweitern, nicht zu ersetzen. Wir stärken Ihr Team, indem wir mühsame Arbeit automatisieren und Freiraum für strategische und kreative Aufgaben schaffen.",
+      "Unsere Automatisierungen arbeiten *für* Ihre Mitarbeiter und nehmen ihnen die Last ab.",
 
-    "why.local.title": "Lokale Expertise, globale Stärke",
+    "why.local.title": "Fokus DACH Region",
     "why.local.description":
-      "Profitieren Sie vom aufmerksamen, zuverlässigen Service eines lokalen deutschen Partners und nutzen Sie gleichzeitig die Stärke von erstklassiger, globaler KI-Technologie.",
+      "Wir verstehen lokale Regularien, Sprache und die Geschäftskultur.",
 
-    "commitment.title": "Unser Versprechen an Sie",
-    "commitment.description":
-      "Diese Prinzipien sind das Fundament jedes Projekts, das wir durchführen.",
+    "commitment.title": "Unsere Standards",
+    "commitment.description": "Zuverlässig. Sicher. Pragmatisch.",
+    "commitment.transparency.title": "Datenschutz",
+    "commitment.transparency.description": "DSGVO-konforme Umsetzung.",
+    "commitment.empowerment.title": "Kein Lock-in",
+    "commitment.empowerment.description": "Daten und Workflows gehören Ihnen.",
+    "commitment.value.title": "Langfristiger Partner",
+    "commitment.value.description": "Wir bleiben als technischer Partner an Ihrer Seite.",
 
-    "commitment.transparency.title": "Radikale Transparenz",
-    "commitment.transparency.description":
-      "Keine 'Black Boxes'. Sie haben jederzeit ein klares Verständnis dafür, was Ihre KI-Agenten tun und warum. So behalten Sie die volle Kontrolle.",
-
-    "commitment.empowerment.title": "Stärkung des Teams",
-    "commitment.empowerment.description":
-      "Unser Ziel ist es, Ihre Experten noch besser zu machen. Wir laden die Fähigkeiten Ihres Teams auf und verwandeln institutionelles Wissen in einen automatisierten Vorteil.",
-
-    "commitment.value.title": "Messbarer Mehrwert",
-    "commitment.value.description":
-      "Wir definieren für jedes Projekt klare KPIs. Erfolg bedeutet für uns nicht nur, ein Tool zu starten, sondern die für Sie wichtigen Kennzahlen nachweislich zu verbessern.",
-
-    //Team
-    "team.founders.title": "Founders",
-    "team.founders.subtitle": "Strategie × Engineering – aus einer Hand.",
-    "team.duo.title": "So arbeiten wir",
+    // Team
+    "team.founders.title": "Das Team",
+    "team.founders.subtitle": "Brückenschlag zwischen Geschäftsstrategie und technischer Exekution.",
+    "team.duo.title": "Unsere Philosophie",
     "team.duo.point1":
-      "Aus Zielen wird ein klarer Automatisierungs-Fahrplan – umgesetzt in kleinen, verifizierten Schritten.",
+      "Wir glauben, dass KI der unsichtbare Motor sein sollte, der Ihr Geschäft antreibt.",
     "team.duo.point2":
-      "Architektur, Integrationen und Datenflüsse Ende-zu-Ende – passend zu Ihrem Stack (SAP, CRM, DB, APIs).",
+      "Wir priorisieren Stabilität und Sicherheit über Hypes.",
     "team.duo.point3":
-      "Nach dem ersten Erfolg härten wir: Sicherheit, Stabilität, Monitoring und saubere Übergabe.",
-    "team.cta.primary": "Termin mit beiden Founder buchen",
-    "team.cta.aria": "Kontaktbereich öffnen, um einen Termin zu buchen",
+      "Wir bauen langfristige Beziehungen, keine Einmal-Skripte.",
+    "team.cta.primary": "Zusammenarbeiten",
+    "team.cta.aria": "Kontakt aufnehmen",
 
     "team.ff.name": "Felix Funke",
-    "team.ff.role_short": "Vision, Kundenstrategie & Full-Stack",
-    "team.ff.focus1": "Strategie",
-    "team.ff.focus2": "Full-Stack & KI",
-    "team.ff.focus3": "Kundenberatung",
+    "team.ff.role_short": "Gründer & Lead Architect",
+    "team.ff.focus1": "Business Strategie",
+    "team.ff.focus2": "Prozess-Architektur",
+    "team.ff.focus3": "Engineering",
     "team.ff.point1":
-      "Überführt Geschäftsziele in einen umsetzbaren Automatisierungs-Plan.",
-    "team.ff.point2": "Fokus auf UX/Dashboards, die Teams wirklich nutzen.",
-    "team.ff.point3": "Steuert messbare Ergebnisse und klare KPIs.",
+      "Verbindet Erfahrung in kaufmännischer Leitung mit tiefer technischer Engineering-Expertise.",
+    "team.ff.point2":
+      "Baut Systeme, die nicht nur Code sind, sondern nachhaltige Unternehmenswerte schaffen.",
+    "team.ff.point3":
+      "Erprobte Umsetzungskompetenz von Konzernen (Handelsblatt) bis zu agilen Silicon Valley Startups.",
 
-    "team.mp.name": "Maik Pfäffle",
-    "team.mp.role_short": "SAP, Prozess-Automation & Architektur",
-    "team.mp.focus1": "SAP & Integrationen",
-    "team.mp.focus2": "Architektur",
-    "team.mp.focus3": "Prozessautomatisierung",
-    "team.mp.point1":
-      "Entwirft skalierbare, sichere Systeme und saubere Datenpipelines.",
-    "team.mp.point2":
-      "Steuert Enterprise-Integrationen (SAP, CRM, APIs, Datenbanken).",
-    "team.mp.point3":
-      "Verankert Zuverlässigkeit, Monitoring und Qualität von Beginn an.",
     // Contact
-    "contact.title": "Bereit, Ihr Unternehmen zu transformieren?",
+    "contact.title": "Automatisieren Sie Ihr Business",
     "contact.description":
-      "Lassen Sie uns besprechen, wie KI-Automatisierung Ihre Prozesse revolutionieren kann. Vereinbaren Sie noch heute Ihre kostenlose Beratung und entdecken Sie die Möglichkeiten.",
+      "Buchen Sie eine kostenlose Strategiesession. Wir finden in 30 Minuten Ihre größten Automatisierungs-Chancen.",
 
     // Form
-    "contact.form.title": "Jetzt starten",
+    "contact.form.title": "Kontakt aufnehmen",
     "contact.form.firstNameLabel": "Vorname",
-    "contact.form.firstNamePlaceholder": "Ihr Vorname",
+    "contact.form.firstNamePlaceholder": "Felix",
     "contact.form.lastNameLabel": "Nachname",
-    "contact.form.lastNamePlaceholder": "Ihr Nachname",
-    "contact.form.emailLabel": "E-Mail-Adresse",
-    "contact.form.emailPlaceholder": "ihre.email@unternehmen.de",
-    "contact.form.companyLabel": "Firmenname",
-    "contact.form.companyPlaceholder": "Ihr Firmenname",
-    "contact.form.phoneLabel": "Telefonnummer",
-    "contact.form.phonePlaceholder": "+49 (0) 176 6336 4095",
-    "contact.form.needsLabel":
-      "Erzählen Sie uns von Ihren Automatisierungsbedürfnissen",
+    "contact.form.lastNamePlaceholder": "Muster",
+    "contact.form.emailLabel": "Arbeits-E-Mail",
+    "contact.form.emailPlaceholder": "felix@firma.de",
+    "contact.form.companyLabel": "Firma",
+    "contact.form.companyPlaceholder": "Muster GmbH",
+    "contact.form.phoneLabel": "Telefon",
+    "contact.form.phonePlaceholder": "+49 123 45678",
+    "contact.form.needsLabel": "Welchen Prozess möchten Sie lösen?",
     "contact.form.needsPlaceholder":
-      "Beschreiben Sie Ihre aktuellen Prozesse und was Sie automatisieren möchten…",
-    "contact.form.submit": "Kostenlose Beratung vereinbaren",
+      "z.B. Rechnungsprüfung, E-Mail Sortierung...",
+    "contact.form.submit": "Strategiegespräch anfragen",
     "contact.form.requiredNote":
-      "* Pflichtfelder. Wir antworten innerhalb von 24 Stunden.",
-    "contact.form.submitting": "Wird gesendet...",
+      "* Pflichtfeld. Antwort meist innerhalb 24h.",
+    "contact.form.submitting": "Sende...",
     "contact.form.error":
-      "Ein Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
-    "contact.form.successTitle": "Vielen Dank!",
+      "Es gab einen Fehler. Bitte versuchen Sie es erneut.",
+    "contact.form.successTitle": "Nachricht gesendet",
     "contact.form.successMessage":
-      "Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.",
-    "contact.form.sendAnother": "Weitere Nachricht senden",
+      "Danke für Ihre Nachricht. Wir melden uns in Kürze.",
+    "contact.form.sendAnother": "Noch eine senden",
 
     // Contact Info
-    "contact.info.title": "Kontaktieren Sie uns",
-    "contact.info.office.title": "Standort",
-    "contact.info.office.line1": "AIceFlow GmbH",
+    "contact.info.title": "Kontakt",
+    "contact.info.office.title": "Sitz",
+    "contact.info.office.line1": "AIceFlow",
     "contact.info.office.line2": "Nussdorfer Strasse 9",
-    "contact.info.office.line3": "88662 Ueberlingen, Deutschland",
+    "contact.info.office.line3": "88662 Überlingen, Deutschland",
     "contact.info.email.title": "E-Mail",
     "contact.info.email.address": "hallo@aiceflow.de",
     "contact.info.phone.title": "Telefon",
     "contact.info.phone.number": "+49 (0) 176 6336 4095",
-    "contact.info.hours.title": "Öffnungszeiten",
+    "contact.info.hours.title": "Geschäftszeiten",
     "contact.info.hours.line1": "Mo – Fr: 9:00 – 18:00 Uhr CET",
-    "contact.info.hours.line2": "Sa: 10:00 – 14:00 Uhr CET",
+    "contact.info.hours.line2": "",
 
     // Actions
-    "contact.actions.title": "Schnellaktionen",
-    "contact.actions.discovery": "Entdeckungsgespräch buchen",
-    "contact.actions.download": "Fallstudien herunterladen",
-    "contact.actions.proposal": "Angebot anfordern",
+    "contact.actions.title": "Nächste Schritte",
+    "contact.actions.discovery": "Gespräch buchen",
+    "contact.actions.download": "Beispiele ansehen",
+    "contact.actions.proposal": "E-Mail schreiben",
 
     // Footer
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "Wir transformieren Unternehmen in Süddeutschland mit modernsten KI-Automatisierungslösungen. Intelligente Prozesse, powered by AI.",
+      "Die AI Operations Ebene für DACH KMUs. Praktische, sichere und maßgeschneiderte Automatisierung.",
 
-    "footer.nav.services.title": "Leistungen",
-    "footer.nav.services.processAutomation": "Prozessautomatisierung",
-    "footer.nav.services.customDashboards": "Individuelle Dashboards",
-    "footer.nav.services.consultation": "Strategische Beratung",
-    "footer.nav.services.implementation": "KI-Implementierung",
-    "footer.nav.services.support": "Fortlaufender Support",
+    "footer.nav.services.title": "Lösungen",
+    "footer.nav.services.processAutomation": "Operations",
+    "footer.nav.services.customDashboards": "Admin & Finance",
+    "footer.nav.services.consultation": "Business Intel",
+    "footer.nav.services.implementation": "Implementierung",
+    "footer.nav.services.support": "Support",
 
-    "footer.nav.company.title": "Unternehmen",
-    "footer.nav.company.about": "Über AIceFlow",
-    "footer.nav.company.team": "Unser Team",
-    "footer.nav.company.testimonials": "Referenzen",
+    "footer.nav.company.title": "Firma",
+    "footer.nav.company.about": "Über Uns",
+    "footer.nav.company.team": "Team",
+    "footer.nav.company.testimonials": "Erfolge",
     "footer.nav.company.contact": "Kontakt",
     "footer.nav.company.careers": "Karriere",
 
-    "footer.copy": "© 2025 AIceFlow GmbH. Alle Rechte vorbehalten.",
-    "footer.tagline": "Präzision, Strategie, Exzellenz.",
+    "footer.copy": "© 2026 AIceFlow. Alle Rechte vorbehalten.",
+    "footer.tagline": "Automatisieren. Optimieren. Wachsen.",
 
     "footer.policies.privacy": "Datenschutz",
-    "footer.policies.terms": "Nutzungsbedingungen",
+    "footer.policies.terms": "AGB",
     "footer.policies.imprint": "Impressum",
   },
 };

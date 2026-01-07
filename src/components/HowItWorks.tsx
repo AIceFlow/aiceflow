@@ -1,139 +1,139 @@
 import { useLanguage } from "@/hooks/useLanguage";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Search, PenTool, Rocket, Headphones } from "lucide-react";
+
+const TimelineItem = ({ 
+  step, 
+  title, 
+  description, 
+  icon: Icon, 
+  index 
+}: { 
+  step: string, 
+  title: string, 
+  description: string, 
+  icon: any, 
+  index: number 
+}) => {
+  const isEven = index % 2 === 0;
+  
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`relative flex items-center justify-between gap-8 md:gap-16 mb-24 last:mb-0 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}
+    >
+      {/* Content Side */}
+      <div className={`flex-1 hidden md:block ${isEven ? 'text-right' : 'text-left'}`}>
+        {isEven ? (
+          <>
+            <h3 className="text-2xl font-bold mb-3 text-foreground">{title}</h3>
+            <p className="text-muted-foreground leading-relaxed">{description}</p>
+          </>
+        ) : (
+          <div className="text-9xl font-bold text-slate-100 opacity-50 select-none">{step}</div>
+        )}
+      </div>
+
+      {/* Center Line Node */}
+      <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow text-white">
+        <Icon size={32} />
+      </div>
+
+      {/* Content Side (Right) / Number Side (Left) */}
+      <div className={`flex-1 ${!isEven ? 'text-right md:text-left' : 'text-left'}`}>
+        {!isEven ? (
+          <div className="hidden md:block">
+            <h3 className="text-2xl font-bold mb-3 text-foreground">{title}</h3>
+            <p className="text-muted-foreground leading-relaxed">{description}</p>
+          </div>
+        ) : (
+          <div className="hidden md:block text-9xl font-bold text-slate-100 opacity-50 select-none">{step}</div>
+        )}
+
+        {/* Mobile Layout Fallback */}
+        <div className="block md:hidden pl-4">
+          <div className="text-4xl font-bold text-primary/20 mb-2">{step}</div>
+          <h3 className="text-xl font-bold mb-2 text-foreground">{title}</h3>
+          <p className="text-muted-foreground text-sm">{description}</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const HowItWorks: React.FC = () => {
   const { t } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
+
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   const steps = [
     {
       step: "01",
       title: t("howItWorks.step1.title"),
       description: t("howItWorks.step1.description"),
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      ),
+      icon: Search,
     },
     {
       step: "02",
       title: t("howItWorks.step2.title"),
       description: t("howItWorks.step2.description"),
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-          />
-        </svg>
-      ),
+      icon: PenTool,
     },
     {
       step: "03",
       title: t("howItWorks.step3.title"),
       description: t("howItWorks.step3.description"),
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
+      icon: Rocket,
     },
     {
       step: "04",
       title: t("howItWorks.step4.title"),
       description: t("howItWorks.step4.description"),
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-          />
-        </svg>
-      ),
+      icon: Headphones,
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="how-it-works" className="py-32 bg-background relative overflow-hidden" ref={containerRef}>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-24">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("howItWorks.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t("howItWorks.description")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="relative group">
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-primary/20 transform translate-x-4 z-0"></div>
-              )}
+        <div className="relative max-w-5xl mx-auto">
+          {/* Vertical Line Background */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-border -translate-x-1/2"></div>
+          
+          {/* Active Vertical Line */}
+          <motion.div 
+            style={{ height }}
+            className="absolute left-8 md:left-1/2 top-0 w-1 bg-gradient-to-b from-primary to-blue-400 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+          />
 
-              <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:scale-105 relative z-10 border border-border group">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:shadow-glow transition-all duration-300">
-                    {step.icon}
-                  </div>
-
-                  <div className="text-4xl font-bold text-primary mb-2">
-                    {step.step}
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground mb-4">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+          <div className="space-y-12">
+            {steps.map((step, index) => (
+              <TimelineItem 
+                key={index}
+                index={index}
+                {...step}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import React from "react";
 import {
   SlidersHorizontal,
-  Handshake,
+  TrendingUp,
   Bot,
   Globe,
   Eye,
@@ -10,45 +10,46 @@ import {
   Target,
 } from "lucide-react";
 
-// --- Helper Components ---
-
-const AdvantageCard: React.FC<{
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  gradient: string;
-}> = ({ icon, title, description, gradient }) => (
-  <div className="group relative overflow-hidden bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:scale-[1.03] border border-border">
-    <div
-      className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
-    ></div>
-    <div className="relative z-10">
-      <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-6 text-white group-hover:shadow-glow transition-all duration-300">
-        {icon}
-      </div>
-      <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-        {title}
-      </h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+const WhyCard = ({ 
+  icon: Icon, 
+  title, 
+  description, 
+}: { 
+  icon: any, 
+  title: string, 
+  description: string, 
+}) => (
+  <div className="group p-8 rounded-2xl bg-card border border-border shadow-card hover:shadow-elegant transition-all duration-300">
+    <div className="mb-6 inline-flex p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+      <Icon size={28} />
     </div>
+    <h3 className="text-xl font-bold text-foreground mb-4">{title}</h3>
+    <p className="text-muted-foreground leading-relaxed">
+      {description}
+    </p>
   </div>
 );
 
-const CommitmentCard: React.FC<{
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}> = ({ icon, title, description }) => (
-  <div className="flex flex-col items-center text-center">
-    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-primary mb-4">
-      {icon}
+const StandardItem = ({ icon: Icon, title, description, index }: { icon: any, title: string, description: string, index: number }) => (
+  <div className="flex flex-col items-center text-center p-6 md:p-8 relative">
+    {/* Vertical Divider for Desktop (except last item) */}
+    {index < 2 && (
+      <div className="hidden md:block absolute right-0 top-1/4 bottom-1/4 w-px bg-border"></div>
+    )}
+    {/* Horizontal Divider for Mobile (except last item) */}
+    {index < 2 && (
+      <div className="md:hidden absolute bottom-0 left-10 right-10 h-px bg-border"></div>
+    )}
+
+    <div className="mb-6 p-4 rounded-full bg-secondary text-primary">
+      <Icon size={32} strokeWidth={1.5} />
     </div>
-    <h4 className="text-xl font-bold mb-2">{title}</h4>
-    <p className="text-blue-100 max-w-xs">{description}</p>
+    <h4 className="text-xl font-bold text-foreground mb-3">{title}</h4>
+    <p className="text-muted-foreground leading-relaxed max-w-xs">
+      {description}
+    </p>
   </div>
 );
-
-// --- Main Component ---
 
 const WhyAIceFlow: React.FC = () => {
   const { t } = useLanguage();
@@ -56,35 +57,32 @@ const WhyAIceFlow: React.FC = () => {
   const advantages = [
     {
       key: "tailored",
-      icon: <SlidersHorizontal className="w-8 h-8" />,
-      color: "from-blue-500 to-purple-600",
+      icon: SlidersHorizontal,
     },
     {
       key: "partnership",
-      icon: <Handshake className="w-8 h-8" />,
-      color: "from-green-500 to-blue-600",
+      icon: TrendingUp,
     },
     {
       key: "synergy",
-      icon: <Bot className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
+      icon: Bot,
     },
     {
       key: "local",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-600",
+      icon: Globe,
     },
   ];
 
   const commitments = [
-    { key: "transparency", icon: <Eye className="w-6 h-6" /> },
-    { key: "empowerment", icon: <Zap className="w-6 h-6" /> },
-    { key: "value", icon: <Target className="w-6 h-6" /> },
+    { key: "transparency", icon: Eye },
+    { key: "empowerment", icon: Zap },
+    { key: "value", icon: Target },
   ];
 
   return (
     <section id="why-aiceflow" className="py-24 bg-background">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("why.title")}
@@ -95,36 +93,41 @@ const WhyAIceFlow: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {advantages.map(({ key, icon, color }) => (
-            <AdvantageCard
-              key={key}
-              icon={icon}
-              title={t(`why.${key}.title`)}
-              description={t(`why.${key}.description`)}
-              gradient={color}
+        {/* Main Advantages Grid */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-32 max-w-5xl mx-auto">
+          {advantages.map((adv) => (
+            <WhyCard 
+              key={adv.key}
+              icon={adv.icon}
+              title={t(`why.${adv.key}.title`)}
+              description={t(`why.${adv.key}.description`)}
             />
           ))}
         </div>
 
-        <div className="mt-20 bg-gradient-primary rounded-2xl p-8 lg:p-12 text-white">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">{t("commitment.title")}</h3>
-            <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              {t("commitment.description")}
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-10 text-center">
-            {commitments.map(({ key, icon }) => (
-              <CommitmentCard
-                key={key}
-                icon={icon}
-                title={t(`commitment.${key}.title`)}
-                description={t(`commitment.${key}.description`)}
-              />
-            ))}
-          </div>
+        {/* Standards Section - The Foundation */}
+        <div className="relative">
+           {/* Section Label */}
+           <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-background px-6 text-sm font-semibold text-primary tracking-wider uppercase">
+              {t("commitment.title")}
+           </div>
+           
+           {/* Main Container with top border */}
+           <div className="border-t border-border pt-12">
+              <div className="grid md:grid-cols-3 max-w-6xl mx-auto">
+                 {commitments.map((c, i) => (
+                   <StandardItem 
+                     key={c.key}
+                     index={i}
+                     icon={c.icon}
+                     title={t(`commitment.${c.key}.title`)}
+                     description={t(`commitment.${c.key}.description`)}
+                   />
+                 ))}
+              </div>
+           </div>
         </div>
+
       </div>
     </section>
   );

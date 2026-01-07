@@ -10,9 +10,9 @@ import {
   Loader2,
   CheckCircle,
   AlertTriangle,
+  ArrowRight
 } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
-
 import { reportFormSubmitConversion } from "../utils/analytics";
 
 type FormData = {
@@ -57,12 +57,11 @@ const Contact: React.FC = () => {
     setStatus("loading");
     setErrorMessage("");
 
-    // Map React state (camelCase) to Supabase table columns (snake_case)
     const submissionData = {
       first_name: formData.firstName,
       last_name: formData.lastName,
       email: formData.email,
-      company: formData.company || null, // Use null for optional fields if empty
+      company: formData.company || null,
       phone: formData.phone || null,
       needs: formData.needs,
     };
@@ -81,255 +80,195 @@ const Contact: React.FC = () => {
     } else {
       reportFormSubmitConversion(submissionData.email);
       setStatus("success");
-      setFormData(initialFormData); // Reset form on success
+      setFormData(initialFormData);
     }
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {t("contact.title")}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("contact.description")}
-          </p>
-        </div>
+    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+       {/* Decorative Background */}
+       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-blue-400/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
-            {status === "success" ? (
-              <div className="flex flex-col items-center justify-center h-full text-center bg-green-50 dark:bg-green-900/20 rounded-lg p-8 min-h-[500px]">
-                <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  {t("contact.form.successTitle")}
-                </h3>
-                <p className="text-muted-foreground">
-                  {t("contact.form.successMessage")}
-                </p>
-                <Button
-                  variant="outline"
-                  className="mt-6"
-                  onClick={() => setStatus("idle")}
-                >
-                  {t("contact.form.sendAnother")}
-                </Button>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-6xl mx-auto bg-white/50 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/20 overflow-hidden">
+           <div className="flex flex-col lg:flex-row">
+              
+              {/* Left Column: Info & Context */}
+              <div className="lg:w-2/5 bg-slate-900 p-10 lg:p-16 text-white flex flex-col justify-between relative overflow-hidden">
+                 {/* Abstract Shapes */}
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[60px] pointer-events-none"></div>
+                 
+                 <div className="relative z-10">
+                   <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                     {t("contact.title")}
+                   </h2>
+                   <p className="text-slate-400 text-lg mb-12">
+                     {t("contact.description")}
+                   </p>
+                   
+                   <div className="space-y-8">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white/10 rounded-xl text-primary">
+                          <Mail size={20} />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white mb-1">{t("contact.info.email.title")}</div>
+                          <div className="text-slate-300">{t("contact.info.email.address")}</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white/10 rounded-xl text-primary">
+                          <Phone size={20} />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white mb-1">{t("contact.info.phone.title")}</div>
+                          <div className="text-slate-300">{t("contact.info.phone.number")}</div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-white/10 rounded-xl text-primary">
+                          <MapPin size={20} />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white mb-1">{t("contact.info.office.title")}</div>
+                          <div className="text-slate-300">
+                             {t("contact.info.office.line1")}<br/>
+                             {t("contact.info.office.line2")}
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                 </div>
+                 
+                 {/* Bottom decoration */}
+                 <div className="mt-12 pt-12 border-t border-white/10">
+                    <div className="flex items-center gap-2 text-sm text-slate-400">
+                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                       Typically replies in 2 hours
+                    </div>
+                 </div>
               </div>
-            ) : (
-              <>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  {t("contact.form.title")}
-                </h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium text-foreground mb-2"
+
+              {/* Right Column: Form */}
+              <div className="lg:w-3/5 p-10 lg:p-16 bg-white/50">
+                 {status === "success" ? (
+                    <div className="h-full flex flex-col items-center justify-center text-center p-8">
+                      <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                        <CheckCircle size={40} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4">{t("contact.form.successTitle")}</h3>
+                      <p className="text-muted-foreground mb-8 max-w-md mx-auto">{t("contact.form.successMessage")}</p>
+                      <Button variant="outline" onClick={() => setStatus("idle")}>
+                        {t("contact.form.sendAnother")}
+                      </Button>
+                    </div>
+                 ) : (
+                   <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                         <div className="space-y-2">
+                            <label className="text-sm font-medium text-foreground/80">{t("contact.form.firstNameLabel")} *</label>
+                            <Input 
+                              name="firstName" 
+                              value={formData.firstName} 
+                              onChange={handleInputChange} 
+                              required 
+                              className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 h-12"
+                              placeholder={t("contact.form.firstNamePlaceholder")}
+                            />
+                         </div>
+                         <div className="space-y-2">
+                            <label className="text-sm font-medium text-foreground/80">{t("contact.form.lastNameLabel")} *</label>
+                            <Input 
+                              name="lastName" 
+                              value={formData.lastName} 
+                              onChange={handleInputChange} 
+                              required 
+                              className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 h-12"
+                              placeholder={t("contact.form.lastNamePlaceholder")}
+                            />
+                         </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <label className="text-sm font-medium text-foreground/80">{t("contact.form.emailLabel")} *</label>
+                        <Input 
+                          name="email" 
+                          type="email"
+                          value={formData.email} 
+                          onChange={handleInputChange} 
+                          required 
+                          className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 h-12"
+                          placeholder={t("contact.form.emailPlaceholder")}
+                        />
+                      </div>
+
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-foreground/80">{t("contact.form.companyLabel")}</label>
+                            <Input 
+                              name="company" 
+                              value={formData.company} 
+                              onChange={handleInputChange} 
+                              className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 h-12"
+                              placeholder={t("contact.form.companyPlaceholder")}
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-sm font-medium text-foreground/80">{t("contact.form.phoneLabel")}</label>
+                            <Input 
+                              name="phone" 
+                              value={formData.phone} 
+                              onChange={handleInputChange} 
+                              className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 h-12"
+                              placeholder={t("contact.form.phonePlaceholder")}
+                            />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                         <label className="text-sm font-medium text-foreground/80">{t("contact.form.needsLabel")} *</label>
+                         <Textarea 
+                            name="needs" 
+                            value={formData.needs} 
+                            onChange={handleInputChange} 
+                            required 
+                            rows={4}
+                            className="bg-white/50 border-gray-200 focus:border-primary focus:ring-primary/20 resize-none"
+                            placeholder={t("contact.form.needsPlaceholder")}
+                         />
+                      </div>
+
+                      {status === "error" && (
+                        <div className="p-4 bg-red-50 text-red-600 rounded-lg flex items-center gap-3">
+                          <AlertTriangle size={20} />
+                          <p className="text-sm">{errorMessage}</p>
+                        </div>
+                      )}
+
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="w-full h-14 text-lg bg-slate-900 hover:bg-slate-800 text-white shadow-lg"
+                        disabled={status === "loading"}
                       >
-                        {t("contact.form.firstNameLabel")} *
-                      </label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        placeholder={t("contact.form.firstNamePlaceholder")}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        {t("contact.form.lastNameLabel")} *
-                      </label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        placeholder={t("contact.form.lastNamePlaceholder")}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      {t("contact.form.emailLabel")} *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder={t("contact.form.emailPlaceholder")}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      {t("contact.form.companyLabel")}
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder={t("contact.form.companyPlaceholder")}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      {t("contact.form.phoneLabel")}
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder={t("contact.form.phonePlaceholder")}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="needs"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      {t("contact.form.needsLabel")} *
-                    </label>
-                    <Textarea
-                      id="needs"
-                      name="needs"
-                      value={formData.needs}
-                      onChange={handleInputChange}
-                      placeholder={t("contact.form.needsPlaceholder")}
-                      rows={4}
-                      required
-                    />
-                  </div>
-
-                  {status === "error" && (
-                    <div className="flex items-center space-x-2 text-sm text-destructive bg-destructive/10 p-3 rounded-md">
-                      <AlertTriangle className="w-5 h-5 flex-shrink-0" />
-                      <p>{errorMessage}</p>
-                    </div>
-                  )}
-
-                  <Button
-                    type="submit"
-                    variant="cta"
-                    size="lg"
-                    className="w-full "
-                    disabled={status === "loading"}
-                  >
-                    {status === "loading" && (
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    )}
-                    {status === "loading"
-                      ? t("contact.form.submitting")
-                      : t("contact.form.submit")}
-                  </Button>
-                  <p className="text-sm text-muted-foreground text-center">
-                    {t("contact.form.requiredNote")}
-                  </p>
-                </form>
-              </>
-            )}
-          </div>
-
-          <div className="space-y-8">
-            {/* The right-side info column remains unchanged */}
-            <div className="bg-gradient-primary rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">
-                {t("contact.info.title")}
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">
-                      {t("contact.info.office.title")}
-                    </h4>
-                    <p className="text-blue-100">
-                      {t("contact.info.office.line1")}
-                      <br />
-                      {t("contact.info.office.line2")}
-                      <br />
-                      {t("contact.info.office.line3")}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">
-                      {t("contact.info.email.title")}
-                    </h4>
-                    <p className="text-blue-100">
-                      {t("contact.info.email.address")}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">
-                      {t("contact.info.phone.title")}
-                    </h4>
-                    <p className="text-blue-100">
-                      {t("contact.info.phone.number")}
-                    </p>
-                  </div>
-                </div>
-                {/* <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">
-                      {t("contact.info.hours.title")}
-                    </h4>
-                    <p className="text-blue-100">
-                      {t("contact.info.hours.line1")}
-                      <br />
-                      {t("contact.info.hours.line2")}
-                    </p>
-                  </div>
-                </div> */}
+                         {status === "loading" ? (
+                           <Loader2 className="w-5 h-5 animate-spin mr-2" />
+                         ) : (
+                           <span className="flex items-center gap-2">
+                             {t("contact.form.submit")} <ArrowRight size={18} />
+                           </span>
+                         )}
+                      </Button>
+                      <p className="text-center text-xs text-muted-foreground mt-4">
+                        {t("contact.form.requiredNote")}
+                      </p>
+                   </form>
+                 )}
               </div>
-            </div>
-            {/* <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">
-                {t("contact.actions.title")}
-              </h3>
-              <div className="space-y-4">
-                <Button variant="outline" className="w-full justify-start">
-                  {t("contact.actions.discovery")}
-                </Button>
-              </div>
-            </div> */}
-          </div>
+           </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,61 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import React from "react";
+import { motion } from "framer-motion";
+import { 
+  MessageSquare, 
+  FileSpreadsheet, 
+  LineChart, 
+  ArrowUpRight 
+} from "lucide-react";
+
+const ServiceCard = ({ 
+  title, 
+  description, 
+  features, 
+  icon: Icon, 
+  className,
+  delay 
+}: { 
+  title: string, 
+  description: string, 
+  features: string[], 
+  icon: any, 
+  className?: string,
+  delay: number
+}) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay, duration: 0.5 }}
+    className={`group relative overflow-hidden rounded-3xl bg-white p-8 shadow-card border border-border hover:shadow-elegant transition-all duration-300 ${className}`}
+  >
+    <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+      <ArrowUpRight className="w-6 h-6 text-primary" />
+    </div>
+    
+    <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+      <Icon className="h-6 w-6" />
+    </div>
+
+    <h3 className="mb-3 text-2xl font-bold text-foreground">{title}</h3>
+    <p className="mb-6 text-muted-foreground leading-relaxed">
+      {description}
+    </p>
+
+    <ul className="space-y-2">
+      {features.map((feature, i) => (
+        <li key={i} className="flex items-center text-sm text-foreground/80">
+          <div className="mr-2 h-1.5 w-1.5 rounded-full bg-primary"></div>
+          {feature}
+        </li>
+      ))}
+    </ul>
+
+    {/* Decorative Gradient Blob */}
+    <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-gradient-to-br from-primary/20 to-transparent blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+  </motion.div>
+);
 
 const Services: React.FC = () => {
   const { t } = useLanguage();
@@ -14,21 +70,8 @@ const Services: React.FC = () => {
         t("services.processAutomation.feature3"),
         t("services.processAutomation.feature4"),
       ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-          />
-        </svg>
-      ),
+      icon: MessageSquare,
+      className: "md:col-span-2 bg-gradient-to-br from-white to-blue-50/50",
     },
     {
       title: t("services.dashboards.title"),
@@ -39,21 +82,8 @@ const Services: React.FC = () => {
         t("services.dashboards.feature3"),
         t("services.dashboards.feature4"),
       ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
+      icon: FileSpreadsheet,
+      className: "md:col-span-1 bg-white",
     },
     {
       title: t("services.consultation.title"),
@@ -64,80 +94,77 @@ const Services: React.FC = () => {
         t("services.consultation.feature3"),
         t("services.consultation.feature4"),
       ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-          />
-        </svg>
-      ),
+      icon: LineChart,
+      className: "md:col-span-3 bg-gradient-to-r from-white to-blue-50/30 flex flex-col md:flex-row md:items-center md:justify-between gap-8",
     },
   ];
 
   return (
-    <section id="services" className="py-24 bg-accent/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="services" className="py-24 bg-background relative overflow-hidden">
+       {/* Background Elements */}
+       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[500px] bg-gradient-to-b from-transparent via-primary/5 to-transparent -skew-y-3 pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-16 max-w-2xl">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("services.title")}
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="w-20 h-1.5 bg-gradient-primary rounded-full mb-6"></div>
+          <p className="text-xl text-muted-foreground">
             {t("services.description")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-border group"
-            >
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-6 text-white group-hover:shadow-glow transition-all duration-300">
-                {service.icon}
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Item 1: Span 2 */}
+          <ServiceCard 
+            {...services[0]} 
+            delay={0.1}
+          />
+          
+          {/* Item 2: Span 1 */}
+          <ServiceCard 
+            {...services[1]} 
+            delay={0.2}
+          />
 
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                {service.title}
-              </h3>
-
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              <ul className="space-y-3">
-                {service.features.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className="flex items-center text-foreground"
-                  >
-                    <div className="w-5 h-5 bg-primary/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg
-                        className="w-3 h-3 text-primary"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Item 3: Span 3 (Full width) - Special layout inside */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="md:col-span-3 group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10 shadow-card border border-border hover:shadow-elegant transition-all duration-300"
+          >
+             <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+               <ArrowUpRight className="w-6 h-6 text-primary" />
+             </div>
+             
+             <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="flex-1">
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <LineChart className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-3 text-2xl font-bold text-foreground">{services[2].title}</h3>
+                  <p className="text-muted-foreground leading-relaxed max-w-xl">
+                    {services[2].description}
+                  </p>
+                </div>
+                
+                <div className="flex-1 w-full bg-accent/30 rounded-2xl p-6">
+                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {services[2].features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm text-foreground/80">
+                        <div className="mr-3 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                   </ul>
+                </div>
+             </div>
+             
+             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-gradient-to-tr from-primary/10 to-transparent blur-3xl group-hover:scale-125 transition-transform duration-500"></div>
+          </motion.div>
         </div>
       </div>
     </section>
