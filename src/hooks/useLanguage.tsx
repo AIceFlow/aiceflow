@@ -252,10 +252,10 @@ export const translations = {
       "Owns the technical platform for secure, robust, and scalable AI operations.",
     "team.hdc.capabilityLabel": "Technical Architecture Leadership",
     "team.hdc.software":
-      "AI Solution Architecture|Backend and Integration Platforms|Data and Agent Infrastructure|Reliability Engineering",
+      "AI Systems Architecture|Enterprise Integration Strategy|API and Data Connectivity|Platform Reliability",
     "team.hdc.specialty.title": "Engineering Authority",
     "team.hdc.specialty.pills":
-      "Safety-Critical Engineering Standards|Computer Vision Expertise|High-Availability System Design|Observability and Quality Gates|Compliance-by-Design|Performance and Cost Control",
+      "AI Readiness and Use-Case Prioritization|ERP/CRM/Microsoft Integration|Data Governance and Compliance|Secure Automation Design|Scalable Operations and Monitoring|Cost and Performance Management",
     "team.hdc.points":
       "Designs architectures that scale from pilot to core business operations.|Builds secure integration layers around legacy and modern systems without operational disruption.|Ensures production stability through strict quality standards, monitoring, and incident resilience.",
 
@@ -575,10 +575,10 @@ export const translations = {
       "Verantwortet die technische Plattform für sichere, robuste und skalierbare AI-Operations.",
     "team.hdc.capabilityLabel": "Technische Architekturführung",
     "team.hdc.software":
-      "AI-Solution-Architektur|Backend- und Integrationsplattformen|Daten- und Agenten-Infrastruktur|Reliability Engineering",
+      "AI-Systemarchitektur|Integrationsstrategie für Unternehmenssysteme|API- und Datenanbindung|Plattformzuverlässigkeit",
     "team.hdc.specialty.title": "Technische Engineering-Autorität",
     "team.hdc.specialty.pills":
-      "Safety-Critical-Engineering-Standards|Computer-Vision-Expertise|Hochverfügbare Systemarchitektur|Observability und Quality Gates|Compliance-by-Design|Performance- und Kostenkontrolle",
+      "AI-Readiness und Use-Case-Priorisierung|Integration von ERP/CRM/Microsoft-Umgebungen|Daten-Governance und Compliance|Sicheres Automatisierungsdesign|Skalierbarer Betrieb und Monitoring|Kosten- und Performance-Steuerung",
     "team.hdc.points":
       "Entwirft Architekturen, die vom Pilot in den geschäftskritischen Betrieb skalieren.|Baut sichere Integrationsschichten zwischen Legacy- und modernen Systemen ohne operative Reibungsverluste.|Sichert Produktionsstabilität über klare Qualitätsstandards, Monitoring und Incident-Resilienz.",
 
