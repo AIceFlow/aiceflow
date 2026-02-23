@@ -69,27 +69,28 @@ export default function ImpressumModal({
                   </a>
                 </span>
               </span>
-
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <span>
-                  <span className="font-medium">Maik Pfäffle:</span>{" "}
+                  <span className="font-medium">Dr. Heiner Di Camillo:</span>{" "}
                   <a
-                    href="mailto:maik.pfaeffle@hikes.digital"
+                    href="mailto:heiner.dicamillo@aiceflow.de"
                     className="underline"
                   >
-                    maik.pfaeffle@hikes.digital
+                    heiner.dicamillo@aiceflow.de
                   </a>
                 </span>
               </span>
+
             </div>
             <p className="mt-2">
-              Vertreten durch die Geschäftsführer: Felix Funke und Maik Pfäffle
+              Vertreten durch die Geschäftsführer: Felix Funke und Dr. Heiner
+              Di Camillo
             </p>
             <p className="mt-2">
-              Handelsregistereintrag (HRB): wird nachgereicht
+              Handelsregistereintrag: Amtsgericht Freiburg, HRB 734207
               <br />
-              Umsatzsteuer-ID: wird nachgereicht
+              USt-IdNr.: DE459248582
             </p>
           </section>
 
@@ -101,7 +102,7 @@ export default function ImpressumModal({
             </h3>
             <p>
               Für inhaltliche Rückfragen stehen Ihnen die Geschäftsführer Felix
-              Funke und Maik Pfäffle zur Verfügung.
+              Funke und Dr. Heiner Di Camillo zur Verfügung.
             </p>
           </section>
 
@@ -140,8 +141,8 @@ export default function ImpressumModal({
           <section>
             <h4 className="font-semibold">Hinweis</h4>
             <p>
-              Felix Funke und Maik Pfäffle sind gemeinsam verantwortlich für die
-              Inhalte dieser Website.
+              Felix Funke und Dr. Heiner Di Camillo sind gemeinsam
+              verantwortlich für die Inhalte dieser Website.
             </p>
           </section>
         </div>

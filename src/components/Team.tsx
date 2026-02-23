@@ -3,149 +3,277 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
-import { 
-  Rocket, 
-  ShieldCheck, 
-  HeartHandshake, 
-  Linkedin, 
-  Mail 
+import {
+  BriefcaseBusiness,
+  CheckCircle2,
+  Cpu,
+  GitBranch,
 } from "lucide-react";
-import felixStairs from "@/assets/felix-profile-stairs.jpeg";
+import felixPortrait from "@/assets/felix-profile-stairs.jpeg";
+import heinerPortrait from "@/assets/portrait_bright.jpg";
+import horizontalFullLogo from "@/assets/logo/horizontal-full.png";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 const containerVariants: Variants = {
   offscreen: {},
   onscreen: {
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
 const itemVariants: Variants = {
-  offscreen: { y: 20, opacity: 0 },
+  offscreen: { y: 24, opacity: 0 },
   onscreen: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", stiffness: 100, damping: 20, duration: 0.5 },
+    transition: { type: "spring", stiffness: 110, damping: 22, duration: 0.5 },
   },
 };
+
+const parsePills = (raw: string): string[] =>
+  raw
+    .split("|")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+const PillCloud = ({
+  items,
+  tone,
+}: {
+  items: string[];
+  tone: "business" | "technical" | "shared";
+}) => {
+  const toneClasses =
+    tone === "business"
+      ? "border-amber-300/45 bg-amber-100/70 text-amber-900"
+      : tone === "technical"
+        ? "border-sky-300/45 bg-sky-100/70 text-sky-900"
+        : "border-white/30 bg-white/10 text-slate-100";
+
+  return (
+    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+      {items.map((item) => (
+        <span
+          key={item}
+          className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide sm:px-3 sm:text-xs ${toneClasses}`}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+};
+
+const DuoBrandPanel = ({ logoAlt, caption }: { logoAlt: string; caption: string }) => (
+  <div className="relative flex h-full min-h-[230px] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-6 sm:min-h-[300px] sm:p-8">
+    <div className="pointer-events-none absolute -left-12 -top-12 h-32 w-32 rounded-full bg-primary/25 blur-3xl" />
+    <div className="pointer-events-none absolute -bottom-14 -right-10 h-36 w-36 rounded-full bg-cyan-400/20 blur-3xl" />
+    <div className="relative z-10 flex flex-col items-center">
+      <img
+        src={horizontalFullLogo as unknown as string}
+        alt={logoAlt}
+        className="w-full max-w-[260px] object-contain drop-shadow-[0_18px_36px_rgba(2,132,199,0.22)] sm:max-w-[320px]"
+      />
+      <p className="mt-5 text-center text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+        {caption}
+      </p>
+    </div>
+  </div>
+);
+
+const FounderBlock = ({
+  tone,
+  icon,
+  name,
+  role,
+  summary,
+  softwareLabel,
+  softwarePills,
+  specialtyLabel,
+  specialtyPills,
+  points,
+  imageSrc,
+  imageAlt,
+  imagePosition,
+  imageFit,
+}: {
+  tone: "business" | "technical";
+  icon: React.ReactNode;
+  name: string;
+  role: string;
+  summary: string;
+  softwareLabel: string;
+  softwarePills: string[];
+  specialtyLabel: string;
+  specialtyPills: string[];
+  points: string[];
+  imageSrc: string;
+  imageAlt: string;
+  imagePosition?: string;
+  imageFit?: "cover" | "contain";
+}) => (
+  <motion.article
+    variants={itemVariants}
+    className={`overflow-hidden rounded-[1.75rem] border bg-white/85 shadow-[0_20px_50px_-24px_rgba(15,23,42,0.35)] backdrop-blur-sm ${
+      tone === "business" ? "border-amber-300/50" : "border-sky-300/50"
+    }`}
+  >
+    <div
+      className={`h-1.5 w-full ${
+        tone === "business"
+          ? "bg-gradient-to-r from-amber-400 to-orange-500"
+          : "bg-gradient-to-r from-sky-400 to-blue-500"
+      }`}
+    />
+
+    <div className="relative h-56 bg-slate-100 sm:h-64">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className={`h-full w-full ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
+        style={{ objectPosition: imagePosition ?? "50% 50%" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
+    </div>
+
+    <div className="p-6 sm:p-8">
+      <div className="mb-4 flex items-center gap-3">
+        <div
+          className={`rounded-xl p-2 ${
+            tone === "business"
+              ? "bg-amber-500/15 text-amber-700"
+              : "bg-sky-500/15 text-sky-700"
+          }`}
+        >
+          {icon}
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-foreground sm:text-2xl">{name}</h3>
+          <p className="text-xs font-semibold text-primary sm:text-sm">{role}</p>
+        </div>
+      </div>
+
+      <p className="mb-5 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+
+      <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-foreground/70">
+        {softwareLabel}
+      </p>
+      <PillCloud items={softwarePills} tone={tone} />
+
+      <p className="mb-2 mt-5 text-[11px] font-bold uppercase tracking-wide text-foreground/70">
+        {specialtyLabel}
+      </p>
+      <PillCloud items={specialtyPills} tone={tone} />
+
+      <div className="mt-5 space-y-2 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
+        {points.map((point) => (
+          <div key={point} className="flex items-start gap-2">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
+            <p>{point}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </motion.article>
+);
 
 const Team: React.FC = () => {
   const { t } = useLanguage();
 
-  const values = [
-    {
-      icon: <Rocket className="w-6 h-6" />,
-      text: t("team.duo.point1"),
-      title: "Invisible Engine" // Hardcoded title or add to translations if critical
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6" />,
-      text: t("team.duo.point2"),
-      title: "Stability First"
-    },
-    {
-      icon: <HeartHandshake className="w-6 h-6" />,
-      text: t("team.duo.point3"),
-      title: "Long-term Partner"
-    },
-  ];
-
   return (
-    <section id="team" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+    <section id="team" className="relative overflow-hidden bg-secondary/30 py-24 sm:py-28">
+      <div className="pointer-events-none absolute -left-40 -top-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+
+      <div className="container relative mx-auto px-4 sm:px-5">
+        <div className="mx-auto mb-14 max-w-3xl text-center sm:mb-16">
+          <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
             {t("team.founders.title")}
           </h2>
-          <div className="w-20 h-1.5 bg-gradient-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-muted-foreground">
+          <div className="mx-auto mb-6 h-1.5 w-20 rounded-full bg-gradient-primary"></div>
+          <p className="text-base text-muted-foreground sm:text-lg lg:text-xl">
             {t("team.founders.subtitle")}
           </p>
         </div>
 
-        <motion.div 
-          className="max-w-6xl mx-auto"
+        <motion.div
+          className="mx-auto max-w-6xl"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.2 }}
           variants={containerVariants}
         >
-          {/* Founder Profile - Main Feature */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
-            className="bg-card rounded-3xl overflow-hidden shadow-elegant border border-border/50 mb-16"
+            className="mb-10 grid gap-6 rounded-[1.75rem] border border-white/10 bg-slate-950 p-6 shadow-[0_28px_90px_-38px_rgba(15,23,42,0.9)] sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-10 lg:rounded-[2rem] lg:p-10"
           >
-            <div className="flex flex-col lg:flex-row">
-              {/* Image Side */}
-              <div className="lg:w-2/5 relative min-h-[400px]">
-                <img
-                  src={felixStairs as unknown as string}
-                  alt={t("team.ff.name")}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/60"></div>
-                <div className="absolute bottom-6 left-6 text-white lg:hidden">
-                  <h3 className="text-3xl font-bold">{t("team.ff.name")}</h3>
-                  <p className="opacity-90">{t("team.ff.role_short")}</p>
-                </div>
-              </div>
-
-              {/* Content Side */}
-              <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                <div className="hidden lg:block mb-6">
-                  <h3 className="text-4xl font-bold text-foreground mb-2">{t("team.ff.name")}</h3>
-                  <p className="text-xl text-primary font-medium">{t("team.ff.role_short")}</p>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {[t("team.ff.focus1"), t("team.ff.focus2"), t("team.ff.focus3")].map((focus, i) => (
-                    <Badge key={i} variant="secondary" className="px-3 py-1 text-sm bg-accent text-accent-foreground border-accent-foreground/10">
-                      {focus}
-                    </Badge>
-                  ))}
-                </div>
-
-                <div className="space-y-4 text-muted-foreground text-lg mb-8 leading-relaxed">
-                  <p>{t("team.ff.point1")}</p>
-                  <p>{t("team.ff.point2")}</p>
-                  <p>{t("team.ff.point3")}</p>
-                </div>
-
-                <div className="flex gap-4 pt-4 border-t border-border">
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
-                    <Linkedin className="w-5 h-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={() => window.location.href = 'mailto:hello@aiceflow.de'}>
-                    <Mail className="w-5 h-5" />
-                  </Button>
-                  <Button asChild className="ml-auto" variant="default">
-                    <a href="#contact">{t("team.cta.primary")}</a>
-                  </Button>
-                </div>
-              </div>
+            <div className="flex flex-col justify-center">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                {t("team.shared.label")}
+              </p>
+              <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
+                {t("team.shared.title")}
+              </h3>
+              <p className="mb-6 text-slate-300">{t("team.shared.subtitle")}</p>
+              <PillCloud items={parsePills(t("team.shared.pills"))} tone="shared" />
             </div>
+
+            <DuoBrandPanel
+              logoAlt={t("team.image.duo.logoAlt")}
+              caption={t("team.image.duo.caption")}
+            />
           </motion.div>
 
-          {/* Values Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {values.map((val, idx) => (
-              <motion.div
-                key={idx}
-                variants={itemVariants}
-                className="bg-card p-8 rounded-2xl shadow-card border border-border hover:shadow-elegant transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
-                  {val.icon}
-                </div>
-                <h4 className="text-lg font-bold mb-3 text-foreground">{val.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {val.text}
-                </p>
-              </motion.div>
-            ))}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <FounderBlock
+              tone="business"
+              icon={<BriefcaseBusiness className="h-6 w-6" />}
+              name={t("team.ff.name")}
+              role={t("team.ff.role_short")}
+              summary={t("team.ff.summary")}
+              softwareLabel={t("team.ff.capabilityLabel")}
+              softwarePills={parsePills(t("team.ff.software"))}
+              specialtyLabel={t("team.ff.specialty.title")}
+              specialtyPills={parsePills(t("team.ff.specialty.pills"))}
+              points={parsePills(t("team.ff.points"))}
+              imageSrc={felixPortrait as unknown as string}
+              imageAlt={t("team.ff.name")}
+            />
+
+            <FounderBlock
+              tone="technical"
+              icon={<Cpu className="h-6 w-6" />}
+              name={t("team.hdc.name")}
+              role={t("team.hdc.role_short")}
+              summary={t("team.hdc.summary")}
+              softwareLabel={t("team.hdc.capabilityLabel")}
+              softwarePills={parsePills(t("team.hdc.software"))}
+              specialtyLabel={t("team.hdc.specialty.title")}
+              specialtyPills={parsePills(t("team.hdc.specialty.pills"))}
+              points={parsePills(t("team.hdc.points"))}
+              imageSrc={heinerPortrait as unknown as string}
+              imageAlt={t("team.hdc.name")}
+              imagePosition="50% 8%"
+              imageFit="contain"
+            />
           </div>
+
+          <motion.div
+            variants={itemVariants}
+            className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border/60 bg-white/85 p-5 text-left shadow-card backdrop-blur-sm sm:flex-row sm:items-center sm:p-6"
+          >
+            <div className="flex items-start gap-3">
+              <div className="rounded-lg bg-primary/10 p-2 text-primary">
+                <GitBranch className="h-5 w-5" />
+              </div>
+              <p className="max-w-3xl text-muted-foreground">{t("team.cta.caption")}</p>
+            </div>
+            <Button asChild size="lg" variant="default">
+              <a href="#contact" aria-label={t("team.cta.aria")}>
+                {t("team.cta.primary")}
+              </a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

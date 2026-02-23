@@ -7,12 +7,12 @@
 **Product:** AIceFlow (AI Automation Agency)
 
 ### Core Mission
-AIceFlow is an AI automation agency for small and mid-sized businesses (SMEs) in the DACH region. We act as the "AI Operations Layer," turning repetitive, manual work into reliable automated workflows.
+AIceFlow is an AI automation agency for the Mittelstand and growth-focused companies in the DACH region. We act as the "AI Operations Layer," turning repetitive, manual work into reliable automated workflows.
 **Key Value Prop:** Practical implementations in days/weeks, not theoretical consulting.
 **Outcome:** Time saved, reduced errors, faster response times, and focus on revenue-driving work.
 
 ### Target Audience
-SMEs in the DACH region without an in-house tech department who need reliable, secure, and tailored automation (e.g., Logistics, Marketing, Operations).
+Mittelstand and growth-focused companies in the DACH region without a dedicated internal AI engineering unit who need reliable, secure, and tailored automation (e.g., Logistics, Marketing, Operations). Large corporates with established in-house AI/software engineering teams are not the primary focus.
 
 ### Key Sections (User Journey)
 1.  **Hero**: Positioning as the "AI Operations Layer" with a focus on practical execution.
@@ -20,7 +20,7 @@ SMEs in the DACH region without an in-house tech department who need reliable, s
 3.  **Services**: Specific examples (Invoice processing, Support summaries, KPI digests).
 4.  **How It Works**: The step-by-step process (Identify -> Build -> Train -> Handover).
 5.  **Showcase**: Visualizing the "Control Center" / Dashboard.
-6.  **Team**: Highlighting Felix Funke (Founder) and the expert team approach.
+6.  **Team**: Highlighting the co-founders Felix Funke and Dr. Heiner Di Camillo.
 7.  **Contact**: Conversion for "Strategy Session".
 
 ## 2. Technical Overview
@@ -48,5 +48,6 @@ SMEs in the DACH region without an in-house tech department who need reliable, s
 - **Responsiveness**: Mobile-first.
 
 ### Recent Changes
-- Pivot from Co-Founder model to Solo Founder (Felix Funke) + Expert Team.
-- Content refocused on "Practical Automation" vs "Consulting".
+- Ownership updated to co-founders: Felix Funke and Dr. Heiner Di Camillo.
+- Positioning updated from SME/KMU phrasing to "Mittelstand + growth-focused companies."
+- Content remains focused on "Practical Automation" vs "Consulting".

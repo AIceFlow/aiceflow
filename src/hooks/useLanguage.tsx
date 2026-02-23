@@ -34,7 +34,7 @@ export const translations = {
     "hero.title.line1": "The AI Operations Layer",
     "hero.title.dynamicWords": "Reliable|Secure|Tailored",
     "hero.title.staticRemainder": "for your Business",
-    "hero.title.line2": "Practical Automation for SMEs",
+    "hero.title.line2": "Practical Automation for the Mittelstand",
     "hero.description":
       "Turn repetitive, manual work into reliable automated workflows. We deliver practical AI agents that triage emails, process invoices, and connect your existing tools—in days, not months.",
 
@@ -54,7 +54,7 @@ export const translations = {
     // About
     "about.title": "We are",
     "about.description":
-      "AIceFlow is an AI automation agency for small and mid-sized businesses. We help companies without in-house tech departments move faster and reduce errors by building the 'AI Operations Layer' tailored to how you already work.",
+      "AIceFlow is an AI automation agency for the Mittelstand and growth-focused companies. We help teams without a dedicated internal AI engineering unit move faster and reduce errors by building the 'AI Operations Layer' tailored to how you already work.",
 
     "about.innovation.title": "Practical > Theoretical",
     "about.custom.title": "Custom Built",
@@ -122,7 +122,7 @@ export const translations = {
     // Testimonials (Placeholder)
     "testimonials.title": "Client Success",
     "testimonials.description":
-      "See how other SMEs are saving time and scaling operations.",
+      "See how Mittelstand and growth companies save time and scale operations.",
 
     // Showcase
     "showcase.title": "Your AI Control Center",
@@ -205,29 +205,52 @@ export const translations = {
     "commitment.value.description": "We are your technical partner.",
 
     // Team
-    "team.founders.title": "The Team",
-    "team.founders.subtitle": "Bridging business strategy and technical execution.",
-    "team.duo.title": "Our Philosophy",
-    "team.duo.point1":
-      "We believe AI should be an invisible engine that powers your business.",
-    "team.duo.point2":
-      "We prioritize stability and security over hype and buzzwords.",
-    "team.duo.point3":
-      "We build long-term relationships, not just one-off scripts.",
-    "team.cta.primary": "Work with us",
-    "team.cta.aria": "Contact us",
+    "team.founders.title": "Technical & Business Excellence for the Mittelstand",
+    "team.founders.subtitle":
+      "Two software founders building custom AI systems for Germany's Mittelstand: business outcomes and adoption on one side, deep technical architecture and reliability on the other.",
+    "team.shared.label": "Execution Core",
+    "team.shared.title": "Custom AI Systems. Production Reliability. Measurable Impact.",
+    "team.shared.subtitle":
+      "We combine business prioritization with engineering depth to deliver AI systems that run reliably in daily operations.",
+    "team.shared.pills":
+      "Board-Ready Business Cases|Custom AI Agent Systems|Security & Compliance by Design|Stable Integrations into Existing Tools|Operational KPI Transparency|Fast Time-to-Value",
+    "team.common.softwareLabel": "Execution Strength",
+    "team.image.duo.logoAlt": "AIceFlow founders brand",
+    "team.image.duo.caption": "Custom AI Systems. Real Business Impact.",
+    "team.image.heiner.label": "Placeholder: Heiner Portrait",
+    "team.image.heiner.hint": "Replace with Heiner's new profile photo.",
 
     "team.ff.name": "Felix Funke",
-    "team.ff.role_short": "Founder & Lead Architect",
-    "team.ff.focus1": "Business Strategy",
-    "team.ff.focus2": "Process Architecture",
-    "team.ff.focus3": "Engineering",
-    "team.ff.point1":
-      "Combines commercial leadership experience with deep technical engineering.",
-    "team.ff.point2":
-      "Proven track record delivering mission-critical systems for enterprises like Handelsblatt and agile Silicon Valley startups.",
-    "team.ff.point3":
-      "Builds solutions that are not just code, but sustainable business assets.",
+    "team.ff.role_short":
+      "Co-Founder | Full-Stack Engineer, Product & Business Execution Lead",
+    "team.ff.summary":
+      "Combines full-stack engineering with product and business execution to ship AI workflows teams adopt quickly.",
+    "team.ff.capabilityLabel": "Business + Technical Execution",
+    "team.ff.software":
+      "Workflow and UX Engineering|Customer Journey Design|Product-Led Rollout|Cross-Functional Delivery Leadership",
+    "team.ff.specialty.title": "Commercial and Product Leadership",
+    "team.ff.specialty.pills":
+      "ROI and Investment Logic|Executive Stakeholder Alignment|Customer Experience Excellence|Change Adoption",
+    "team.ff.points":
+      "Designs user-centered AI workflows that teams trust and use in daily operations.|Transforms strategic goals into a focused roadmap with clear value milestones and delivery priorities.|Aligns leadership, operations, and users so rollout translates into measurable business outcomes.",
+
+    "team.hdc.name": "Dr. Heiner Di Camillo",
+    "team.hdc.role_short": "Co-Founder | Technical Founder",
+    "team.hdc.summary":
+      "Owns the technical platform for secure, robust, and scalable AI operations.",
+    "team.hdc.capabilityLabel": "Technical Architecture Leadership",
+    "team.hdc.software":
+      "AI Solution Architecture|Backend and Integration Platforms|Data and Agent Infrastructure|Reliability Engineering",
+    "team.hdc.specialty.title": "Engineering Authority",
+    "team.hdc.specialty.pills":
+      "Safety-Critical Engineering Standards|Computer Vision Expertise|High-Availability System Design|Observability and Quality Gates|Compliance-by-Design|Performance and Cost Control",
+    "team.hdc.points":
+      "Designs architectures that scale from pilot to core business operations.|Builds secure integration layers around legacy and modern systems without operational disruption.|Ensures production stability through strict quality standards, monitoring, and incident resilience.",
+
+    "team.cta.primary": "Talk to the Founders",
+    "team.cta.aria": "Contact the founders",
+    "team.cta.caption":
+      "Discuss your highest-impact automation opportunities with both business and technical leadership.",
 
     // Contact
     "contact.title": "Let's Automate Your Business",
@@ -284,7 +307,7 @@ export const translations = {
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "The AI Operations Layer for DACH SMEs. Practical, secure, and tailored automation.",
+      "The AI Operations Layer for the DACH Mittelstand and growth companies. Practical, secure, and tailored automation.",
 
     "footer.nav.services.title": "Solutions",
     "footer.nav.services.processAutomation": "Operations",
@@ -320,7 +343,7 @@ export const translations = {
     "hero.title.line1": "Die AI Operations Ebene",
     "hero.title.dynamicWords": "Zuverlässig|Sicher|Maßgeschneidert",
     "hero.title.staticRemainder": "für Ihr Business",
-    "hero.title.line2": "Praktische Automatisierung für KMUs",
+    "hero.title.line2": "Praktische Automatisierung für den Mittelstand",
     "hero.description":
       "Verwandeln Sie repetitive, manuelle Arbeit in zuverlässige automatisierte Workflows. Wir liefern praktische KI-Agenten, die E-Mails sortieren, Rechnungen verarbeiten und Ihre Tools verbinden – in Tagen, nicht Monaten.",
 
@@ -340,7 +363,7 @@ export const translations = {
     // About
     "about.title": "Wir sind",
     "about.description":
-      "AIceFlow ist eine KI-Automatisierungsagentur für kleine und mittelständische Unternehmen. Wir helfen Firmen ohne eigene Tech-Abteilung, schneller zu werden und Fehler zu reduzieren, indem wir eine 'AI Operations Ebene' aufbauen, die genau so arbeitet, wie Sie es brauchen.",
+      "AIceFlow ist eine KI-Automatisierungsagentur für den Mittelstand und wachstumsorientierte Unternehmen. Wir helfen Teams ohne dedizierte interne AI-Engineering-Einheit, schneller zu werden und Fehler zu reduzieren, indem wir eine 'AI Operations Ebene' aufbauen, die genau so arbeitet, wie Sie es brauchen.",
 
     "about.innovation.title": "Praxis > Theorie",
     "about.custom.title": "Maßgefertigt",
@@ -408,7 +431,7 @@ export const translations = {
     // Testimonials
     "testimonials.title": "Kundenerfolge",
     "testimonials.description":
-      "Sehen Sie, wie andere KMUs Zeit sparen und skalieren.",
+      "Sehen Sie, wie Mittelstand und wachstumsorientierte Unternehmen Zeit sparen und skalieren.",
 
     // Showcase
     "showcase.title": "Ihr KI Kontrollzentrum",
@@ -490,29 +513,52 @@ export const translations = {
     "commitment.value.description": "Wir bleiben als technischer Partner an Ihrer Seite.",
 
     // Team
-    "team.founders.title": "Das Team",
-    "team.founders.subtitle": "Brückenschlag zwischen Geschäftsstrategie und technischer Exekution.",
-    "team.duo.title": "Unsere Philosophie",
-    "team.duo.point1":
-      "Wir glauben, dass KI der unsichtbare Motor sein sollte, der Ihr Geschäft antreibt.",
-    "team.duo.point2":
-      "Wir priorisieren Stabilität und Sicherheit über Hypes.",
-    "team.duo.point3":
-      "Wir bauen langfristige Beziehungen, keine Einmal-Skripte.",
-    "team.cta.primary": "Zusammenarbeiten",
-    "team.cta.aria": "Kontakt aufnehmen",
+    "team.founders.title": "Technische und Business-Exzellenz für den Mittelstand",
+    "team.founders.subtitle":
+      "Zwei Software-Gründer für maßgeschneiderte AI-Systeme im deutschen Mittelstand: Business-Impact und Adoption auf der einen Seite, tiefe technische Architektur und Zuverlässigkeit auf der anderen.",
+    "team.shared.label": "Execution Core",
+    "team.shared.title": "Custom AI Systems. Production Reliability. Measurable Impact.",
+    "team.shared.subtitle":
+      "Wir verbinden Business-Priorisierung mit technischer Tiefe und liefern AI-Systeme, die im Tagesgeschäft zuverlässig laufen.",
+    "team.shared.pills":
+      "Entscheidungsreife Business Cases|Maßgeschneiderte AI-Agentensysteme|Security & Compliance by Design|Stabile Integrationen in bestehende Tools|Operative KPI-Transparenz|Schneller Time-to-Value",
+    "team.common.softwareLabel": "Umsetzungskompetenz",
+    "team.image.duo.logoAlt": "AIceFlow Gründer-Branding",
+    "team.image.duo.caption": "Custom AI Systems. Real Business Impact.",
+    "team.image.heiner.label": "Platzhalter: Heiner Porträt",
+    "team.image.heiner.hint": "Hier Heiners neues Profilfoto einsetzen.",
 
     "team.ff.name": "Felix Funke",
-    "team.ff.role_short": "Gründer & Lead Architect",
-    "team.ff.focus1": "Business Strategie",
-    "team.ff.focus2": "Prozess-Architektur",
-    "team.ff.focus3": "Engineering",
-    "team.ff.point1":
-      "Verbindet Erfahrung in kaufmännischer Leitung mit tiefer technischer Engineering-Expertise.",
-    "team.ff.point2":
-      "Baut Systeme, die nicht nur Code sind, sondern nachhaltige Unternehmenswerte schaffen.",
-    "team.ff.point3":
-      "Erprobte Umsetzungskompetenz von Konzernen (Handelsblatt) bis zu agilen Silicon Valley Startups.",
+    "team.ff.role_short":
+      "Co-Founder | Full-Stack Engineer, Product-, UX- und Business-Execution Lead",
+    "team.ff.summary":
+      "Verbindet Full-Stack Engineering mit Product- und Business-Execution, um AI-Workflows zu liefern, die Teams schnell übernehmen.",
+    "team.ff.capabilityLabel": "Business- und technische Umsetzung",
+    "team.ff.software":
+      "Workflow- und UX-Engineering|Customer-Journey-Design|Product-led Rollout|Cross-funktionale Delivery-Leadership",
+    "team.ff.specialty.title": "Kommerzielle und Product-Leadership",
+    "team.ff.specialty.pills":
+      "ROI- und Investment-Logik|Alignment mit Entscheiderkreisen|Customer-Experience-Exzellenz|Change Adoption",
+    "team.ff.points":
+      "Entwirft nutzerzentrierte AI-Workflows, die Teams im Tagesgeschäft vertrauen und aktiv nutzen.|Übersetzt strategische Ziele in eine fokussierte Roadmap mit klaren Wertmeilensteinen und Delivery-Prioritäten.|Hält Führung, Fachbereiche und Anwender ausgerichtet, damit Rollout in messbare Ergebnisse übersetzt wird.",
+
+    "team.hdc.name": "Dr. Heiner Di Camillo",
+    "team.hdc.role_short": "Co-Founder | Technischer Gründer & AI-Systemarchitekt",
+    "team.hdc.summary":
+      "Verantwortet die technische Plattform für sichere, robuste und skalierbare AI-Operations.",
+    "team.hdc.capabilityLabel": "Technische Architekturführung",
+    "team.hdc.software":
+      "AI-Solution-Architektur|Backend- und Integrationsplattformen|Daten- und Agenten-Infrastruktur|Reliability Engineering",
+    "team.hdc.specialty.title": "Technische Engineering-Autorität",
+    "team.hdc.specialty.pills":
+      "Safety-Critical-Engineering-Standards|Computer-Vision-Expertise|Hochverfügbare Systemarchitektur|Observability und Quality Gates|Compliance-by-Design|Performance- und Kostenkontrolle",
+    "team.hdc.points":
+      "Entwirft Architekturen, die vom Pilot in den geschäftskritischen Betrieb skalieren.|Baut sichere Integrationsschichten zwischen Legacy- und modernen Systemen ohne operative Reibungsverluste.|Sichert Produktionsstabilität über klare Qualitätsstandards, Monitoring und Incident-Resilienz.",
+
+    "team.cta.primary": "Mit den Gründern sprechen",
+    "team.cta.aria": "Die Gründer kontaktieren",
+    "team.cta.caption":
+      "Besprechen Sie Ihre wichtigsten Automatisierungshebel direkt mit Business- und Technik-Lead.",
 
     // Contact
     "contact.title": "Automatisieren Sie Ihr Business",
@@ -569,7 +615,7 @@ export const translations = {
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "Die AI Operations Ebene für DACH KMUs. Praktische, sichere und maßgeschneiderte Automatisierung.",
+      "Die AI Operations Ebene für den DACH Mittelstand und wachstumsorientierte Unternehmen. Praktische, sichere und maßgeschneiderte Automatisierung.",
 
     "footer.nav.services.title": "Lösungen",
     "footer.nav.services.processAutomation": "Operations",
