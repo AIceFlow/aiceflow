@@ -168,8 +168,8 @@ const Hero = () => {
                {/* Card 1: Trigger */}
                <FloatingCard 
                  icon={Mail} 
-                 title="New Inquiry" 
-                 subtitle="Received from website" 
+                 title={t("hero.flow.step1.title")} 
+                 subtitle={t("hero.flow.step1.subtitle")} 
                  delay={0.2} 
                  x="5%" 
                  y="5%" 
@@ -179,8 +179,8 @@ const Hero = () => {
                {/* Card 2: AI Logic */}
                <FloatingCard 
                  icon={BrainCircuit} 
-                 title="AI Analysis" 
-                 subtitle="Intent: High Priority" 
+                 title={t("hero.flow.step2.title")} 
+                 subtitle={t("hero.flow.step2.subtitle")} 
                  delay={0.6} 
                  x="55%" 
                  y="30%" 
@@ -190,8 +190,8 @@ const Hero = () => {
                {/* Card 3: Action */}
                <FloatingCard 
                  icon={Database} 
-                 title="CRM Updated" 
-                 subtitle="Deal created in HubSpot" 
+                 title={t("hero.flow.step3.title")} 
+                 subtitle={t("hero.flow.step3.subtitle")} 
                  delay={1.0} 
                  x="10%" 
                  y="60%" 
@@ -201,8 +201,8 @@ const Hero = () => {
                {/* Card 4: Result */}
                <FloatingCard 
                  icon={BellRing} 
-                 title="Sales Notified" 
-                 subtitle="Slack alert sent" 
+                 title={t("hero.flow.step4.title")} 
+                 subtitle={t("hero.flow.step4.subtitle")} 
                  delay={1.4} 
                  x="50%" 
                  y="85%" 

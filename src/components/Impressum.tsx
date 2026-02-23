@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 import { Mail, Phone } from "lucide-react";
 import React from "react";
 
@@ -24,14 +25,16 @@ export default function ImpressumModal({
   onOpenChange: (open: boolean) => void;
   children?: React.ReactNode;
 }) {
+  const { t } = useLanguage();
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        {children ?? <Button variant="outline">Impressum</Button>}
+        {children ?? <Button variant="outline">{t("footer.policies.imprint")}</Button>}
       </DialogTrigger>
       <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Impressum</DialogTitle>
+          <DialogTitle>{t("footer.policies.imprint")}</DialogTitle>
           <DialogDescription>
             Angaben gemäß § 5 TMG <br />
             Verantwortlich für diese Website sind:
@@ -148,7 +151,7 @@ export default function ImpressumModal({
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="secondary">Schließen</Button>
+            <Button variant="secondary">{t("common.close")}</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

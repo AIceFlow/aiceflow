@@ -136,7 +136,8 @@ const Contact: React.FC = () => {
                           <div className="font-semibold text-white mb-1">{t("contact.info.office.title")}</div>
                           <div className="text-slate-300">
                              {t("contact.info.office.line1")}<br/>
-                             {t("contact.info.office.line2")}
+                             {t("contact.info.office.line2")}<br/>
+                             {t("contact.info.office.line3")}
                           </div>
                         </div>
                       </div>
@@ -147,7 +148,7 @@ const Contact: React.FC = () => {
                  <div className="mt-12 pt-12 border-t border-white/10">
                     <div className="flex items-center gap-2 text-sm text-slate-400">
                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                       Typically replies in 2 hours
+                       {t("contact.responseTime")}
                     </div>
                  </div>
               </div>

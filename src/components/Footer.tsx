@@ -21,8 +21,10 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://linkedin.com/company/aiceflow/"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Linkedin className="text-white w-6 h-6" />
@@ -131,7 +133,7 @@ const Footer: React.FC = () => {
                 open={impressumOpen}
                 onOpenChange={setImpressumOpen}
               >
-                <a className=" cursor-pointer">Impressum</a>
+                <a className=" cursor-pointer">{t("footer.policies.imprint")}</a>
               </ImpressumModal>
             </div>
           </div>

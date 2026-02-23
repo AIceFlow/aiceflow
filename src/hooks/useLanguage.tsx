@@ -22,6 +22,9 @@ export const useLanguage = () => {
 
 export const translations = {
   en: {
+    // Common
+    "common.close": "Close",
+
     // Header
     "nav.about": "About",
     "nav.services": "Solutions",
@@ -36,7 +39,7 @@ export const translations = {
     "hero.title.staticRemainder": "for your Business",
     "hero.title.line2": "Practical Automation for the Mittelstand",
     "hero.description":
-      "Turn repetitive, manual work into reliable automated workflows. We deliver practical AI agents that triage emails, process invoices, and connect your existing tools—in days, not months.",
+      "Turn repetitive operational work into reliable automated workflows. We design, build, and run custom AI systems that process requests, handle documents, and connect your existing tools in days, not months.",
 
     "hero.cta.primary": "Get Your Custom Plan",
     "hero.cta.secondary": "See It In Action",
@@ -48,35 +51,43 @@ export const translations = {
     "hero.pillars.partnership.title": "Operations Layer",
     "hero.pillars.partnership.description": "Secure, pragmatic, managed",
 
-    "hero.status.available": "Accepting New Projects",
+    "hero.status.available": "Open for New Projects",
     "hero.status.location": "DACH Region & Remote",
+    "hero.flow.step1.title": "New Inquiry",
+    "hero.flow.step1.subtitle": "Captured from website",
+    "hero.flow.step2.title": "AI Qualification",
+    "hero.flow.step2.subtitle": "Priority and intent scored",
+    "hero.flow.step3.title": "System Updated",
+    "hero.flow.step3.subtitle": "CRM and task flow synced",
+    "hero.flow.step4.title": "Team Notified",
+    "hero.flow.step4.subtitle": "Owner informed in real time",
 
     // About
     "about.title": "We are",
     "about.description":
-      "AIceFlow is an AI automation agency for the Mittelstand and growth-focused companies. We help teams without a dedicated internal AI engineering unit move faster and reduce errors by building the 'AI Operations Layer' tailored to how you already work.",
+      "AIceFlow is the AI automation partner for Mittelstand and growth-focused companies. We help teams without an internal AI engineering unit deploy reliable automation and reduce operational friction.",
 
     "about.innovation.title": "Practical > Theoretical",
     "about.custom.title": "Custom Built",
     "about.results.title": "Measurable Impact",
 
     "about.innovation.description":
-      "Instead of abstract 'AI consulting', we deliver ready-to-run solutions that solve actual operational headaches.",
+      "No abstract slideware. We deliver production-ready systems for real operational bottlenecks.",
 
     "about.custom.description":
-      "Every automation has a clear trigger, input, and output. We connect the tools you already use (Microsoft 365, CRM, ERP).",
+      "Every automation has defined triggers, inputs, and outputs. We integrate directly with the systems you already run.",
 
     "about.results.description":
-      "We focus on response times, error reduction, and hours saved. If it doesn't drive value, we don't build it.",
+      "We focus on response times, quality, and measurable savings. If impact is unclear, we do not build it.",
 
     // Services
     "services.title": "What We Automate",
     "services.description":
-      "From inbox to invoice, we deploy agents that handle the busywork so your team can focus on the big picture.",
+      "From customer communication to finance workflows, we automate recurring process work so your teams can focus on value creation.",
 
     "services.processAutomation.title": "Communication & Triage",
     "services.processAutomation.description":
-      "Never miss a lead or a critical request again.",
+      "Capture every relevant request and route it reliably.",
     "services.processAutomation.feature1": "Email Triage & Routing",
     "services.processAutomation.feature2": "Lead Qualification",
     "services.processAutomation.feature3": "Support Ticket Summaries",
@@ -84,7 +95,7 @@ export const translations = {
 
     "services.dashboards.title": "Finance & Admin",
     "services.dashboards.description":
-      "Streamline the back-office chaos with precision.",
+      "Automate recurring back-office work with precision and traceability.",
     "services.dashboards.feature1": "Invoice Processing",
     "services.dashboards.feature2": "Expense Categorization",
     "services.dashboards.feature3": "Contract Data Extraction",
@@ -92,7 +103,7 @@ export const translations = {
 
     "services.consultation.title": "Business Intelligence",
     "services.consultation.description":
-      "Turn scattered data into decision-ready insights.",
+      "Turn fragmented data into decision-ready management insights.",
     "services.consultation.feature1": "Weekly KPI Digests",
     "services.consultation.feature2": "Competitor Monitoring",
     "services.consultation.feature3": "Review Aggregation",
@@ -101,23 +112,23 @@ export const translations = {
     // How It Works
     "howItWorks.title": "Our Process",
     "howItWorks.description":
-      "We keep it simple: Identify the highest-ROI opportunity, build it, and ensure your team adopts it.",
+      "Focused process: identify the highest-value use case, implement it fast, and anchor it in daily operations.",
 
     "howItWorks.step1.title": "Identify",
     "howItWorks.step1.description":
-      "We audit your workflows to find high-volume, repetitive tasks that are ripe for automation.",
+      "We analyze your workflows and select the highest-leverage process opportunity.",
 
     "howItWorks.step2.title": "Build",
     "howItWorks.step2.description":
-      "We configure secure agents and connect them to your tools (Google/Microsoft, CRM, Accounting).",
+      "We build the solution with secure architecture and connect it to your live system landscape.",
 
     "howItWorks.step3.title": "Train & Handoff",
     "howItWorks.step3.description":
-      "We provide documentation and training to ensure your team trusts and uses the new system.",
+      "We enable your teams with training, documentation, and clear operating standards.",
 
     "howItWorks.step4.title": "Support",
     "howItWorks.step4.description":
-      "We monitor performance and refine the agents as your business evolves.",
+      "We monitor quality in production and continuously optimize performance and reliability.",
 
     // Testimonials (Placeholder)
     "testimonials.title": "Client Success",
@@ -127,7 +138,7 @@ export const translations = {
     // Showcase
     "showcase.title": "Your AI Control Center",
     "showcase.description":
-      "Automation shouldn't be a black box. Our dashboards give you full visibility into what your agents are doing, how much time they've saved, and where they need your input.",
+      "Automation should never be a black box. Our control layer gives you visibility into performance, quality, and intervention points.",
 
     "showcase.overlay.title": "Visibility & Control",
 
@@ -150,46 +161,47 @@ export const translations = {
     "showcase.impact.unlock.icon": "Zap",
     "showcase.impact.unlock.title": "Speed",
     "showcase.impact.unlock.description":
-      "Respond to customers instantly, even outside business hours.",
+      "Shorter cycle times across customer and internal processes.",
     "showcase.impact.decisions.icon": "CheckCircle",
     "showcase.impact.decisions.title": "Accuracy",
     "showcase.impact.decisions.description":
-      "Eliminate copy-paste errors and lost information.",
+      "Fewer process errors through structured, automated execution.",
     "showcase.impact.resilience.icon": "TrendingUp",
     "showcase.impact.resilience.title": "Focus",
     "showcase.impact.resilience.description":
-      "Free your team to work on strategy and relationships.",
+      "More team capacity for customer, strategy, and growth initiatives.",
 
     // Universal (Chaos Tamer)
-    "universal.title": "Whatever You Do, Do It Faster.",
-    "universal.subtitle": "Logistics, Law, or Lemonade stands. Chaos looks the same everywhere. So does the solution.",
-    "universal.button.idle": "Tame the Chaos",
-    "universal.button.active": "Order Restored",
+    "universal.title": "Operational Complexity, Controlled.",
+    "universal.subtitle":
+      "Whether logistics, service, or administration: recurring bottlenecks follow similar patterns. We automate them with reliable AI workflows.",
+    "universal.button.idle": "Activate Process Flow",
+    "universal.button.active": "Operations Stabilized",
     // Short labels for floating cards to prevent overflow
-    "universal.floating.email": "Inbox 99+",
-    "universal.floating.invoice": "Unpaid Bills",
-    "universal.floating.meeting": "Scheduling",
-    "universal.floating.data": "Bad Data",
-    "universal.floating.urgent": "Fire Drill",
-    "universal.floating.delay": "Late Delivery",
-    "universal.floating.error": "Human Error",
+    "universal.floating.email": "Unprocessed Inquiries",
+    "universal.floating.invoice": "Invoice Backlog",
+    "universal.floating.meeting": "Coordination Overhead",
+    "universal.floating.data": "Fragmented Data",
+    "universal.floating.urgent": "Critical Escalation",
+    "universal.floating.delay": "Delayed Response",
+    "universal.floating.error": "Manual Error Risk",
 
     // Why AIceFlow
     "why.title": "Why AIceFlow?",
     "why.description":
-      "We bridge the gap between complex AI technology and your daily business reality.",
+      "We connect strategic business priorities with robust technical execution.",
 
-    "why.tailored.title": "Not Just Consulting",
+    "why.tailored.title": "Implementation, Not Slideware",
     "why.tailored.description":
-      "We don't just leave you with a PDF strategy. We build, deploy, and maintain the software.",
+      "We do not stop at concept decks. We build, deploy, and operate the system in production.",
 
-    "why.partnership.title": "Defined ROI",
+    "why.partnership.title": "Measurable Business Value",
     "why.partnership.description":
-      "We target processes where the impact is measurable: time saved, money saved, revenue generated.",
+      "We prioritize use cases with transparent impact: time savings, quality gains, and economic value.",
 
     "why.synergy.title": "Human-Centric",
     "why.synergy.description":
-      "Our automations are designed to work *with* your people, handling the grunt work so they shine.",
+      "Our automations are designed to work with your teams and remove repetitive operational load.",
 
     "why.local.title": "DACH Region Focus",
     "why.local.description":
@@ -255,7 +267,7 @@ export const translations = {
     // Contact
     "contact.title": "Let's Automate Your Business",
     "contact.description":
-      "Book a free strategy session. We'll identify your highest-ROI automation opportunities in 30 minutes.",
+      "Book a free strategy session. In 30 minutes we identify your highest-value automation opportunities.",
 
     // Form
     "contact.form.title": "Get in Touch",
@@ -282,6 +294,7 @@ export const translations = {
     "contact.form.successMessage":
       "Thanks for reaching out. We'll be in touch shortly to discuss your automation potential.",
     "contact.form.sendAnother": "Send another",
+    "contact.responseTime": "Typically replies within one business day",
 
     // Contact Info
     "contact.info.title": "Contact",
@@ -307,12 +320,12 @@ export const translations = {
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "The AI Operations Layer for the DACH Mittelstand and growth companies. Practical, secure, and tailored automation.",
+      "The AI Operations Layer for the DACH Mittelstand and growth-focused companies. Practical, secure, and tailored automation.",
 
     "footer.nav.services.title": "Solutions",
     "footer.nav.services.processAutomation": "Operations",
     "footer.nav.services.customDashboards": "Admin & Finance",
-    "footer.nav.services.consultation": "Business Intel",
+    "footer.nav.services.consultation": "BI & Reporting",
     "footer.nav.services.implementation": "Implementation",
     "footer.nav.services.support": "Support",
 
@@ -331,102 +344,114 @@ export const translations = {
     "footer.policies.imprint": "Imprint",
   },
   de: {
+    // Common
+    "common.close": "Schließen",
+
     // Header
-    "nav.about": "Über Uns",
+    "nav.about": "Über uns",
     "nav.services": "Lösungen",
     "nav.how-it-works": "Ablauf",
     "nav.testimonials": "Erfolge",
     "nav.contact": "Kontakt",
-    "header.cta": "Automatisierung Starten",
+    "header.cta": "Strategiegespräch starten",
 
     // Hero
-    "hero.title.line1": "Die AI Operations Ebene",
+    "hero.title.line1": "Die AI-Operations-Ebene",
     "hero.title.dynamicWords": "Zuverlässig|Sicher|Maßgeschneidert",
     "hero.title.staticRemainder": "für Ihr Business",
     "hero.title.line2": "Praktische Automatisierung für den Mittelstand",
     "hero.description":
       "Verwandeln Sie repetitive, manuelle Arbeit in zuverlässige automatisierte Workflows. Wir liefern praktische KI-Agenten, die E-Mails sortieren, Rechnungen verarbeiten und Ihre Tools verbinden – in Tagen, nicht Monaten.",
 
-    "hero.cta.primary": "Strategiegespräch Buchen",
-    "hero.cta.secondary": "Live-Demo Ansehen",
+    "hero.cta.primary": "Strategiegespräch buchen",
+    "hero.cta.secondary": "Live-Demo ansehen",
 
-    "hero.pillars.tailored.title": "High-ROI Prozesse",
+    "hero.pillars.tailored.title": "Prozesse mit hohem ROI",
     "hero.pillars.tailored.description": "Fokus auf Wertschöpfung",
-    "hero.pillars.integration.title": "Nahtlose Verbinder",
-    "hero.pillars.integration.description": "Passt in Ihren Tech-Stack",
+    "hero.pillars.integration.title": "Nahtlose Integrationen",
+    "hero.pillars.integration.description":
+      "Passt in Ihre bestehende Systemlandschaft",
     "hero.pillars.partnership.title": "Operations Layer",
     "hero.pillars.partnership.description": "Sicher, pragmatisch, betreut",
 
-    "hero.status.available": "Neue Projekte möglich",
-    "hero.status.location": "DACH Region & Remote",
+    "hero.status.available": "Kapazität für neue Projekte",
+    "hero.status.location": "DACH-Region & Remote",
+    "hero.flow.step1.title": "Neue Anfrage",
+    "hero.flow.step1.subtitle": "Von der Website erfasst",
+    "hero.flow.step2.title": "AI-Qualifizierung",
+    "hero.flow.step2.subtitle": "Priorität und Kontext bewertet",
+    "hero.flow.step3.title": "System synchronisiert",
+    "hero.flow.step3.subtitle": "CRM und Aufgabenfluss aktualisiert",
+    "hero.flow.step4.title": "Team informiert",
+    "hero.flow.step4.subtitle": "Verantwortliche in Echtzeit benachrichtigt",
 
     // About
     "about.title": "Wir sind",
     "about.description":
-      "AIceFlow ist eine KI-Automatisierungsagentur für den Mittelstand und wachstumsorientierte Unternehmen. Wir helfen Teams ohne dedizierte interne AI-Engineering-Einheit, schneller zu werden und Fehler zu reduzieren, indem wir eine 'AI Operations Ebene' aufbauen, die genau so arbeitet, wie Sie es brauchen.",
+      "AIceFlow ist der AI-Automatisierungspartner für den Mittelstand und wachstumsorientierte Unternehmen. Wir unterstützen Teams ohne eigene AI-Engineering-Einheit dabei, operative Reibung zu reduzieren und Prozesse verlässlich zu automatisieren.",
 
     "about.innovation.title": "Praxis > Theorie",
     "about.custom.title": "Maßgefertigt",
     "about.results.title": "Messbarer Impact",
 
     "about.innovation.description":
-      "Statt theoretischer 'KI-Beratung' liefern wir sofort einsatzbereite Lösungen für echte operative Probleme.",
+      "Keine Folienprojekte. Wir liefern produktionsreife Lösungen für reale operative Engpässe.",
 
     "about.custom.description":
-      "Jede Automatisierung hat einen klaren Auslöser, Input und Output. Wir verbinden die Tools, die Sie bereits nutzen (Microsoft 365, CRM, ERP).",
+      "Jede Automatisierung hat klare Trigger, Inputs und Outputs. Wir integrieren direkt in Ihre bestehende Systemlandschaft.",
 
     "about.results.description":
-      "Wir fokussieren uns auf Reaktionszeiten, Fehlerreduktion und gesparte Stunden. Wenn es keinen Wert schafft, bauen wir es nicht.",
+      "Wir fokussieren auf Reaktionszeit, Qualität und messbare Entlastung. Wenn der Nutzen unklar ist, bauen wir es nicht.",
 
     // Services
-    "services.title": "Was wir automatisieren",
+    "services.title": "Unsere Automatisierungsschwerpunkte",
     "services.description":
-      "Vom Posteingang bis zur Rechnung: Wir setzen Agenten ein, die die Fleißarbeit erledigen, damit Ihr Team sich auf das große Ganze konzentrieren kann.",
+      "Von Kundenkommunikation bis Finanzprozess: Wir automatisieren wiederkehrende Prozessarbeit, damit Ihre Teams auf Wertschöpfung fokussieren.",
 
-    "services.processAutomation.title": "Kommunikation & Triage",
+    "services.processAutomation.title": "Kommunikation & Vorgangssteuerung",
     "services.processAutomation.description":
-      "Verpassen Sie nie wieder einen Lead oder eine wichtige Anfrage.",
-    "services.processAutomation.feature1": "E-Mail Triage & Routing",
-    "services.processAutomation.feature2": "Lead Qualifizierung",
-    "services.processAutomation.feature3": "Support-Ticket Zusammenfassung",
-    "services.processAutomation.feature4": "Meeting-Notizen zu Aufgaben",
+      "Erfassen, priorisieren und steuern Sie relevante Anfragen ohne Medienbrüche.",
+    "services.processAutomation.feature1": "E-Mail-Triage und Routing",
+    "services.processAutomation.feature2": "Lead-Qualifizierung",
+    "services.processAutomation.feature3": "Support-Ticket-Zusammenfassungen",
+    "services.processAutomation.feature4": "Meeting-Notizen in Aufgaben",
 
-    "services.dashboards.title": "Finanzen & Admin",
+    "services.dashboards.title": "Finanzen & Administration",
     "services.dashboards.description":
-      "Bringen Sie Präzision in das Back-Office Chaos.",
+      "Automatisieren Sie wiederkehrende Backoffice-Prozesse präzise und nachvollziehbar.",
     "services.dashboards.feature1": "Rechnungsverarbeitung",
     "services.dashboards.feature2": "Ausgaben-Kategorisierung",
     "services.dashboards.feature3": "Vertragsdaten-Extraktion",
-    "services.dashboards.feature4": "Onboarding Workflows",
+    "services.dashboards.feature4": "Onboarding-Workflows",
 
-    "services.consultation.title": "Business Intelligence",
+    "services.consultation.title": "Unternehmenssteuerung & Reporting",
     "services.consultation.description":
-      "Machen Sie aus verstreuten Daten entscheidungssichere Insights.",
+      "Machen Sie aus verteilten Daten entscheidungsreife Steuerungsinformationen für Führung und Operations.",
     "services.consultation.feature1": "Wöchentliche KPI-Digests",
     "services.consultation.feature2": "Wettbewerber-Monitoring",
     "services.consultation.feature3": "Bewertungs-Aggregation",
     "services.consultation.feature4": "Automatisierte Reports",
 
     // How It Works
-    "howItWorks.title": "Unser Prozess",
+    "howItWorks.title": "So gehen wir vor",
     "howItWorks.description":
-      "Wir halten es einfach: Die größte ROI-Chance finden, bauen und sicherstellen, dass Ihr Team es nutzt.",
+      "Klarer Ablauf: höchste Wertchance identifizieren, schnell umsetzen und im Tagesgeschäft verankern.",
 
     "howItWorks.step1.title": "Identifizieren",
     "howItWorks.step1.description":
-      "Wir auditieren Ihre Abläufe, um repetitive Aufgaben mit hohem Volumen zu finden.",
+      "Wir analysieren Ihre Abläufe und priorisieren den wirksamsten Automatisierungshebel.",
 
     "howItWorks.step2.title": "Bauen",
     "howItWorks.step2.description":
-      "Wir konfigurieren sichere Agenten und verbinden sie mit Ihren Tools (Google/Microsoft, CRM, Buchhaltung).",
+      "Wir bauen die Lösung mit sicherer Architektur und integrieren sie in Ihre aktive Systemlandschaft.",
 
-    "howItWorks.step3.title": "Training & Übergabe",
+    "howItWorks.step3.title": "Enablement & Übergabe",
     "howItWorks.step3.description":
-      "Wir schulen Ihr Team und liefern Dokumentation, damit das neue System vertrauensvoll genutzt wird.",
+      "Wir befähigen Ihre Teams mit Schulung, Dokumentation und klaren Betriebsstandards.",
 
     "howItWorks.step4.title": "Support",
     "howItWorks.step4.description":
-      "Wir überwachen die Performance und passen die Agenten an, wenn Ihr Geschäft wächst.",
+      "Wir überwachen Qualität im Betrieb und optimieren Performance sowie Zuverlässigkeit laufend.",
 
     // Testimonials
     "testimonials.title": "Kundenerfolge",
@@ -434,9 +459,9 @@ export const translations = {
       "Sehen Sie, wie Mittelstand und wachstumsorientierte Unternehmen Zeit sparen und skalieren.",
 
     // Showcase
-    "showcase.title": "Ihr KI Kontrollzentrum",
+    "showcase.title": "Ihr AI-Kontrollzentrum",
     "showcase.description":
-      "Automatisierung darf keine Black Box sein. Unsere Dashboards geben volle Transparenz darüber, was Ihre Agenten tun, wie viel Zeit gespart wurde und wo Ihr Input nötig ist.",
+      "Automatisierung darf keine Blackbox sein. Unsere Control-Layer zeigt Leistung, Qualität und Eingriffspunkte transparent.",
 
     "showcase.overlay.title": "Sichtbarkeit & Kontrolle",
 
@@ -445,65 +470,67 @@ export const translations = {
     "showcase.stats.monitoring.label": "Fehlerrate",
     "showcase.stats.monitoring.value": "< 1%",
     "showcase.stats.architecture.label": "ROI",
-    "showcase.stats.architecture.value": "Sofort",
+    "showcase.stats.architecture.value": "Kurzfristig",
 
-    "showcase.features.title": "Die Operations Ebene",
+    "showcase.features.title": "Die Operations-Ebene",
     "showcase.features.item1": "Zentrale Ansicht aller aktiven Agenten.",
-    "showcase.features.item2": "Freigabeprozesse (Human-in-the-loop).",
+    "showcase.features.item2": "Freigabeprozesse mit menschlicher Kontrolle.",
     "showcase.features.item3": "Live-Logs und Audit-Trails.",
     "showcase.features.item4": "Nahtlose API-Integrationen.",
     "showcase.features.item5": "Individuelle Trigger und Zeitpläne.",
-    "showcase.features.item6": "Sicherheitsstandards auf Enterprise-Niveau.",
+    "showcase.features.item6":
+      "Sicherheits- und Compliance-Standards für den produktiven Betrieb.",
 
     "showcase.impact.title": "Warum es zählt",
     "showcase.impact.unlock.icon": "Zap",
     "showcase.impact.unlock.title": "Geschwindigkeit",
     "showcase.impact.unlock.description":
-      "Antworten Sie Kunden sofort, auch außerhalb der Geschäftszeiten.",
+      "Kürzere Durchlaufzeiten über Kunden- und interne Prozesse hinweg.",
     "showcase.impact.decisions.icon": "CheckCircle",
     "showcase.impact.decisions.title": "Präzision",
     "showcase.impact.decisions.description":
-      "Eliminieren Sie Copy-Paste-Fehler und verlorene Informationen.",
+      "Weniger Prozessfehler durch strukturierte, automatisierte Ausführung.",
     "showcase.impact.resilience.icon": "TrendingUp",
     "showcase.impact.resilience.title": "Fokus",
     "showcase.impact.resilience.description":
-      "Geben Sie Ihrem Team den Freiraum für Strategie und Kundenbeziehungen.",
+      "Mehr Kapazität für Kundenarbeit, Strategie und Wachstumsvorhaben.",
 
     // Universal (Chaos Tamer)
-    "universal.title": "Egal was Sie tun, tun Sie es schneller.",
-    "universal.subtitle": "Logistik, Recht oder Limonadenstand. Chaos sieht überall gleich aus. Die Lösung auch.",
-    "universal.button.idle": "Chaos bändigen",
-    "universal.button.active": "Ordnung wiederhergestellt",
-    "universal.floating.email": "Inbox 99+",
+    "universal.title": "Operative Komplexität. Kontrolliert automatisiert.",
+    "universal.subtitle":
+      "Ob Logistik, Service oder Administration: wiederkehrende Engpässe folgen ähnlichen Mustern. Wir automatisieren sie mit zuverlässigen AI-Workflows.",
+    "universal.button.idle": "Prozessfluss aktivieren",
+    "universal.button.active": "Betrieb stabilisiert",
+    "universal.floating.email": "Unbearbeitete Anfragen",
     "universal.floating.invoice": "Offene Rechnung",
-    "universal.floating.meeting": "Terminchaos",
-    "universal.floating.data": "Daten-Fehler",
+    "universal.floating.meeting": "Abstimmungsaufwand",
+    "universal.floating.data": "Fragmentierte Daten",
     "universal.floating.urgent": "Eskalation",
     "universal.floating.delay": "Verzug",
-    "universal.floating.error": "Human Error",
+    "universal.floating.error": "Manuelles Fehlerrisiko",
 
     // Why AIceFlow
-    "why.title": "Warum AIceFlow?",
+    "why.title": "Warum AIceFlow für den Mittelstand?",
     "why.description":
-      "Wir schlagen die Brücke zwischen komplexer KI-Technologie und Ihrer täglichen Geschäftsrealität.",
+      "Wir verbinden strategische Business-Ziele mit robuster technischer Umsetzung.",
 
-    "why.tailored.title": "Nicht nur Beratung",
+    "why.tailored.title": "Umsetzung statt Folien",
     "why.tailored.description":
-      "Wir lassen Sie nicht mit einem PDF-Konzept allein. Wir bauen, implementieren und warten die Software.",
+      "Wir stoppen nicht beim Konzept. Wir bauen, integrieren und betreiben das System produktiv.",
 
-    "why.partnership.title": "Definierter ROI",
+    "why.partnership.title": "Messbarer Geschäftswert",
     "why.partnership.description":
-      "Wir zielen auf Prozesse, wo der Impact messbar ist: Zeit gespart, Kosten gesenkt, Umsatz generiert.",
+      "Wir priorisieren Anwendungsfälle mit transparentem Nutzen: Zeitgewinn, Qualitätsgewinn und wirtschaftlicher Effekt.",
 
     "why.synergy.title": "Mensch im Mittelpunkt",
     "why.synergy.description":
-      "Unsere Automatisierungen arbeiten *für* Ihre Mitarbeiter und nehmen ihnen die Last ab.",
+      "Unsere Automatisierungen arbeiten mit Ihren Teams und entlasten von repetitiver Prozessarbeit.",
 
     "why.local.title": "Fokus DACH Region",
     "why.local.description":
       "Wir verstehen lokale Regularien, Sprache und die Geschäftskultur.",
 
-    "commitment.title": "Unsere Standards",
+    "commitment.title": "Unser Qualitätsversprechen",
     "commitment.description": "Zuverlässig. Sicher. Pragmatisch.",
     "commitment.transparency.title": "Datenschutz",
     "commitment.transparency.description": "DSGVO-konforme Umsetzung.",
@@ -561,9 +588,9 @@ export const translations = {
       "Besprechen Sie Ihre wichtigsten Automatisierungshebel direkt mit Business- und Technik-Lead.",
 
     // Contact
-    "contact.title": "Automatisieren Sie Ihr Business",
+    "contact.title": "Ihr nächster Automatisierungsschritt",
     "contact.description":
-      "Buchen Sie eine kostenlose Strategiesession. Wir finden in 30 Minuten Ihre größten Automatisierungs-Chancen.",
+      "Buchen Sie ein kostenloses Strategiegespräch. In 30 Minuten identifizieren wir Ihre größten Automatisierungspotenziale.",
 
     // Form
     "contact.form.title": "Kontakt aufnehmen",
@@ -582,7 +609,7 @@ export const translations = {
       "z.B. Rechnungsprüfung, E-Mail Sortierung...",
     "contact.form.submit": "Strategiegespräch anfragen",
     "contact.form.requiredNote":
-      "* Pflichtfeld. Antwort meist innerhalb 24h.",
+      "* Pflichtfeld. Rückmeldung in der Regel innerhalb eines Werktags.",
     "contact.form.submitting": "Sende...",
     "contact.form.error":
       "Es gab einen Fehler. Bitte versuchen Sie es erneut.",
@@ -590,6 +617,7 @@ export const translations = {
     "contact.form.successMessage":
       "Danke für Ihre Nachricht. Wir melden uns in Kürze.",
     "contact.form.sendAnother": "Noch eine senden",
+    "contact.responseTime": "Antwort in der Regel innerhalb eines Werktags",
 
     // Contact Info
     "contact.info.title": "Kontakt",
@@ -615,24 +643,24 @@ export const translations = {
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "Die AI Operations Ebene für den DACH Mittelstand und wachstumsorientierte Unternehmen. Praktische, sichere und maßgeschneiderte Automatisierung.",
+      "Die AI-Operations-Ebene für den DACH-Mittelstand und wachstumsorientierte Unternehmen. Praktische, sichere und maßgeschneiderte Automatisierung.",
 
     "footer.nav.services.title": "Lösungen",
-    "footer.nav.services.processAutomation": "Operations",
-    "footer.nav.services.customDashboards": "Admin & Finance",
-    "footer.nav.services.consultation": "Business Intel",
+    "footer.nav.services.processAutomation": "Betriebsprozesse",
+    "footer.nav.services.customDashboards": "Administration & Finanzen",
+    "footer.nav.services.consultation": "BI & Reporting",
     "footer.nav.services.implementation": "Implementierung",
-    "footer.nav.services.support": "Support",
+    "footer.nav.services.support": "Betrieb & Support",
 
-    "footer.nav.company.title": "Firma",
-    "footer.nav.company.about": "Über Uns",
+    "footer.nav.company.title": "Unternehmen",
+    "footer.nav.company.about": "Über uns",
     "footer.nav.company.team": "Team",
     "footer.nav.company.testimonials": "Erfolge",
     "footer.nav.company.contact": "Kontakt",
     "footer.nav.company.careers": "Karriere",
 
     "footer.copy": "© 2026 AIceFlow. Alle Rechte vorbehalten.",
-    "footer.tagline": "Automatisieren. Optimieren. Wachsen.",
+    "footer.tagline": "Automatisieren. Entlasten. Wachsen.",
 
     "footer.policies.privacy": "Datenschutz",
     "footer.policies.terms": "AGB",
