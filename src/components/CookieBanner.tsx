@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { initializeLinkedInInsightTag } from "../utils/linkedinInsight";
 
 type ConsentType =
   | "ad_storage"
@@ -51,6 +52,7 @@ const CookieBanner: React.FC = () => {
       ad_personalization: "granted",
     };
     updateConsent(consentStatus);
+    initializeLinkedInInsightTag();
     if (setLocalStorage) {
       localStorage.setItem("cookie_consent", "accepted");
     }
