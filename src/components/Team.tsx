@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import felixPortrait from "@/assets/felix-profile-stairs.jpeg";
 import heinerPortrait from "@/assets/portrait_bright.jpg";
-import horizontalFullLogo from "@/assets/logo/horizontal-full.png";
+import horizontalFullLogoWhite from "@/assets/logo/AIceFlow_Logo_White.svg";
 import { Button } from "@/components/ui/button";
 
 const containerVariants: Variants = {
@@ -70,7 +70,7 @@ const DuoBrandPanel = ({ logoAlt, caption }: { logoAlt: string; caption: string 
     <div className="pointer-events-none absolute -bottom-14 -right-10 h-36 w-36 rounded-full bg-cyan-400/20 blur-3xl" />
     <div className="relative z-10 flex flex-col items-center">
       <img
-        src={horizontalFullLogo as unknown as string}
+        src={horizontalFullLogoWhite}
         alt={logoAlt}
         className="w-full max-w-[260px] object-contain drop-shadow-[0_18px_36px_rgba(2,132,199,0.22)] sm:max-w-[320px]"
       />

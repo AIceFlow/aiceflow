@@ -108,11 +108,11 @@ const Universal: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* Left: Text Content */}
-          <div className="lg:w-1/2 text-center lg:text-left z-30">
+          <div className="lg:w-1/2 text-center z-30">
             <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {t("universal.title")}
             </h2>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg mx-auto">
               {t("universal.subtitle")}
             </p>
             

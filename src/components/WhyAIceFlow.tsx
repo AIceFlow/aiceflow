@@ -9,6 +9,7 @@ import {
   Zap,
   Target,
 } from "lucide-react";
+import BrandText from "./BrandText";
 
 const WhyCard = ({ 
   icon: Icon, 
@@ -85,7 +86,7 @@ const WhyAIceFlow: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {t("why.title")}
+            <BrandText text={t("why.title")} />
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

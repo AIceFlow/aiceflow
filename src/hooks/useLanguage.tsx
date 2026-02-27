@@ -31,17 +31,18 @@ export const translations = {
     "nav.how-it-works": "Process",
     "nav.testimonials": "Success Stories",
     "nav.contact": "Contact",
-    "header.cta": "Start Automation",
+    "header.cta": "Start a Strategy Session",
 
     // Hero
     "hero.title.line1": "The AI Operations Layer",
     "hero.title.dynamicWords": "Reliable|Secure|Tailored",
     "hero.title.staticRemainder": "for your Business",
-    "hero.title.line2": "Practical Automation for the Mittelstand",
+    "hero.title.line2":
+      "Practical Automation for SMEs and Growth-Focused Companies",
     "hero.description":
       "Turn repetitive operational work into reliable automated workflows. We design, build, and run custom AI systems that process requests, handle documents, and connect your existing tools in days, not months.",
 
-    "hero.cta.primary": "Get Your Custom Plan",
+    "hero.cta.primary": "Book a Strategy Session",
     "hero.cta.secondary": "See It In Action",
 
     "hero.pillars.tailored.title": "High-ROI Processes",
@@ -65,7 +66,7 @@ export const translations = {
     // About
     "about.title": "We are",
     "about.description":
-      "AIceFlow is the AI automation partner for Mittelstand and growth-focused companies. We help teams without an internal AI engineering unit deploy reliable automation and reduce operational friction.",
+      "AIceFlow is the AI automation partner for SMEs and growth-focused companies. We help teams without an internal AI engineering unit deploy reliable automation and reduce operational friction.",
 
     "about.innovation.title": "Practical > Theoretical",
     "about.custom.title": "Custom Built",
@@ -133,7 +134,7 @@ export const translations = {
     // Testimonials (Placeholder)
     "testimonials.title": "Client Success",
     "testimonials.description":
-      "See how Mittelstand and growth companies save time and scale operations.",
+      "See how SMEs and growth-focused companies save time and scale operations.",
 
     // Showcase
     "showcase.title": "Your AI Control Center",
@@ -217,9 +218,9 @@ export const translations = {
     "commitment.value.description": "We are your technical partner.",
 
     // Team
-    "team.founders.title": "Technical & Business Excellence for the Mittelstand",
+    "team.founders.title": "Technical & Business Excellence for SMEs",
     "team.founders.subtitle":
-      "Two software founders building custom AI systems for Germany's Mittelstand: business outcomes and adoption on one side, deep technical architecture and reliability on the other.",
+      "Two software founders building custom AI systems for SMEs and growth-focused companies: business outcomes and adoption on one side, deep technical architecture and reliability on the other.",
     "team.shared.label": "Execution Core",
     "team.shared.title": "Custom AI Systems. Production Reliability. Measurable Impact.",
     "team.shared.subtitle":
@@ -320,7 +321,7 @@ export const translations = {
     "footer.company.initials": "AF",
     "footer.company.name": "AIceFlow",
     "footer.company.description":
-      "The AI Operations Layer for the DACH Mittelstand and growth-focused companies. Practical, secure, and tailored automation.",
+      "The AI Operations Layer for DACH SMEs and growth-focused companies. Practical, secure, and tailored automation.",
 
     "footer.nav.services.title": "Solutions",
     "footer.nav.services.processAutomation": "Operations",

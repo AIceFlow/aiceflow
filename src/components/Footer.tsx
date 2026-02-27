@@ -1,7 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { Linkedin } from "lucide-react";
 import React from "react";
-import horizontalLogo from "@/assets/logo/horizontal-full.png";
+import horizontalLogoWhite from "@/assets/logo/AIceFlow_Logo_White.svg";
 import ImpressumModal from "./Impressum";
 
 const Footer: React.FC = () => {
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <img src={horizontalLogo} alt="AIceFlow" className="w-48" />
+              <img src={horizontalLogoWhite} alt="AIceFlow" className="w-48" />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {t("footer.company.description")}

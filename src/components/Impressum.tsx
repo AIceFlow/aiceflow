@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { Mail, Phone } from "lucide-react";
 import React from "react";
+import BrandText from "./BrandText";
 
 // Props allow external control and custom trigger
 export default function ImpressumModal({
@@ -42,7 +43,9 @@ export default function ImpressumModal({
         </DialogHeader>
         <div className="space-y-8 text-sm leading-relaxed">
           <section>
-            <h3 className="font-semibold text-base mb-2">AIceFlow GmbH</h3>
+            <h3 className="font-semibold text-base mb-2">
+              <BrandText text="AIceFlow GmbH" />
+            </h3>
             <div>
               Nussdorfer Strasse 9
               <br />

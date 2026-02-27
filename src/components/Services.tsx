@@ -105,11 +105,11 @@ const Services: React.FC = () => {
        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[500px] bg-gradient-to-b from-transparent via-primary/5 to-transparent -skew-y-3 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-16 max-w-2xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("services.title")}
           </h2>
-          <div className="w-20 h-1.5 bg-gradient-primary rounded-full mb-6"></div>
+          <div className="w-20 h-1.5 bg-gradient-primary rounded-full mb-6 mx-auto"></div>
           <p className="text-xl text-muted-foreground">
             {t("services.description")}
           </p>
