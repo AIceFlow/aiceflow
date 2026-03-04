@@ -26,7 +26,7 @@ const FloatingCard = ({
   y,
   colorClass = "bg-primary/10 text-primary"
 }: { 
-  icon: any, 
+  icon: React.ElementType, 
   title: string, 
   subtitle: string, 
   delay: number, 
