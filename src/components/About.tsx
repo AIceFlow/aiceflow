@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8">
             {t("about.title")}{" "}
             <span>
               <span className="text-[#4876ff]">AI</span>

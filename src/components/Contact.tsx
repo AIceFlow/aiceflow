@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[60px] pointer-events-none"></div>
                  
                  <div className="relative z-10">
-                   <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight break-words">
                      {t("contact.title")}
                    </h2>
                    <p className="text-slate-400 text-lg mb-12">

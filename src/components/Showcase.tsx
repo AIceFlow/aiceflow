@@ -49,7 +49,7 @@ export default function Showcase() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("showcase.title")}
           </h2>
           <div className="w-20 h-1.5 bg-gradient-primary mx-auto rounded-full mb-6"></div>

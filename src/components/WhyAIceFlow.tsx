@@ -85,7 +85,7 @@ const WhyAIceFlow: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             <BrandText text={t("why.title")} />
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>

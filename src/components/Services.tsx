@@ -38,7 +38,7 @@ const ServiceCard = ({
       <Icon className="h-6 w-6" />
     </div>
 
-    <h3 className="mb-3 text-2xl font-bold text-foreground">{title}</h3>
+    <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground break-words">{title}</h3>
     <p className="mb-6 text-muted-foreground leading-relaxed">
       {description}
     </p>
@@ -106,7 +106,7 @@ const Services: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 break-words">
             {t("services.title")}
           </h2>
           <div className="w-20 h-1.5 bg-gradient-primary rounded-full mb-6 mx-auto"></div>
@@ -145,7 +145,7 @@ const Services: React.FC = () => {
                   <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <LineChart className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-3 text-2xl font-bold text-foreground">{services[2].title}</h3>
+                  <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground break-words">{services[2].title}</h3>
                   <p className="text-muted-foreground leading-relaxed max-w-xl">
                     {services[2].description}
                   </p>

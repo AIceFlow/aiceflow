@@ -109,7 +109,7 @@ const Universal: React.FC = () => {
           
           {/* Left: Text Content */}
           <div className="lg:w-1/2 text-center z-30">
-            <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight break-words">
               {t("universal.title")}
             </h2>
             <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-lg mx-auto">

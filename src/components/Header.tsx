@@ -58,7 +58,8 @@ const Header = () => {
 
           <Button
             variant="cta"
-            size="lg"
+            size="sm"
+            className="hidden sm:inline-flex sm:text-sm md:text-base"
             onClick={() => {
               const contactSection = document.getElementById("contact");
               if (contactSection) {
