@@ -1,15 +1,20 @@
 <!doctype html>
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8" />
-    <title>AIceFlow Redirect</title>
+    <title>Seite nicht gefunden – AIceFlow</title>
+    <meta name="robots" content="noindex" />
     <script type="text/javascript">
-      var path = window.location.pathname;
-      var repoName = "/aiceflow";
-      var pathSegment = path.split(repoName)[1];
-      sessionStorage.redirect = pathSegment;
-      window.location.href = repoName;
+      // SPA redirect for GitHub Pages: store path and redirect to index
+      var path = window.location.pathname + window.location.search + window.location.hash;
+      sessionStorage.redirect = path;
+      window.location.replace('/');
     </script>
   </head>
-  <body></body>
+  <body>
+    <noscript>
+      <h1>Seite nicht gefunden</h1>
+      <p>Die angeforderte Seite existiert nicht. <a href="/">Zur Startseite</a></p>
+    </noscript>
+  </body>
 </html>

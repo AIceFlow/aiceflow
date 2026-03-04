@@ -73,6 +73,7 @@ const DuoBrandPanel = ({ logoAlt, caption }: { logoAlt: string; caption: string 
         src={horizontalFullLogoWhite}
         alt={logoAlt}
         className="w-full max-w-[260px] object-contain drop-shadow-[0_18px_36px_rgba(2,132,199,0.22)] sm:max-w-[320px]"
+        loading="lazy"
       />
       <p className="mt-5 text-center text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
         {caption}
@@ -132,6 +133,7 @@ const FounderBlock = ({
         alt={imageAlt}
         className={`h-full w-full ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
         style={{ objectPosition: imagePosition ?? "50% 50%" }}
+        loading="lazy"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
     </div>

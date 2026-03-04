@@ -57,17 +57,14 @@ const Header = () => {
           </button>
 
           <Button
+            asChild
             variant="cta"
             size="sm"
             className="hidden sm:inline-flex sm:text-sm md:text-base"
-            onClick={() => {
-              const contactSection = document.getElementById("contact");
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
           >
-            {t("header.cta")}
+            <a href="#contact">
+              {t("header.cta")}
+            </a>
           </Button>
         </div>
       </div>

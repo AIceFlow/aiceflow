@@ -13,20 +13,22 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <HowItWorks />
-      <Universal />
-      {/* <Testimonials /> */}
-      <Showcase />
-      <WhyAIceFlow />
-      <Team />
-      <Contact />
+      <main className="min-h-screen">
+        <Hero />
+        <About />
+        <Services />
+        <HowItWorks />
+        <Universal />
+        {/* <Testimonials /> */}
+        <Showcase />
+        <WhyAIceFlow />
+        <Team />
+        <Contact />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

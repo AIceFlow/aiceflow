@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Sparkles, Mail, BrainCircuit, Database, BellRing } from "lucide-react";
-import React from "react";
 import {
   motion,
   useScroll,
@@ -64,12 +63,6 @@ const Hero = () => {
   // Parallax for the entire right-side visual
   const yParallax = useTransform(scrollY, [0, 500], [0, 100]);
 
-  const scrollToId = (id: string) => {
-    document
-      .getElementById(id)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
       <BackgroundGrid />
@@ -100,21 +93,25 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="text-lg px-8 h-14 rounded-full shadow-glow hover:shadow-glow/80 transition-all"
-                onClick={() => scrollToId("contact")}
               >
-                {t("hero.cta.primary")}
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <a href="#contact">
+                  {t("hero.cta.primary")}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
                 className="text-lg px-8 h-14 rounded-full border-2 hover:bg-secondary/50"
-                onClick={() => scrollToId("showcase")}
               >
-                {t("hero.cta.secondary")}
+                <a href="#showcase">
+                  {t("hero.cta.secondary")}
+                </a>
               </Button>
             </div>
 

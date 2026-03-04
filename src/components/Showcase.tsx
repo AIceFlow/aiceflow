@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import dashboardMockup from "@/assets/showcase.png";
+import dashboardMockup from "@/assets/showcase.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Users, BarChart2, ShieldCheck, Zap } from "lucide-react";
@@ -83,8 +83,11 @@ export default function Showcase() {
              <div className="relative">
                <img
                  src={dashboardMockup}
-                 alt="AIceFlow Dashboard"
+                 alt="AIceFlow Dashboard – Zentrales Kontrollzentrum für AI-Automatisierungen"
                  className="w-full h-auto"
+                 loading="lazy"
+                 width={1400}
+                 height={933}
                />
                
                {/* Overlay Content (Visible on Hover/Always) */}
