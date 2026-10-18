@@ -1,0 +1,542 @@
+<!-- Startseite: Markup der Seite, übernommen aus dem Entwurf in ../governance-layer. Fußzeile, Impressum und Datenschutz kommen aus React. -->
+<!-- Symbole: Agent wie auf der Bühne, eigener Agent in Türkis -->
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="u-af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e4e8f0" /></linearGradient>
+        <linearGradient id="u-as" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7dce6" /><stop offset="1" stop-color="#b8c0d0" /></linearGradient>
+        <linearGradient id="u-av" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3249" /><stop offset="1" stop-color="#0a0d19" /></linearGradient>
+        <symbol id="agent-unit" viewBox="-30 -40 58 64">
+          <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" stroke="#fff" />
+          <rect x="-21" y="-6" width="30" height="16" rx="6" fill="url(#u-av)" />
+          <rect x="-16" y="-1" width="8" height="7" rx="3.5" fill="#4876ff" /><rect x="-4" y="-1" width="8" height="7" rx="3.5" fill="#4876ff" />
+          <rect x="-15" y="0" width="6" height="5" rx="2.5" fill="#a9c0ff" /><rect x="-3" y="0" width="6" height="5" rx="2.5" fill="#a9c0ff" />
+          <path d="M0 -20.5V-31" stroke="#a3abbe" stroke-width="1.6" stroke-linecap="round" /><circle cx="0" cy="-34" r="3.6" fill="#4876ff" />
+        </symbol>
+        <symbol id="agent-unit-own" viewBox="-30 -40 58 64">
+          <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" stroke="#9de8df" />
+          <rect x="-21" y="-6" width="30" height="16" rx="6" fill="url(#u-av)" />
+          <rect x="-16" y="-1" width="8" height="7" rx="3.5" fill="#2fd3c4" /><rect x="-4" y="-1" width="8" height="7" rx="3.5" fill="#2fd3c4" />
+          <rect x="-15" y="0" width="6" height="5" rx="2.5" fill="#cbfbf5" /><rect x="-3" y="0" width="6" height="5" rx="2.5" fill="#cbfbf5" />
+          <path d="M0 -20.5V-31" stroke="#a3abbe" stroke-width="1.6" stroke-linecap="round" /><circle cx="0" cy="-34" r="3.6" fill="#2fd3c4" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <a class="skip" href="#angebot">Zum Inhalt springen</a>
+
+    <header class="topbar" id="topbar">
+      <a class="brand" href="#top" data-jump aria-label="AIceFlow, zum Seitenanfang">
+        <img src="/logo/aiceflow-horizontal.svg" alt="AIceFlow" width="95" height="28" />
+      </a>
+      <nav class="topbar__links" aria-label="Abschnitte">
+        <a href="#top" data-jump>So funktioniert’s</a>
+        <a href="#angebot" data-jump>Angebot</a>
+        <a href="#trace" data-jump>Trace</a>
+        <a href="#einstieg" data-jump>Pilot</a>
+        <a href="#team" data-jump>Team</a>
+      </nav>
+      <nav class="topbar__nav" aria-label="Seitennavigation">
+        <a class="btn btn--primary" href="#termin" data-log="cta-top">Gespräch buchen</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- ============ STORY: eine Bühne, acht Kapitel ============ -->
+      <div class="story" id="story" data-chapters="8">
+        <div class="stage" id="stage">
+          <div class="stage__view" id="stage-view" aria-hidden="true"></div>
+          <div class="board" id="board" aria-hidden="true">
+            <svg class="stage-svg" id="stage-svg" width="1440" height="900" focusable="false"></svg>
+          </div>
+
+          <div class="chapters" id="chapters">
+            <section class="chapter chapter--hero" data-ch="0" aria-label="Kapitel 1">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span><span><span class="prod">Governance Gateway</span> · Agents</span></p>
+              <h1 class="h-hero" data-words>Die Kontrollschicht für KI-Agenten.</h1>
+              <p class="lead" data-words>Ob Ihr Team Agents selbst baut oder wir sie bauen: Mit dem <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> darf jeder Agent nur, was er soll. Und mit <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> ist jede Aktion bis zur Quelle nachvollziehbar.</p>
+              <div class="hero-choice">
+                <a class="btn btn--primary btn--big" href="#termin" data-log="cta-hero">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a>
+                <button class="film-teaser" type="button" data-film="0" aria-label="Film ansehen, 1 Minute 28 Sekunden">
+                  <span class="film-teaser__img"><img src="/film/thumb.jpg" alt="" width="640" height="360" /><span class="film-teaser__play" aria-hidden="true"></span></span>
+                  <span class="film-teaser__text"><span class="film-teaser__title">Film ansehen</span><span class="film-teaser__meta">1:28 · mit Ton</span></span>
+                </button>
+              </div>
+              <p class="scrollhint" aria-hidden="true"><svg width="14" height="22" viewBox="0 0 14 22"><path d="M7 3V17M2.5 12.5L7 17L11.5 12.5" /></svg>Scrollen Sie, und die Seite baut das System Schritt für Schritt auf.</p>
+            </section>
+
+            <section class="chapter" data-ch="1" aria-label="Kapitel 2">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--orange"></span>02 · Ohne Rahmen</p>
+              <h2 class="h-chapter" data-words>Wer hat das gebucht? Durfte er das? Wie weisen Sie es nach?</h2>
+              <p class="lead" data-words>Agents bauen kann heute jeder. Sobald sie an ERP, E-Mail und DMS dürfen, stellen sich andere Fragen.</p>
+            </section>
+
+            <section class="chapter chapter--list" data-ch="2" aria-label="Kapitel 3">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span><span>03 · Das <span class="prod">Gateway</span> entsteht</span></p>
+              <h2 class="h-chapter" data-words>Eine Schicht zwischen Agents und Systemen.</h2>
+              <p class="list-caption">Aufgeklappt: vier Ebenen in einer Schicht</p>
+              <ol class="plates" id="plate-list">
+                <li class="plate" data-plate="0"><span class="plate__swatch plate__swatch--1"></span><span class="plate__tag">01</span><span class="plate__body"><span class="plate__name">Identität <span class="plate__en">Identity</span></span><span class="plate__text">Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person.</span></span></li>
+                <li class="plate" data-plate="1"><span class="plate__swatch plate__swatch--2"></span><span class="plate__tag">02</span><span class="plate__body"><span class="plate__name">Berechtigungen <span class="plate__en">Access Control · RBAC</span></span><span class="plate__text">Genau die Rechte, die er braucht. Nicht mehr.</span></span></li>
+                <li class="plate" data-plate="2"><span class="plate__swatch plate__swatch--3"></span><span class="plate__tag">03</span><span class="plate__body"><span class="plate__name">Richtlinien &amp; Freigaben <span class="plate__en">Policies &amp; Approvals</span></span><span class="plate__text">Sie legen fest, was ein Agent allein darf und wo ein Mensch entscheidet.</span></span></li>
+                <li class="plate" data-plate="3"><span class="plate__swatch plate__swatch--4"></span><span class="plate__tag">04</span><span class="plate__body"><span class="plate__name">Anbindung <span class="plate__en">Connectors</span></span><span class="plate__text">Ihre Systeme, einmal sauber angebunden. Vom ERP bis zur Eigenentwicklung.</span></span></li>
+              </ol>
+              <p class="trace-note" id="trace-note"><span class="trace-note__line" aria-hidden="true"></span><span><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> läuft durch alle vier Ebenen und schreibt jede Aktion mit, vom Posteingang bis zur Buchung.</span></p>
+            </section>
+
+            <section class="chapter" data-ch="3" aria-label="Kapitel 4">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>04 · Identität und Berechtigungen</p>
+              <h2 class="h-chapter" data-words>Kein Agent handelt anonym.</h2>
+              <p class="lead" data-words>Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person. Mit genau den Rechten, die er braucht.</p>
+            </section>
+
+            <section class="chapter chapter--hitl" data-ch="4" aria-label="Kapitel 5">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--amber"></span>05 · Freigabe und Aufsicht</p>
+              <h2 class="h-chapter" data-words>Sie entscheiden, was ein Agent allein darf.</h2>
+              <p class="lead lead--hitl" data-words>Diese Rechnung liegt über der Grenze. Sie wartet, bis ein Mensch entscheidet.</p>
+              <div class="beat" id="beat-hotl">
+                <p class="beat__label">Im Betrieb · Human-on-the-Loop</p>
+                <h3 class="beat__title">Ihr Team behält die Aufsicht.</h3>
+                <p class="beat__text">Wo keine Freigabe nötig ist, arbeiten Agents selbstständig. Ihr Team sieht jede Aktion live und kann jederzeit eingreifen.</p>
+              </div>
+            </section>
+
+            <section class="chapter chapter--list chapter--trace" data-ch="5" aria-label="Kapitel 6">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span>06 · <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></span></p>
+              <h2 class="h-chapter h-chapter--long" data-words><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span>. Vom Posteingang bis zur Buchung.</h2>
+              <p class="lead" data-words><span class="prod">Trace</span> schreibt jeden Schritt mit, in Klartext und mit Zeitstempel. So lässt sich jede Aktion zurückverfolgen, bis zur Quelle.</p>
+              <div class="stations-wrap">
+                <span class="stations-rail" aria-hidden="true"></span>
+                <ol class="stations" id="station-list" aria-label="Stationen der Rechnung 2026-1042">
+                  <li class="station"><span class="station__dot" aria-hidden="true"></span><span class="station__name"><span class="station__no">1</span>Original-E-Mail</span><span class="station__time">rechnung@mueller-gmbh.de</span></li>
+                  <li class="station"><span class="station__dot" aria-hidden="true"></span><span class="station__name"><span class="station__no">2</span>gelesen</span><span class="station__time">09:14:02</span></li>
+                  <li class="station"><span class="station__dot" aria-hidden="true"></span><span class="station__name"><span class="station__no">3</span>entschieden</span><span class="station__time">09:14:05</span></li>
+                  <li class="station"><span class="station__dot" aria-hidden="true"></span><span class="station__name"><span class="station__no">4</span>geprüft</span><span class="station__time">09:14:06</span></li>
+                  <li class="station"><span class="station__dot" aria-hidden="true"></span><span class="station__name"><span class="station__no">5</span>gebucht</span><span class="station__time">09:16:41</span></li>
+                </ol>
+              </div>
+              <p class="chapter__link"><a href="#trace" data-log="to-trace">Trace im Detail<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a></p>
+            </section>
+
+            <section class="chapter" data-ch="6" aria-label="Kapitel 7">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--own"></span>07 · Eigener Agent</p>
+              <h2 class="h-chapter" data-words>Ihre Agents. Unser Rahmen.</h2>
+              <p class="lead" data-words>Bringen Sie mit, was Ihr Team gebaut hat. Eigene Agents docken am <span class="prod">Gateway</span> an, und es gelten sofort dieselben Regeln.</p>
+            </section>
+
+            <section class="chapter chapter--final" data-ch="7" aria-label="Kapitel 8">
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>08 · Ein Rahmen für alle</p>
+              <h2 class="h-chapter" data-words>Ein Rahmen für alle Agents. Ihre und unsere.</h2>
+              <p class="lead" data-words>Das <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> mit <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span>. In der EU-Cloud oder in Ihrem Rechenzentrum.</p>
+              <p class="chapter__cta"><a class="btn btn--primary btn--big" href="#termin" data-log="cta-story">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a><a class="btn btn--big btn--quiet" href="#angebot" data-log="to-offer">Angebot ansehen</a></p>
+            </section>
+          </div>
+
+          <!-- Kapitel 05: Freigabe vorab (Human-in-the-Loop) -->
+          <aside class="panel approval" id="approval" aria-hidden="true" aria-labelledby="approval-title">
+            <p class="panel__mode">Freigabe vorab <span>· Human-in-the-Loop</span></p>
+            <h3 class="panel__title" id="approval-title"><span class="panel__dot" aria-hidden="true"></span>Freigabe erforderlich</h3>
+            <p class="approval__reason">Betrag über 10.000 €</p>
+            <dl class="approval__meta">
+              <div class="approval__row approval__row--opt"><dt>Rechnung</dt><dd>Lieferant Müller GmbH</dd></div>
+              <div class="approval__row approval__row--opt"><dt>Betrag</dt><dd class="num">12.400 €</dd></div>
+              <div class="approval__row approval__row--opt"><dt>Agent</dt><dd>Rechnungs-Agent · für Buchhaltung</dd></div>
+            </dl>
+            <div class="approval__actions">
+              <button class="btn btn--ghost" id="reject-btn" type="button">Ablehnen</button>
+              <button class="btn btn--approve" id="approve-btn" type="button">Freigeben<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></button>
+            </div>
+            <p class="approval__hint" id="approval-hint" aria-live="polite">Oder einfach weiterscrollen.</p>
+          </aside>
+
+          <!-- Kapitel 05: Aufsicht im Betrieb (Human-on-the-Loop) -->
+          <aside class="panel oversight" id="oversight" aria-hidden="true" aria-labelledby="oversight-title">
+            <p class="panel__mode">Aufsicht im Betrieb <span>· Human-on-the-Loop</span></p>
+            <h3 class="panel__title" id="oversight-title">Agenten-Aktivität <span class="live"><i aria-hidden="true"></i>live</span></h3>
+            <ol class="feed">
+              <li class="feed__row"><span class="feed__t num">09:21:04</span><span class="feed__a">Angebot ins CRM übertragen<small>Vertriebs-Agent</small></span><span class="feed__s feed__s--ok">erledigt</span></li>
+              <li class="feed__row"><span class="feed__t num">09:21:06</span><span class="feed__a">Bestellung im ERP angelegt<small>Einkaufs-Agent</small></span><span class="feed__s feed__s--ok">erledigt</span></li>
+              <li class="feed__row"><span class="feed__t num">09:21:09</span><span class="feed__a">Beleg im DMS abgelegt<small>Rechnungs-Agent</small></span><span class="feed__s feed__s--ok">erledigt</span></li>
+              <li class="feed__row feed__row--live"><span class="feed__t num">09:21:11</span><span class="feed__a">E-Mail an Kunden senden<small>Vertriebs-Agent</small></span><span class="feed__s"><button class="btn-halt" id="halt-btn" type="button"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10"><path d="M3 2V8M7 2V8" /></svg>Anhalten</button><span class="feed__halted">angehalten</span></span></li>
+            </ol>
+          </aside>
+
+          <!-- Kapitel 06: Drill-down bis zur Modell-Begründung -->
+          <aside class="panel drill" id="drill" aria-hidden="true" aria-labelledby="drill-title">
+            <p class="panel__mode"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> <span>· Drill-down</span></p>
+            <h3 class="panel__title" id="drill-title">Rechnung 2026-1042</h3>
+            <p class="panel__sub">Lieferant Müller GmbH · 12.400 €</p>
+            <div class="roles-row">
+              <p class="roles__label" id="roles-label">Sichtbar für</p>
+              <div class="roles" role="group" aria-labelledby="roles-label">
+                <button class="role" type="button" data-role="0" aria-pressed="true">Geschäftsführung</button>
+                <button class="role" type="button" data-role="1" aria-pressed="false">Operator</button>
+                <button class="role" type="button" data-role="2" aria-pressed="false">Superuser</button>
+              </div>
+            </div>
+            <ol class="levels">
+              <li class="level" data-level="0">
+                <p class="level__head"><span class="level__name">Aktion</span><span class="level__who">Geschäftsführung</span></p>
+                <div class="level__body"><div><p class="level__det"><em>ERP-Buchung</em> · 12.400 € · gebucht 09:16:41</p></div></div>
+              </li>
+              <li class="level" data-level="1">
+                <p class="level__head"><span class="level__name">Entscheidung</span><span class="level__who">Operator</span></p>
+                <div class="level__body"><div><p class="level__det">Regel <em>„Betrag &gt; 10.000 €“</em> <svg class="ico-arrow" aria-label="führt zu" width="14" height="10" viewBox="0 0 14 10"><path d="M1 5H12M8.5 1.5L12 5L8.5 8.5" /></svg> Freigabe vorab · freigegeben von M. Berger</p></div></div>
+              </li>
+              <li class="level" data-level="2">
+                <p class="level__head"><span class="level__name">Modell-Begründung <small>LLM Reasoning</small></span><span class="level__who">Superuser</span></p>
+                <div class="level__body"><div>
+                  <p class="level__det">Warum der Agent so entschieden hat</p>
+                  <ol class="steps">
+                    <li class="step"><p class="step__k">Vor dem Modellaufruf <span>Pre-Model-Call</span></p><p class="step__i">Eingabe: Rechnung (PDF) · Lieferantenstamm · Buchungsregeln · Rolle: Buchhaltung</p></li>
+                    <li class="step"><p class="step__k">Abwägung <span>Reasoning</span></p><ul class="step__list"><li class="ok">Lieferant bekannt</li><li class="ok">Betrag plausibel</li><li class="ok">Kostenstelle 4711</li><li class="go">über 10.000 € – Freigabe nötig</li></ul></li>
+                    <li class="step"><p class="step__k">Nach dem Modellaufruf <span>Post-Model-Call</span></p><ul class="step__list"><li>Buchungsvorschlag 12.400 €</li><li class="ok">gegen Regeln geprüft</li><li class="go">Freigabe angefordert</li></ul></li>
+                  </ol>
+                </div></div>
+              </li>
+            </ol>
+          </aside>
+
+          <!-- Kapitel-Fortschritt -->
+          <nav class="progress" id="progress" aria-label="Kapitel">
+            <p class="progress__label"><span class="progress__num" id="progress-num">01 / 08</span><span class="progress__name" id="progress-name">Die Kontrollschicht</span><button class="progress__film" id="progress-film" type="button" data-film="0">Im Film ab 0:00</button></p>
+            <ol class="progress__marks">
+              <li><button type="button" data-goto="0" aria-label="Kapitel 1: Die Kontrollschicht"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="1" aria-label="Kapitel 2: Ohne Rahmen"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="2" aria-label="Kapitel 3: Das Gateway entsteht"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="3" aria-label="Kapitel 4: Identität und Berechtigungen"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="4" aria-label="Kapitel 5: Freigabe und Aufsicht"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="5" aria-label="Kapitel 6: AIceFlow Trace"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="6" aria-label="Kapitel 7: Eigener Agent"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="7" aria-label="Kapitel 8: Ein Rahmen für alle"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- ============ NORMALE SEITE ============ -->
+      <!-- ============ Angebot: Gateway (Produkt) und Agents (Leistung) ============ -->
+      <section class="section section--angebot" id="angebot" aria-labelledby="angebot-title">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Angebot</p>
+          <div class="split-head">
+            <h2 class="h-section" id="angebot-title">Der Rahmen. Und die Agents dazu.</h2>
+            <p class="split-head__text">Das <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> ist unser Produkt. Agents bauen wir auf Wunsch gleich mit, für Ihre Prozesse und Ihre Systeme.</p>
+          </div>
+          <div class="offers">
+            <article class="offer" aria-labelledby="offer-gw">
+              <svg class="offer__art" viewBox="0 0 400 230" role="img" aria-label="Vier Ebenen des Gateways zwischen Agents und Systemen">
+                <defs>
+                  <linearGradient id="og-t" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e9eefb" /></linearGradient>
+                  <linearGradient id="og-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f6ff" /><stop offset="1" stop-color="#cfdaf7" /></linearGradient>
+                  <linearGradient id="og-m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e3349" /><stop offset="1" stop-color="#171b29" /></linearGradient>
+                  <filter id="og-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" /></filter>
+                </defs>
+                <ellipse cx="200" cy="216" rx="170" ry="10" fill="#0e1120" opacity="0.08" />
+                <g fill="url(#og-m)"><rect x="66" y="186" width="68" height="24" rx="3" /><rect x="166" y="186" width="68" height="24" rx="3" /><rect x="266" y="186" width="68" height="24" rx="3" /></g>
+                <g fill="#3f4560"><path d="M66 186L78 178H146L134 186Z" /><path d="M166 186L178 178H246L234 186Z" /><path d="M266 186L278 178H346L334 186Z" /></g>
+                <g fill="#4876ff"><circle cx="122" cy="196" r="2.6" /><circle cx="222" cy="196" r="2.6" /><circle cx="322" cy="196" r="2.6" /></g>
+                <g stroke="#8fa8ff" stroke-width="2"><path d="M106 44V182" /><path d="M306 44V182" stroke="#16a89b" /></g>
+                <path d="M206 44V182" stroke="#4876ff" stroke-width="7" opacity="0.45" filter="url(#og-glow)" />
+                <path d="M206 44V182" stroke="#2f5bea" stroke-width="2.6" />
+                <g>
+                  <path d="M40 154L64 140H360L336 154Z" fill="url(#og-t)" /><rect x="40" y="154" width="296" height="8" fill="url(#og-f)" /><path d="M336 154L360 140V148L336 162Z" fill="#b8c7f1" />
+                  <path d="M40 124L64 110H360L336 124Z" fill="url(#og-t)" /><rect x="40" y="124" width="296" height="8" fill="url(#og-f)" /><path d="M336 124L360 110V118L336 132Z" fill="#c3d0f4" />
+                  <path d="M40 94L64 80H360L336 94Z" fill="url(#og-t)" /><rect x="40" y="94" width="296" height="8" fill="url(#og-f)" /><path d="M336 94L360 80V88L336 102Z" fill="#d0daf4" />
+                  <path d="M40 64L64 50H360L336 64Z" fill="url(#og-t)" /><rect x="40" y="64" width="296" height="8" fill="url(#og-f)" /><path d="M336 64L360 50V58L336 72Z" fill="#dce1eb" />
+                </g>
+                <g fill="#2f5bea"><ellipse cx="206" cy="57" rx="4.5" ry="1.8" /><ellipse cx="206" cy="87" rx="4.5" ry="1.8" /><ellipse cx="206" cy="117" rx="4.5" ry="1.8" /><ellipse cx="206" cy="147" rx="4.5" ry="1.8" /></g>
+                <g fill="#4876ff" opacity="0.7"><ellipse cx="106" cy="57" rx="4" ry="1.6" /><ellipse cx="106" cy="147" rx="4" ry="1.6" /></g>
+                <g fill="#16a89b" opacity="0.8"><ellipse cx="306" cy="57" rx="4" ry="1.6" /><ellipse cx="306" cy="147" rx="4" ry="1.6" /></g>
+                <use href="#agent-unit" x="86" y="0" width="40" height="44" /><use href="#agent-unit" x="186" y="0" width="40" height="44" /><use href="#agent-unit-own" x="286" y="0" width="40" height="44" />
+              </svg>
+              <p class="offer__kind">Produkt</p>
+              <h3 class="offer__name" id="offer-gw"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span></h3>
+              <p class="offer__text">Die Kontrollschicht zwischen Ihren Agents und Ihren Systemen. Jeder Agent bekommt eine Identität, genau die Rechte, die er braucht, und Ihre Regeln. Ab einer Grenze entscheidet ein Mensch, und <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> schreibt jede Aktion mit.</p>
+              <ul class="offer__list">
+                <li>Identität</li><li>Berechtigungen</li><li>Richtlinien &amp; Freigaben</li><li>Anbindung</li><li><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></li><li>EU-Cloud oder On-Prem</li>
+              </ul>
+              <p class="offer__note">Für Agents von uns, von Ihrem Team oder von Dritten.</p>
+            </article>
+            <article class="offer" aria-labelledby="offer-ag">
+              <svg class="offer__art" viewBox="0 0 400 230" role="img" aria-label="Agents, die am Gateway andocken">
+                <defs>
+                  <linearGradient id="oa-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e2e7f0" /></linearGradient>
+                  <linearGradient id="oa-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5c86ff" /><stop offset="1" stop-color="#2f5bea" /></linearGradient>
+                </defs>
+                <ellipse cx="200" cy="216" rx="170" ry="10" fill="#0e1120" opacity="0.08" />
+                <g stroke="#4876ff" stroke-width="2"><path d="M85 124V176" /><path d="M200 124V176" /></g>
+                <path d="M315 124V176" stroke="#16a89b" stroke-width="2" />
+                <path d="M40 184L64 170H360L336 184Z" fill="#f4f6fb" /><rect x="40" y="184" width="296" height="20" fill="url(#oa-p)" /><rect x="40" y="200" width="296" height="4" fill="url(#oa-s)" /><path d="M336 184L360 170V190L336 204Z" fill="#cfd5e2" />
+                <g fill="#4876ff"><ellipse cx="85" cy="177" rx="5" ry="2" /><ellipse cx="200" cy="177" rx="5" ry="2" /></g><ellipse cx="315" cy="177" rx="5" ry="2" fill="#16a89b" />
+                <use href="#agent-unit" x="51" y="52" width="68" height="75" /><use href="#agent-unit" x="166" y="52" width="68" height="75" /><use href="#agent-unit-own" x="281" y="52" width="68" height="75" />
+                <g font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+                  <rect x="33" y="16" width="104" height="24" rx="12" fill="#fff" stroke="#e1e5ee" /><text x="85" y="32" fill="#0e1120">Rechnungs-Agent</text>
+                  <rect x="150" y="16" width="100" height="24" rx="12" fill="#fff" stroke="#e1e5ee" /><text x="200" y="32" fill="#0e1120">Einkaufs-Agent</text>
+                  <rect x="275" y="16" width="80" height="24" rx="12" fill="#fff" stroke="#9de8df" /><text x="315" y="32" fill="#0b7f75">Ihr Agent</text>
+                </g>
+              </svg>
+              <p class="offer__kind">Leistung</p>
+              <h3 class="offer__name" id="offer-ag">Agents von <span class="aice"><span class="aice__ai">AI</span>ceFlow</span></h3>
+              <p class="offer__text">Wir bauen Agents, die in Ihrem Alltag arbeiten: Rechnungen buchen, Bestellungen anlegen, Anfragen ins CRM übertragen. Wir binden Ihre Systeme an und betreiben die Agents über das <span class="prod">Gateway</span>, vom ersten Tag an.</p>
+              <ul class="offer__list">
+                <li>Prozess klären</li><li>Systeme anbinden</li><li>Agent bauen</li><li>Betrieb und Weiterentwicklung</li>
+              </ul>
+              <p class="offer__note offer__note--own">Ihr Team baut selbst, etwa mit Claude, Google ADK oder LangGraph? Dann docken diese Agents genauso an.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AIceFlow Trace im Detail ============ -->
+      <section class="section section--trace" id="trace" aria-labelledby="trace-title">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></span></p>
+          <div class="trace-intro">
+            <h2 class="h-section h-section--big" id="trace-title">Jede Aktion. Bis zur Quelle nachvollziehbar.</h2>
+            <p class="trace-intro__text"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> schreibt mit, was Ihre Agents tun: automatisch, für jedes angebundene System, in Sätzen statt in Logdateien. So verfolgen Sie jede Aktion zurück, von der Buchung bis zur Original-E-Mail.</p>
+          </div>
+
+          <p class="answers-cap">Die drei Fragen vom Anfang, beantwortet aus der Spur</p>
+          <dl class="answers">
+            <div class="answer"><dt>Wer hat das gebucht?</dt><dd>Der Rechnungs-Agent, im Auftrag der Buchhaltung. Freigegeben von M.&nbsp;Berger.</dd></div>
+            <div class="answer"><dt>Durfte er das?</dt><dd>Ja. Seine Rolle darf im ERP Rechnungen buchen. Die Richtlinie für Beträge über 10.000&nbsp;€ hat gegriffen, die Freigabe liegt vor.</dd></div>
+            <div class="answer"><dt>Wie weisen Sie es nach?</dt><dd>Mit der Spur. Jede Station mit Zeitstempel, von der Buchung zurück bis zur Original-E-Mail.</dd></div>
+          </dl>
+
+          <div class="spur">
+            <div class="spur__legend">
+              <h3 class="spur__h">Was <span class="prod">Trace</span> mitschreibt</h3>
+              <ol class="kinds" id="trace-kinds">
+                <li><button class="kind" type="button" data-k="1" aria-pressed="false"><span class="kind__no">01</span><span><span class="kind__name">Was hereinkommt</span><span class="kind__text">Die Quelle jeder Aktion: E-Mail, Dokument, Auftrag.</span></span></button></li>
+                <li><button class="kind" type="button" data-k="2" aria-pressed="false"><span class="kind__no">02</span><span><span class="kind__name">Was der Agent bekommt</span><span class="kind__text">Welche Unterlagen und Regeln vor einer Entscheidung vorliegen.</span></span></button></li>
+                <li><button class="kind" type="button" data-k="3" aria-pressed="false"><span class="kind__no">03</span><span><span class="kind__name">Wie er abwägt</span><span class="kind__text">Seine Begründung, in Sätzen statt in Protokolldateien.</span></span></button></li>
+                <li><button class="kind" type="button" data-k="4" aria-pressed="false"><span class="kind__no">04</span><span><span class="kind__name">Was er tut</span><span class="kind__text">Jede Aktion in jedem System, mit Ergebnis.</span></span></button></li>
+                <li><button class="kind" type="button" data-k="5" aria-pressed="false"><span class="kind__no">05</span><span><span class="kind__name">Wer eingreift</span><span class="kind__text">Richtlinien, Freigaben, Anhalten. Mit Name und Uhrzeit.</span></span></button></li>
+              </ol>
+              <p class="spur__note">Für jeden Agent und jedes System, nicht nur für diese Rechnung.</p>
+            </div>
+
+            <article class="trail is-pending" id="trail" aria-labelledby="trail-title">
+              <p class="panel__mode"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> <span>· Spur</span></p>
+              <h3 class="trail__title" id="trail-title">Rechnung 2026-1042</h3>
+              <p class="trail__sub">Lieferant Müller GmbH · 12.400 € · Rechnungs-Agent im Auftrag von Buchhaltung</p>
+              <div class="dir" role="group" aria-label="Leserichtung">
+                <button class="dir__btn" type="button" data-dir="fwd" aria-pressed="true">Von der Quelle zur Buchung</button>
+                <button class="dir__btn" type="button" data-dir="back" aria-pressed="false">Von der Buchung zur Quelle</button>
+              </div>
+              <ol class="trail__list" id="trail-list">
+                <li class="step-entry" data-k="1" style="--i: 0">
+                  <p class="step-entry__meta"><span class="step-entry__t">Quelle</span><span class="step-entry__name">Original-E-Mail</span><span class="step-entry__who">E-Mail</span></p>
+                  <p class="step-entry__text">Die Rechnung kommt per E-Mail.</p>
+                  <p class="step-entry__det">Von rechnung@mueller-gmbh.de · Betreff „Rechnung 2026-1042“ · Anhang Rechnung_2026-1042.pdf</p>
+                </li>
+                <li class="step-entry" data-k="4" style="--i: 1">
+                  <p class="step-entry__meta"><span class="step-entry__t num">09:14:02</span><span class="step-entry__name">gelesen</span><span class="step-entry__who">Rechnungs-Agent</span></p>
+                  <p class="step-entry__text">Der Agent liest die E-Mail und den Anhang.</p>
+                </li>
+                <li class="step-entry" data-k="2 3 4" style="--i: 2">
+                  <p class="step-entry__meta"><span class="step-entry__t num">09:14:05</span><span class="step-entry__name">entschieden</span><span class="step-entry__who">Rechnungs-Agent</span></p>
+                  <p class="step-entry__text">Der Agent schlägt eine Buchung über 12.400 € vor.</p>
+                  <dl class="step-entry__why">
+                    <div data-k="2"><dt>Bekommen</dt><dd>Rechnung (PDF) · Lieferantenstamm · Buchungsregeln · Rolle: Buchhaltung</dd></div>
+                    <div data-k="3"><dt>Abgewogen</dt><dd>Lieferant bekannt · Betrag plausibel · Kostenstelle 4711 · über 10.000 € – Freigabe nötig</dd></div>
+                    <div data-k="4"><dt>Ergebnis</dt><dd>Buchungsvorschlag 12.400 € · Freigabe angefordert</dd></div>
+                  </dl>
+                </li>
+                <li class="step-entry" data-k="5" style="--i: 3">
+                  <p class="step-entry__meta"><span class="step-entry__t num">09:14:06</span><span class="step-entry__name">geprüft</span><span class="step-entry__who">Gateway</span></p>
+                  <p class="step-entry__text">Die Richtlinie „Betrag über 10.000 €“ greift. Die Buchung wartet auf Freigabe.</p>
+                </li>
+                <li class="step-entry" data-k="4 5" style="--i: 4">
+                  <p class="step-entry__meta"><span class="step-entry__t num">09:16:41</span><span class="step-entry__name">gebucht</span><span class="step-entry__who">ERP</span></p>
+                  <p class="step-entry__text">Nach Freigabe durch M.&nbsp;Berger bucht der Agent die Rechnung im ERP.</p>
+                </li>
+              </ol>
+            </article>
+          </div>
+
+                  </div>
+      </section>
+
+      <!-- ============ Einsatz ============ -->
+      <section class="section section--einsatz section--alt" id="einsatz" aria-labelledby="einsatz-title">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Einsatz</p>
+          <div class="split-head">
+            <h2 class="h-section" id="einsatz-title">Wo Agents zuerst arbeiten.</h2>
+            <p class="split-head__text">Dort, wo Belege per E-Mail kommen und im Kernsystem landen müssen. Die Agents aus der Geschichte stehen für typische erste Prozesse.</p>
+          </div>
+          <ol class="uses">
+            <li class="use">
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Rechnungs-Agent</p>
+              <h3 class="use__name">Eingangsrechnungen</h3>
+              <p class="use__text">Aus dem Postfach geprüft ins ERP. Ab einer Grenze, die Sie festlegen, entscheidet ein Mensch.</p>
+              <p class="use__route">E-Mail <span aria-hidden="true">·</span> ERP <span aria-hidden="true">·</span> im Auftrag der Buchhaltung</p>
+            </li>
+            <li class="use">
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Einkaufs-Agent</p>
+              <h3 class="use__name">Bestellungen und Auftragsbestätigungen</h3>
+              <p class="use__text">Bestellungen im ERP angelegt, Liefertermine abgeglichen, bevor sie in der Fertigung fehlen.</p>
+              <p class="use__route">E-Mail <span aria-hidden="true">·</span> ERP <span aria-hidden="true">·</span> im Auftrag des Einkaufs</p>
+            </li>
+            <li class="use">
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Vertriebs-Agent</p>
+              <h3 class="use__name">Anfragen und Angebote</h3>
+              <p class="use__text">Anfragen erfasst, Angebote ins CRM übertragen. E-Mails an Kunden gehen nur raus, wenn die Richtlinie es erlaubt.</p>
+              <p class="use__route">E-Mail <span aria-hidden="true">·</span> CRM <span aria-hidden="true">·</span> im Auftrag des Vertriebs</p>
+            </li>
+            <li class="use use--own">
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit-own" /></svg>Ihr Prozess</p>
+              <h3 class="use__name">Lieferscheine, Verträge, Aufträge</h3>
+              <p class="use__text">Was per E-Mail und als Dokument hereinkommt, kann geprüft und nachvollziehbar im Kernsystem landen.</p>
+              <p class="use__route">Ihre Systeme <span aria-hidden="true">·</span> Ihre Regeln</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--betrieb" id="betrieb">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Betrieb</p>
+          <h2 class="h-section">Läuft dort, wo Ihre Daten bleiben sollen.</h2>
+          <div class="columns">
+            <div class="column">
+              <p class="column__tag">EU-Cloud</p>
+              <p class="column__text">Das <span class="prod">Gateway</span> läuft bei uns, ausschließlich in der EU. Schnell startklar, Betrieb und Updates inklusive.</p>
+            </div>
+            <div class="column">
+              <p class="column__tag">On-Prem</p>
+              <p class="column__text">Das <span class="prod">Gateway</span> läuft in Ihrem Rechenzentrum. Ihre Daten verlassen das Haus nicht.</p>
+            </div>
+          </div>
+          <p class="statement">Die Anbindungen gehören Ihnen, die Protokolle aus <span class="prod">Trace</span> liegen im offenen Format. Kein Lock-in.</p>
+        </div>
+      </section>
+
+      <section class="section section--einstieg" id="einstieg">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Einstieg</p>
+          <h2 class="h-section h-section--big">Pilot in 6–8 Wochen.</h2>
+          <p class="einstieg__formula">1 Prozess · 2 Systeme · 1 Agent – Ihrer oder unserer.</p>
+          <ol class="steps-row">
+            <li><span class="steps-row__no">01</span><h3 class="steps-row__name">Gespräch</h3><p class="steps-row__text">Eine Stunde mit den Gründern. Wir klären Prozess und Systeme, und ob sich ein Pilot für Sie lohnt.</p></li>
+            <li><span class="steps-row__no">02</span><h3 class="steps-row__name">Pilot</h3><p class="steps-row__text">Ein Prozess im Parallelbetrieb. Ausnahmen gehen an Ihre Leute, <span class="prod">Trace</span> schreibt jede Aktion mit.</p></li>
+            <li><span class="steps-row__no">03</span><h3 class="steps-row__name">Betrieb</h3><p class="steps-row__text">Wir betreiben <span class="prod">Gateway</span> und Agents, Ihr Team behält die Aufsicht. Weitere Prozesse docken an.</p></li>
+          </ol>
+          <div class="einstieg__cta">
+            <a class="btn btn--primary btn--big" href="#termin" data-log="cta-pilot">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a>
+          </div>
+          <div class="share">
+            <button class="share__thumb" type="button" data-film="0" aria-label="Film ansehen"><img src="/film/thumb.jpg" alt="" width="640" height="360" /><span class="film-teaser__play" aria-hidden="true"></span></button>
+            <div class="share__body">
+              <p class="share__title">Für Ihr Team: der Film zum Weitergeben.</p>
+              <p class="share__text">Dieselbe Geschichte in 1:28, mit Ton und Untertiteln. Für Kollegen, IT-Leitung oder Systemhaus.</p>
+              <p class="share__actions">
+                <button class="btn" type="button" data-film="0">Film ansehen</button>
+                <button class="btn btn--quiet" type="button" data-copy-film>Link kopieren</button>
+                <span class="share__status" aria-live="polite"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Team ============ -->
+      <section class="section section--team section--alt" id="team" aria-labelledby="team-title">
+        <div class="wrap">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Team</p>
+          <div class="split-head">
+            <h2 class="h-section" id="team-title">Zwei Gründer. Business und Technik.</h2>
+            <p class="split-head__text">Sie sprechen von Anfang an mit den Menschen, die <span class="prod">Gateway</span> und Agents bauen und betreiben.</p>
+          </div>
+          <div class="people">
+            <figure class="person">
+              <img class="person__img" src="/team/felix-funke.jpg" alt="Felix Funke" width="1200" height="800" loading="lazy" />
+              <figcaption>
+                <p class="person__name">Felix Funke</p>
+                <p class="person__role">Co-Founder · Produkt und Umsetzung</p>
+                <p class="person__text">Verbindet Engineering mit Produkt und Business. Sorgt dafür, dass Agents im Tagesgeschäft ankommen und genutzt werden.</p>
+              </figcaption>
+            </figure>
+            <figure class="person">
+              <img class="person__img person__img--portrait" src="/team/heiner-di-camillo.jpg" alt="Dr. Heiner Di Camillo" width="1080" height="1440" loading="lazy" />
+              <figcaption>
+                <p class="person__name">Dr. Heiner Di Camillo</p>
+                <p class="person__role">Co-Founder · Technik und Architektur</p>
+                <p class="person__text">Verantwortet die Plattform: sichere Anbindungen an ERP, DMS und weitere Systeme, stabiler Betrieb vom Pilot bis in den Alltag.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Termin: Google-Kalender, lädt erst nach Klick ============ -->
+      <section class="section section--termin" id="termin" aria-labelledby="termin-title">
+        <div class="wrap termin">
+          <div class="termin__intro">
+            <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Gespräch</p>
+            <h2 class="h-section" id="termin-title">Ein Gespräch mit den Gründern.</h2>
+            <p class="termin__text">Wählen Sie direkt einen Termin, eine Stunde per Google Meet. Wir klären Ihren Prozess und Ihre Systeme und sagen Ihnen offen, ob sich ein Pilot lohnt. Kostenlos.</p>
+            <ul class="termin__points">
+              <li>Was heute per E-Mail hereinkommt und wo es landen muss</li>
+              <li>Welche Agents es schon gibt: Ihre oder neue von uns</li>
+              <li>Ob EU-Cloud oder Ihr Rechenzentrum besser passt</li>
+            </ul>
+            <dl class="kontakt__info">
+              <div><dt>Lieber per E-Mail</dt><dd><a href="mailto:hello@aiceflow.de">hello@aiceflow.de</a></dd></div>
+              <div><dt>Telefon</dt><dd><a href="tel:+4917663364095">+49 176 6336 4095</a></dd></div>
+              <div><dt>Sitz</dt><dd><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> GmbH · Nussdorfer Straße 9 · 88662 Überlingen</dd></div>
+            </dl>
+          </div>
+          <div class="booking" id="booking">
+            <div class="booking__gate" id="booking-gate">
+              <svg class="booking__icon" aria-hidden="true" width="44" height="44" viewBox="0 0 44 44"><rect x="6" y="9" width="32" height="29" rx="6" /><path d="M6 17H38M15 5V12M29 5V12" /><circle cx="16" cy="25" r="1.6" /><circle cx="22" cy="25" r="1.6" /><circle cx="28" cy="25" r="1.6" /><circle cx="16" cy="31" r="1.6" /><circle cx="22" cy="31" r="1.6" /></svg>
+              <p class="booking__title">Freie Termine im Google-Kalender</p>
+              <p class="booking__text">Der Kalender wird von Google geladen. Daten gehen erst an Google, wenn Sie ihn öffnen.</p>
+              <p class="booking__actions">
+                <button class="btn btn--primary btn--big" type="button" id="booking-load">Kalender laden</button>
+                <a class="btn btn--big btn--quiet" id="booking-tab" href="#termin" target="_blank" rel="noopener">In neuem Tab öffnen</a>
+              </p>
+              <p class="booking__missing" id="booking-missing" hidden>Entwurf: Hier fehlt noch der Link zur Google-Terminbuchung (<code>BOOKING_URL</code> in <code>src/booking.js</code>).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    
+
+    <!-- Film: dieselbe Geschichte wie die Bühne, in 1:28 -->
+    <dialog class="film" id="film-dialog" aria-labelledby="film-title">
+      <div class="film__head">
+        <div>
+          <p class="panel__mode">Film <span>· 1:28 · mit Ton und Untertiteln</span></p>
+          <h2 class="film__title" id="film-title">Jeder Agent darf nur, was er soll.</h2>
+        </div>
+        <button class="film__close" type="button" data-film-close aria-label="Film schließen"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 2L12 12M12 2L2 12" /></svg></button>
+      </div>
+      <div class="film__body">
+        <video class="film__video" id="film-video" src="https://ufkzsbysriygnafpcycy.supabase.co/storage/v1/object/public/public-assets/marketing/video_2026-10-18_12-24-54.mp4" poster="/film/poster.jpg" controls playsinline preload="none"></video>
+        <div class="film__side">
+          <div class="film__side-inner">
+          <p class="film__side-title">Kapitel im Film</p>
+          <ol class="film__chapters" id="film-chapters">
+            <li><button type="button" data-t="0"><span class="num">0:00</span>Agents bauen kann heute jeder</button></li>
+            <li><button type="button" data-t="6.5"><span class="num">0:06</span>Ohne Rahmen: Wer hat das gebucht?</button></li>
+            <li><button type="button" data-t="15.1"><span class="num">0:15</span>Das Gateway schiebt sich dazwischen</button></li>
+            <li><button type="button" data-t="23.1"><span class="num">0:23</span>Vier Ebenen: Identität bis Anbindung</button></li>
+            <li><button type="button" data-t="34.5"><span class="num">0:34</span>Freigabe vorab: Rechnung über 10.000 €</button></li>
+            <li><button type="button" data-t="43.5"><span class="num">0:43</span>Aufsicht im Betrieb: Aktion anhalten</button></li>
+            <li><button type="button" data-t="52.5"><span class="num">0:52</span>Trace: zurück bis zur Original-E-Mail</button></li>
+            <li><button type="button" data-t="61.1"><span class="num">1:01</span>Drill-down: warum der Agent so entschied</button></li>
+            <li><button type="button" data-t="71.5"><span class="num">1:11</span>Eigene Agents docken an</button></li>
+            <li><button type="button" data-t="79.1"><span class="num">1:19</span>Die Kontrollschicht für KI-Agenten</button></li>
+          </ol>
+          <p class="film__share"><button class="btn btn--quiet" type="button" data-copy-film>Link zum Film kopieren</button><span class="share__status" aria-live="polite"></span></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
