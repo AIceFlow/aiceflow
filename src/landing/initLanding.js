@@ -13,7 +13,6 @@ import { createDrill } from './drill.js';
 import { createTrace } from './trace.js';
 import { createFilm, FILM_T, fmtT } from './film.js';
 import { createBooking } from './booking.js';
-import { Sound } from './sound.js';
 import { splitWords } from './textfx.js';
 
 const CHAPTER_NAMES = ['Die Kontrollschicht', 'Ohne Rahmen', 'Das Gateway entsteht', 'Identität und Berechtigungen', 'Freigabe und Aufsicht', 'AIceFlow Trace', 'Eigener Agent', 'Ein Rahmen für alle'];
@@ -61,25 +60,17 @@ export function initLanding({ onBookingOpen } = {}) {
   $$('[data-words]').forEach(splitWords);
 
   /* ---------- Module ---------- */
-  const sound = new Sound();
   const shared = { approved: false, release: 0 };
   const stage = new Stage({ board: $('#board'), svg: $('#stage-svg') });
 
   const approval = createApproval({
     panel: $('#approval'), approveBtn: $('#approve-btn'), rejectBtn: $('#reject-btn'), hint: $('#approval-hint'),
     oversight: $('#oversight'), haltBtn: $('#halt-btn'), stage: stageEl, shared, reduced,
-    onApprove: () => sound.chime(),
-    onHalt: () => sound.click(0.8),
   });
   off.push(() => approval.destroy());
 
   const drill = createDrill({ panel: $('#drill'), roleBtns: $$('#drill .role'), levels: $$('#drill .level') });
 
-  stage.onEvent = (name, k) => {
-    if (name === 'gate') sound.click(0.9);
-    if (name === 'snap') sound.click(1 + k * 0.07);
-    if (name === 'dock') sound.click(0.85);
-  };
 
   const story = createStory({ storyEl, chapterEls, plateEls, stationEls, traceNote: $('#trace-note'), reduced });
   off.push(() => story.destroy());
@@ -182,14 +173,6 @@ export function initLanding({ onBookingOpen } = {}) {
   off.push(() => { alive = false; clearTimeout(resizeT); });
 
   /* ---------- Interaktionen ---------- */
-  const soundBtn = $('#sound-toggle');
-  soundBtn.addEventListener('click', () => {
-    const on = soundBtn.getAttribute('aria-pressed') !== 'true';
-    sound.enable(on);
-    soundBtn.setAttribute('aria-pressed', String(on));
-    if (on) sound.click(1);
-  });
-  off.push(() => sound.enable(false));
 
   /* Sprünge innerhalb der Seite, sanft über Lenis */
   $$('a[data-log], a[data-jump]').forEach((el) => {

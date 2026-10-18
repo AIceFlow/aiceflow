@@ -212,21 +212,6 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
 .topbar__links a:hover { color: var(--ink); background: rgba(14, 17, 32, 0.05); }
 @media (max-width: 1239px) { .topbar__links { display: none; } }
 
-.sound {
-  display: flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; border-radius: 999px;
-  background: var(--surface); box-shadow: 0 0 0 1px rgba(14, 17, 32, 0.08);
-  color: #4b5167;
-}
-.sound:hover { color: var(--ink); }
-.sound__bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 12px; }
-.sound__bars i { width: 2px; height: 4px; border-radius: 1px; background: currentColor; transition: height 0.3s ease; }
-.sound[aria-pressed="true"] { color: var(--blue-ink); }
-.sound[aria-pressed="true"] .sound__bars i { animation: bars 0.9s ease-in-out infinite alternate; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(2) { animation-delay: 0.15s; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(3) { animation-delay: 0.3s; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(4) { animation-delay: 0.45s; }
-@keyframes bars { from { height: 3px; } to { height: 12px; } }
 
 /* ---------- Story / Bühne ---------- */
 .story { position: relative; height: calc(var(--chapter-vh) * 8 * 1vh); }
@@ -795,7 +780,6 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
   .topbar { padding: 0 12px 0 16px; background: rgba(244, 245, 248, 0.94); }
   .brand img { height: 24px; }
   .topbar__nav .btn { min-height: 40px; padding: 0 16px; font-size: 0.8125rem; }
-  .sound { width: 40px; height: 40px; }
 
   .stage__view { inset: auto; left: 0; right: 0; top: var(--topbar-h); height: calc(50svh - var(--topbar-h)); }
 
