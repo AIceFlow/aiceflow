@@ -1,5 +1,9 @@
 # AIceFlow Launchpad - Agent Context
 
+> **Stand Oktober 2026:** Die Startseite ist neu aufgebaut, rund um das AIceFlow Governance Gateway
+> (Produkt) und Agents von AIceFlow (Leistung). Aufbau, Dateien und Routen (inkl. `/impressum` und
+> `/datenschutz`) stehen in `CLAUDE.md`. Die Abschnitte unten beschreiben die frühere Agentur-Seite.
+
 ## 1. Business Overview
 
 **Project Name:** AIceFlow Launchpad

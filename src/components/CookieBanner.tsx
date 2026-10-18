@@ -82,7 +82,11 @@ const CookieBanner: React.FC = () => {
         <p className="text-center text-sm md:text-left">
           Wir verwenden Cookies, um die Leistung unserer Website zu analysieren.
           Indem Sie auf „Akzeptieren“ klicken, stimmen Sie der Verwendung von
-          Tracking-Technologien für Marketingzwecke zu.
+          Tracking-Technologien für Marketingzwecke zu. Mehr dazu in der{" "}
+          <a href="/datenschutz" className="underline hover:text-white/80">
+            Datenschutzerklärung
+          </a>
+          .
         </p>
         <div className="flex flex-shrink-0 gap-3">
           <button
