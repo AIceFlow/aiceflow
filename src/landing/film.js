@@ -4,8 +4,9 @@
  * („Im Film ab …“) und beim Pilot zum Weitergeben. Der Dialog springt ins passende Kapitel.
  * Deep Link: …/#film öffnet den Film beim Laden.
  */
-// Beginn der acht Seitenkapitel im Film (Szenen-Starts aus compositions/, 88,1 s)
-export const FILM_T = [0, 6.5, 15.1, 23.1, 34.5, 52.5, 71.5, 79.1];
+// Beginn der neun Seitenkapitel im Film (Szenen-Starts aus compositions/, 99,3 s).
+// null = Kapitel ohne Entsprechung im Film (derzeit keines).
+export const FILM_T = [0, 6.5, 15.1, 23.1, 34.5, 52.5, 71.5, 79.1, 90.3];
 export const fmtT = (t) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
 
 export function createFilm({ dialog, video, chapters, onOpen, onCopy, onPause, onResume }) {

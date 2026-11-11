@@ -32,7 +32,7 @@ npm run preview    # Preview production build
 **App shell** (`src/App.tsx`): Wraps the app in QueryClientProvider → LanguageProvider → TooltipProvider → BrowserRouter. CookieBanner sits outside the router.
 
 **Home page** (`src/pages/Index.tsx`): `<Landing />` + `<SiteFooter />` from `src/components/landing/`.
-`Landing` injects `src/landing/markup.html` (raw HTML: SVG stage, eight-chapter scroll story, Angebot,
+`Landing` injects `src/landing/markup.html` (raw HTML: SVG stage, nine-chapter scroll story (chapter 08 „ChatGPT und Claude“ since 2026-11-11: two chat windows whose requests run through the Gateway; OpenAI and Claude marks from simple-icons, used at the user's request), Angebot,
 Trace, Einsatz, Betrieb, Pilot, Team, Termin, film dialog) and calls `initLanding()` from
 `src/landing/initLanding.js`, which wires the vanilla modules (`stage.js`, `story.js`, `approval.js`,
 `drill.js`, `trace.js`, `film.js`, `booking.js`; GSAP ScrollTrigger + Lenis) and returns a teardown
@@ -49,7 +49,7 @@ Datenschutz page.
 
 **Booking**: Google Calendar appointment schedule, embedded only after a click (`src/landing/booking.js`).
 Opening it fires the gtag event `termin_kalender_geoeffnet` (`src/utils/analytics.ts`). The film is
-served from the Supabase bucket `public-assets/marketing`.
+served from the Supabase bucket `public-assets/marketing` (render of 2026-11-11, 99.3 s; `FILM_T` in `film.js` holds the scene starts).
 
 ## Key Conventions
 
