@@ -214,7 +214,7 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
 
 
 /* ---------- Story / Bühne ---------- */
-.story { position: relative; height: calc(var(--chapter-vh) * 8 * 1vh); }
+.story { position: relative; height: calc(var(--chapter-vh) * 9 * 1vh); }
 .stage {
   position: sticky; top: 0;
   height: 100vh; height: 100svh;
@@ -540,7 +540,7 @@ ol, ul { margin: 0; padding: 0; list-style: none; }
   font-variant-numeric: tabular-nums; white-space: nowrap;
 }
 .progress__film:hover { color: var(--ink); }
-.progress__marks { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); column-gap: 6px; }
+.progress__marks { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); column-gap: 6px; }
 .progress__marks button { display: flex; align-items: center; width: 100%; height: 44px; }
 .progress__bar { position: relative; display: block; width: 100%; height: 4px; border-radius: 2px; background: #dfe3eb; overflow: hidden; }
 .progress__fill { position: absolute; inset: 0; border-radius: 2px; background: var(--ink); transform: scaleX(0); transform-origin: 0 0; }

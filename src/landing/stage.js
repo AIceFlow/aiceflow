@@ -2,7 +2,7 @@
  * Bühne des Governance Gateway: schiefe Parallelprojektion (Kabinett, 35°) als SVG,
  * gerendert mit Verläufen, weichen Schatten, Licht und fließenden Impulsen.
  * Das Markup kommt aus stage-markup.js; scene() berechnet alle Platzhalterwerte aus
- * p ∈ [0, 8]. Nur die Freigabe (release 0 … 1) ist zeitbasiert.
+ * p ∈ [0, 9]. Nur die Freigabe (release 0 … 1) ist zeitbasiert.
  * Weltkoordinaten: x nach rechts, y nach hinten, z nach oben.
  */
 import { MARKUP } from './stage-markup.js';
@@ -11,7 +11,8 @@ export const GATE = 2.28;                        // Gateway rastet als eine Schi
 export const SNAP = [2.6, 2.67, 2.74, 2.81];     // Ebene k ist aufgeklappt und beschriftet
 export const DOCK = 6.5;                         // eigener Agent dockt an
 // Eingeschwungener Zustand je Kapitel: Ziel für Sprungmarken und Reduced Motion
-export const TARGET = [0.15, 1.82, 2.9, 3.6, 4.62, 5.86, 6.84, 7.7];
+export const CHAT = 7.3;                         // Chatfenster (ChatGPT, Claude) docken an
+export const TARGET = [0.15, 1.82, 2.9, 3.6, 4.62, 5.86, 6.84, 7.8, 8.7];
 
 const CX = 880, CY = 720, S = 70;
 const KX = 0.5 * Math.cos((35 * Math.PI) / 180);
@@ -28,6 +29,9 @@ const TRACE = [[-1.95, 0.9, 0.5], [-1.95, 0.9, 6.1], [0, 0.9, 6.1], [0, WY, ZB],
 const TRACE_P = [5.08, 5.7];
 // eigener Agent: durch das Gateway, dicht unter Ebene 04 hinüber in die Buchse des DMS
 const OWN = [[5.0, WY, ZB], [5.0, WY, 0.75], [2.6, WY, 0.75], [2.6, WY, 0.5]];
+// Chatfenster (Kapitel 08): zwischen den Agents, über der Agent-Reihe; durch das Gateway, unter Ebene 04 ins ERP
+const CHAT_X = [-1.3, 1.3], ZC = 7.255, CHAT_S = 1.18;
+const CHAT_W = CHAT_X.map((x) => [[x, WY, ZC], [x, WY, 0.75], [0, WY, 0.75], [0, WY, 0.5]]);
 // Trace-Stationen: Original-E-Mail, gelesen, entschieden (beide am Agent), geprüft (Ebene 03), gebucht
 const ST_AT = [[-1.95, 0.9, 0.5], [0, WY, ZB], [0, WY, ZB], [0, WY, 2.85], [0, WY, 0.5]];
 const ST_OFF = [[-30, -16, -1], [-44, -12, -1], [44, -12, 1], [30, -14, 1], [-32, -8, -1]];   // Versatz und Seite des Schilds
@@ -45,6 +49,7 @@ const BLUE = '#4876FF';
 /* Ausschnitte für die kompakte (mobile) Ansicht: [x0, y0, x1, y1] im Raster 1440 × 900 */
 const VIEW_BASE = [590, 86, 1268, 738];
 const VIEW_WIDE = [590, 86, 1418, 738];
+const VIEW_CHAT = [590, 52, 1418, 738];
 const VIEW_FINAL = [636, 78, 1352, 738];
 
 const clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
@@ -139,7 +144,9 @@ function addWire(out, path, head, plates) {
 /* Alle Platzhalterwerte für einen Zustand. k skaliert Beschriftungen (mobil größer). */
 function scene(p, approved, release, k, intro) {
   const v = { k: r3(k), ka: r3(Math.min(k, 1.12)), markInk: MARK_SM.ink, markBlue: MARK_SM.blue };
-  const finalFade = 1 - seg(p, 7.05, 7.25);
+  /* Kapitel 08: die Namen der Agents treten zurück, solange die Chatfenster darüber stehen */
+  const chatOn = seg(p, 7.04, 7.14) * (1 - seg(p, 7.93, 8.0));
+  const cardKeep = 1 - seg(p, 7.02, 7.12);          // die Karten räumen den Platz und kommen nicht wieder
 
   /* Einstieg: das laufende System mit der Kontrollschicht. Beim Laden fällt die Schicht in ihre
      Passung (intro, zeitbasiert), dann laufen die Leitungen hindurch. Beim Scrollen hebt sie sich
@@ -162,7 +169,7 @@ function scene(p, approved, release, k, intro) {
   const trF = seg(p, 5.02, 5.15) * (1 - seg(p, 5.92, 6.02));       // Kapitel 06: Trace läuft durch alle Ebenen
   const drop = Math.max(seg(p, 2.08, GATE), hGate);
   const dzDrop = (1 - easeOut(drop)) * 0.9;
-  const ex = smooth(seg(p, 2.42, 2.7)) * (1 - smooth(seg(p, 7.0, 7.3)));
+  const ex = smooth(seg(p, 2.42, 2.7)) * (1 - smooth(seg(p, 8.0, 8.3)));
   const gwOp = smooth(seg(drop, 0, 0.45));
   const plates = PLATE_Z.map((z, i) => {
     const zb = lerp(GW_TOP - (i + 1) * T, z, ex) + dzDrop;
@@ -241,6 +248,7 @@ function scene(p, approved, release, k, intro) {
   }
 
   /* Leitungen durch das Gateway, nach Bändern sortiert */
+  const bChat = ['', '', '', '', ''], bCPort = ['', '', '', '', ''];
   const bOrd = ['', '', '', '', ''], bOwn = ['', '', '', '', ''], bPort = ['', '', '', '', ''], bOPort = ['', '', '', '', ''], bTr = ['', '', '', '', ''], bTPort = ['', '', '', '', ''];
   AGENT_X.forEach((x, i) => {
     const h = Math.max(seg(p, 2.28 + ORDER[i] * 0.02, 2.34 + ORDER[i] * 0.02), hWire);
@@ -250,6 +258,21 @@ function scene(p, approved, release, k, intro) {
   const oh = seg(p, 6.62, 6.82);
   addWire(bOwn, OWN, oh, plates);
   plates.forEach((pl) => { if (pl.solid && oh * OWN_TOTAL >= ZB - pl.zt) bOPort[bandOf(pl.zt, plates)] += port([5.0, WY, pl.zt]); });
+  /* Chatfenster: blenden nacheinander ein, die Leitung läuft durch alle Ebenen ins ERP, dann kommt die Antwort */
+  CHAT_W.forEach((path, i) => {
+    const a = 7.1 + i * 0.08, out = 1 - seg(p, 7.93, 8.0);
+    const inn = seg(p, a, a + 0.14), back = 7.58 + i * 0.06;
+    const head = seg(p, CHAT + i * 0.06, CHAT + 0.22 + i * 0.06) * out;
+    addWire(bChat, path, head, plates);
+    const L = cum(path), tot = L[L.length - 1];
+    plates.forEach((pl) => { if (pl.solid && head * tot >= ZC - pl.zt) bCPort[bandOf(pl.zt, plates)] += port([path[0][0], WY, pl.zt]); });
+    const c = P(path[0][0], WY, ZC);
+    v[`cw${i}`] = {
+      X: r1(c[0]), Y: r1(c[1] - (1 - easeOut(inn)) * 14), op: r3(seg(inn, 0, 0.7) * out),
+      sc: r3((0.92 + 0.08 * easeOut(inn)) * CHAT_S), nub: head > 0.001 ? 1 : 0,
+      typ: r3(seg(p, a + 0.16, a + 0.2) * (1 - seg(p, back, back + 0.03))), ans: r3(seg(p, back, back + 0.04)),
+    };
+  });
   const th = seg(p, TRACE_P[0], TRACE_P[1]);
   addWire(bTr, TRACE, th, plates);
   plates.forEach((pl) => {
@@ -258,7 +281,7 @@ function scene(p, approved, release, k, intro) {
     if (th >= (pl.zt - 0.5) / TT) bTPort[bnd] += port([-1.95, 0.9, pl.zt]);
     if (th >= (TL[3] + ZB - pl.zt) / TT) bTPort[bnd] += port([0, WY, pl.zt]);
   });
-  for (let b = 0; b < 5; b++) v[`b${b}`] = { ord: bOrd[b], own: bOwn[b], port: bPort[b], oport: bOPort[b], tr: bTr[b], tport: bTPort[b] };
+  for (let b = 0; b < 5; b++) v[`b${b}`] = { ord: bOrd[b], own: bOwn[b], chat: bChat[b], cport: bCPort[b], port: bPort[b], oport: bOPort[b], tr: bTr[b], tport: bTPort[b] };
   const ordOp = 1 - 0.65 * trF, trOp = 1 - 0.5 * seg(p, 6.0, 6.3);
   v.ordOp = r3(ordOp);
   v.ordBase = r3(ordOp * 0.9);
@@ -271,12 +294,12 @@ function scene(p, approved, release, k, intro) {
   /* Agents: erscheinen beim Laden nacheinander mit leichtem Nachschwingen, dann leuchten Augen und Antenne */
   AGENT_X.forEach((x, i) => {
     const am = seg(intro, 0.1 + ORDER[i] * 0.1, 0.6 + ORDER[i] * 0.1), c = P(x, WY, ZA);
-    const id = smooth(seg(p, 3.08 + ORDER[i] * 0.1, 3.25 + ORDER[i] * 0.1)) * finalFade;
+    const id = smooth(seg(p, 3.08 + ORDER[i] * 0.1, 3.25 + ORDER[i] * 0.1)) * cardKeep;
     v[`ag${i}`] = {
       X: r1(c[0]), Y: r1(c[1]), hs: 1, halo: 0,
       op: r3(seg(am, 0, 0.25)), sc: r3(0.55 + 0.45 * backOut(seg(am, 0, 0.7))),
       eye: r3(seg(am, 0.55, 0.8)), ant: r3(seg(am, 0.7, 1)),
-      nameOp: r3(seg(am, 0.75, 1)), nameY: r1(lerp(-48, -93, id)), cardOp: r3(id),
+      nameOp: r3(seg(am, 0.75, 1) * (1 - chatOn)), nameY: r1(lerp(-48, -93, id)), cardOp: r3(id),
     };
   });
 
@@ -286,11 +309,11 @@ function scene(p, approved, release, k, intro) {
   const qx = 1470, qy = dP[1] - 30, sx = 1500, sy = 40;
   const ox = (1 - e) * (1 - e) * sx + 2 * (1 - e) * e * qx + e * e * dP[0];
   const oy = (1 - e) * (1 - e) * sy + 2 * (1 - e) * e * qy + e * e * dP[1];
-  const oid = smooth(seg(p, 6.56, 6.72)) * finalFade;
+  const oid = smooth(seg(p, 6.56, 6.72)) * cardKeep;
   v.own = {
     vis: fly > 0.001 ? 1 : 0, X: r1(ox), Y: r1(oy), ghost: r3(1 - dk), solid: r3(dk), shade: r3(0.2 * dk),
     flash: r3(seg(p, DOCK, DOCK + 0.01) * (1 - seg(p, DOCK + 0.04, DOCK + 0.12))),
-    nameOp: r3(seg(fly, 0.5, 1)), nameY: r1(lerp(-48, -93, oid)), cardOp: r3(oid),
+    nameOp: r3(seg(fly, 0.5, 1) * (1 - chatOn)), nameY: r1(lerp(-48, -93, oid)), cardOp: r3(oid),
   };
 
   /* Klammer links: erst das Gateway (vier Ebenen), ab Kapitel 06 AIceFlow Trace über alles */
@@ -329,10 +352,10 @@ function scene(p, approved, release, k, intro) {
   });
 
   /* Totale: Bühne tritt zurück, die Marke zeichnet sich Strich für Strich */
-  const zs = 1 - 0.18 * smooth(seg(p, 7.0, 7.32));
+  const zs = 1 - 0.18 * smooth(seg(p, 8.0, 8.32));
   v.fin = `translate(${r1(960 * (1 - zs))} ${r1(700 * (1 - zs))}) scale(${r3(zs)})`;
   MARK.forEach((m, i) => {
-    const st = 7.28 + i * 0.045, dr = seg(p, st, st + 0.12);
+    const st = 8.28 + i * 0.045, dr = seg(p, st, st + 0.12);
     v[`m${i}`] = {
       x1: r1(MX + m[0] * MS), y1: r1(MY - m[1] * MS), x2: r1(MX + m[2] * MS), y2: r1(MY - m[3] * MS),
       dof: r3(Math.pow(1 - dr, 2.2)), op: dr > 0.01 ? 1 : 0,
@@ -420,8 +443,8 @@ export class Stage {
   _fit(p) {
     let r = [0, 0, 1440, 900];
     if (this.compact) {
-      const w = smooth(seg(p, 6.3, 6.7)), f = smooth(seg(p, 7.0, 7.3));
-      r = VIEW_BASE.map((v, i) => lerp(lerp(v, VIEW_WIDE[i], w), VIEW_FINAL[i], f));
+      const w = smooth(seg(p, 6.3, 6.7)), c = smooth(seg(p, 7.0, 7.12)), f = smooth(seg(p, 8.0, 8.3));
+      r = VIEW_BASE.map((v, i) => lerp(lerp(lerp(v, VIEW_WIDE[i], w), VIEW_CHAT[i], c), VIEW_FINAL[i], f));
     }
     const rw = r[2] - r[0], rh = r[3] - r[1], v = this.view;
     const s = Math.min(v.w / rw, v.h / rh);

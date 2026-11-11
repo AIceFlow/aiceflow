@@ -15,7 +15,7 @@ import { createFilm, FILM_T, fmtT } from './film.js';
 import { createBooking } from './booking.js';
 import { splitWords } from './textfx.js';
 
-const CHAPTER_NAMES = ['Die Kontrollschicht', 'Ohne Rahmen', 'Das Gateway entsteht', 'Identität und Berechtigungen', 'Freigabe und Aufsicht', 'AIceFlow Trace', 'Eigener Agent', 'Ein Rahmen für alle'];
+const CHAPTER_NAMES = ['Die Kontrollschicht', 'Ohne Rahmen', 'Das Gateway entsteht', 'Identität und Berechtigungen', 'Freigabe und Aufsicht', 'AIceFlow Trace', 'Eigener Agent', 'ChatGPT und Claude', 'Ein Rahmen für alle'];
 
 /* Text mit Wortmarke setzen: „AI“ im CI-Blau, „ceFlow“ schwarz (wie span.aice im Markup) */
 function setBrandText(el, text) {
@@ -107,14 +107,18 @@ export function initLanding({ onBookingOpen } = {}) {
       const v = Math.max(0, Math.min(1, raw - i)).toFixed(3);
       if (f._v !== v) { f._v = v; f.style.transform = `scaleX(${v})`; }
     });
-    const ch = Math.min(7, Math.floor(raw + 1e-4));
+    const ch = Math.min(CHAPTER_NAMES.length - 1, Math.floor(raw + 1e-4));
     if (ch === progressCh) return;
     progressCh = ch;
-    progressNum.textContent = `${String(ch + 1).padStart(2, '0')} / 08`;
+    progressNum.textContent = `${String(ch + 1).padStart(2, '0')} / ${String(CHAPTER_NAMES.length).padStart(2, '0')}`;
     setBrandText(progressName, CHAPTER_NAMES[ch]);
     // Dieselbe Stelle im Film
-    progressFilm.dataset.film = String(FILM_T[ch]);
-    progressFilm.textContent = `Im Film ab ${fmtT(FILM_T[ch])}`;
+    // Kapitel ohne Entsprechung im Film zeigen keinen Sprung
+    progressFilm.hidden = FILM_T[ch] == null;
+    if (FILM_T[ch] != null) {
+      progressFilm.dataset.film = String(FILM_T[ch]);
+      progressFilm.textContent = `Im Film ab ${fmtT(FILM_T[ch])}`;
+    }
     progressBtns.forEach((b, i) => {
       if (i === ch) b.setAttribute('aria-current', 'step');
       else b.removeAttribute('aria-current');
