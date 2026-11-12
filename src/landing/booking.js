@@ -4,8 +4,8 @@
  * BOOKING_URL: Terminplan-Adresse für die Einbettung (mit ?gv=true erlaubt Google das Einbetten).
  * BOOKING_LINK: der kurze Teilen-Link, für „In neuem Tab öffnen“.
  */
-export const BOOKING_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3t44tb_hJKFWh6EcBnyM08Kh3DAyDZRmntmHs0qc5wa1s1CtHPyBfWY1cnM03H0HfNIG6um8cC';
-export const BOOKING_LINK = 'https://calendar.app.google/4akp6gfpSMuBh3yT9';
+export const BOOKING_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1CY3uZveTu0IYcrMwJ8_tSBL8BFhJx6XcdcbhtEvECNsnvZUXx9paOyd0Pzjaflo_p9_IpfXXO';
+export const BOOKING_LINK = 'https://calendar.app.google/bMACv4apznGZfq2v7';
 
 export function createBooking({ root, gate, loadBtn, tabLink, missing, onLoad }) {
   if (BOOKING_LINK || BOOKING_URL) tabLink.href = BOOKING_LINK || BOOKING_URL;

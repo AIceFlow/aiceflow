@@ -68,10 +68,10 @@ export default function ImpressumModal({
                 <span>
                   <span className="font-medium">Felix Funke:</span>{" "}
                   <a
-                    href="mailto:felixfunke456@gmail.com"
+                    href="mailto:felix.funke@aiceflow.de"
                     className="underline"
                   >
-                    felixfunke456@gmail.com
+                    felix.funke@aiceflow.de
                   </a>
                 </span>
               </span>

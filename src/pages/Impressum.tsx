@@ -22,9 +22,11 @@ const Impressum = () => (
         Deutschland
       </p>
       <p>
+        E-Mail: <a href="mailto:hello@aiceflow.de">hello@aiceflow.de</a>
+        <br />
         Felix Funke: <a href="tel:017663364095">0176 63364095</a>
         <br />
-        Felix Funke: <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
+        Felix Funke: <a href="mailto:felix.funke@aiceflow.de">felix.funke@aiceflow.de</a>
         <br />
         Dr. Heiner Di Camillo: <a href="mailto:heiner.dicamillo@aiceflow.de">heiner.dicamillo@aiceflow.de</a>
       </p>
