@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map(({ key, rating }) => (
             <div
               key={key}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-border relative group"
+              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 border border-shadcn-border relative group"
             >
               <div className="absolute top-6 right-6 w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white opacity-20 group-hover:opacity-40 transition-opacity duration-300">
                 <svg

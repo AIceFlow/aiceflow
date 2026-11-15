@@ -20,7 +20,7 @@ const WhyCard = ({
   title: string, 
   description: string, 
 }) => (
-  <div className="group p-8 rounded-2xl bg-card border border-border shadow-card hover:shadow-elegant transition-all duration-300">
+  <div className="group p-8 rounded-2xl bg-card border border-shadcn-border shadow-card hover:shadow-elegant transition-all duration-300">
     <div className="mb-6 inline-flex p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
       <Icon size={28} />
     </div>
@@ -114,7 +114,7 @@ const WhyAIceFlow: React.FC = () => {
            </div>
            
            {/* Main Container with top border */}
-           <div className="border-t border-border pt-12">
+           <div className="border-t border-shadcn-border pt-12">
               <div className="grid md:grid-cols-3 max-w-6xl mx-auto">
                  {commitments.map((c, i) => (
                    <StandardItem 

@@ -167,7 +167,7 @@ const FounderBlock = ({
       </p>
       <PillCloud items={specialtyPills} tone={tone} />
 
-      <div className="mt-5 space-y-2 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
+      <div className="mt-5 space-y-2 border-t border-shadcn-border pt-4 text-sm leading-relaxed text-muted-foreground">
         {points.map((point) => (
           <div key={point} className="flex items-start gap-2">
             <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
@@ -262,7 +262,7 @@ const Team: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border/60 bg-white/85 p-5 text-left shadow-card backdrop-blur-xs sm:flex-row sm:items-center sm:p-6"
+            className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-shadcn-border/60 bg-white/85 p-5 text-left shadow-card backdrop-blur-xs sm:flex-row sm:items-center sm:p-6"
           >
             <div className="flex items-start gap-3">
               <div className="rounded-lg bg-primary/10 p-2 text-primary">

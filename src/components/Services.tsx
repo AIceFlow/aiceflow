@@ -28,7 +28,7 @@ const ServiceCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
-    className={`group relative overflow-hidden rounded-3xl bg-white p-8 shadow-card border border-border hover:shadow-elegant transition-all duration-300 ${className}`}
+    className={`group relative overflow-hidden rounded-3xl bg-white p-8 shadow-card border border-shadcn-border hover:shadow-elegant transition-all duration-300 ${className}`}
   >
     <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
       <ArrowUpRight className="w-6 h-6 text-primary" />
@@ -134,7 +134,7 @@ const Services: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="md:col-span-3 group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10 shadow-card border border-border hover:shadow-elegant transition-all duration-300"
+            className="md:col-span-3 group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10 shadow-card border border-shadcn-border hover:shadow-elegant transition-all duration-300"
           >
              <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                <ArrowUpRight className="w-6 h-6 text-primary" />

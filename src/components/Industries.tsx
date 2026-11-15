@@ -50,7 +50,7 @@ const Industries: React.FC = () => {
                   flex: isActive ? 3 : 0.5,
                   backgroundColor: isActive ? "hsl(var(--card))" : "hsl(var(--background))"
                 }}
-                className={`relative rounded-2xl overflow-hidden cursor-pointer shadow-card border transition-colors duration-300 ${isActive ? 'border-primary/20 shadow-elegant' : 'border-border hover:bg-card'}`}
+                className={`relative rounded-2xl overflow-hidden cursor-pointer shadow-card border transition-colors duration-300 ${isActive ? 'border-primary/20 shadow-elegant' : 'border-shadcn-border hover:bg-card'}`}
                 onClick={() => setActiveKey(ind.key)}
                 onHoverStart={() => setActiveKey(ind.key)}
               >
@@ -109,7 +109,7 @@ const Industries: React.FC = () => {
         {/* Mobile: Simple Grid (Better than stacked cards for scanning) */}
         <div className="lg:hidden grid md:grid-cols-2 gap-4">
           {industries.map((ind) => (
-            <div key={ind.key} className="bg-card rounded-xl p-6 shadow-xs border border-border">
+            <div key={ind.key} className="bg-card rounded-xl p-6 shadow-xs border border-shadcn-border">
                <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary shrink-0">
                     <ind.icon size={24} />

@@ -1,0 +1,31 @@
+/* Tailwind v4: nach tokens.css importieren. Macht die Tokens als Klassen nutzbar: bg-paper, text-ink, font-display, rounded-soft ... */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-well: var(--well);
+  --color-line: var(--line);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-on-ink: var(--on-ink);
+  --color-on-ink-muted: var(--on-ink-muted);
+  --color-blue: var(--blue);
+  --color-blue-strong: var(--blue-strong);
+  --color-signal: var(--signal);
+  --color-signal-strong: var(--signal-strong);
+  --color-signal-tint: var(--signal-tint);
+  --color-on-signal: var(--on-signal);
+  --color-stop: var(--stop);
+  --color-stop-strong: var(--stop-strong);
+  --color-stop-tint: var(--stop-tint);
+  --color-on-stop: var(--on-stop);
+  --color-focus: var(--focus);
+  --font-display: Gloock, Georgia, serif;
+  --font-serif: Newsreader, Georgia, serif;
+  --font-sans: "Host Grotesk", system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, monospace;
+  --radius-sharp: 0px;
+  --radius-soft: 2px;
+  --radius-flow: 999px;
+}
