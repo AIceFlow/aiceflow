@@ -109,9 +109,9 @@ const Industries: React.FC = () => {
         {/* Mobile: Simple Grid (Better than stacked cards for scanning) */}
         <div className="lg:hidden grid md:grid-cols-2 gap-4">
           {industries.map((ind) => (
-            <div key={ind.key} className="bg-card rounded-xl p-6 shadow-sm border border-border">
+            <div key={ind.key} className="bg-card rounded-xl p-6 shadow-xs border border-border">
                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary flex-shrink-0">
+                  <div className="p-3 bg-primary/10 rounded-lg text-primary shrink-0">
                     <ind.icon size={24} />
                   </div>
                   <div>

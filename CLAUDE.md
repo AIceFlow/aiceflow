@@ -21,7 +21,8 @@ npm run preview    # Preview production build
 ## Tech Stack
 
 - React 18 + TypeScript (Vite, SWC)
-- Tailwind CSS 3 with HSL design tokens defined in `src/index.css`
+- Tailwind CSS 4 via `@tailwindcss/vite`, configured in `src/index.css` (`@theme`, no `tailwind.config.ts`),
+  with HSL design tokens defined there
 - shadcn/ui + Radix UI primitives (48 components in `src/components/ui/`)
 - Framer Motion for animations
 - Supabase for form submissions
@@ -62,7 +63,9 @@ served from the Supabase bucket `public-assets/marketing` (render of 2026-11-11,
 
 **Styling**: the home and legal pages use `src/landing/landing.css` (plain CSS, deliberately not Tailwind,
 so it stays identical to the prototype; its tokens avoid shadcn names, e.g. `--ring-hair`). Everything
-else uses Tailwind utility classes with the HSL variables from `src/index.css`.
+else uses Tailwind utility classes with the HSL variables from `src/index.css`. `src/index.css` imports
+`landing.css` into Tailwind's `base` layer (not from JS): unlayered, its reset would beat every Tailwind
+utility. Tailwind only scans `src/**/*.{ts,tsx}` (`source(none)` + `@source`), not `markup.html`.
 
 **Icons**: Use `lucide-react`.
 

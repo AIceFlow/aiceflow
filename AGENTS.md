@@ -32,7 +32,7 @@ Mittelstand and growth-focused companies in the DACH region without a dedicated 
 ### Tech Stack
 - **Framework:** React 18 (Vite)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS 3
+- **Styling:** Tailwind CSS 4
 - **UI Library:** shadcn/ui + Radix UI
 - **Animation:** Framer Motion
 - **Internationalization:** Custom `useLanguage` hook (content stored in `src/hooks/useLanguage.tsx`).

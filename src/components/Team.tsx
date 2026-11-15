@@ -65,7 +65,7 @@ const PillCloud = ({
 };
 
 const DuoBrandPanel = ({ logoAlt, caption }: { logoAlt: string; caption: string }) => (
-  <div className="relative flex h-full min-h-[230px] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-6 sm:min-h-[300px] sm:p-8">
+  <div className="relative flex h-full min-h-[230px] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-linear-to-br from-slate-900 via-slate-900 to-slate-800 p-6 sm:min-h-[300px] sm:p-8">
     <div className="pointer-events-none absolute -left-12 -top-12 h-32 w-32 rounded-full bg-primary/25 blur-3xl" />
     <div className="pointer-events-none absolute -bottom-14 -right-10 h-36 w-36 rounded-full bg-cyan-400/20 blur-3xl" />
     <div className="relative z-10 flex flex-col items-center">
@@ -115,15 +115,15 @@ const FounderBlock = ({
 }) => (
   <motion.article
     variants={itemVariants}
-    className={`overflow-hidden rounded-[1.75rem] border bg-white/85 shadow-[0_20px_50px_-24px_rgba(15,23,42,0.35)] backdrop-blur-sm ${
+    className={`overflow-hidden rounded-[1.75rem] border bg-white/85 shadow-[0_20px_50px_-24px_rgba(15,23,42,0.35)] backdrop-blur-xs ${
       tone === "business" ? "border-amber-300/50" : "border-sky-300/50"
     }`}
   >
     <div
       className={`h-1.5 w-full ${
         tone === "business"
-          ? "bg-gradient-to-r from-amber-400 to-orange-500"
-          : "bg-gradient-to-r from-sky-400 to-blue-500"
+          ? "bg-linear-to-r from-amber-400 to-orange-500"
+          : "bg-linear-to-r from-sky-400 to-blue-500"
       }`}
     />
 
@@ -135,7 +135,7 @@ const FounderBlock = ({
         style={{ objectPosition: imagePosition ?? "50% 50%" }}
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-slate-900/30 via-transparent to-transparent" />
     </div>
 
     <div className="p-6 sm:p-8">
@@ -207,7 +207,7 @@ const Team: React.FC = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="mb-10 grid gap-6 rounded-[1.75rem] border border-white/10 bg-slate-950 p-6 shadow-[0_28px_90px_-38px_rgba(15,23,42,0.9)] sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-10 lg:rounded-[2rem] lg:p-10"
+            className="mb-10 grid gap-6 rounded-[1.75rem] border border-white/10 bg-slate-950 p-6 shadow-[0_28px_90px_-38px_rgba(15,23,42,0.9)] sm:gap-8 sm:p-8 lg:grid-cols-2 lg:gap-10 lg:rounded-4xl lg:p-10"
           >
             <div className="flex flex-col justify-center">
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
@@ -262,7 +262,7 @@ const Team: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border/60 bg-white/85 p-5 text-left shadow-card backdrop-blur-sm sm:flex-row sm:items-center sm:p-6"
+            className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border/60 bg-white/85 p-5 text-left shadow-card backdrop-blur-xs sm:flex-row sm:items-center sm:p-6"
           >
             <div className="flex items-start gap-3">
               <div className="rounded-lg bg-primary/10 p-2 text-primary">

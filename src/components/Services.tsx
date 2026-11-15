@@ -38,7 +38,7 @@ const ServiceCard = ({
       <Icon className="h-6 w-6" />
     </div>
 
-    <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground break-words">{title}</h3>
+    <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground wrap-break-word">{title}</h3>
     <p className="mb-6 text-muted-foreground leading-relaxed">
       {description}
     </p>
@@ -53,7 +53,7 @@ const ServiceCard = ({
     </ul>
 
     {/* Decorative Gradient Blob */}
-    <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-gradient-to-br from-primary/20 to-transparent blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+    <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-linear-to-br from-primary/20 to-transparent blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
   </motion.div>
 );
 
@@ -71,7 +71,7 @@ const Services: React.FC = () => {
         t("services.processAutomation.feature4"),
       ],
       icon: MessageSquare,
-      className: "md:col-span-2 bg-gradient-to-br from-white to-blue-50/50",
+      className: "md:col-span-2 bg-linear-to-br from-white to-blue-50/50",
     },
     {
       title: t("services.dashboards.title"),
@@ -95,14 +95,14 @@ const Services: React.FC = () => {
         t("services.consultation.feature4"),
       ],
       icon: LineChart,
-      className: "md:col-span-3 bg-gradient-to-r from-white to-blue-50/30 flex flex-col md:flex-row md:items-center md:justify-between gap-8",
+      className: "md:col-span-3 bg-linear-to-r from-white to-blue-50/30 flex flex-col md:flex-row md:items-center md:justify-between gap-8",
     },
   ];
 
   return (
     <section id="services" className="py-24 bg-background relative overflow-hidden">
        {/* Background Elements */}
-       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[500px] bg-gradient-to-b from-transparent via-primary/5 to-transparent -skew-y-3 pointer-events-none"></div>
+       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[500px] bg-linear-to-b from-transparent via-primary/5 to-transparent -skew-y-3 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-16 max-w-4xl mx-auto text-center">
@@ -145,7 +145,7 @@ const Services: React.FC = () => {
                   <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     <LineChart className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground break-words">{services[2].title}</h3>
+                  <h3 className="mb-3 text-xl sm:text-2xl font-bold text-foreground wrap-break-word">{services[2].title}</h3>
                   <p className="text-muted-foreground leading-relaxed max-w-xl">
                     {services[2].description}
                   </p>
@@ -155,7 +155,7 @@ const Services: React.FC = () => {
                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {services[2].features.map((feature, i) => (
                       <li key={i} className="flex items-center text-sm text-foreground/80">
-                        <div className="mr-3 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0"></div>
+                        <div className="mr-3 h-1.5 w-1.5 rounded-full bg-primary shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -163,7 +163,7 @@ const Services: React.FC = () => {
                 </div>
              </div>
              
-             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-gradient-to-tr from-primary/10 to-transparent blur-3xl group-hover:scale-125 transition-transform duration-500"></div>
+             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-linear-to-tr from-primary/10 to-transparent blur-3xl group-hover:scale-125 transition-transform duration-500"></div>
           </motion.div>
         </div>
       </div>

@@ -10,7 +10,7 @@ import {
 // --- Animated Background Grid ---
 const BackgroundGrid = () => (
   <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
     <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/20 opacity-20 blur-[100px]"></div>
     <div className="absolute right-0 bottom-0 -z-10 h-[310px] w-[310px] rounded-full bg-blue-400/20 opacity-20 blur-[100px]"></div>
   </div>
@@ -81,7 +81,7 @@ const Hero = () => {
               <span>{t("hero.status.available")}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1] break-words">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-[1.1] wrap-break-word">
               {t("hero.title.line1")} <br />
               <span className="text-transparent bg-clip-text bg-gradient-primary">
                 {t("hero.title.line2")}

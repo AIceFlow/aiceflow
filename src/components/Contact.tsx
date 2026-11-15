@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-blue-400/5 rounded-full blur-[80px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto bg-white/50 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-white/20 overflow-hidden">
+        <div className="max-w-6xl mx-auto bg-white/50 backdrop-blur-xl rounded-4xl shadow-2xl border border-white/20 overflow-hidden">
            <div className="flex flex-col lg:flex-row">
               
               {/* Left Column: Info & Context */}
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[60px] pointer-events-none"></div>
                  
                  <div className="relative z-10">
-                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight break-words">
+                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight wrap-break-word">
                      {t("contact.title")}
                    </h2>
                    <p className="text-slate-400 text-lg mb-12">

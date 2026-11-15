@@ -1,7 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import SiteFooter from "./SiteFooter";
-import "@/landing/landing.css";
 
 /* Rahmen für Impressum und Datenschutz: schlichter Kopf, Text, gemeinsamer Fuß */
 const LegalLayout = ({ title, children }: { title: string; children: ReactNode }) => {

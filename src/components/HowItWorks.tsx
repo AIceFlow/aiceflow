@@ -39,7 +39,7 @@ const TimelineItem = ({
       </div>
 
       {/* Center Line Node */}
-      <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow text-white">
+      <div className="relative z-10 shrink-0 w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow text-white">
         <Icon size={32} />
       </div>
 
@@ -122,7 +122,7 @@ const HowItWorks: React.FC = () => {
           {/* Active Vertical Line */}
           <motion.div 
             style={{ height }}
-            className="absolute left-8 md:left-1/2 top-0 w-1 bg-gradient-to-b from-primary to-blue-400 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+            className="absolute left-8 md:left-1/2 top-0 w-1 bg-linear-to-b from-primary to-blue-400 -translate-x-1/2 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
           />
 
           <div className="space-y-12">

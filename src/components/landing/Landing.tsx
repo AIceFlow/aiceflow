@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import markup from "@/landing/markup.html?raw";
 import { initLanding } from "@/landing/initLanding.js";
 import { reportBookingOpen } from "@/utils/analytics";
-import "@/landing/landing.css";
 
 /*
  * Startseite rund um das AIceFlow Governance Gateway. Das Markup (Bühne, Story, Abschnitte,
