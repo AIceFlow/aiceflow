@@ -6,22 +6,27 @@ export function splitWords(el) {
   if (el.dataset.split === '1') return;
   const nodes = [...el.childNodes];
   el.textContent = '';
+  let prev = null;   // letztes Wort, an das direkt folgende Zeichen angehängt werden
   for (const node of nodes) {
     if (node.nodeType !== Node.TEXT_NODE) {
       const span = document.createElement('span');
       span.className = 'w';
       span.appendChild(node);
       el.appendChild(span);
+      prev = span;
       continue;
     }
-    for (const part of node.textContent.split(/(\s+)/)) {
-      if (!part) continue;
-      if (/^\s+$/.test(part)) { el.appendChild(document.createTextNode(' ')); continue; }
+    node.textContent.split(/(\s+)/).forEach((part, i) => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) { el.appendChild(document.createTextNode(' ')); prev = null; return; }
+      // Satzzeichen direkt nach einem Element („Trace.“) bleiben am Wort, sonst bricht die Zeile davor
+      if (i === 0 && prev) { prev.append(part); return; }
       const span = document.createElement('span');
       span.className = 'w';
       span.textContent = part;
       el.appendChild(span);
-    }
+      prev = span;
+    });
   }
   el.dataset.split = '1';
 }

@@ -13,9 +13,10 @@ import { createDrill } from './drill.js';
 import { createTrace } from './trace.js';
 import { createFilm, FILM_T, fmtT } from './film.js';
 import { createBooking } from './booking.js';
+import { createConnectors } from './connectors.js';
 import { splitWords } from './textfx.js';
 
-const CHAPTER_NAMES = ['Die Kontrollschicht', 'Ohne Rahmen', 'Das Gateway entsteht', 'Identität und Berechtigungen', 'Freigabe und Aufsicht', 'AIceFlow Trace', 'Eigener Agent', 'ChatGPT und Claude', 'Ein Rahmen für alle'];
+const CHAPTER_NAMES = ['Die Kontrollschicht', 'Ohne Rahmen', 'Das Gateway entsteht', 'Identität und Berechtigungen', 'Freigabe und Aufsicht', 'AIceFlow Trace', 'Eigener Agent', 'ChatGPT, Claude und n8n', 'Ein Rahmen für alle'];
 
 /* Text mit Wortmarke setzen: „AI“ im CI-Blau, „ceFlow“ schwarz (wie span.aice im Markup) */
 function setBrandText(el, text) {
@@ -138,7 +139,8 @@ export function initLanding({ onBookingOpen } = {}) {
   /* ---------- Render-Loop ---------- */
   let active = true;
   const loop = () => {
-    story.tick();
+    // Kapitel 05 läuft nach Zeit: die Geschichte wartet dort, bis es einmal durchgelaufen ist
+    story.tick(!active, approval.hold ? TARGET[4] : null);
     const p = story.p;
     approval.tick(p);
     drill.tick(p);
@@ -201,6 +203,9 @@ export function initLanding({ onBookingOpen } = {}) {
 
   const trace = createTrace({ trail: $('#trail'), dirBtns: $$('#trail .dir__btn'), kinds: $$('#trace-kinds .kind'), reduced });
   off.push(() => trace.destroy());
+
+  const connectors = createConnectors({ root: $('#vortex'), groupBtns: $$('#connect-groups .kind'), reduced });
+  off.push(() => connectors.destroy());
 
   return function destroy() {
     while (off.length) {

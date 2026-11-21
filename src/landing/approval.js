@@ -7,14 +7,22 @@ import gsap from 'gsap';
  *    protokolliert; für den Trace in Kapitel 06 zeigt die Demo danach den freigegebenen Weg.
  * 2. Aufsicht im Betrieb (Human-on-the-Loop): Nach der Buchung zeigt das Panel die Live-Aktivität,
  *    eine laufende Aktion lässt sich anhalten.
+ * Beide Takte laufen nach Zeit. Damit man sie beim Scrollen nicht verpasst, wartet die Geschichte
+ * beim ersten Durchgang am Halt dieses Kapitels (hold), bis gebucht ist und die Aufsicht kurz zu
+ * sehen war. Den Halt selbst setzt story.js um.
  * Reduced Motion: kein Timer, die Freigabe erfolgt beim Verlassen des Kapitels.
  */
 const IN_CHAPTER = (p) => p >= 4.44 && p < 5.05;
+const SEEN_MS = 1400;   // so lange ist die Aufsicht zu sehen, bevor die Geschichte weiterläuft
+const HINT_AUTO = 'Die Demo gibt gleich selbst frei.';
 
 export function createApproval({ panel, approveBtn, rejectBtn, hint, oversight, haltBtn, stage, shared, reduced, onApprove, onReject, onHalt }) {
   let timer = null;
   let rejected = false;
   let halted = false;
+  let settled = reduced;   // Freigabe, Buchung und Aufsicht sind einmal durchgelaufen
+  let seenT = null;
+  const hintText = hint.textContent;
 
   function approve(how) {
     if (shared.approved) return;
@@ -60,7 +68,10 @@ export function createApproval({ panel, approveBtn, rejectBtn, hint, oversight, 
     setOpen(panel, IN_CHAPTER(p) && !shared.approved, approveBtn);
     // Aufsicht erst, wenn die Rechnung gebucht ist
     const watch = IN_CHAPTER(p) && shared.approved && shared.release >= 0.999;
-    if (setOpen(oversight, watch) && watch) oversight.classList.add('is-live');
+    if (setOpen(oversight, watch) && watch) {
+      oversight.classList.add('is-live');
+      if (!settled && !seenT) seenT = setTimeout(() => { settled = true; }, SEEN_MS);
+    }
     stage.classList.toggle('is-oversight', watch);
 
     if (reduced) {
@@ -68,18 +79,23 @@ export function createApproval({ panel, approveBtn, rejectBtn, hint, oversight, 
       return;
     }
     if (!shared.approved && p >= 4.6) {
-      if (!timer) timer = setTimeout(() => approve('scroll'), 2000);
+      if (!timer) {
+        timer = setTimeout(() => approve('scroll'), 2000);
+        if (!rejected) hint.textContent = HINT_AUTO;
+      }
     } else if (timer && p < 4.55) {
       clearTimeout(timer);
       timer = null;
+      if (!rejected) hint.textContent = hintText;
     }
   }
 
   function destroy() {
     if (timer) clearTimeout(timer);
+    if (seenT) clearTimeout(seenT);
     timer = null;
     gsap.killTweensOf(shared);
   }
 
-  return { tick, approve, destroy, get open() { return panel.classList.contains('is-open'); } };
+  return { tick, approve, destroy, get open() { return panel.classList.contains('is-open'); }, get hold() { return !settled; } };
 }

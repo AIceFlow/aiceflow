@@ -6,10 +6,8 @@
 @import 'tailwindcss' source(none);
 /*
   AIceFlow Design System (design-system/, see design-system/EINBINDEN.md). Tokens and
-  component classes go into the base layer before landing.css: landing.css defines --ink,
-  --surface, --blue, --font-sans, body and .lead as well and keeps priority on the current
-  page. Sections built with the design system get its exact values with data-theme="light"
-  (or "dark"), which tokens.css sets on the element itself. Tailwind utilities beat both.
+  component classes go into the base layer before landing.css, which takes its colors and
+  fonts from these tokens. Tailwind utilities beat both.
 */
 @import '../design-system/tokens.css' layer(base);
 @import '../design-system/tailwind.css';
@@ -188,20 +186,6 @@
   }
 }
 
-/*
-  Design-system sections on pages that still load landing.css: data-theme on the section sets
-  the color tokens (tokens.css), this rule adds what the design system's body rule does, since
-  body, :root and --font-sans still belong to landing.css. Values come from the design system.
-*/
-@layer base {
-  [data-theme] {
-    --font-sans: --theme(--font-sans inline);
-    font-family: var(--font-sans);
-    color: var(--ink);
-    background-color: var(--paper);
-  }
-}
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -304,7 +288,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    /* Hintergrund und Textfarbe setzt landing.css aus den Tokens des Design Systems (paper, ink) */
+    @apply antialiased selection:bg-primary/20 selection:text-primary;
   }
   
   h1, h2, h3, h4, h5, h6 {

@@ -1,25 +1,37 @@
 <!-- Startseite: Markup der Seite, übernommen aus dem Entwurf in ../governance-layer. Fußzeile, Impressum und Datenschutz kommen aus React. -->
-<!-- Symbole: Agent wie auf der Bühne, eigener Agent in Türkis -->
+<!-- Symbole: Agent wie auf der Bühne, eine Kachel mit dunkler Anzeige, dem Zeichen seiner Aufgabe und einem blauen Funken für „KI“. Beim eigenen Agent ist der Funke weiß. -->
     <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
       <defs>
-        <linearGradient id="u-af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e4e8f0" /></linearGradient>
-        <linearGradient id="u-as" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7dce6" /><stop offset="1" stop-color="#b8c0d0" /></linearGradient>
-        <linearGradient id="u-av" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3249" /><stop offset="1" stop-color="#0a0d19" /></linearGradient>
-        <symbol id="agent-unit" viewBox="-30 -40 58 64">
+        <linearGradient id="u-af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--surface)" /><stop offset="1" style="stop-color: var(--well)" /></linearGradient>
+        <linearGradient id="u-as" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--line)" /><stop offset="1" style="stop-color: color-mix(in srgb, var(--line) 48%, var(--on-ink-muted))" /></linearGradient>
+        <linearGradient id="u-av" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: color-mix(in srgb, var(--ink-muted) 54%, var(--ink))" /><stop offset="1" style="stop-color: var(--ink)" /></linearGradient>
+        <symbol id="agent-rechnung" viewBox="-28 -27 56 51">
           <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
-          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" stroke="#fff" />
-          <rect x="-21" y="-6" width="30" height="16" rx="6" fill="url(#u-av)" />
-          <rect x="-16" y="-1" width="8" height="7" rx="3.5" fill="#4876ff" /><rect x="-4" y="-1" width="8" height="7" rx="3.5" fill="#4876ff" />
-          <rect x="-15" y="0" width="6" height="5" rx="2.5" fill="#a9c0ff" /><rect x="-3" y="0" width="6" height="5" rx="2.5" fill="#a9c0ff" />
-          <path d="M0 -20.5V-31" stroke="#a3abbe" stroke-width="1.6" stroke-linecap="round" /><circle cx="0" cy="-34" r="3.6" fill="#4876ff" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" style="stroke: var(--surface)" />
+          <rect x="-23" y="-13" width="34" height="32" rx="5.5" fill="url(#u-av)" />
+          <path transform="translate(-16.5 -3.5) scale(1.125)" d="M4 1.8H9.6L12.6 4.8V14.2H4ZM9.6 1.8V4.8H12.6M6.4 8.2H10.2M6.4 10.9H10.2" fill="none" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--surface)" />
+          <path transform="translate(0 -12) scale(0.625)" d="M8 1.6C8.5 5.4 10.6 7.5 14.4 8C10.6 8.5 8.5 10.6 8 14.4C7.5 10.6 5.4 8.5 1.6 8C5.4 7.5 7.5 5.4 8 1.6Z" style="fill: var(--blue)" />
         </symbol>
-        <symbol id="agent-unit-own" viewBox="-30 -40 58 64">
+        <symbol id="agent-einkauf" viewBox="-28 -27 56 51">
           <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
-          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" stroke="#9de8df" />
-          <rect x="-21" y="-6" width="30" height="16" rx="6" fill="url(#u-av)" />
-          <rect x="-16" y="-1" width="8" height="7" rx="3.5" fill="#2fd3c4" /><rect x="-4" y="-1" width="8" height="7" rx="3.5" fill="#2fd3c4" />
-          <rect x="-15" y="0" width="6" height="5" rx="2.5" fill="#cbfbf5" /><rect x="-3" y="0" width="6" height="5" rx="2.5" fill="#cbfbf5" />
-          <path d="M0 -20.5V-31" stroke="#a3abbe" stroke-width="1.6" stroke-linecap="round" /><circle cx="0" cy="-34" r="3.6" fill="#2fd3c4" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" style="stroke: var(--surface)" />
+          <rect x="-23" y="-13" width="34" height="32" rx="5.5" fill="url(#u-av)" />
+          <path transform="translate(-16.5 -3.5) scale(1.125)" d="M1.8 3H3.9L5.4 10.4H12.2L13.6 5.4H4.4M6.3 13.3H6.31M11.3 13.3H11.31" fill="none" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--surface)" />
+          <path transform="translate(0 -12) scale(0.625)" d="M8 1.6C8.5 5.4 10.6 7.5 14.4 8C10.6 8.5 8.5 10.6 8 14.4C7.5 10.6 5.4 8.5 1.6 8C5.4 7.5 7.5 5.4 8 1.6Z" style="fill: var(--blue)" />
+        </symbol>
+        <symbol id="agent-vertrieb" viewBox="-28 -27 56 51">
+          <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" style="stroke: var(--surface)" />
+          <rect x="-23" y="-13" width="34" height="32" rx="5.5" fill="url(#u-av)" />
+          <path transform="translate(-16.5 -3.5) scale(1.125)" d="M2.2 12.6L6.2 8.6L9.2 10.6L13.6 5M10.4 5H13.6V8.2" fill="none" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--surface)" />
+          <path transform="translate(0 -12) scale(0.625)" d="M8 1.6C8.5 5.4 10.6 7.5 14.4 8C10.6 8.5 8.5 10.6 8 14.4C7.5 10.6 5.4 8.5 1.6 8C5.4 7.5 7.5 5.4 8 1.6Z" style="fill: var(--blue)" />
+        </symbol>
+        <symbol id="agent-own" viewBox="-28 -27 56 51">
+          <rect x="-14" y="-25" width="40" height="38" rx="8" fill="url(#u-as)" /><rect x="-20" y="-20.5" width="40" height="38" rx="8" fill="url(#u-as)" />
+          <rect x="-26" y="-16" width="40" height="38" rx="8" fill="url(#u-af)" /><rect x="-25.5" y="-15.5" width="39" height="37" rx="7.5" fill="none" style="stroke: var(--border)" />
+          <rect x="-23" y="-13" width="34" height="32" rx="5.5" fill="url(#u-av)" />
+          <path transform="translate(-16.5 -3.5) scale(1.125)" d="M5.8 4.6L2.4 8L5.8 11.4M10.2 4.6L13.6 8L10.2 11.4" fill="none" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--surface)" />
+          <path transform="translate(0 -12) scale(0.625)" d="M8 1.6C8.5 5.4 10.6 7.5 14.4 8C10.6 8.5 8.5 10.6 8 14.4C7.5 10.6 5.4 8.5 1.6 8C5.4 7.5 7.5 5.4 8 1.6Z" style="fill: var(--surface)" />
         </symbol>
       </defs>
     </svg>
@@ -55,7 +67,7 @@
             <section class="chapter chapter--hero" data-ch="0" aria-label="Kapitel 1">
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span><span><span class="prod">Governance Gateway</span> · Agents</span></p>
               <h1 class="h-hero" data-words>Die Kontrollschicht für KI-Agenten.</h1>
-              <p class="lead" data-words>Ob Ihr Team Agents selbst baut oder wir sie bauen: Mit dem <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> darf jeder Agent nur, was er soll. Und mit <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> ist jede Aktion bis zur Quelle nachvollziehbar.</p>
+              <p class="lead" data-words>Ob Ihr Team Agents selbst baut oder wir sie bauen: Mit dem <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span> darf jeder Agent nur, was er soll. Und mit <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> ist jede Aktion bis zur Quelle nachvollziehbar.</p>
               <div class="hero-choice">
                 <a class="btn btn--primary btn--big" href="#termin" data-log="cta-hero">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a>
                 <button class="film-teaser" type="button" data-film="0" aria-label="Film ansehen, 1 Minute 39 Sekunden">
@@ -82,7 +94,7 @@
                 <li class="plate" data-plate="2"><span class="plate__swatch plate__swatch--3"></span><span class="plate__tag">03</span><span class="plate__body"><span class="plate__name">Richtlinien &amp; Freigaben <span class="plate__en">Policies &amp; Approvals</span></span><span class="plate__text">Sie legen fest, was ein Agent allein darf und wo ein Mensch entscheidet.</span></span></li>
                 <li class="plate" data-plate="3"><span class="plate__swatch plate__swatch--4"></span><span class="plate__tag">04</span><span class="plate__body"><span class="plate__name">Anbindung <span class="plate__en">Connectors · MCP</span></span><span class="plate__text">Ihre Systeme, einmal sauber angebunden. Vom ERP bis zur Eigenentwicklung.</span></span></li>
               </ol>
-              <p class="trace-note" id="trace-note"><span class="trace-note__line" aria-hidden="true"></span><span><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> läuft durch alle vier Ebenen und schreibt jede Aktion mit, vom Posteingang bis zur Buchung.</span></p>
+              <p class="trace-note" id="trace-note"><span class="trace-note__line" aria-hidden="true"></span><span><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> läuft durch alle vier Ebenen und schreibt jede Aktion mit, vom Posteingang bis zur Buchung.</span></p>
             </section>
 
             <section class="chapter" data-ch="3" aria-label="Kapitel 4">
@@ -103,8 +115,8 @@
             </section>
 
             <section class="chapter chapter--list chapter--trace" data-ch="5" aria-label="Kapitel 6">
-              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span>06 · <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></span></p>
-              <h2 class="h-chapter h-chapter--long" data-words><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span>. Vom Posteingang bis zur Buchung.</h2>
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span>06 · <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span></span></p>
+              <h2 class="h-chapter h-chapter--long" data-words><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span>. Vom Posteingang bis zur Buchung.</h2>
               <p class="lead" data-words><span class="prod">Trace</span> schreibt jeden Schritt mit, in Klartext und mit Zeitstempel. So lässt sich jede Aktion zurückverfolgen, bis zur Quelle.</p>
               <div class="stations-wrap">
                 <span class="stations-rail" aria-hidden="true"></span>
@@ -126,16 +138,16 @@
             </section>
 
             <section class="chapter" data-ch="7" aria-label="Kapitel 8">
-              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>08 · ChatGPT und Claude</p>
+              <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>08 · ChatGPT, Claude und n8n</p>
               <h2 class="h-chapter" data-words>Auch der Chat läuft über das Gateway.</h2>
               <p class="lead" data-words>Ihre Mitarbeiter arbeiten mit ChatGPT oder Claude. Über einen Anschluss am <span class="prod">Gateway</span> fragen sie Ihre Systeme direkt aus dem Chat ab: im eigenen Namen, mit den eigenen Rechten. <span class="prod">Trace</span> schreibt mit.</p>
-              <p class="list-caption">Anschluss über MCP · ohne Kopieren zwischen Chat und System</p>
+              <p class="list-caption">Anschluss über MCP · derselbe Anschluss für Abläufe aus n8n</p>
             </section>
 
             <section class="chapter chapter--final" data-ch="8" aria-label="Kapitel 9">
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>09 · Ein Rahmen für alle</p>
               <h2 class="h-chapter" data-words>Ein Rahmen für alle. Agents und Assistenten.</h2>
-              <p class="lead" data-words>Das <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> mit <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span>. In der EU-Cloud oder in Ihrem Rechenzentrum.</p>
+              <p class="lead" data-words>Das <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span> mit <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span>. In der EU-Cloud oder in Ihrem Rechenzentrum.</p>
               <p class="chapter__cta"><a class="btn btn--primary btn--big" href="#termin" data-log="cta-story">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a><a class="btn btn--big btn--quiet" href="#angebot" data-log="to-offer">Angebot ansehen</a></p>
             </section>
           </div>
@@ -171,7 +183,7 @@
 
           <!-- Kapitel 06: Drill-down bis zur Modell-Begründung -->
           <aside class="panel drill" id="drill" aria-hidden="true" aria-labelledby="drill-title">
-            <p class="panel__mode"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> <span>· Drill-down</span></p>
+            <p class="panel__mode"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> <span>· Drill-down</span></p>
             <h3 class="panel__title" id="drill-title">Rechnung 2026-1042</h3>
             <p class="panel__sub">Lieferant Müller GmbH · 12.400 €</p>
             <div class="roles-row">
@@ -216,7 +228,7 @@
               <li><button type="button" data-goto="4" aria-label="Kapitel 5: Freigabe und Aufsicht"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
               <li><button type="button" data-goto="5" aria-label="Kapitel 6: AIceFlow Trace"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
               <li><button type="button" data-goto="6" aria-label="Kapitel 7: Eigener Agent"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
-              <li><button type="button" data-goto="7" aria-label="Kapitel 8: ChatGPT und Claude"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
+              <li><button type="button" data-goto="7" aria-label="Kapitel 8: ChatGPT, Claude und n8n"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
               <li><button type="button" data-goto="8" aria-label="Kapitel 9: Ein Rahmen für alle"><span class="progress__bar"><span class="progress__fill"></span></span></button></li>
             </ol>
           </nav>
@@ -230,59 +242,59 @@
           <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Angebot</p>
           <div class="split-head">
             <h2 class="h-section" id="angebot-title">Der Rahmen. Und die Agents dazu.</h2>
-            <p class="split-head__text">Das <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span> ist unser Produkt, auch als kontrollierter Anschluss für ChatGPT und Claude. Agents bauen wir auf Wunsch gleich mit, für Ihre Prozesse und Ihre Systeme.</p>
+            <p class="split-head__text">Das <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span> ist unser Produkt, auch als kontrollierter Anschluss für ChatGPT und Claude. Agents bauen wir auf Wunsch gleich mit, für Ihre Prozesse und Ihre Systeme.</p>
           </div>
           <div class="offers">
             <article class="offer" aria-labelledby="offer-gw">
               <svg class="offer__art" viewBox="0 0 400 230" role="img" aria-label="Vier Ebenen des Gateways zwischen Agents und Systemen">
                 <defs>
-                  <linearGradient id="og-t" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e9eefb" /></linearGradient>
-                  <linearGradient id="og-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f6ff" /><stop offset="1" stop-color="#cfdaf7" /></linearGradient>
-                  <linearGradient id="og-m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e3349" /><stop offset="1" stop-color="#171b29" /></linearGradient>
+                  <linearGradient id="og-t" x1="0" y1="1" x2="1" y2="0"><stop offset="0" style="stop-color: var(--surface)" /><stop offset="1" style="stop-color: var(--paper)" /></linearGradient>
+                  <linearGradient id="og-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--paper)" /><stop offset="1" style="stop-color: var(--line)" /></linearGradient>
+                  <linearGradient id="og-m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: color-mix(in srgb, var(--ink-muted) 55%, var(--ink))" /><stop offset="1" style="stop-color: color-mix(in srgb, var(--ink-muted) 21%, var(--ink))" /></linearGradient>
                   <filter id="og-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" /></filter>
                 </defs>
-                <ellipse cx="200" cy="216" rx="170" ry="10" fill="#0e1120" opacity="0.08" />
+                <ellipse cx="200" cy="216" rx="170" ry="10" opacity="0.08" style="fill: var(--ink)" />
                 <g fill="url(#og-m)"><rect x="66" y="186" width="68" height="24" rx="3" /><rect x="166" y="186" width="68" height="24" rx="3" /><rect x="266" y="186" width="68" height="24" rx="3" /></g>
-                <g fill="#3f4560"><path d="M66 186L78 178H146L134 186Z" /><path d="M166 186L178 178H246L234 186Z" /><path d="M266 186L278 178H346L334 186Z" /></g>
-                <g fill="#4876ff"><circle cx="122" cy="196" r="2.6" /><circle cx="222" cy="196" r="2.6" /><circle cx="322" cy="196" r="2.6" /></g>
-                <g stroke="#8fa8ff" stroke-width="2"><path d="M106 44V182" /><path d="M306 44V182" stroke="#16a89b" /></g>
-                <path d="M206 44V182" stroke="#4876ff" stroke-width="7" opacity="0.45" filter="url(#og-glow)" />
-                <path d="M206 44V182" stroke="#2f5bea" stroke-width="2.6" />
+                <g style="fill: color-mix(in srgb, var(--ink-muted) 79%, var(--ink))"><path d="M66 186L78 178H146L134 186Z" /><path d="M166 186L178 178H246L234 186Z" /><path d="M266 186L278 178H346L334 186Z" /></g>
+                <g style="fill: var(--blue)"><circle cx="122" cy="196" r="2.6" /><circle cx="222" cy="196" r="2.6" /><circle cx="322" cy="196" r="2.6" /></g>
+                <g stroke-width="2" style="stroke: color-mix(in srgb, var(--blue) 61%, var(--surface))"><path d="M106 44V182" /><path d="M306 44V182" style="stroke: var(--ink)" /></g>
+                <path d="M206 44V182" stroke-width="7" opacity="0.45" filter="url(#og-glow)" style="stroke: var(--blue)" />
+                <path d="M206 44V182" stroke-width="2.6" style="stroke: var(--blue-strong)" />
                 <g>
-                  <path d="M40 154L64 140H360L336 154Z" fill="url(#og-t)" /><rect x="40" y="154" width="296" height="8" fill="url(#og-f)" /><path d="M336 154L360 140V148L336 162Z" fill="#b8c7f1" />
-                  <path d="M40 124L64 110H360L336 124Z" fill="url(#og-t)" /><rect x="40" y="124" width="296" height="8" fill="url(#og-f)" /><path d="M336 124L360 110V118L336 132Z" fill="#c3d0f4" />
-                  <path d="M40 94L64 80H360L336 94Z" fill="url(#og-t)" /><rect x="40" y="94" width="296" height="8" fill="url(#og-f)" /><path d="M336 94L360 80V88L336 102Z" fill="#d0daf4" />
-                  <path d="M40 64L64 50H360L336 64Z" fill="url(#og-t)" /><rect x="40" y="64" width="296" height="8" fill="url(#og-f)" /><path d="M336 64L360 50V58L336 72Z" fill="#dce1eb" />
+                  <path d="M40 154L64 140H360L336 154Z" fill="url(#og-t)" /><rect x="40" y="154" width="296" height="8" fill="url(#og-f)" /><path d="M336 154L360 140V148L336 162Z" style="fill: color-mix(in srgb, var(--line) 64%, var(--on-ink-muted))" />
+                  <path d="M40 124L64 110H360L336 124Z" fill="url(#og-t)" /><rect x="40" y="124" width="296" height="8" fill="url(#og-f)" /><path d="M336 124L360 110V118L336 132Z" style="fill: color-mix(in srgb, var(--line) 83%, var(--on-ink-muted))" />
+                  <path d="M40 94L64 80H360L336 94Z" fill="url(#og-t)" /><rect x="40" y="94" width="296" height="8" fill="url(#og-f)" /><path d="M336 94L360 80V88L336 102Z" style="fill: var(--line)" />
+                  <path d="M40 64L64 50H360L336 64Z" fill="url(#og-t)" /><rect x="40" y="64" width="296" height="8" fill="url(#og-f)" /><path d="M336 64L360 50V58L336 72Z" style="fill: var(--well)" />
                 </g>
-                <g fill="#2f5bea"><ellipse cx="206" cy="57" rx="4.5" ry="1.8" /><ellipse cx="206" cy="87" rx="4.5" ry="1.8" /><ellipse cx="206" cy="117" rx="4.5" ry="1.8" /><ellipse cx="206" cy="147" rx="4.5" ry="1.8" /></g>
-                <g fill="#4876ff" opacity="0.7"><ellipse cx="106" cy="57" rx="4" ry="1.6" /><ellipse cx="106" cy="147" rx="4" ry="1.6" /></g>
-                <g fill="#16a89b" opacity="0.8"><ellipse cx="306" cy="57" rx="4" ry="1.6" /><ellipse cx="306" cy="147" rx="4" ry="1.6" /></g>
-                <use href="#agent-unit" x="86" y="0" width="40" height="44" /><use href="#agent-unit" x="186" y="0" width="40" height="44" /><use href="#agent-unit-own" x="286" y="0" width="40" height="44" />
+                <g style="fill: var(--blue-strong)"><ellipse cx="206" cy="57" rx="4.5" ry="1.8" /><ellipse cx="206" cy="87" rx="4.5" ry="1.8" /><ellipse cx="206" cy="117" rx="4.5" ry="1.8" /><ellipse cx="206" cy="147" rx="4.5" ry="1.8" /></g>
+                <g opacity="0.7" style="fill: var(--blue)"><ellipse cx="106" cy="57" rx="4" ry="1.6" /><ellipse cx="106" cy="147" rx="4" ry="1.6" /></g>
+                <g opacity="0.8" style="fill: var(--ink)"><ellipse cx="306" cy="57" rx="4" ry="1.6" /><ellipse cx="306" cy="147" rx="4" ry="1.6" /></g>
+                <use href="#agent-rechnung" x="82" y="1" width="48" height="43.7" /><use href="#agent-einkauf" x="182" y="1" width="48" height="43.7" /><use href="#agent-own" x="282" y="1" width="48" height="43.7" />
               </svg>
               <p class="offer__kind">Produkt</p>
-              <h3 class="offer__name" id="offer-gw"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Governance Gateway</span></h3>
-              <p class="offer__text">Die Kontrollschicht zwischen Ihren Agents und Ihren Systemen. Jeder Agent bekommt eine Identität, genau die Rechte, die er braucht, und Ihre Regeln. Ab einer Grenze entscheidet ein Mensch, und <span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> schreibt jede Aktion mit.</p>
+              <h3 class="offer__name" id="offer-gw"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span></h3>
+              <p class="offer__text">Die Kontrollschicht zwischen Ihren Agents und Ihren Systemen. Jeder Agent bekommt eine Identität, genau die Rechte, die er braucht, und Ihre Regeln. Ab einer Grenze entscheidet ein Mensch, und <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> schreibt jede Aktion mit.</p>
               <ul class="offer__list">
-                <li>Identität</li><li>Berechtigungen</li><li>Richtlinien &amp; Freigaben</li><li>Anbindung</li><li>Anschluss für ChatGPT und Claude (MCP)</li><li><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></li><li>EU-Cloud oder On-Prem</li>
+                <li>Identität</li><li>Berechtigungen</li><li>Richtlinien &amp; Freigaben</li><li>Anbindung</li><li>Anschluss für ChatGPT und Claude (MCP)</li><li><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span></li><li>EU-Cloud oder On-Prem</li>
               </ul>
               <p class="offer__note">Für Agents von uns, von Ihrem Team oder von Dritten. Und für ChatGPT und Claude Ihrer Mitarbeiter.</p>
             </article>
             <article class="offer" aria-labelledby="offer-ag">
               <svg class="offer__art" viewBox="0 0 400 230" role="img" aria-label="Agents, die am Gateway andocken">
                 <defs>
-                  <linearGradient id="oa-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" /><stop offset="1" stop-color="#e2e7f0" /></linearGradient>
-                  <linearGradient id="oa-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5c86ff" /><stop offset="1" stop-color="#2f5bea" /></linearGradient>
+                  <linearGradient id="oa-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--surface)" /><stop offset="1" style="stop-color: var(--well)" /></linearGradient>
+                  <linearGradient id="oa-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color: color-mix(in srgb, var(--blue) 89%, var(--surface))" /><stop offset="1" style="stop-color: var(--blue-strong)" /></linearGradient>
                 </defs>
-                <ellipse cx="200" cy="216" rx="170" ry="10" fill="#0e1120" opacity="0.08" />
-                <g stroke="#4876ff" stroke-width="2"><path d="M85 124V176" /><path d="M200 124V176" /></g>
-                <path d="M315 124V176" stroke="#16a89b" stroke-width="2" />
-                <path d="M40 184L64 170H360L336 184Z" fill="#f4f6fb" /><rect x="40" y="184" width="296" height="20" fill="url(#oa-p)" /><rect x="40" y="200" width="296" height="4" fill="url(#oa-s)" /><path d="M336 184L360 170V190L336 204Z" fill="#cfd5e2" />
-                <g fill="#4876ff"><ellipse cx="85" cy="177" rx="5" ry="2" /><ellipse cx="200" cy="177" rx="5" ry="2" /></g><ellipse cx="315" cy="177" rx="5" ry="2" fill="#16a89b" />
-                <use href="#agent-unit" x="51" y="52" width="68" height="75" /><use href="#agent-unit" x="166" y="52" width="68" height="75" /><use href="#agent-unit-own" x="281" y="52" width="68" height="75" />
-                <g font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
-                  <rect x="33" y="16" width="104" height="24" rx="12" fill="#fff" stroke="#e1e5ee" /><text x="85" y="32" fill="#0e1120">Rechnungs-Agent</text>
-                  <rect x="150" y="16" width="100" height="24" rx="12" fill="#fff" stroke="#e1e5ee" /><text x="200" y="32" fill="#0e1120">Einkaufs-Agent</text>
-                  <rect x="275" y="16" width="80" height="24" rx="12" fill="#fff" stroke="#9de8df" /><text x="315" y="32" fill="#0b7f75">Ihr Agent</text>
+                <ellipse cx="200" cy="216" rx="170" ry="10" opacity="0.08" style="fill: var(--ink)" />
+                <g stroke-width="2" style="stroke: var(--blue)"><path d="M85 124V176" /><path d="M200 124V176" /></g>
+                <path d="M315 124V176" stroke-width="2" style="stroke: var(--ink)" />
+                <path d="M40 184L64 170H360L336 184Z" style="fill: var(--paper)" /><rect x="40" y="184" width="296" height="20" fill="url(#oa-p)" /><rect x="40" y="200" width="296" height="4" fill="url(#oa-s)" /><path d="M336 184L360 170V190L336 204Z" style="fill: var(--line)" />
+                <g style="fill: var(--blue)"><ellipse cx="85" cy="177" rx="5" ry="2" /><ellipse cx="200" cy="177" rx="5" ry="2" /></g><ellipse cx="315" cy="177" rx="5" ry="2" style="fill: var(--ink)" />
+                <use href="#agent-rechnung" x="44.4" y="53.6" width="81.2" height="74" /><use href="#agent-einkauf" x="159.4" y="53.6" width="81.2" height="74" /><use href="#agent-own" x="274.4" y="53.6" width="81.2" height="74" />
+                <g font-size="11" font-weight="600" text-anchor="middle" style="font-family: var(--font-sans)">
+                  <rect x="33" y="16" width="104" height="24" rx="12" style="fill: var(--surface); stroke: var(--well)" /><text x="85" y="32" style="fill: var(--ink)">Rechnungs-Agent</text>
+                  <rect x="150" y="16" width="100" height="24" rx="12" style="fill: var(--surface); stroke: var(--well)" /><text x="200" y="32" style="fill: var(--ink)">Einkaufs-Agent</text>
+                  <rect x="275" y="16" width="80" height="24" rx="12" style="fill: var(--surface); stroke: var(--border)" /><text x="315" y="32" style="fill: var(--ink)">Ihr Agent</text>
                 </g>
               </svg>
               <p class="offer__kind">Leistung</p>
@@ -291,7 +303,7 @@
               <ul class="offer__list">
                 <li>Prozess klären</li><li>Systeme anbinden</li><li>Agent bauen</li><li>Betrieb und Weiterentwicklung</li>
               </ul>
-              <p class="offer__note offer__note--own">Ihr Team baut selbst, etwa mit Claude, Google ADK oder LangGraph? Dann docken diese Agents genauso an.</p>
+              <p class="offer__note offer__note--own">Ihr Team baut selbst, etwa mit n8n, Claude, Google ADK oder LangGraph? Dann docken diese Agents genauso an.</p>
             </article>
           </div>
         </div>
@@ -300,10 +312,10 @@
       <!-- ============ AIceFlow Trace im Detail ============ -->
       <section class="section section--trace" id="trace" aria-labelledby="trace-title">
         <div class="wrap">
-          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span></span></p>
+          <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span></span></p>
           <div class="trace-intro">
             <h2 class="h-section h-section--big" id="trace-title">Jede Aktion. Bis zur Quelle nachvollziehbar.</h2>
-            <p class="trace-intro__text"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> schreibt mit, was Ihre Agents tun: automatisch, für jedes angebundene System, in Sätzen statt in Logdateien. So verfolgen Sie jede Aktion zurück, von der Buchung bis zur Original-E-Mail.</p>
+            <p class="trace-intro__text"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> schreibt mit, was Ihre Agents tun: automatisch, für jedes angebundene System, in Sätzen statt in Logdateien. So verfolgen Sie jede Aktion zurück, von der Buchung bis zur Original-E-Mail.</p>
           </div>
 
           <p class="answers-cap">Die drei Fragen vom Anfang, beantwortet aus der Spur</p>
@@ -327,7 +339,7 @@
             </div>
 
             <article class="trail is-pending" id="trail" aria-labelledby="trail-title">
-              <p class="panel__mode"><span class="prod"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> Trace</span> <span>· Spur</span></p>
+              <p class="panel__mode"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> <span>· Spur</span></p>
               <h3 class="trail__title" id="trail-title">Rechnung 2026-1042</h3>
               <p class="trail__sub">Lieferant Müller GmbH · 12.400 € · Rechnungs-Agent im Auftrag von Buchhaltung</p>
               <div class="dir" role="group" aria-label="Leserichtung">
@@ -378,30 +390,58 @@
           </div>
           <ol class="uses">
             <li class="use">
-              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Rechnungs-Agent</p>
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-rechnung" /></svg>Rechnungs-Agent</p>
               <h3 class="use__name">Eingangsrechnungen</h3>
               <p class="use__text">Aus dem Postfach geprüft ins ERP. Ab einer Grenze, die Sie festlegen, entscheidet ein Mensch.</p>
               <p class="use__route">E-Mail <span aria-hidden="true">·</span> ERP <span aria-hidden="true">·</span> im Auftrag der Buchhaltung</p>
             </li>
             <li class="use">
-              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Einkaufs-Agent</p>
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-einkauf" /></svg>Einkaufs-Agent</p>
               <h3 class="use__name">Bestellungen und Auftragsbestätigungen</h3>
               <p class="use__text">Bestellungen im ERP angelegt, Liefertermine abgeglichen, bevor sie in der Fertigung fehlen.</p>
               <p class="use__route">E-Mail <span aria-hidden="true">·</span> ERP <span aria-hidden="true">·</span> im Auftrag des Einkaufs</p>
             </li>
             <li class="use">
-              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit" /></svg>Vertriebs-Agent</p>
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-vertrieb" /></svg>Vertriebs-Agent</p>
               <h3 class="use__name">Anfragen und Angebote</h3>
               <p class="use__text">Anfragen erfasst, Angebote ins CRM übertragen. E-Mails an Kunden gehen nur raus, wenn die Richtlinie es erlaubt.</p>
               <p class="use__route">E-Mail <span aria-hidden="true">·</span> CRM <span aria-hidden="true">·</span> im Auftrag des Vertriebs</p>
             </li>
             <li class="use use--own">
-              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-unit-own" /></svg>Ihr Prozess</p>
+              <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-own" /></svg>Ihr Prozess</p>
               <h3 class="use__name">Lieferscheine, Verträge, Aufträge</h3>
               <p class="use__text">Was per E-Mail und als Dokument hereinkommt, kann geprüft und nachvollziehbar im Kernsystem landen.</p>
               <p class="use__route">Ihre Systeme <span aria-hidden="true">·</span> Ihre Regeln</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <!-- ============ Anbindung: die Logos der Anschlüsse laufen im Strudel auf das Gateway zu ============ -->
+      <section class="section section--anbindung" id="anbindung" aria-labelledby="anbindung-title">
+        <div class="wrap connect">
+          <div class="connect__head">
+            <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Anbindung</p>
+            <h2 class="h-section" id="anbindung-title">Ihre Systeme laufen am Gateway zusammen.</h2>
+            <p class="connect__text">Für die gängigen Systeme gibt es fertige Anschlüsse, vom Postfach bis zum ERP. Über 700 stehen bereit. Fehlt Ihr System, binden wir es an.</p>
+          </div>
+          <div class="vortex" id="vortex" role="img" aria-label="Logos von Systemen, die sich anschließen lassen, laufen in einem Strudel auf das Gateway zu">
+            <svg class="vortex__arms" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><path /></svg>
+            <div class="vortex__field"></div>
+            <div class="vortex__core"><img src="/logo/aiceflow-mark-dark.svg" alt="" width="64" height="64" /></div>
+            <span class="vortex__label" aria-hidden="true"></span>
+          </div>
+          <div class="connect__list">
+            <ol class="kinds" id="connect-groups">
+              <li><button class="kind" type="button" data-g="mail" aria-pressed="false"><span class="kind__no">01</span><span><span class="kind__name">Postfach und Chat</span><span class="kind__text">Outlook, Gmail, Teams, Slack</span></span></button></li>
+              <li><button class="kind" type="button" data-g="erp" aria-pressed="false"><span class="kind__no">02</span><span><span class="kind__name">ERP, Buchhaltung und Shop</span><span class="kind__text">Dynamics 365 Business Central, Odoo, Xero, Shopify</span></span></button></li>
+              <li><button class="kind" type="button" data-g="crm" aria-pressed="false"><span class="kind__no">03</span><span><span class="kind__name">CRM und Vertrieb</span><span class="kind__text">Salesforce, HubSpot, Pipedrive, Dynamics CRM</span></span></button></li>
+              <li><button class="kind" type="button" data-g="docs" aria-pressed="false"><span class="kind__no">04</span><span><span class="kind__name">Dokumente und Ablage</span><span class="kind__text">SharePoint, OneDrive, Google Drive, DocuSign</span></span></button></li>
+              <li><button class="kind" type="button" data-g="tickets" aria-pressed="false"><span class="kind__no">05</span><span><span class="kind__name">Tickets und Projekte</span><span class="kind__text">Jira, ServiceNow, Zendesk, Asana</span></span></button></li>
+              <li><button class="kind" type="button" data-g="data" aria-pressed="false"><span class="kind__no">06</span><span><span class="kind__name">Datenbanken und Schnittstellen</span><span class="kind__text">SQL Server, PostgreSQL, Oracle, SFTP</span></span></button></li>
+            </ol>
+            <p class="spur__note">Für jeden Anschluss gelten dieselben Regeln. <span class="prod">Trace</span> schreibt mit.</p>
+          </div>
         </div>
       </section>
 
@@ -490,7 +530,7 @@
             <ul class="termin__points">
               <li>Was heute per E-Mail hereinkommt und wo es landen muss</li>
               <li>Welche Agents es schon gibt: Ihre oder neue von uns</li>
-              <li>Ob Ihr Team schon mit ChatGPT oder Claude arbeitet</li>
+              <li>Ob Ihr Team schon mit ChatGPT, Claude oder n8n arbeitet</li>
               <li>Ob EU-Cloud oder Ihr Rechenzentrum besser passt</li>
             </ul>
             <dl class="kontakt__info">

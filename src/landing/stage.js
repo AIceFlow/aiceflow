@@ -11,7 +11,7 @@ export const GATE = 2.28;                        // Gateway rastet als eine Schi
 export const SNAP = [2.6, 2.67, 2.74, 2.81];     // Ebene k ist aufgeklappt und beschriftet
 export const DOCK = 6.5;                         // eigener Agent dockt an
 // Eingeschwungener Zustand je Kapitel: Ziel für Sprungmarken und Reduced Motion
-export const CHAT = 7.3;                         // Chatfenster (ChatGPT, Claude) docken an
+export const CHAT = 7.3;                         // Fenster (ChatGPT, Claude, n8n) docken an
 export const TARGET = [0.15, 1.82, 2.9, 3.6, 4.62, 5.86, 6.84, 7.8, 8.7];
 
 const CX = 880, CY = 720, S = 70;
@@ -29,9 +29,12 @@ const TRACE = [[-1.95, 0.9, 0.5], [-1.95, 0.9, 6.1], [0, 0.9, 6.1], [0, WY, ZB],
 const TRACE_P = [5.08, 5.7];
 // eigener Agent: durch das Gateway, dicht unter Ebene 04 hinüber in die Buchse des DMS
 const OWN = [[5.0, WY, ZB], [5.0, WY, 0.75], [2.6, WY, 0.75], [2.6, WY, 0.5]];
-// Chatfenster (Kapitel 08): zwischen den Agents, über der Agent-Reihe; durch das Gateway, unter Ebene 04 ins ERP
-const CHAT_X = [-1.3, 1.3], ZC = 7.255, CHAT_S = 1.18;
-const CHAT_W = CHAT_X.map((x) => [[x, WY, ZC], [x, WY, 0.75], [0, WY, 0.75], [0, WY, 0.5]]);
+// Fenster über der Agent-Reihe (Kapitel 08): ChatGPT und Claude zwischen den Agents, n8n rechts daneben.
+// Jede Leitung läuft durch das Gateway und dicht unter Ebene 04 in ihr System: die Chats ins ERP, n8n ins DMS
+// (tiefer als die Leitung des eigenen Agents, die denselben Weg nimmt).
+const CHAT_X = [-1.3, 1.3, 3.9], ZC = 7.255, CHAT_S = 1.18;
+const CHAT_TO = [[0, 0.75], [0, 0.75], [2.6, 0.62]];   // System (x) und Höhe des Querlaufs
+const CHAT_W = CHAT_X.map((x, i) => { const [to, z] = CHAT_TO[i]; return [[x, WY, ZC], [x, WY, z], [to, WY, z], [to, WY, 0.5]]; });
 // Trace-Stationen: Original-E-Mail, gelesen, entschieden (beide am Agent), geprüft (Ebene 03), gebucht
 const ST_AT = [[-1.95, 0.9, 0.5], [0, WY, ZB], [0, WY, ZB], [0, WY, 2.85], [0, WY, 0.5]];
 const ST_OFF = [[-30, -16, -1], [-44, -12, -1], [44, -12, 1], [30, -14, 1], [-32, -8, -1]];   // Versatz und Seite des Schilds
@@ -44,7 +47,6 @@ const MARK = [
   [0.982, 0.478, -0.468, -0.971], [-0.308, -0.194, 0.470, -0.972], [-0.971, 0.471, -0.688, 0.188],
 ];
 const MX = 990, MY = 158, MS = 58;
-const BLUE = '#4876FF';
 
 /* Ausschnitte für die kompakte (mobile) Ansicht: [x0, y0, x1, y1] im Raster 1440 × 900 */
 const VIEW_BASE = [590, 86, 1268, 738];
@@ -65,12 +67,31 @@ const pts = (list) => list.map((q) => `${r1(q[0])},${r1(q[1])}`).join(' ');
 const shiftY = (list, dy) => list.map((q) => [q[0], q[1] + dy]);
 const at = (a, b, t) => [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
 
+const toRgb = (c) => {
+  if (c.startsWith('#')) { const n = parseInt(c.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  return c.match(/\d+(\.\d+)?/g).slice(0, 3).map(Number);
+};
 function mix(a, b, t) {
-  const rgb = (h) => { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
   if (t <= 0.001) return a;
   if (t >= 0.999) return b;
-  const A = rgb(a), B = rgb(b);
+  const A = toRgb(a), B = toRgb(b);
   return `rgb(${Math.round(lerp(A[0], B[0], t))},${Math.round(lerp(A[1], B[1], t))},${Math.round(lerp(A[2], B[2], t))})`;
+}
+
+/* Farben, die hier gemischt werden, kommen aus den Tokens des Design Systems
+   (design-system/tokens.css). Einmal gelesen, sobald die Bühne zum ersten Mal zeichnet. */
+let TOK = null;
+function tok() {
+  if (TOK) return TOK;
+  const cs = getComputedStyle(document.documentElement);
+  const v = (n) => cs.getPropertyValue(n).trim();
+  TOK = {
+    blue: v('--blue'), blueStrong: v('--blue-strong'), ink: v('--ink'), signal: v('--signal'),
+    ledOff: mix(v('--ink'), v('--ink-muted'), 0.72),        // Kontrollleuchte aus
+    ledOn: mix(v('--surface'), v('--blue'), 0.47),          // Kontrollleuchte an
+    bracket: mix(v('--on-ink-muted'), v('--line'), 0.42),   // Klammer vor Trace
+  };
+  return TOK;
 }
 function box(x0, x1, y0, y1, z0, z1) {
   return {
@@ -220,7 +241,7 @@ function scene(p, approved, release, k, intro) {
     v[`sy${i}`] = {
       op: r3(kk), top: b.top, side: b.side, fx: r1(tl[0]), fy: r1(tl[1]), gx: r1(tl[0] + 72), gy: r1(tl[1] + 58),
       sock: pts([P(x - 0.2, WY - 0.28, zt), P(x + 0.2, WY - 0.28, zt), P(x + 0.2, WY + 0.28, zt), P(x - 0.2, WY + 0.28, zt)]),
-      conn: r3(conn), lit: r3(lit * 0.85), led: mix('#3A4058', '#A9C0FF', conn),
+      conn: r3(conn), lit: r3(lit * 0.85), led: mix(tok().ledOff, tok().ledOn, conn),
     };
   });
 
@@ -229,7 +250,7 @@ function scene(p, approved, release, k, intro) {
   const sbx = box(SLOT_X - 0.85, SLOT_X + 0.85, 0.7, 2.5, SYS_Z0 + sdz, szt), stl = P(SLOT_X - 0.85, 0.7, szt);
   v.slot = { op: r3(sk), top: sbx.top, side: sbx.side, fx: r1(stl[0]), fy: r1(stl[1]) };
   /* Weitere Systeme: angebunden, sobald Ebene 04 (Anbindung) einrastet */
-  v.xs = { op: r3(sk), led: mix('#3A4058', '#A9C0FF', Math.max(seg(p, SNAP[3], SNAP[3] + 0.02), hConn)) };
+  v.xs = { op: r3(sk), led: mix(tok().ledOff, tok().ledOn, Math.max(seg(p, SNAP[3], SNAP[3] + 0.02), hConn)) };
 
   /* Ohne Rahmen: jeder Agent direkt auf jedes System */
   let n = 0;
@@ -258,7 +279,7 @@ function scene(p, approved, release, k, intro) {
   const oh = seg(p, 6.62, 6.82);
   addWire(bOwn, OWN, oh, plates);
   plates.forEach((pl) => { if (pl.solid && oh * OWN_TOTAL >= ZB - pl.zt) bOPort[bandOf(pl.zt, plates)] += port([5.0, WY, pl.zt]); });
-  /* Chatfenster: blenden nacheinander ein, die Leitung läuft durch alle Ebenen ins ERP, dann kommt die Antwort */
+  /* Fenster: blenden nacheinander ein, die Leitung läuft durch alle Ebenen in ihr System, dann kommt die Antwort */
   CHAT_W.forEach((path, i) => {
     const a = 7.1 + i * 0.08, out = 1 - seg(p, 7.93, 8.0);
     const inn = seg(p, a, a + 0.14), back = 7.58 + i * 0.06;
@@ -291,14 +312,14 @@ function scene(p, approved, release, k, intro) {
   const hp = P(0, WY, PLATE_Z[2] + T);
   v.held = { op: r3(hold), cx: r1(hp[0]), cy: r1(hp[1]) };
 
-  /* Agents: erscheinen beim Laden nacheinander mit leichtem Nachschwingen, dann leuchten Augen und Antenne */
+  /* Agents: erscheinen beim Laden nacheinander mit leichtem Nachschwingen, dann leuchten Zeichen und Lämpchen */
   AGENT_X.forEach((x, i) => {
     const am = seg(intro, 0.1 + ORDER[i] * 0.1, 0.6 + ORDER[i] * 0.1), c = P(x, WY, ZA);
     const id = smooth(seg(p, 3.08 + ORDER[i] * 0.1, 3.25 + ORDER[i] * 0.1)) * cardKeep;
     v[`ag${i}`] = {
       X: r1(c[0]), Y: r1(c[1]), hs: 1, halo: 0,
       op: r3(seg(am, 0, 0.25)), sc: r3(0.55 + 0.45 * backOut(seg(am, 0, 0.7))),
-      eye: r3(seg(am, 0.55, 0.8)), ant: r3(seg(am, 0.7, 1)),
+      sign: r3(seg(am, 0.55, 0.8)), led: r3(seg(am, 0.7, 1)),
       nameOp: r3(seg(am, 0.75, 1) * (1 - chatOn)), nameY: r1(lerp(-48, -93, id)), cardOp: r3(id),
     };
   });
@@ -323,7 +344,7 @@ function scene(p, approved, release, k, intro) {
     ag: r3(seg(intro, 0.6, 1)), sy: r3(seg(intro, 0.6, 1)),
     br: r3(Math.max(seg(p, 2.82, 2.95) * seg(ex, 0.8, 1), tb)),
     bd: `M603 ${r1(bTop)}H599Q594 ${r1(bTop)} 594 ${r1(bTop + 5)}V${r1(bBot - 5)}Q594 ${r1(bBot)} 599 ${r1(bBot)}H603`,
-    bc: mix('#B5BDCD', BLUE, tb), cy: r1((bTop + bBot) / 2),
+    bc: mix(tok().bracket, tok().blue, tb), cy: r1((bTop + bBot) / 2),
     gOp: r3(1 - seg(tb, 0, 0.5)), tOp: r3(seg(tb, 0.5, 1)),
     glow: r3(0.5 * seg(p, 5.1, 5.35) * (1 - seg(p, 5.95, 6.1))),
   };
@@ -336,7 +357,7 @@ function scene(p, approved, release, k, intro) {
   v.pk = {
     op: p > 4.06 && p < 6.0 && sc > 0.01 ? 1 : 0,
     tf: `translate(${r1(P(0, WY, 0)[0])} ${r1(py)}) scale(${r3(Math.max(0.001, sc) * k)})`,
-    dot: released ? BLUE : '#FFB547', txt: released ? '#2B55E6' : '#0E1120',
+    dot: released ? tok().blue : tok().signal, txt: released ? tok().blueStrong : tok().ink,
   };
 
   /* Trace: nummerierte Stationen */
