@@ -81,7 +81,7 @@
             <section class="chapter" data-ch="1" aria-label="Kapitel 2">
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--orange"></span>02 · Ohne Rahmen</p>
               <h2 class="h-chapter" data-words>Wer hat das gebucht? Durfte er das? Wie weisen Sie es nach?</h2>
-              <p class="lead" data-words>Agents bauen kann heute jeder. Sobald sie an ERP, E-Mail und DMS dürfen, stellen sich andere Fragen.</p>
+              <p class="lead" data-words>Agents bauen kann heute jeder. Sobald sie auf ERP, E-Mail und DMS zugreifen dürfen, stellen sich andere Fragen.</p>
             </section>
 
             <section class="chapter chapter--list" data-ch="2" aria-label="Kapitel 3">
@@ -89,7 +89,7 @@
               <h2 class="h-chapter" data-words>Eine Schicht zwischen Agents und Systemen.</h2>
               <p class="list-caption">Aufgeklappt: vier Ebenen in einer Schicht</p>
               <ol class="plates" id="plate-list">
-                <li class="plate" data-plate="0"><span class="plate__swatch plate__swatch--1"></span><span class="plate__tag">01</span><span class="plate__body"><span class="plate__name">Identität <span class="plate__en">Identity</span></span><span class="plate__text">Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person.</span></span></li>
+                <li class="plate" data-plate="0"><span class="plate__swatch plate__swatch--1"></span><span class="plate__tag">01</span><span class="plate__body"><span class="plate__name">Identität <span class="plate__en">Identity</span></span><span class="plate__text">Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person oder einer Organisationseinheit.</span></span></li>
                 <li class="plate" data-plate="1"><span class="plate__swatch plate__swatch--2"></span><span class="plate__tag">02</span><span class="plate__body"><span class="plate__name">Berechtigungen <span class="plate__en">Access Control · RBAC</span></span><span class="plate__text">Genau die Rechte, die er braucht. Nicht mehr.</span></span></li>
                 <li class="plate" data-plate="2"><span class="plate__swatch plate__swatch--3"></span><span class="plate__tag">03</span><span class="plate__body"><span class="plate__name">Richtlinien &amp; Freigaben <span class="plate__en">Policies &amp; Approvals</span></span><span class="plate__text">Sie legen fest, was ein Agent allein darf und wo ein Mensch entscheidet.</span></span></li>
                 <li class="plate" data-plate="3"><span class="plate__swatch plate__swatch--4"></span><span class="plate__tag">04</span><span class="plate__body"><span class="plate__name">Anbindung <span class="plate__en">Connectors · MCP</span></span><span class="plate__text">Ihre Systeme, einmal sauber angebunden. Vom ERP bis zur Eigenentwicklung.</span></span></li>
@@ -100,7 +100,7 @@
             <section class="chapter" data-ch="3" aria-label="Kapitel 4">
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>04 · Identität und Berechtigungen</p>
               <h2 class="h-chapter" data-words>Kein Agent handelt anonym.</h2>
-              <p class="lead" data-words>Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person. Mit genau den Rechten, die er braucht.</p>
+              <p class="lead" data-words>Jeder Agent bekommt eine Identität und handelt im Auftrag einer Person oder einer Organisationseinheit. Mit genau den Rechten, die er braucht.</p>
             </section>
 
             <section class="chapter chapter--hitl" data-ch="4" aria-label="Kapitel 5">
@@ -117,7 +117,7 @@
             <section class="chapter chapter--list chapter--trace" data-ch="5" aria-label="Kapitel 6">
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--deep"></span><span>06 · <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span></span></p>
               <h2 class="h-chapter h-chapter--long" data-words><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span>. Vom Posteingang bis zur Buchung.</h2>
-              <p class="lead" data-words><span class="prod">Trace</span> schreibt jeden Schritt mit, in Klartext und mit Zeitstempel. So lässt sich jede Aktion zurückverfolgen, bis zur Quelle.</p>
+              <p class="lead" data-words><span class="prod">Trace</span> schreibt jeden Schritt mit, in Klartext und mit Zeitstempel. So lässt sich jede Aktion bis zur Quelle zurückverfolgen.</p>
               <div class="stations-wrap">
                 <span class="stations-rail" aria-hidden="true"></span>
                 <ol class="stations" id="station-list" aria-label="Stationen der Rechnung 2026-1042">
@@ -141,7 +141,7 @@
               <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>08 · ChatGPT, Claude und n8n</p>
               <h2 class="h-chapter" data-words>Auch der Chat läuft über das Gateway.</h2>
               <p class="lead" data-words>Ihre Mitarbeiter arbeiten mit ChatGPT oder Claude. Über einen Anschluss am <span class="prod">Gateway</span> fragen sie Ihre Systeme direkt aus dem Chat ab: im eigenen Namen, mit den eigenen Rechten. <span class="prod">Trace</span> schreibt mit.</p>
-              <p class="list-caption">Anschluss über MCP · derselbe Anschluss für Abläufe aus n8n</p>
+              <p class="list-caption">Anschluss über MCP · auch für Abläufe aus n8n</p>
             </section>
 
             <section class="chapter chapter--final" data-ch="8" aria-label="Kapitel 9">
@@ -209,7 +209,7 @@
                   <p class="level__det">Warum der Agent so entschieden hat</p>
                   <ol class="steps">
                     <li class="step"><p class="step__k">Vor dem Modellaufruf <span>Pre-Model-Call</span></p><p class="step__i">Eingabe: Rechnung (PDF) · Lieferantenstamm · Buchungsregeln · Rolle: Buchhaltung</p></li>
-                    <li class="step"><p class="step__k">Abwägung <span>Reasoning</span></p><ul class="step__list"><li class="ok">Lieferant bekannt</li><li class="ok">Betrag plausibel</li><li class="ok">Kostenstelle 4711</li><li class="go">über 10.000 € – Freigabe nötig</li></ul></li>
+                    <li class="step"><p class="step__k">Abwägung <span>Reasoning</span></p><ul class="step__list"><li class="ok">Lieferant bekannt</li><li class="ok">Betrag plausibel</li><li class="ok">Kostenstelle 4711</li><li class="go">über 10.000 €: Freigabe nötig</li></ul></li>
                     <li class="step"><p class="step__k">Nach dem Modellaufruf <span>Post-Model-Call</span></p><ul class="step__list"><li>Buchungsvorschlag 12.400 €</li><li class="ok">gegen Regeln geprüft</li><li class="go">Freigabe angefordert</li></ul></li>
                   </ol>
                 </div></div>
@@ -242,7 +242,7 @@
           <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Angebot</p>
           <div class="split-head">
             <h2 class="h-section" id="angebot-title">Der Rahmen. Und die Agents dazu.</h2>
-            <p class="split-head__text">Das <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span> ist unser Produkt, auch als kontrollierter Anschluss für ChatGPT und Claude. Agents bauen wir auf Wunsch gleich mit, für Ihre Prozesse und Ihre Systeme.</p>
+            <p class="split-head__text">Das <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span> ist unser Produkt und kompatibel mit Claude, ChatGPT und allen marktüblichen Agentensystemen. Autonome Agents bauen wir auf Wunsch gleich mit, für Ihre Prozesse und Ihre Systeme.</p>
           </div>
           <div class="offers">
             <article class="offer" aria-labelledby="offer-gw">
@@ -273,11 +273,11 @@
               </svg>
               <p class="offer__kind">Produkt</p>
               <h3 class="offer__name" id="offer-gw"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Governance Gateway</span></span></h3>
-              <p class="offer__text">Die Kontrollschicht zwischen Ihren Agents und Ihren Systemen. Jeder Agent bekommt eine Identität, genau die Rechte, die er braucht, und Ihre Regeln. Ab einer Grenze entscheidet ein Mensch, und <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> schreibt jede Aktion mit.</p>
+              <p class="offer__text">Die Kontrollschicht zwischen Ihren Agents und Ihren Systemen. Jeder Agent bekommt eine Identität und genau die Rechte, die er braucht. Wo Ihre Regeln es verlangen, entscheidet ein Mensch. <span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> schreibt jede Aktion mit.</p>
               <ul class="offer__list">
                 <li>Identität</li><li>Berechtigungen</li><li>Richtlinien &amp; Freigaben</li><li>Anbindung</li><li>Anschluss für ChatGPT und Claude (MCP)</li><li><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span></li><li>EU-Cloud oder On-Prem</li>
               </ul>
-              <p class="offer__note">Für Agents von uns, von Ihrem Team oder von Dritten. Und für ChatGPT und Claude Ihrer Mitarbeiter.</p>
+              <p class="offer__note">Für Agents von uns, von Ihrem Team oder von Dritten.</p>
             </article>
             <article class="offer" aria-labelledby="offer-ag">
               <svg class="offer__art" viewBox="0 0 400 230" role="img" aria-label="Agents, die am Gateway andocken">
@@ -318,11 +318,11 @@
             <p class="trace-intro__text"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> schreibt mit, was Ihre Agents tun: automatisch, für jedes angebundene System, in Sätzen statt in Logdateien. So verfolgen Sie jede Aktion zurück, von der Buchung bis zur Original-E-Mail.</p>
           </div>
 
-          <p class="answers-cap">Die drei Fragen vom Anfang, beantwortet aus der Spur</p>
+          <p class="answers-cap">Die drei Fragen vom Anfang, beantwortet mit Trace</p>
           <dl class="answers">
             <div class="answer"><dt>Wer hat das gebucht?</dt><dd>Der Rechnungs-Agent, im Auftrag der Buchhaltung. Freigegeben von M.&nbsp;Berger.</dd></div>
             <div class="answer"><dt>Durfte er das?</dt><dd>Ja. Seine Rolle darf im ERP Rechnungen buchen. Die Richtlinie für Beträge über 10.000&nbsp;€ hat gegriffen, die Freigabe liegt vor.</dd></div>
-            <div class="answer"><dt>Wie weisen Sie es nach?</dt><dd>Mit der Spur. Jede Station mit Zeitstempel, von der Buchung zurück bis zur Original-E-Mail.</dd></div>
+            <div class="answer"><dt>Wie weisen Sie es nach?</dt><dd>Mit dem <span class="prod">Trace</span>. Jede Station mit Zeitstempel, von der Buchung zurück bis zur Original-E-Mail.</dd></div>
           </dl>
 
           <div class="spur">
@@ -333,7 +333,7 @@
                 <li><button class="kind" type="button" data-k="2" aria-pressed="false"><span class="kind__no">02</span><span><span class="kind__name">Was der Agent bekommt</span><span class="kind__text">Welche Unterlagen und Regeln vor einer Entscheidung vorliegen.</span></span></button></li>
                 <li><button class="kind" type="button" data-k="3" aria-pressed="false"><span class="kind__no">03</span><span><span class="kind__name">Wie er abwägt</span><span class="kind__text">Seine Begründung, in Sätzen statt in Protokolldateien.</span></span></button></li>
                 <li><button class="kind" type="button" data-k="4" aria-pressed="false"><span class="kind__no">04</span><span><span class="kind__name">Was er tut</span><span class="kind__text">Jede Aktion in jedem System, mit Ergebnis.</span></span></button></li>
-                <li><button class="kind" type="button" data-k="5" aria-pressed="false"><span class="kind__no">05</span><span><span class="kind__name">Wer eingreift</span><span class="kind__text">Richtlinien, Freigaben, Anhalten. Mit Name und Uhrzeit.</span></span></button></li>
+                <li><button class="kind" type="button" data-k="5" aria-pressed="false"><span class="kind__no">05</span><span><span class="kind__name">Wer eingreift</span><span class="kind__text">Richtlinien, Freigaben, Anhalten. Mit Namen und Uhrzeit.</span></span></button></li>
               </ol>
               <p class="spur__note">Für jeden Agent und jedes System, nicht nur für diese Rechnung.</p>
             </div>
@@ -341,7 +341,7 @@
             <article class="trail is-pending" id="trail" aria-labelledby="trail-title">
               <p class="panel__mode"><span class="prod prod--full"><span class="aice"><span class="aice__ai">AI</span>ceFlow</span> <span class="prod__name">Trace</span></span> <span>· Spur</span></p>
               <h3 class="trail__title" id="trail-title">Rechnung 2026-1042</h3>
-              <p class="trail__sub">Lieferant Müller GmbH · 12.400 € · Rechnungs-Agent im Auftrag von Buchhaltung</p>
+              <p class="trail__sub">Lieferant Müller GmbH · 12.400 € · Rechnungs-Agent im Auftrag der Buchhaltung</p>
               <div class="dir" role="group" aria-label="Leserichtung">
                 <button class="dir__btn" type="button" data-dir="fwd" aria-pressed="true">Von der Quelle zur Buchung</button>
                 <button class="dir__btn" type="button" data-dir="back" aria-pressed="false">Von der Buchung zur Quelle</button>
@@ -361,7 +361,7 @@
                   <p class="step-entry__text">Der Agent schlägt eine Buchung über 12.400 € vor.</p>
                   <dl class="step-entry__why">
                     <div data-k="2"><dt>Bekommen</dt><dd>Rechnung (PDF) · Lieferantenstamm · Buchungsregeln · Rolle: Buchhaltung</dd></div>
-                    <div data-k="3"><dt>Abgewogen</dt><dd>Lieferant bekannt · Betrag plausibel · Kostenstelle 4711 · über 10.000 € – Freigabe nötig</dd></div>
+                    <div data-k="3"><dt>Abgewogen</dt><dd>Lieferant bekannt · Betrag plausibel · Kostenstelle 4711 · über 10.000 €: Freigabe nötig</dd></div>
                     <div data-k="4"><dt>Ergebnis</dt><dd>Buchungsvorschlag 12.400 € · Freigabe angefordert</dd></div>
                   </dl>
                 </li>
@@ -386,7 +386,6 @@
           <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Einsatz</p>
           <div class="split-head">
             <h2 class="h-section" id="einsatz-title">Wo Agents zuerst arbeiten.</h2>
-            <p class="split-head__text">Dort, wo Belege per E-Mail kommen und im Kernsystem landen müssen. Die Agents aus der Geschichte stehen für typische erste Prozesse.</p>
           </div>
           <ol class="uses">
             <li class="use">
@@ -398,7 +397,7 @@
             <li class="use">
               <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-einkauf" /></svg>Einkaufs-Agent</p>
               <h3 class="use__name">Bestellungen und Auftragsbestätigungen</h3>
-              <p class="use__text">Bestellungen im ERP angelegt, Liefertermine abgeglichen, bevor sie in der Fertigung fehlen.</p>
+              <p class="use__text">Bestellungen im ERP angelegt, Liefertermine abgeglichen, bevor Material in der Fertigung fehlt.</p>
               <p class="use__route">E-Mail <span aria-hidden="true">·</span> ERP <span aria-hidden="true">·</span> im Auftrag des Einkaufs</p>
             </li>
             <li class="use">
@@ -410,7 +409,7 @@
             <li class="use use--own">
               <p class="use__agent"><svg class="use__unit" aria-hidden="true"><use href="#agent-own" /></svg>Ihr Prozess</p>
               <h3 class="use__name">Lieferscheine, Verträge, Aufträge</h3>
-              <p class="use__text">Was per E-Mail und als Dokument hereinkommt, kann geprüft und nachvollziehbar im Kernsystem landen.</p>
+              <p class="use__text">Was per E-Mail oder als Dokument hereinkommt, landet geprüft und nachvollziehbar im Kernsystem.</p>
               <p class="use__route">Ihre Systeme <span aria-hidden="true">·</span> Ihre Regeln</p>
             </li>
           </ol>
@@ -459,19 +458,19 @@
               <p class="column__text">Das <span class="prod">Gateway</span> läuft in Ihrem Rechenzentrum. Ihre Daten verlassen das Haus nicht.</p>
             </div>
           </div>
-          <p class="statement">Die Anbindungen gehören Ihnen, die Protokolle aus <span class="prod">Trace</span> liegen im offenen Format. Kein Lock-in.</p>
+          <p class="statement">Die Anbindungen gehören Ihnen, die Protokolle aus <span class="prod">Trace</span> liegen im offenen Format bereit. Kein Lock-in.</p>
         </div>
       </section>
 
       <section class="section section--einstieg" id="einstieg">
         <div class="wrap">
           <p class="eyebrow"><span class="eyebrow__dot eyebrow__dot--blue"></span>Einstieg</p>
-          <h2 class="h-section h-section--big">Pilot in 6–8 Wochen.</h2>
-          <p class="einstieg__formula">1 Prozess · 2 Systeme · 1 Agent – Ihrer oder unserer.</p>
+          <h2 class="h-section h-section--big">Pilot in 6 bis 8 Wochen.</h2>
+          <p class="einstieg__formula">1 Prozess · 2 Systeme · 1 Agent, Ihrer oder unserer.</p>
           <ol class="steps-row">
-            <li><span class="steps-row__no">01</span><h3 class="steps-row__name">Gespräch</h3><p class="steps-row__text">Eine Stunde mit den Gründern. Wir klären Prozess und Systeme, und ob sich ein Pilot für Sie lohnt.</p></li>
-            <li><span class="steps-row__no">02</span><h3 class="steps-row__name">Pilot</h3><p class="steps-row__text">Ein Prozess im Parallelbetrieb. Ausnahmen gehen an Ihre Leute, <span class="prod">Trace</span> schreibt jede Aktion mit.</p></li>
-            <li><span class="steps-row__no">03</span><h3 class="steps-row__name">Betrieb</h3><p class="steps-row__text">Wir betreiben <span class="prod">Gateway</span> und Agents, Ihr Team behält die Aufsicht. Weitere Prozesse docken an.</p></li>
+            <li><span class="steps-row__no">01</span><h3 class="steps-row__name">Gespräch</h3><p class="steps-row__text">Eine Stunde mit den Gründern. Wir klären Prozess und Systeme und prüfen, ob sich ein Pilot für Sie lohnt.</p></li>
+            <li><span class="steps-row__no">02</span><h3 class="steps-row__name">Pilot</h3><p class="steps-row__text">Ein Prozess im Parallelbetrieb. Prozessregeln werden von Ihren Leuten mitentwickelt, <span class="prod">Trace</span> schreibt jede Aktion mit.</p></li>
+            <li><span class="steps-row__no">03</span><h3 class="steps-row__name">Betrieb</h3><p class="steps-row__text">Wir betreiben <span class="prod">Gateway</span> und Agents, Ihr Team behält die Aufsicht. Weitere Prozesse kommen dazu.</p></li>
           </ol>
           <div class="einstieg__cta">
             <a class="btn btn--primary btn--big" href="#termin" data-log="cta-pilot">Gespräch buchen<svg class="btn__arrow" aria-hidden="true" width="16" height="12" viewBox="0 0 16 12"><path d="M1 6H14M9.5 1.5L14 6L9.5 10.5" /></svg></a>
@@ -529,7 +528,7 @@
             <p class="termin__text">Wählen Sie direkt einen Termin, eine Stunde per Google Meet. Wir klären Ihren Prozess und Ihre Systeme und sagen Ihnen offen, ob sich ein Pilot lohnt. Kostenlos.</p>
             <ul class="termin__points">
               <li>Was heute per E-Mail hereinkommt und wo es landen muss</li>
-              <li>Welche Agents es schon gibt: Ihre oder neue von uns</li>
+              <li>Welche Agents es schon gibt und welche wir bauen</li>
               <li>Ob Ihr Team schon mit ChatGPT, Claude oder n8n arbeitet</li>
               <li>Ob EU-Cloud oder Ihr Rechenzentrum besser passt</li>
             </ul>
